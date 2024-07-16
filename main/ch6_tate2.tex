@@ -1,24 +1,39 @@
 \chapter{Metastability and phononic CDW quench in TaTe2}
 
-Ever since the proposition of Graphene as a model system for more complex materials, researchers were extremely successful in finding new physical properties of Graphene itself and extending the knowledge to other materials.
-This resulted in the explosion of the field and discovery of many new phenomena, from xyz to superconductivty in magic angle twisted bilayer graphene.
-These developments ultimately also resulted in the wish for the emergence other platforms, that could drive new ideas and discoveries.
-One of these platforms of 2D materials are transition metal dichalcogenides (TMDs).
+Strongly correlated condensed matter systems are materials with a very high complexity, making it difficult to predict and understand their properties.
+To reduce this complexity Novoselov, Geim and co-workers proposed Graphene as a model system for more complex materials \cite{novoselov_electric_2004, novoselov_two-dimensional_2005, geim_rise_2007}.
+Since then, researchers were extremely successful in finding new physical properties of Graphene itself while also extending and applying the knowledge to other materials.
+Apart from the simplicity of these 2D materials, the idea of engineering properties by stacking multiple layers with different stacking orders or at twist angles offered the possibility of a vast playground for discovering and engineering new properties.
+This resulted in the explosion of the field with the discovery of many new phenomena, from the observation of quatum Hall effect \cite{zhang_experimental_2005} to superconductivty in magic angle twisted bilayer graphene \cite{cao_unconventional_2018}.
+Ultimately these developments lead the emergence other 2D material platforms.
+One of these platforms of 2D materials are transition metal dichalcogenides (TMDs) \cite{butler_progress_2013, chowdhury_progress_2020, liu_van_2016}.
 
-introduce some more the other tmds and developments here, especially for ultrafast
+These layered TMDs exhibit various phenomena xyz
 
-One constituent of these TMDs is \ce{TaTe2} which, compared to its \ce{TaX2} based sister compounds \ce{TaS2} and \ce{TaSe2} and the isostructural polytypes of \ce{MTe2} like \ce{NbTe2} or \ce{VTe2}, it has so far received less attention from the community, but many reports characterizing the compound have come up in recent years, as well as the first ultrafast out-of-equilibrium studies.
-\ce{TaTe2} can be characterized as semimetal at room temperature (RT) and forms ribbon like structures in a distorted 1T'-phase.
+
+One constituent of these TMDs is \ce{TaTe2} which, compared to its \ce{TaX2} based sister compounds \ce{TaS2} and \ce{TaSe2} and the isostructural polytypes of \ce{MTe2} like \ce{NbTe2} or \ce{VTe2}, it has so far received less attention from the community, but some reports characterizing the compound have come up in recent years, as well as the first ultrafast out-of-equilibrium studies.
+
+Here talk more about the MTe and TaX properties (see RRR intro)
+
+\ce{TaTe2} can be characterized as a semimetal at room temperature (RT), which forms ribbon like structures in a distorted (3 x 1) 1T'-phase.
 The compound appears to have strong molecular properties, with \ce{Ta} atoms forming in trimers or fluctuating dimers, with each \ce{Ta}-atoms being surrounded by 8 \ce{Te}-atoms.
-At \SI{170}{\kelvin} the material undergoes a structural phase transitions, where two \ce{Ta}-atoms further distort the structure, breaking dimers and instead form "butterfly" shaped heptameres in a 1T"-phase.
-This structural phase transition is accompanied by the formation of charge density wave (CDW), which has been observed both by gap formation in ARPES and the formation of a periodic lattice distortion (PLD) in STM and diffraction.
+At \SI{170}{\kelvin} the material undergoes a structural phase transitions, where two \ce{Ta}-atoms further distort the structure, breaking dimers and instead form "butterfly" shaped heptameres in a (3 x 3) 1T"-phase \cite{feng_charge_2016, katayama_observation_2023}.
+This structural phase transition is accompanied by the formation of charge density wave (CDW), which has been observed both by gap formation in ARPES \cite{lin_evidence_2022, mitsuishi_unveiling_2024} and the formation of a periodic lattice distortion (PLD) in STM and diffraction \cite{feng_charge_2016, siddiqui_ultrafast_2021, domrose_femtosecond_2024}.
 The exact mechanism of how this phase transition occurs and what the interplay with the CDW is have still not been understood.
 
 \begin{figure}
 	\centering
-	\subfigure[]{\includegraphics[width=0.33\textwidth]{tate2/ht_structure.png}}
-	\subfigure[]{\includegraphics[width=0.33\textwidth]{tate2/lt_structure.png}}
-	\subfigure[]{\includegraphics[width=0.33\textwidth]{tate2/resistivity.png}}
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{tate2/ht_structure.png}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{tate2/lt_structure.png}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{tate2/resistivity.png}
+	\end{subfigure}
 	\caption{(a) 1T' RT phase of \ce{TaTe2} forming ribbons. (b) 1T" LT phase of \ce{TaTe2}, \ce{Ta} atoms move together forming heptameres. (c) Resistivity of \ce{TaTe2} as a function of temperature with an overall reduction in resistivity while cooling. A phase transition occurs at \SI{170}{\kelvin}, which is accompanied by a further steplike reduction in resistivity.}
 	\label{fig:tate_structure}
 \end{figure}
@@ -27,14 +42,98 @@ The exact mechanism of how this phase transition occurs and what the interplay w
 The reason for the lack of understanding stems from the electronic reaction to the phase transition, especially in comparison to the \ce{TaX2} sister compounds.
 Typically, entering a CDW phase by cooling the sample down from RT leads to an increase in resistivity due to the reduced density of states (DOS) in proximity to the Fermi level $E_F$.
 Similarly a drop of the magnetic susceptibility would be expected while cooling $T_s$.
-Instead \ce{TaTe2} shows a drop in resistivity and an increase in magnetic susceptibility, despite the observation of small gaps in the band structure.
+Instead \ce{TaTe2} shows a drop in resistivity and an increase in magnetic susceptibility, despite the observation of small gaps in the band structure \cite{sorgel_new_2006,hu_optical_2022,lin_evidence_2022}.
 For this reason the compound has been branded a "strange" CDW material.
 
 In this chapter of the thesis I give further insight into the driving mechanism of the CDW and the formation of the structural phase transition with the help of ultrafast pump-probe ARPES, and comparing our data to the recent ARPES and ultrafast publications on \ce{TaTe2}.
-Our data shows strong oscillations, a delayed quench of the CDW gap after laser excitation and a metastable state at high fluences persisting for $>\SI{100}{\pico\second}$.
+I will first introduce the band structure of \ce{TaTe2} and the Fermi surface topology, comparing the RT and LT phase, including the formation of CDW minigaps (first observed by \cite{lin_evidence_2022}).
+After this I will give a description of the charge dynamics on a few picosecond timescale, including the delayed response of the CDW.
+And then focus on the strong, band specific oscillations observed in the time domain and analyzing the different oscialltion modes with the help of Fourier analysis.
+Last, I present a metastable electronic state persisting for $>\SI{200}{\pico\second}$ and discuss it's relevancy for the phase structural phase transition at equilibrium.
 
 \section{Bandstructure and Fermiology}
 
+The electronic structure of \ce{TaTe2} is characterized by the strong molecular bonding properties of the Ta-Ta dimers, with a strong orbital character.
+Studying the band structure with ARPES reveals a complex set of bands at RT.
+The valence states, which are governing the electronic properties of the compound consist of a mix of Ta 5d and Te 5p orbitals. \cite{mitsuishi_unveiling_2024}
+
+The Fermi surface of \ce{TaTe2} shows a much stronger quasi-1D character when compared to other 2D materials, even the isostructural \ce{TaSe2} and \ce{TaS2}.
+This character can be observed by 2-fold symmetric wavy contours around \SI{0.5}{\angstrom^{-1}}, which are located along the $\Gamma$-M$_1$ direction and forms an outer Fermi surface.
+Within these contours, an inner second Fermi surface forming multiple pockets can be located (see Fig. \ref{fig:TaTe_FS}).
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{tate2/TaTe2_BZ_sketch_full.pdf}
+		\caption{}
+	\end{subfigure}
+	\hfill
+	\\
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{tate2/TaTe2_FS_RT.pdf}
+		\caption{}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{tate2/TaTe2_FS_LT.pdf}
+		\caption{}
+	\end{subfigure}
+	\caption{(a) The measured Fermi surface of the LT phase is overlapped with the 1. BZ of the virtual monoclinic (1 x 1) 1T phase (black), extended BZs of the distorted HT (3 x 1) 1T' phase (orange) and extended BZs of the further distorted LT (3 x 3) 1 T'' phase (red). (b) RT Fermi surface overlapped with the HT and LT Brillouin zones. The relevant high symmetry points are marked. (c) Same Fermi surface as (b) but measured in the LT phase at \SI{77}{\kelvin}.}
+	\label{fig:TaTe_FS}
+\end{figure}
+
+Comparing the RT and LT Fermi surface, only small changes can be observed.
+The overall topology, consisting of the wavy outer contours and an inner FS sheet with multiple pockets is conserved.
+A main difference lies in the slightly changed size of the pockets in the inner sheet, as some more pronounced features in the 2nd BZ of the LT FS.
+The difference in size of the pockets stems from a slightly shifted chemical potential, when cooling through the phase transition, which has also been observed by N. Mitsuishi et. al. \cite{mitsuishi_unveiling_2024}.
+
+Instead of the small changes in the Fermi surface topology, the effects of the phase transition become apparent when investigating the EDCs.
+Here, we compare a series of EDCs taken parallel to the K$_1$-$\Gamma$-K$_1$ direction from the $\Gamma$-point to the edge of the 2nd BZ, for both room and low temperature.
+
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{tate2/TaTe2_RT_cuts.pdf}
+	\caption{Series of cuts parallel to K$_1$-$\Gamma$-K$_1$, from $\Gamma$ to the BZ border. The location of the cuts in respect to the BZ is indicated in the FS of Fig. \ref{fig:TaTe_FS}. All cuts have been taken at RT, using the Helium $\alpha1$ line of a Helium lamp.}
+	\label{fig:TaTe_RT_cuts}
+\end{figure}
+
+The RT EDCs show a manifold of bands, with multiple bands crossing the Fermi level in each cut.
+These Fermi crossings clearly show the two different Fermi sheets, with the crossing at the edge of the cut determining the wavy contours of the outer quasi-1D Fermi surface sheet, and the crossing close to the center of the band structure forming the 2nd, inner Fermi sheet.
+Cooling the compound through the phase transition results in a complex reordering of the bands.
+The broader bands from the RT phase seem to split in multiple individual ones, with additional backfolded bands appearing.
+Looking at the FS crossing of the inner sheet, the aforementioned size difference it the Fermi pockets becomes clearer.
+Comparing the cuts of the RT phase to the equivalent LT cuts, it is possible to identify a small shift in the chemical potential $\mu$, which has also been reported by \cite{mitsuishi_unveiling_2024}.
+Another difference between the two phases seems to lie in the flattening of the band dispersion close to $E_F$ at energies above \SI{-0.6}{\electronvolt}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{tate2/TaTe2_LT_cuts.pdf}
+	\caption{Series of cuts parallel to K$_1$-$\Gamma$-K$_1$, from $\Gamma$ to the BZ border. The cuts are the equivalent band maps to the RT one in Fig. \ref{fig:TaTe_RT_cuts}. All cuts have been taken at LT $\simeq$\SI{77}{\kelvin}, using the Helium $\alpha1$ line of a Helium lamp.}
+	\label{fig:TaTe_LT_cuts}
+\end{figure}
+
+This flattening of the bands might stem from the established charge order due to the CDW phase, typically resulting in the opening of gaps and backfolded bands from the PLD.
+To further address the CDW and the gap formation we have to revisit the quasi-1D character of the FS.
+A nesting of the FS occurs when different parts of the Fermi surface can be connected by a reciprocal lattice vector which can translate the different parts on top of each other.
+This Fermi surface nesting (FSN) leads then to charge instabilities close to the FS and can play a dominant role in the formation of CDWs.
+The wavy contours of the outer FS sheet (see Fig. \ref{fig:TaTe_FS}) fulfill the Fermi surface nesting (FSN) conditions.
+Determining the distance between two points that are connected by this vector results in a length of approximately \SI{0.92}{\angstrom^{-1}}, which is comparable to the \SI{0.85}{\angstrom^{-1}} found by Y. Lin et al. \cite{lin_evidence_2022}.
+A possible second FSN vector can be found for the inner FS sheet.
+These bands show a stronger 1D character and the vector has a length of \SI{0.24}{\angstrom^{-1}}.
+Both of these FSN vector lengths do not correspond to the periodicity of the PLD, which was found to be $\simeq\SI{0.67}{\angstrom^{-1}}$.
+The discrepancy between these vector lengths means that the FSN is not the sole driving force of the phase transition, underlining the complexity of the situation in \ce{TaTe2}.
+
+As a result of the CDW formation minigaps can be observed across the Brillouin zone, most prominently close to the $\Gamma$-point \cite{lin_evidence_2022}.
+Figure \ref{fig:TaTe_minigaps} shows a cut close to $\Gamma$, with a dashed box around the area in which the minigap formation occurs.
+A zoom of this region better showcases these small gaps at the edge of the band map at around \SI{0.4}{\angstrom^{-1}}.
+This band also connects to the wavy contours, which fulfill the FSN condition, further underlining the relevance for the CDW.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{tate2/TaTe2_CDW_minigaps.pdf}
+	\caption{Left: Band map parallel to the K$_1$-$\Gamma$-K$_1$ direction close to the $\Gamma$-point. The dashed rectangle marks the region of which a zoom is provided. Right: Zoom of dashed rectangle region. The band map shows a faint signature of the observed minigaps \cite{lin_evidence_2022}.}
+	\label{fig:TaTe_minigaps}
+\end{figure}
 
 \section{Ultrafast charge dynamics and CDW quench}
 
