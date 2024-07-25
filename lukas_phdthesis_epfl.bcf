@@ -2399,6 +2399,22 @@
     <bcf:citekey order="15" intorder="1">lin_evidence_2022</bcf:citekey>
     <bcf:citekey order="16" intorder="1">lin_evidence_2022</bcf:citekey>
     <bcf:citekey order="17" intorder="1">lin_evidence_2022</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">luo</bcf:citekey>
+    <bcf:citekey order="18" intorder="2">hu_optical_2022</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">luo</bcf:citekey>
+    <bcf:citekey order="19" intorder="2">hu_optical_2022</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">hu_optical_2022</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">luo</bcf:citekey>
+    <bcf:citekey order="21" intorder="2">hu_optical_2022</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">mitsuishi_unveiling_2024</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">siddiqui_ultrafast_2021</bcf:citekey>
+    <bcf:citekey order="23" intorder="2">domrose_femtosecond_2024</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">katayama_observation_2023</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">feng_charge_2016</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">siddiqui_ultrafast_2021</bcf:citekey>
+    <bcf:citekey order="26" intorder="2">domrose_femtosecond_2024</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">domrose_femtosecond_2024</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">domrose_femtosecond_2024</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
