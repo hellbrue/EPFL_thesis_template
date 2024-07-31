@@ -1,12 +1,135 @@
 \chapter{High resolution trARPES in the VUV regime}
-Here you can see a citation: \cite{atc13}.
 
-\lipsum[7]
+The field of strongly correlated quantum matter is already an old field by modern standards, with the discovery of high T$_c$ superconductors dating back more than 30 years.
+But the ever growing field has changed in many regards since then, most notably with the introduction of ultrafast spectroscopies.
+Where the research used to be exclusively focused on ground state of these materials and enormous effort of reducing any environmental effect on the materials, ultrafast out of equilibrium studies have become not only an accepted tool in this field, but also a very powerful one.
+The two previous chapters on metastable states in \ce{Bi}2212 and \ce{TaTe2} are an example of this.
 
-\section{One section}
+Ultrafast techniques have experienced intense development, leading not only to increasingly precise measurements, but also to an expanding understanding of what these out of equilibrium measurements actually observe.
+The technological challenge here is to bring together recent advances in laser physics, or optics in general, and pair it together with better detection schemes, samples and vacuum systems, introducing overall better performing tools.
+In this chapter I will introduce a technical development in trARPES, which is the expansion of the technique into the VUV regime, at high repetition rates, high energy resolution, while still allowing for the exploration of the time domain with reasonably high detail.
+The technique and instrumentation has already been published \cite{}, but I will expand more on the rational for this type of trARPES, it's up- and downsides, the context in which it is used in the LACUS facility and the ongoing developments of it.
 
-\lipsum[3]
+\section{Previous capabilities: Harmonium}
 
-\subsection{One subsection}
+Before delving into the new capabilities, I will give a short overview on the setup that existed before the newest extensions.
+The trARPES at LACUS used a higher hamonics based laser system, paired with a first generation 2D hemispherical analyzer and a 4-axis manipulator for experiments.
+This higher harmonics beam lines is called Harmonium.
+A Titanium Sapphire (Ti:Sa) oscillator (brand and model) is used to generate IR (\qty{1.55}{\electronvolt} or \qty{800}{\nano\meter}) pulses at a repetition rate of insert rep rate.
+These pulses are amplified in one of the two existing amplifier systems (KMLabs Wyvern or Coherent Astrella) from pulse power a to b
+The high peak pulse energy is needed to drive the non-linear process creating the higher harmonics.
+In the so called higher harmonic generation (HHG) a ultrashort light pulse is used to ionize a noble gas, typically Argon, Neon or Xenon.
+After ionization, the now free electron is accelerated in electric field of the IR driving pulse, gaining kinetic energy.
+Some electrons recombine with the ionized atom, at which point they generate an extreme violet UV emission.
+Multiple separated harmonics with an energy of $2n+1$, $n$ being the IR seed energy, are created at the same time, in a harmonics comb.
 
-\lipsum[3]
+Mainly two different ways of HHG exist, with the generation process either happening in a gas jet or a gas filled fiber.
+In both cases, a full comb of harmonics is emitted from the gas with the spectrum of the harmonics depending on the phase matching conditions, which can be adjusted to optimize for different energies.
+For example, different gases are just to access different spectral ranges.
+Typically, Argon is used to create energies between \qtylist{20; 50}{\electronvolt} and Neon between \qtylist{50; 100}{\electronvolt}.
+Furthermore the coupling into the gas, gas pressure, laser seed fluence and beam shape are all parameters that can be adjusted for the phase matching conditions and optimize the output of the desired harmonic.
+The small cross section of the HHG process, due to the low probability of the electron recombining with the ionized gas atom, and the dependence of the $\chi_3$ term in
+\begin{equation}
+	\chi `bla
+\end{equation}
+are the reason for the need of high peak fluences, as previously mentioned.
+
+From the many harmonics emitted simultaneously, one is selected for a trARPES measurement, with the help of a monochromator.
+The monochromator consists of multiple different gratings with different amounts of grooves per \unit{cm} (\unit{g\per\cm}), with the different gratings being used for different energy ranges.
+The gratings are illuminated at grazing incidence, and are aligned with their grooves parallel to the propagation direction to reduce the pulse front tilt of the wavefront.
+An adjustable slit is located behind the gratings to isolated the selected harmonic.
+The high harmonic probe beam is then focused by a torroidal mirror onto the sample.
+
+At the same time part of the amplified IR beam was split of before the HHG process.
+This residual beam is used to excite the sample.
+After compensating for the beam path of the probe pulse a telescope consisting of two curved mirrors is used to focus the pump beam onto the sample adjust the spot size at the sample position.
+Pump and probe beam co-propagate with a small angle between each other, due to geometrical constraints.
+A $\beta$-bariumborate (BBO) crystal can be inserted between the two focusing mirrors to double to pump energy from \qty{1.55}{\electronvolt} to \qty{3.1}{\electronvolt}.
+
+In total the HHG beamline can produce high flux (flux number) harmonics between \qtyrange{20}{110}{\electronvolt}.
+An energy resolution of $\approx$\qty{150}{\electronvolt} can be achieved, which is mainly determined by the chosen harmonic and grating combination.
+The time resolution amounts to $<\qty{100}{\femto\second}$, which is a result of the cross-correlation of pump and probe pulse.
+While the HHG probe pulses have an intrinsically small pulse duration, only limited by the spread in recombination times within the gas jet, the probe beam experiences a pulse front tilt due to the single grating monochromator.
+The pulse front tilt leads to a increase in pulse duration over the spot size, which together with the pump pulse duration of $\approx$\qty{50}{\femto\second} results in the above time resolution.
+
+\section{High repetition rate VUV trARPES}
+
+In recent years many new HHG based trARPES systems have emerged at high repetition rates of up to \qty{60}{\mega\hertz}.
+Such systems are based on cavity enhanced seed pulses utilizing resonators.
+By enhancing the seed pulses it is possible to operate at higher repetition rates, despite the lowered peak power and still maintain a high photon flux at high energies.
+The clear upside of this is strongly increasing the statistics collected within the same measurement time.
+On the other hand two clear downsides emerge with this approach.
+One is the obviously much higher technical difficulty to continuously operate the system compared to a simple gas jet or fiber based HHG system.
+But the more important challenge emergence when including the pump pulse into the picture.
+Here the relevant quantity for out of equilibrium phenomena is the peak intensity per pulse in \unit{\milli\joule\per\centi\meter^2}.
+Keeping this parameter constant, it is obvious that the average power increases by 5 orders of magnitude when moving from \qty{6}{\kilo\hertz} to \qty{60}{\mega\hertz} (assuming all other beam parameters remain the same).
+Even though the available pump laser power is nowadays not a problem anymore, thermalization becomes the limiting factor.
+Strongly increasing the average power is necessarily accompanied with a higher thermal load on the sample, at which point the sample struggles dissipating the heat from pulse to pulse, leading to a build up and much accelerated sample degradation.
+In the end thermalization puts a hard limitation on the use case of these high repetition trARPES setups.
+Either by a limited amount of samples that can be measured at high average powers, or by the necessity to reduce the peak power per pulse to a degree at which the out of equilibrium effect is not observable.
+A way to reduce this problem lays naturally in reducing the repetition rate, but still have it high enough that a high amount of statistics can be acquired.
+The new addition to trARPES setup at LACUS was therefore planned to operate at repetition rates between \qtyrange{0.5}{2}{\mega\hertz}, allowing for high statistics and reasonably high pump fluences.
+
+Another challenge in trARPES in particular lies in the accessible spectral range for the employed probes.
+As previously mentioned, HHG can easily access the spectral range between \qtyrange{20}{110}{\electronvolt}.
+Same is true for then range below \qty{7}{\electronvolt}, which can be accessed  by frequency conversion in nonlinear crystals like BBOs and KBBT, even at high repetition rates.
+This leaves a gap in the spectral range between \qtyrange{7}{20}{\electronvolt}.
+A way to tackle this so far in trARPES has been performing third harmonic generation (THG) in a crystal and then use the same THG process again in a Xenon filled fiber, creating the 9th harmonic, with an energy of usually around \qty{11}{\electronvolt}.
+This leaves the problem of only having access to one particular energy within the \qtyrange{7}{20}{\electronvolt} range.
+But information from ARPES, like any other spectroscopic technique, heavily depends on the employed probe energy due to the dipole matrix element, making it very desirable to tune the probe energy.
+The new VUV light source can address this problem and close this gap significantly, by allowing for tunability in the range from \qtyrange{7}{10.8}{\electronvolt} with a \qty{1.2}{\electronvolt} spacing.
+This is possible by using a highly cascaded harmonic generation process (HCHG) instead of a double THG process \cite{}.
+
+explain process in detail.
+
+
+
+
+\section{Paper and Supplementary}
+
+The previous sections introduced the capabilities of each instrument.
+Both light sources are complementary to each other, covering most of the desired needs for trARPES measurements.
+In order to truly exploit this characteristic it is necessary to operate them interchangeably. 
+One of the challenges was being able to switch between the two beamlines, while avoiding downtime and additional time for realignments.
+For this reason a new vacuum chamber was inserted into the HHG beamline, with the goal hosting insertable optics that direct the VUV pump and probe beams to the sample.
+These optics consist of a flat IR mirror for the pump beam, and two \ce{Al} mirrors with \ce{MgF2} coating for focusing and redirecting the probe beam.
+All three optics are mounted on individual, motorized stages, that can bring the optics in position for operation of the VUV beamline or retract them in order to use Harmonium.
+This allows switching between the two light sources within seconds, without breaking vacuum or additional realignment beyond the usual use case.
+
+
+\includepdf[pages=-]{main/vuv_paper.pdf}
+
+\section{Ongoing Developments}
+
+Since the full implementation and characterization of the VUV laser system further developments on the system have been introduced.
+A main change has been the switch to a new manipulator.
+The old manipulator had four adjustable axes (3 Cartesian coordinates plus rotational axis), with access to a fifth (in plane rotation) with low accuracy by rotating the sample with the help of a wobble stick.
+In this setup only the rotational axis was motorized.
+The new manipulator has access to all six degrees of freedom, with all of them being motorized, allowing for greater control and more complex scans.
+
+The main advantages of this manipulator is the access to the in plane rotational degree of freedom, allowing for it's adjustment while having a live view of the band structure.
+Furthermore it solves a problem when taking Fermi surface maps.
+Due to the sample geometry center of rotation is often not the imaged point.
+This mean that the illuminated spot slightly changes under sample rotation of a Fermi surface scan, resulting in the possibility to image adjacent domains.
+To compensate for this the $x$ and $y$ coordinate have to adjusted when changing from one angle to the next to image the same sample position.
+While this was possible with the old manipulator, it makes data acquisition very tedious if after every angle the Cartesian coordinates have to be adjusted by hand.
+Instead, with the motorization of the new manipulator more complex movements are possible, where the $x$ and $y$ coordinates can be dynamically adjusted during a Fermi surface scan.
+
+Another big advantage of the new manipulator is a better temperature control.
+With an open cycle cryostate the temperature can be lower down to \qty{4}{\kelvin}.
+Intermediate temperatures can be reached by adjusting the flow rate of the used coolant.
+Additionally a heater unit makes fine adjustments of the temperature possible.
+This would allow for more precise temperature scan, for example when crossing phase transitions or the exploration of softening of modes etc.
+
+A further development concerns the polarization control of the VUV beamline.
+While control over the pump polarization is easily implemented with a IR waveplate, the situation is more difficult for the probe.
+It is in principal possible to rotate the polarization of both IR and green beam before entering the fiber and create harmonics with the corresponding polarization, it is only possible to use the monochromator with p-polarization.
+Using the monochromator at s-polarization does not remove the residual IR and green from the seed, which leads to a degradation of the optics and intense stray light passing through the monochromator.
+Therefore it is necessary to instead rotate the polarization of the VUV light after the monochromator.
+At these energies optics working in transmission are not readily available, but a custom made wave-plate for \qty{10.8}{\electronvolt} was found.
+With the help of a vacuum compatible rotational mount it is possible to rotate the polarization.
+First tests are ongoing and hopefully show full control over the polarization at \qty{10.8}{\electronvolt}.
+The control over the polarization is important in ARPES due to the dipole matrix element.
+It is possible that the lack of photo-emission signal from \ce{Bi}2212 is due to a strong dipol matrix element at low energies.
+This question could for example be addressed by having polarization control.
+
