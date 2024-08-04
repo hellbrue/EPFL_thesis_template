@@ -82,8 +82,21 @@ This is possible by using a highly cascaded harmonic generation process (HCHG) i
 
 explain process in detail.
 
+An additional benefit of this VUV light source stems from the high focusability of the beam, in principle $<$\qty{5}{\micro\meter}.
+The current layout does not allow to focus the beam this tight without major chamber redesigns and due to geometrical constraints.
+Nonetheless it is possible to enable micrometer spot-sizes and move into the direction of $\mu$-ARPES with much higher spatial resolution.
 
+Lastly, a big upside of this laser system lies in the usability.
+The VUV laser uses a fiber based oscillator and two fiber based amplifiers, this does not only make the source more compact, but also significantly increase it's stability.
+For example it is not necessary to realign the oscillator at all, and the amplifier only needs small adjustments every few months.
+This greatly reduces the time spent re-aligning the system, which can be used to focus on other parts of the experiment.
+Furthermore, the implementation of the fibers in cartridges without adjustability also makes the VUV generation process quite stable.
+The photon flux can be re-optimized with only a few touch-ups after a days of continuous usage.
 
+Therefore the new light source enables trARPES measurements in an energy range previously not accessible with the HHG beamline.
+It provides higher energy resolution than Harmonium while compromising some time resolution, complementing the characteristics of the HHG beamline.
+The higher repetition rates allow for faster acquisition for the same amount of statistics, while still allowing for high pump fluence measurements.
+But the light source is most suitable to explore the low perturbation regime due to the high repetition rates, something that was previously very challenging with Harmonium.
 
 \section{Paper and Supplementary}
 
@@ -133,3 +146,43 @@ The control over the polarization is important in ARPES due to the dipole matrix
 It is possible that the lack of photo-emission signal from \ce{Bi}2212 is due to a strong dipol matrix element at low energies.
 This question could for example be addressed by having polarization control.
 
+The most recent development concern one of the strengths of the VUV light source, which is the ability to better study low perturbation dynamics.
+As mentioned in section ref, the nature of the high repetition rates make it possible to faster acquire the needed statistics.
+This enables the observation of less pronounced features, which is typically the case for features occurring only after a small perturbation to the system.
+Adding this to the fact that high pump fluences are also problematic at high repetition rates due to the thermalization issues described earlier, it seems that the best use case for the light source is the low perturbation regime.
+To further strengthen this ability a new detection scheme is implemented, which measures pumped and unpumped signals successively.
+The differences between these images should, in principle, show the pump induced features more pronounced and reduce fluctuations that just occur over time.
+
+This detection scheme works due to a fast acquisition camera, whose frame frequency can be adjusted up to \qty{1.5}{\kilo\hertz}.
+The camera can be directly triggered by the laser trigger signal, or any similar reference signal.
+In order to measure both on and off signals a chopper wheel is used, which is set to a frequency that matches the camera acquisition rate.
+With the VUV laser set to \qty{1}{\mega\hertz}, both camera and chopper are set to \qty{1}{\kilo\hertz}.
+This results in each acquired camera shot, reflecting the data of 1000 probe pulses, with pumped and unpumped shots following one after the other.
+A typical detection scheme of a trARPES experiment looks the following:
+
+\begin{itemize}
+	\item [$\bullet$] \qty{1000}{\hertz} repetition rate of each camera shot
+	\item [$\bullet$] summing for \qty{1}{\second} with chopper letting pump pulse
+	\item [$\bullet$] summing for \qty{1}{\second} with chopper blocking pump pulse
+	\item [$\bullet$] move stage to next delay position and repeat on and off picture
+	\item [$\bullet$] after finishing delay list, start at first delay and repeat loop
+\end{itemize}
+
+The main challenge with the implementation of this detection scheme is accounting for all accumulated delays and detector dead times.
+The delays can be investigated with the help of an oscilloscope and adjusted by a delay generator.
+A major challenge in setting the delays correct was also accounting for the decay time of the phosphor screen at the end of the hemispherical analyzer.
+It's decay time is in the \unit{\milli\second} range, therefore the start of each acquisition has to be carefully adjusted to avoid spillover signals from pump on to pump off frames.
+Systematic testing of several delays has been done by only using the pump beam and observing the multiphoton photoemission signal, which should lead to the observation of a photoemission signal when the chopper lets the pump beam pass and an empty frame when not.
+With this method an optimal acquisition window was found, and by additionally setting correct threshold setting of the camera any spillover can be avoided, while simultaneously avoiding a big reduction in signal.
+
+Initial tests with this new detection scheme have been carried out with the VUV beamline as well as with Harmonium.
+While the detection scheme has been shown to be correctly implemented, an improvement in signal quality has not been observed, which can have multiple reasons.
+The tests with the VUV laser where done with \ce{TaTe2}, which did not show a strong out of equilibrium signal at the high repetition rates.
+Therefore it was hard to make a comparison to the new detection scheme.
+Further tests have been carried out with Harmonium, with reference samples that have shown to provide strong out of equilibrium signals like \ce{WSe2}.
+It was shown clearly that the scheme was implemented correctly, by observing the excitonic state only in the pump on frames.
+But again no signal improvement was observed when plotting the on/off frames compared to the only on frames.
+Firstly the measurement was taken far out of equilibrium, which is not the best use case for this detection scheme.
+Secondly no big changes to the band structure have been observed below the Fermi level, which is the region where signal improvements would be expected.
+While the region above Fermi containing the excitonic state has intrinsically no background signature and therefore shouldn't show improvements when plotting any on/off images.
+More tests have to be carried out with samples that show changes in the low perturbation regime and in the occupied region of the band structure.
