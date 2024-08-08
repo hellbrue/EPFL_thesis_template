@@ -1,44 +1,48 @@
 \chapter{High resolution trARPES in the VUV regime}
 
-The field of strongly correlated quantum matter is already an old field by modern standards, with the discovery of high T$_c$ superconductors dating back more than 30 years.
-But the ever growing field has changed in many regards since then, most notably with the introduction of ultrafast spectroscopies.
-Where the research used to be exclusively focused on ground state of these materials and enormous effort of reducing any environmental effect on the materials, ultrafast out of equilibrium studies have become not only an accepted tool in this field, but also a very powerful one.
-The two previous chapters on metastable states in \ce{Bi}2212 and \ce{TaTe2} are an example of this.
+The field of strongly correlated quantum matter is already a very established field, with the discovery of high T$_c$ superconductors dating back more than 30 years \cite{anderson_resonating_1987}.
+But the ever growing field has changed in many regards since then, with the introduction of ultrafast spectroscopies being among the more notable ones.
+For very long times researchers focused their interest on the ground state of these materials and an enormous effort was spent of reducing any environmental effect on the materials.
+Since then an almost paradigm change occurred, and thanks to many groundbreaking studies \cite{eesley_relaxation_1990, han_femtosecond_1990, giannetti_revealing_2011, smallwood_tracking_2012} ultrafast out of equilibrium studies have become not only an accepted tool in this field, but also a very powerful one \cite{orenstein_ultrafast_2012, maiuri_ultrafast_2020, boschini_time-resolved_2024, giannetti_ultrafast_2016, lloyd-hughes_2021_2021}.
+Out of equilibrium techniques can not only provide information on the formation of certain phases, or pairings relevant for the ground state, but can also demonstrate the formation of excited states and can provide an avenue of control via light illumination.
+The two previous chapters on metastable states in \ce{Bi}2212 and \ce{TaTe2} are an example for this.
 
-Ultrafast techniques have experienced intense development, leading not only to increasingly precise measurements, but also to an expanding understanding of what these out of equilibrium measurements actually observe.
-The technological challenge here is to bring together recent advances in laser physics, or optics in general, and pair it together with better detection schemes, samples and vacuum systems, introducing overall better performing tools.
-In this chapter I will introduce a technical development in trARPES, which is the expansion of the technique into the VUV regime, at high repetition rates, high energy resolution, while still allowing for the exploration of the time domain with reasonably high detail.
-The technique and instrumentation has already been published \cite{}, but I will expand more on the rational for this type of trARPES, it's up- and downsides, the context in which it is used in the LACUS facility and the ongoing developments of it.
+New groundbreaking discoveries are often a result of technological advancements that allow a more precise measurement, revealing new features that expand our knowledge in the field.
+Therefore developing and improving the available tools is inherent part of advancing the understanding of strongly correlated quantum physics and science in general.
+Ultrafast techniques have experienced intense development of the years, most notably in the development of ultrafast light sources \cite{keller_recent_2003}.
+From the use of maintenance heavy dye lasers, over the development of few \unit{\femto\second} Titanium doped Sapphire (Ti:Sa) lasers, to the nowadays often preferred ultrafast fiber based turn-key solutions, light sources have become more precise, stable and user-friendly.
+Further developments of better detection schemes, vacuum systems, sample quality are naturally of similar importance.
+In general, the challenge is to bring together all recent advances, bringing them together and creating an overall better performing tool.
+In this chapter I will introduce a technical development in trARPES with the expansion of the technique into the VUV regime, at high repetition rates, high energy resolution, while still allowing for the exploration of the time domain with reasonably high detail.
+The technique and instrumentation have already been published and the paper is integrated into this chapter \cite{hellbruck_high-resolution_2024}, but here I will expand more on the rational for this type of trARPES, it's up- and downsides, the context in which it is used in the LACUS facility and the ongoing developments of it.
 
 \section{Previous capabilities: Harmonium}
 
 Before delving into the new capabilities, I will give a short overview on the setup that existed before the newest extensions.
 The trARPES at LACUS used a higher hamonics based laser system, paired with a first generation 2D hemispherical analyzer and a 4-axis manipulator for experiments.
-This higher harmonics beam lines is called Harmonium.
+This higher harmonics beam lines is called Harmonium and functions on the principle of higher harmonic generation (HHG) \cite{arrell_harmonium_2017}.
 A Titanium Sapphire (Ti:Sa) oscillator (brand and model) is used to generate IR (\qty{1.55}{\electronvolt} or \qty{800}{\nano\meter}) pulses at a repetition rate of insert rep rate.
 These pulses are amplified in one of the two existing amplifier systems (KMLabs Wyvern or Coherent Astrella) from pulse power a to b
-The high peak pulse energy is needed to drive the non-linear process creating the higher harmonics.
-In the so called higher harmonic generation (HHG) a ultrashort light pulse is used to ionize a noble gas, typically Argon, Neon or Xenon.
+The high peak pulse energy is necessary to drive the non-linear process creating the higher harmonics.
+In the HHG process a ultrashort light pulse is used to ionize a noble gas, typically Argon or Neon \cite{rudawski_high-flux_2013}.
 After ionization, the now free electron is accelerated in electric field of the IR driving pulse, gaining kinetic energy.
-Some electrons recombine with the ionized atom, at which point they generate an extreme violet UV emission.
-Multiple separated harmonics with an energy of $2n+1$, $n$ being the IR seed energy, are created at the same time, in a harmonics comb.
+Some electrons recombine with the ionized atom, at which point they generate an extreme ultraviolet (EUV) emission.
+Multiple separated harmonics with an energy of $2n+1 \omega$, $n$ being the number of the harmonic and $\omega$ the IR seed energy, are created at the same time in an harmonics comb.
 
-Mainly two different ways of HHG exist, with the generation process either happening in a gas jet or a gas filled fiber.
+Mainly two different ways of HHG exist, with the generation process either happening in a gas jet or a gas filled fiber \cite{paul_quasi-phase-matched_2003, heckl_high_2009, sudmeyer_femtosecond_2008, roser_131w220fs_2005}.
 In both cases, a full comb of harmonics is emitted from the gas with the spectrum of the harmonics depending on the phase matching conditions, which can be adjusted to optimize for different energies.
-For example, different gases are just to access different spectral ranges.
-Typically, Argon is used to create energies between \qtylist{20; 50}{\electronvolt} and Neon between \qtylist{50; 100}{\electronvolt}.
+For example, different gases provide different phase matching conditions, allowing for better access to different spectral ranges.
+Typically, Argon is used to create energies between \qtylist{20; 40}{\electronvolt} and Neon between \qtylist{40; 110}{\electronvolt} \cite{rudawski_high-flux_2013}.
 Furthermore the coupling into the gas, gas pressure, laser seed fluence and beam shape are all parameters that can be adjusted for the phase matching conditions and optimize the output of the desired harmonic.
-The small cross section of the HHG process, due to the low probability of the electron recombining with the ionized gas atom, and the dependence of the $\chi_3$ term in
-\begin{equation}
-	\chi `bla
-\end{equation}
-are the reason for the need of high peak fluences, as previously mentioned.
+The small cross section of the HHG process, due to the low probability of the electron recombining with the ionized gas atom, as wells as the perturbative nature of the process are the reason for the need of high peak fluences, as previously mentioned.
 
 From the many harmonics emitted simultaneously, one is selected for a trARPES measurement, with the help of a monochromator.
 The monochromator consists of multiple different gratings with different amounts of grooves per \unit{cm} (\unit{g\per\cm}), with the different gratings being used for different energy ranges.
 The gratings are illuminated at grazing incidence, and are aligned with their grooves parallel to the propagation direction to reduce the pulse front tilt of the wavefront.
 An adjustable slit is located behind the gratings to isolated the selected harmonic.
 The high harmonic probe beam is then focused by a torroidal mirror onto the sample.
+
+figure of harmonium
 
 At the same time part of the amplified IR beam was split of before the HHG process.
 This residual beam is used to excite the sample.
@@ -50,37 +54,79 @@ In total the HHG beamline can produce high flux (flux number) harmonics between 
 An energy resolution of $\approx$\qty{150}{\electronvolt} can be achieved, which is mainly determined by the chosen harmonic and grating combination.
 The time resolution amounts to $<\qty{100}{\femto\second}$, which is a result of the cross-correlation of pump and probe pulse.
 While the HHG probe pulses have an intrinsically small pulse duration, only limited by the spread in recombination times within the gas jet, the probe beam experiences a pulse front tilt due to the single grating monochromator.
-The pulse front tilt leads to a increase in pulse duration over the spot size, which together with the pump pulse duration of $\approx$\qty{50}{\femto\second} results in the above time resolution.
+The pulse front tilt leads to a increase in pulse duration over the spot size, which together with the pump pulse duration of $\approx$\qty{50}{\femto\second} results in the above time resolution \cite{arrell_harmonium_2017}.
 
 \section{High repetition rate VUV trARPES}
 
-In recent years many new HHG based trARPES systems have emerged at high repetition rates of up to \qty{60}{\mega\hertz}.
+Recent advancements in HHG and their extension into the multi-\unit{\mega\hertz} regime \cite{mills_xuv_2012,hadrich_high_2014,pronin_high-power_2015,saraceno_toward_2015,hadrich_single-pass_2016,carstens_high-harmonic_2016,zhao_efficient_2018} lead to their adaptation in trARPES systems.
+Since then new HHG based trARPES systems have emerged at high repetition rates of up to \qty{88}{\mega\hertz} \cite{corder_ultrafast_2018,mills_cavity-enhanced_2019}.
 Such systems are based on cavity enhanced seed pulses utilizing resonators.
 By enhancing the seed pulses it is possible to operate at higher repetition rates, despite the lowered peak power and still maintain a high photon flux at high energies.
-The clear upside of this is strongly increasing the statistics collected within the same measurement time.
-On the other hand two clear downsides emerge with this approach.
+The clear upside of higher repetition rate HHG systems is strongly increasing the statistics collected within the same measurement time.
+On the other hand two downsides emerge with this approach.
 One is the obviously much higher technical difficulty to continuously operate the system compared to a simple gas jet or fiber based HHG system.
-But the more important challenge emergence when including the pump pulse into the picture.
+But while the technical challenge can be addressed the more fundamental challenge emergence when including the pump pulse into the picture.
 Here the relevant quantity for out of equilibrium phenomena is the peak intensity per pulse in \unit{\milli\joule\per\centi\meter^2}.
-Keeping this parameter constant, it is obvious that the average power increases by 5 orders of magnitude when moving from \qty{6}{\kilo\hertz} to \qty{60}{\mega\hertz} (assuming all other beam parameters remain the same).
-Even though the available pump laser power is nowadays not a problem anymore, thermalization becomes the limiting factor.
-Strongly increasing the average power is necessarily accompanied with a higher thermal load on the sample, at which point the sample struggles dissipating the heat from pulse to pulse, leading to a build up and much accelerated sample degradation.
+Keeping this parameter constant, it is obvious that the average power increases by 5 orders of magnitude when moving from \qty{6}{\kilo\hertz} to \qty{88}{\mega\hertz} (assuming all other beam parameters remain the same), at which point thermalization becomes the limiting factor.
+Strongly increasing the average power is necessarily accompanied with a higher thermal load on the sample, and heat dissipation from pulse to pulse becomes a problem, leading to a build up and a much accelerated sample degradation.
 In the end thermalization puts a hard limitation on the use case of these high repetition trARPES setups.
-Either by a limited amount of samples that can be measured at high average powers, or by the necessity to reduce the peak power per pulse to a degree at which the out of equilibrium effect is not observable.
-A way to reduce this problem lays naturally in reducing the repetition rate, but still have it high enough that a high amount of statistics can be acquired.
-The new addition to trARPES setup at LACUS was therefore planned to operate at repetition rates between \qtyrange{0.5}{2}{\mega\hertz}, allowing for high statistics and reasonably high pump fluences.
+Either by a limited amount of samples that can be measured at high average powers, or by the necessity to reduce the peak power per pulse to a degree at which the out of equilibrium effect may not be observable anymore.
+A way to reduce this problem lays naturally in reducing the repetition rate, but still operate at high enough rates, so that a high amount of statistics can still be acquired.
+The new addition to trARPES setup at LACUS was therefore planned to operate at repetition rates between \qtyrange{0.5}{2}{\mega\hertz}, allowing for high statistics and reasonably high pump fluences to explore the high perturbation regime.
 
 Another challenge in trARPES in particular lies in the accessible spectral range for the employed probes.
 As previously mentioned, HHG can easily access the spectral range between \qtyrange{20}{110}{\electronvolt}.
-Same is true for then range below \qty{7}{\electronvolt}, which can be accessed  by frequency conversion in nonlinear crystals like BBOs and KBBT, even at high repetition rates.
+Same is true for then range below \qty{7}{\electronvolt}, which can be accessed by frequency conversion in nonlinear crystals like BBO and KBBT, even at high repetition rates.
 This leaves a gap in the spectral range between \qtyrange{7}{20}{\electronvolt}.
-A way to tackle this so far in trARPES has been performing third harmonic generation (THG) in a crystal and then use the same THG process again in a Xenon filled fiber, creating the 9th harmonic, with an energy of usually around \qty{11}{\electronvolt}.
-This leaves the problem of only having access to one particular energy within the \qtyrange{7}{20}{\electronvolt} range.
+A way to tackle this so far in trARPES has been performing third harmonic generation (THG) in a crystal converting IR pulse with an energy around \qty{1.2}{\electronvolt} to UV pulses of \qty{3.6}{\electronvolt}.
+These are then again frequency trippeld in a Xenon filled fiber, creating the 9th harmonic, with an energy of usually around \qty{11}{\electronvolt}.
+This leaves the problem of only offering small tunability depending on the IR input pulse energy, and a resulting gap within the \qtyrange{7}{20}{\electronvolt} range.
 But information from ARPES, like any other spectroscopic technique, heavily depends on the employed probe energy due to the dipole matrix element, making it very desirable to tune the probe energy.
 The new VUV light source can address this problem and close this gap significantly, by allowing for tunability in the range from \qtyrange{7}{10.8}{\electronvolt} with a \qty{1.2}{\electronvolt} spacing.
-This is possible by using a highly cascaded harmonic generation process (HCHG) instead of a double THG process \cite{}.
+This is possible by using a highly cascaded harmonic generation process (HCHG) instead of a double THG process \cite{couch_ultrafast_2020}.
 
-explain process in detail.
+The HCHG process requires two driving pulses, with one being the frequency double of the other.
+In our case a fundamental light pulse with a wavelength of \qty{1030}{\nano\meter} is used, which is a standard output wavelength of fiber-based oscillators.
+The pulses are provided by a Ytterbium doped fiber laser, which after two amplification processes provides up to \qty{12}{\micro\joule}, \qty{200}{\femto\second} pulses.
+Approximately \qty{5}{\micro\joule} are used in the HCHG process in a typical experiment, with the rest being available for optical pumping.
+The \qty{5}{\micro\joule} are then split into two beams, with one arm containing a BBO crystal,that creates the second harmonic at \qty{515}{\nano\meter}.
+The second harmonic beam is passing over a delay stage before the two arms are overlapped again and co-propagate to the fiber.
+This delay stage ensures that fundamental and second harmonic pulses arrive in the fiber at the same time, which is necessary to create the third harmonic and start the HCHG process.
+A waveplate - polarizing prism pair is used to adjust the relative power between the two arms.
+Typically the highest VUV output is achieved by having an equal amount of power for the fundamental and second harmonic before entering the fiber.
+Additionally a waveplate in the green arm ensures that both beams a co-linearly polarized before entering the fiber.
+While the cascaded process has also been demonstrated with capillary waveguides with large diameters, those setups were based on Ti:Sa oscillators, working with much shorter pulse durations and higher pulse energies \cite{misoguti_generation_2001,durfee_phase_2002,misoguti_nonlinear_2005}.
+The light source here uses negativ-curvature hollow-core photonic crystal fibers (HCPCF) of smaller diameters (\qty{50}{\micro\meter}), which enables the use of the fiber laser with longer pulse durations \cite{couch_ultrafast_2020}.
+
+The HCPCF is filled with xenon gas in which the third harmonic is created in a four-wave-mixing process, combining two photons of the second harmonic and creating one photon of the fundamental and third harmonic.
+Once the third harmonic is generated it can combine with the fundamental or second harmonic in additional four-wave mixing processes, successively creating the higher harmonics up to the 15th order.
+For the generation of the fourth harmonic onward multiple options of combining photons arise to create the respective harmonics.
+For example the 7th harmonic $\omega_7$ can be created by either:
+\begin{equation}
+\begin{aligned}
+	\omega_7 &= \omega_6 + \omega_2 - \omega_1 \\
+	\omega_7 &= \omega_5 + \omega_3 - \omega_1 \\
+	\omega_7 &= \omega_4 + \omega_4 - \omega_1
+\end{aligned}
+\label{eq:vuv_pathway}
+\end{equation}
+With further examples being listed in the report by Couch et al. \cite{couch_ultrafast_2020}.
+
+For a harmonic to be created a phase matching conditions has to be first fulfilled in each case.
+As an example the phase mismatch for a four-wave-mixing process for the third harmonic can be calculated for the case of a gas filled hollow core fiber by
+\begin{equation}
+	\Delta k = k_1 + k_3 - 2k_2 = 2\pi N \left( \frac{\delta_3}{\lambda_3} + \frac{\delta_1}{\lambda_1} - \frac{2\delta_2}{\lambda_2}\right) - \frac{u}{4\pi a^2} (\lambda_3 + \lambda_1 -2\lambda_2)
+\end{equation}
+with the first term representing the contribution which depends on the xenon pressure in the HCPCF and the second term stemming from the confinement in the waveguide.
+This can be generalized for any harmonic, depending on the creation pathway mentioned in equation \ref{eq:vuv_pathway}, with $\lambda_n$ representing the wavelength of the nth harmonic, $k_n$ the corresponding wavevector, N the number density of the gas (in this case xenon), $\delta_n$ the wavelength dependent gas-dispersion \cite{bideau-mehu_measurement_1981}, u a mode dependent parameter \cite{couch_ultrafast_2020,durfee_iii_guided-wave_1999}) and a the waveguide diameter (here \qty{50}{\micro\meter}). 
+The phase mismatch can be fulfilled for each harmonic by a slightly varied xenon gas pressure, with the third harmonic requiring the highest pressure.
+In order to fulfill the condition for all harmonics simultaneously, a pressure of typically \qtyrange{100}{125}{\kilo\pascal} is applied to one side of the fiber, with a resulting pressure gradient existing over the length of the fiber.
+To confirm the $\chi^3$ dependent nature of the HCHG process Couch et al. performed numerical simulations using nonlinear Schrödinger equations within the PyNLO package, calculating the output flux of the harmonics \cite{couch_ultrafast_2020,hult_fourth-order_2007,ycas_g_pynlopynlo_2024}.
+The simulations matched roughly the measured output, which is consistent with a $\chi^3$ dependent nonlinear process.
+
+Couch et al. \cite{couch_ultrafast_2020} have also reported that high resolution spectra of the higher harmonics have a higher bandwidth full-width at half-maximum (FWHM) than the driving pulse (\qty{40}{\milli\electronvolt} instead of \qty{8}{\milli\electronvolt}), indicating that the HCHG process creates shorter pulse duration than the one of the driving pulse, similar to HHG \cite{gagnon_soft_2007}.
+In our paper \cite{hellbruck_high-resolution_2024} we found that the time resolution measured in the ARPES experiment is quite longer than the one of the driving pulse, but found that the resolution and with it the VUV pulse duration is limited by the pulse front tilt of the monochromator grating, suggesting that the pulse duration is indeed shorter than the one of the driving pulse.
+Measurements with a time compensated monochromator could help identifying the time duration of the pulse.
 
 An additional benefit of this VUV light source stems from the high focusability of the beam, in principle $<$\qty{5}{\micro\meter}.
 The current layout does not allow to focus the beam this tight without major chamber redesigns and due to geometrical constraints.
@@ -100,15 +146,56 @@ But the light source is most suitable to explore the low perturbation regime due
 
 \section{Paper and Supplementary}
 
-The previous sections introduced the capabilities of each instrument.
-Both light sources are complementary to each other, covering most of the desired needs for trARPES measurements.
-In order to truly exploit this characteristic it is necessary to operate them interchangeably. 
-One of the challenges was being able to switch between the two beamlines, while avoiding downtime and additional time for realignments.
-For this reason a new vacuum chamber was inserted into the HHG beamline, with the goal hosting insertable optics that direct the VUV pump and probe beams to the sample.
+While the previous sections introduced the capabilities of each instrument this chapter will focus on the implementation of the new light source within the previously existing lab space and the full characterization of the light source.
+A paper on the fully implemented trARPES setup, functioning with both light sources, containing a full characterization of the VUV light source has already been published.
+This section will therefore contain the paper to address the characterization and expand on the specifics of the implementation.
+Furthermore the section will contain supplementary information to the paper.
+
+trARPES is a versatile technique, which is also highly dependent on the light source used due to the matrix element.
+The previous section already delves into the various different options for light sources and the desired parameters for trARPES.
+There I already argued about why the VUV laser source was chosen and its complementary properties compared to the Harmonium beamline.
+Both light sources combined span a big range of desired options for trARPES, but in order to truly exploit this characteristic it is necessary to operate them interchangeably. 
+The interoperability of the two beamlines was one of the challenges, when planning and constructing the new setup.
+With the priorities being the ability to switch between the two beamlines within a minute, while avoiding downtime and additional time for realignments, as well as ensuring no modifications to the existing Harmonium beamline.
+In order to fulfill these goals, a new vacuum chamber was inserted into the HHG beamline, with the purpose hosting insertable optics that direct the VUV pump and probe beams to the sample.
 These optics consist of a flat IR mirror for the pump beam, and two \ce{Al} mirrors with \ce{MgF2} coating for focusing and redirecting the probe beam.
 All three optics are mounted on individual, motorized stages, that can bring the optics in position for operation of the VUV beamline or retract them in order to use Harmonium.
-This allows switching between the two light sources within seconds, without breaking vacuum or additional realignment beyond the usual use case.
+This allows switching between the two light sources within a minute, without breaking vacuum or additional realignment beyond the usual use case.
 
+Another challenge is posed by the xenon gas, which leads to a pressure of \qty{1e-4}{\milli\bar} in the monochromator.
+It is important to reduce this pressure in the vacuum parts closer to the ARPES chamber in order to operate in the low \qty{1e-10}{\milli\bar} range and ensure low sample degradation.
+For this purpose multiple differential pumping stages have been introduced, including a turbo pump between the recombination chamber and the laser, a turbo pump on the recombination chamber itself and two ion pumps directly attached to the beamline tupe connecting the recombination chamber with the ARPES chamber.
+Additionally a gate valve can be inserted in front of the recombination chamber to completely separate the two vacuum systems.
+The gate valve is equipped with \ce{MgF2} window which can transmit the VUV light, but will lead to a reduction of the intensity of about 50\%, and is therefore rarely used.
+
+The last integral part of the VUV trARPES setup is the pump beamline which contains various parts.
+First, a motorized attenuator with thin film plates (TFP) is situated directly after a the exit port of residual infrared beam.
+With it the fluenced used for creating the out of equilibrium excitation can be directly controlled by the measurement software, allowing for direct fluence dependent measurements.
+The attenuator is used in a way that the beam reflected by the two TFPs is used for the pumping, ensuring the shortest possible pulse duration, while the transmitted beam is dumped on a beamblock.
+After passing the attenuator, a pair of two 2-inch mirrors is used to compensate for the longer probe beam path.
+The two 2-inch optics were chosen to allow for multiple bounces on each mirror, keeping the compensation as compact as possible.
+A pickup mirror picks the infrared beam up from the beam compensation and directs it to a motorized delay stage, after which a focusing telescope is passed.
+It consists of two convex lenses, that create a focal spot size of \qty{390}{\micro\meter} x \qty{360}{\micro\meter} on the sample.
+The second lens is positioned on a \unit{\micro\meter} stage for fine adjustment of the spot size.
+A BBO crystal can be inserted  close to the focal point of the first lens, enabling pumping of the sample with \qty{515}{\nano\meter} light.
+If the second harmonic is used for pumping the following IR optics have to be switched for green light optimized optics and ensure that any residual IR light is removed from the green second harmonic pump beam.
+The pump laser beam enters the recombination vacuum chamber through a window port, parallel to the probe beam, after which it can be directed to the sample with an insertable mirror.
+Fine adjustment of the pump beam position is done with the help of a piezo-mirror mount before entering the recombination chamber.
+
+Within the VUV probe arm a diagnostic chamber is situated, containing a photodiode which is used to measure the photon flux of the selected VUV beam after leaving the monochromator.
+In addition this diagnostic chamber can be used to measure the full VUV spectrum which is generated in the HCPCF, by step wise rotation of the monochromator's grating and measuring the flux at each step.
+Figure \ref{label} shows the output of the VUV fiber, covering the four harmonics that are able to pass the monochromator with high intensity.
+Further information on the harmonics, the spectral shape and relative intensities for all monochromator exit slit combinations can be found in the already published paper, contained in this chapter.
+
+The paper attempts a comparison two other complementary light sources as well as fixed wavelength VUV sources.
+A more detailed explanation of the light source is then followed, with a full description of the monochromator used and the working principle of a normal incident monochromator with is advantages and disadvantages.
+Additionally, a short description of the integration into the trARPES setup can be found.
+After the description of the light source and its integration two sections about the achieved energy and time resolution fully characterize the trARPES setup with the VUV light source.
+For the energy resolutions measurements on polychristalline gold have been performed for all combinations of the four harmonics (\qtylist{7.2;8.4;9.6;10.8}{\electronvolt}) and monochromator exit slits (\qtylist{500;100;32}{\micro\meter}), to determine the total energy resolution.
+The same measurements have been performed on a Helium lamp to extract the linewidths of the harmonics in each case.
+Additional measurements on \ce{Bi2Se3} and \ce{Au(111)} have been performed to demonstrate the energy and momentum resolution by resolving the Rashba split in gold and Dirac-cone in \ce{Bi2Se3}.
+Two measurements on \ce{Bi2Se3} and \ce{TaTe2} have been performed to analyze the time resolution of the light source at \qty{10.8}{\electronvolt} at two monochromator exit slits (\qtylist{500;100}{\micro\meter}).
+At the end of the paper a conclusion is made, putting the achieved performance of the system in context with literature and offer possible further ways to improve the system.
 
 \includepdf[pages=-]{main/vuv_paper.pdf}
 
