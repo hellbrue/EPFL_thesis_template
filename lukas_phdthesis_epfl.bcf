@@ -96,15 +96,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>6</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>2</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>6</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -331,15 +331,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>6</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>2</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>6</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -643,6 +643,8 @@
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
     <bcf:option datatype="boolean">subentry</bcf:option>
+    <bcf:option datatype="boolean">dashed</bcf:option>
+    <bcf:option datatype="boolean">subentrycomp</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer">mincrossrefs</bcf:option>
     <bcf:option datatype="integer">minxrefs</bcf:option>
@@ -725,6 +727,7 @@
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
     <bcf:option datatype="boolean">subentry</bcf:option>
+    <bcf:option datatype="boolean">subentrycomp</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="xml">labelalphatemplate</bcf:option>
     <bcf:option datatype="xml">translit</bcf:option>
@@ -814,6 +817,7 @@
     <bcf:option datatype="boolean" backendout="1">eprint</bcf:option>
     <bcf:option datatype="boolean" backendout="1">related</bcf:option>
     <bcf:option datatype="boolean" backendout="1">subentry</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">subentrycomp</bcf:option>
     <bcf:option datatype="boolean" backendout="1">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer" backendin="maxcitenames,maxbibnames,maxsortnames">maxnames</bcf:option>
     <bcf:option datatype="integer" backendin="mincitenames,minbibnames,minsortnames">minnames</bcf:option>
@@ -2372,6 +2376,49 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">tail/bib_thesis_lukas.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1" intorder="1">novoselov_electric_2004</bcf:citekey>
+    <bcf:citekey order="1" intorder="2">novoselov_two-dimensional_2005</bcf:citekey>
+    <bcf:citekey order="1" intorder="3">geim_rise_2007</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">zhang_experimental_2005</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">cao_unconventional_2018</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">butler_progress_2013</bcf:citekey>
+    <bcf:citekey order="4" intorder="2">chowdhury_progress_2020</bcf:citekey>
+    <bcf:citekey order="4" intorder="3">liu_van_2016</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">feng_charge_2016</bcf:citekey>
+    <bcf:citekey order="5" intorder="2">katayama_observation_2023</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">lin_evidence_2022</bcf:citekey>
+    <bcf:citekey order="6" intorder="2">mitsuishi_unveiling_2024</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">feng_charge_2016</bcf:citekey>
+    <bcf:citekey order="7" intorder="2">siddiqui_ultrafast_2021</bcf:citekey>
+    <bcf:citekey order="7" intorder="3">domrose_femtosecond_2024</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">sorgel_new_2006</bcf:citekey>
+    <bcf:citekey order="8" intorder="2">hu_optical_2022</bcf:citekey>
+    <bcf:citekey order="8" intorder="3">lin_evidence_2022</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">lin_evidence_2022</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">mitsuishi_unveiling_2024</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">mitsuishi_unveiling_2024</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">mitsuishi_unveiling_2024</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">lin_evidence_2022</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">lin_evidence_2022</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">lin_evidence_2022</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">lin_evidence_2022</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">lin_evidence_2022</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">luo</bcf:citekey>
+    <bcf:citekey order="18" intorder="2">hu_optical_2022</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">luo</bcf:citekey>
+    <bcf:citekey order="19" intorder="2">hu_optical_2022</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">hu_optical_2022</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">luo</bcf:citekey>
+    <bcf:citekey order="21" intorder="2">hu_optical_2022</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">mitsuishi_unveiling_2024</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">siddiqui_ultrafast_2021</bcf:citekey>
+    <bcf:citekey order="23" intorder="2">domrose_femtosecond_2024</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">katayama_observation_2023</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">feng_charge_2016</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">siddiqui_ultrafast_2021</bcf:citekey>
+    <bcf:citekey order="26" intorder="2">domrose_femtosecond_2024</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">domrose_femtosecond_2024</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">domrose_femtosecond_2024</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

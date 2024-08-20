@@ -6,19 +6,22 @@ Since then, researchers were extremely successful in finding new physical proper
 Apart from the simplicity of these 2D materials, the idea of engineering properties by stacking multiple layers with different stacking orders or at twist angles offered the possibility of a vast playground for discovering and engineering new properties.
 This resulted in the explosion of the field with the discovery of many new phenomena, from the observation of quatum Hall effect \cite{zhang_experimental_2005} to superconductivty in magic angle twisted bilayer graphene \cite{cao_unconventional_2018}.
 Ultimately these developments lead the emergence other 2D material platforms.
-One of these platforms of 2D materials are transition metal dichalcogenides (TMDs) \cite{butler_progress_2013, chowdhury_progress_2020, liu_van_2016}.
+One of these platforms of 2D materials are transition metal dichalcogenides (TMDCs) \cite{butler_progress_2013, chowdhury_progress_2020, liu_van_2016}.
 
 These layered TMDs exhibit various phenomena xyz
 
 
-One constituent of these TMDs is \ce{TaTe2} which, compared to its \ce{TaX2} based sister compounds \ce{TaS2} and \ce{TaSe2} and the isostructural polytypes of \ce{MTe2} like \ce{NbTe2} or \ce{VTe2}, it has so far received less attention from the community, but some reports characterizing the compound have come up in recent years, as well as the first ultrafast out-of-equilibrium studies.
+One member of TMDC family is \ce{TaTe2} which, compared to its \ce{TaX2} based sister compounds \ce{TaS2} and \ce{TaSe2} and the isostructural polytypes of \ce{MTe2} like \ce{NbTe2} or \ce{VTe2}, it has so far received less attention from the community, but some reports characterizing the compound have come up in recent years, as well as the first ultrafast out-of-equilibrium studies.
 
 Here talk more about the MTe and TaX properties (see RRR intro)
 
-\ce{TaTe2} can be characterized as a semimetal at room temperature (RT), which forms ribbon like structures in a distorted (3 x 1) 1T'-phase.
-The compound appears to have strong molecular properties, with \ce{Ta} atoms forming in trimers or fluctuating dimers, with each \ce{Ta}-atoms being surrounded by 8 \ce{Te}-atoms.
+\ce{TaTe2}-crystals form in orthorombic (1T) structures, although in bulk crystals the 1T-phase is only a virtual phase and only exists in a distorted 1T' phase up to highest temperatures measured ($>$\qty{500}{\kelvin}).
+The 1T phase has only been realized in epitaxilly grown mono and few-layer systems, which can form due to the absence or only weakly existing \ce{Te}-\ce{Te} interlayer coupling \cite{}. cite hwang , wang
+In the real distorted 1T' phase, \ce{TaTe2} forms ribbon like structures and shows an overall (3 x 1) superstructure at the surface.
+The structural distortion is governed by the local bonding, with \ce{Ta} atoms forming in trimers or fluctuating dimers, with each \ce{Ta}-atoms being surrounded by 8 \ce{Te}-atoms.
 At \qty{170}{\kelvin} the material undergoes a structural phase transitions, where two \ce{Ta}-atoms further distort the structure, breaking dimers and instead form "butterfly" shaped heptameres in a (3 x 3) 1T"-phase \cite{feng_charge_2016, katayama_observation_2023}.
-This structural phase transition is accompanied by the formation of charge density wave (CDW), which has been observed both by gap formation in ARPES \cite{lin_evidence_2022, mitsuishi_unveiling_2024} and the formation of a periodic lattice distortion (PLD) in STM and diffraction \cite{feng_charge_2016, siddiqui_ultrafast_2021, domrose_femtosecond_2024}.
+Simultaneously the stripe-like charge ordering at RT is modulated by the structural distortion and a hexagonal "star of david"-like charge order occurs below the phase transition.
+This structural phase transition and the formation of the LT commensurate charge density wave (CDW), which has been observed both by gap formation (close to $E_F$) in ARPES \cite{lin_evidence_2022, mitsuishi_unveiling_2024} and the formation of a periodic lattice distortion (PLD) in STM and diffraction \cite{feng_charge_2016, siddiqui_ultrafast_2021, domrose_femtosecond_2024}.
 The exact mechanism of how this phase transition occurs and what the interplay with the CDW is have still not been understood.
 
 \begin{figure}
@@ -41,8 +44,8 @@ The exact mechanism of how this phase transition occurs and what the interplay w
 
 The reason for the lack of understanding stems from the electronic reaction to the phase transition, especially in comparison to the \ce{TaX2} sister compounds.
 Typically, entering a CDW phase by cooling the sample down from RT leads to an increase in resistivity due to the reduced density of states (DOS) in proximity to the Fermi level $E_F$.
-Similarly a drop of the magnetic susceptibility would be expected while cooling $T_s$.
-Instead \ce{TaTe2} shows a drop in resistivity and an increase in magnetic susceptibility, despite the observation of small gaps in the band structure \cite{sorgel_new_2006,hu_optical_2022,lin_evidence_2022}.
+Similarly the loss in DOS and with it the loss of electrons carrying magnetic moments should lead to a drop of the magnetic susceptibility while cooling through $T_s$.
+Instead \ce{TaTe2}, which inhibits semi-metallic behavior at RT, shows a drop in resistivity and an increase in magnetic susceptibility, despite the observation of small gaps in the band structure \cite{sorgel_new_2006,hu_optical_2022,lin_evidence_2022}.
 For this reason the compound has been branded a "strange" CDW material.
 
 In this chapter of the thesis I give further insight into the driving mechanism of the CDW and the formation of the structural phase transition with the help of ultrafast pump-probe ARPES, and comparing our data to the recent ARPES and ultrafast publications on \ce{TaTe2}.
@@ -53,7 +56,7 @@ Last, I present a metastable electronic state persisting for $>\qty{200}{\pico\s
 
 \section{Bandstructure and Fermiology}
 
-The electronic structure of \ce{TaTe2} is characterized by the strong molecular bonding properties of the Ta-Ta dimers, with a strong orbital character.
+The electronic structure of \ce{TaTe2} is characterized by local molecular bonding of the Ta-Ta dimers, with a strong orbital character.
 Studying the band structure with ARPES reveals a complex set of bands at RT.
 The valence states, which are governing the electronic properties of the compound consist of a mix of Ta 5d and Te 5p orbitals. \cite{mitsuishi_unveiling_2024}
 
@@ -87,8 +90,8 @@ The overall topology, consisting of the wavy outer contours and an inner FS shee
 A main difference lies in the slightly changed size of the pockets in the inner sheet, as some more pronounced features in the 2nd BZ of the LT FS.
 The difference in size of the pockets stems from a slightly shifted chemical potential, when cooling through the phase transition, which has also been observed by N. Mitsuishi et. al. \cite{mitsuishi_unveiling_2024}.
 
-Instead of the small changes in the Fermi surface topology, the effects of the phase transition become apparent when investigating the EDCs.
-Here, we compare a series of EDCs taken parallel to the K$_2$-$\Gamma$-K$_2$ direction from the $\Gamma$-point to the edge of the 2nd BZ, for both room and low temperature.
+Instead of the small changes in the Fermi surface topology, the effects of the phase transition become apparent when investigating the bandmaps.
+Here, we compare a series of bandmaps taken parallel to the K$_2$-$\Gamma$-K$_2$ direction from the $\Gamma$-point to the edge of the 2nd BZ, for both room and low temperature.
 
 \begin{figure}[t!]
 	\centering
@@ -97,13 +100,13 @@ Here, we compare a series of EDCs taken parallel to the K$_2$-$\Gamma$-K$_2$ dir
 	\label{fig:TaTe_RT_cuts}
 \end{figure}
 
-The RT EDCs show a manifold of bands, with multiple bands crossing the Fermi level in each cut.
+The RT bandmaps show a manifold of bands, with multiple bands crossing the Fermi level in each cut.
 These Fermi crossings clearly show the two different Fermi sheets, with the crossing at the edge of the cut determining the wavy contours of the outer quasi-1D Fermi surface sheet, and the crossing close to the center of the band structure forming the 2nd, inner Fermi sheet.
 Cooling the compound through the phase transition results in a complex reordering of the bands.
-The broader bands from the RT phase seem to split in multiple individual ones, with additional backfolded bands appearing.
-Looking at the FS crossing of the inner sheet, the aforementioned size difference it the Fermi pockets becomes clearer.
+The broader bands from the RT phase split in multiple individual ones, with additional backfolded bands appearing.
+Looking at the FS crossing of the inner sheet, the aforementioned size difference of the Fermi pockets becomes clearer.
 Comparing the cuts of the RT phase to the equivalent LT cuts, it is possible to identify a small shift in the chemical potential $\mu$, which has also been reported by \cite{mitsuishi_unveiling_2024}.
-Another difference between the two phases seems to lie in the flattening of the band dispersion close to $E_F$ at energies above \qty{-0.6}{\electronvolt}.
+Another difference between the two phases is a band flattening close to $E_F$ at energies above \qty{-0.6}{\electronvolt}.
 
 \begin{figure}[h]
 	\centering
@@ -137,20 +140,20 @@ This band also connects to the wavy contours, which fulfill the FSN condition, f
 
 \section{Ultrafast charge dynamics and CDW quench}
 
-Investigating the evolution of the electronic band structure after pump excitation provides insight into the relaxation dynamics, not only of an isolated electronic states, but also the influence of the system.
+Investigating the evolution of the electronic band structure after pump excitation provides insight into the relaxation dynamics, not only of an isolated electronic states, but also the collective response of the material out of equilibrium.
 Performing pump-probe experiments at RT and LN temperature allows us to reveal differences between the two different structural phases.
-The excitation is created by a \qty{1.55}{\electronvolt} pulse.
-Here I will first analyze measurements that have been performed in the low temperature phase at \qty{77}{\kelvin} and then switch to RT data to point out the differences due to the phase transition.
+The excitation is created by a \qty{1.55}{\electronvolt} ultrashort laser pulse.
+Here, I will first analyze measurements that have been performed in the low temperature phase at \qty{77}{\kelvin} and then switch to RT data to point out the differences due to the phase transition.
 
 The LT cuts, presented in this section, have been measured parallel to K$_2$-$\Gamma$-K$_2$ direction at three different points in the LT FBZ ($\Gamma$, M$_1$ and in proximity of $\Gamma$ See Fig. ref).
 Focusing on the cut close to $\Gamma$ it is possible to make out a complex band dynamics, depending on the region in the band structure.
 Figure \ref{fig:TaTe_bandmap_dyn_betw} shows this band map \qty{50}{\femto\second} after excitation.
-Additionally, difference maps for three different time steps (\qtylist{50; 500; 4000}{\femto\second}) are plotted to better display the pump induced changes.
+Additionally, difference maps for three different time steps (\qtylist{50; 500; 4000}{\femto\second}) are plotted to better display the pump-induced changes.
 
 At \qty{50}{\femto\second} a fast depopulation of occupied bands can be observed, with the difference band contours following the band structure at equilibrium.
 Similarly a fast population of the unoccupied states occurs.
-After a decay of the excitation sets in as expected, but at \qty{500}{\femto\second} a sudden increase in spectral weight occurs in the occupied states.
-This atypical behavior can be explained by a quench of the charge order, and will be discussed in greater detail when analyzing the specific delay traces.
+This is followed by the decay of the excitation, but at \qty{500}{\femto\second} a sudden increase in spectral weight occurs in the occupied states.
+This atypical behavior can be explained by a quench of the charge order, and will be discussed in greater detail when analyzing specific delay traces at the end of this section.
 At a time delay of \qty{4}{\pico\second} most of the population in the excited states has decayed, but a rest population is still observed.
 Additionally the band structure is significantly altered compared to the equilibrium state.
 
@@ -162,14 +165,14 @@ Additionally the band structure is significantly altered compared to the equilib
 \end{figure}
 
 Some exemplary traces have been selected for a more detailed insight into the relaxation dynamics.
-These traces are marked with squared in the band maps, black squares for the unoccupied band structure, white for the occupied region and green for the region with a significant spectral weight after \qty{4}{\pico\second}.
+These traces are marked with squares in the band maps, black squares for the unoccupied band structure, white for the occupied region and green for the region with a significant spectral weight after \qty{4}{\pico\second}.
 Traces for the unoccupied region (black squares, see Fig. \ref{fig:TaTe_dyn_betw} (a)-(c)) shows a sharp population within the duration of the pump pulse.
 The ultrafast population is followed by a fast decay which becomes increasingly longer when approaching $E_F$, in accordance with the scattering rate $\tau \propto \sqrt{E-E_F}$.
 In each trace, the population has decayed within \qty{4}{\pico\second}.
 Similarly the depopulation of the occupied state in Fig. \ref{fig:TaTe_dyn_betw} (d) is created within the pump pulse duration and recovers on the same time scale.
 
 Unexpected dynamics occur when looking at the region that shows a increase in population below $E_F$.
-Typically a pump light pulse excites the system which transfers energy to electrons and driving a transition to a higher unoccupied state, therefore reducing the occupancy below $E_F$.
+Typically a pump light pulse excites the system which transfers energy to electrons and drives a transition to a higher unoccupied state, therefore reducing the occupancy below $E_F$.
 Instead \ce{TaTe2} shows small gaps resulting from the CDW, which leads in the LT phase to a loss of density of states (DOS), when compared to the RT phase.
 If this charge order is broken, the gap closes and in a simple case, excluding other band modifications, the DOS of the RT phase is re-established.
 This behavior is observed in Fig. \ref{fig:TaTe_dyn_betw} (e), which coincides with the region of CDW gaps reported by \cite{lin_evidence_2022}.
