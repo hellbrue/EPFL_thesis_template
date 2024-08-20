@@ -9,5 +9,9 @@
 *.synctex.gz
 *.toc
 *.pdf
+*.png
+*.jpg
+*.ai
+*.svg
 *.run.xml
 
