@@ -167,7 +167,7 @@ Additionally the band structure is significantly altered compared to the equilib
 Some exemplary traces have been selected for a more detailed insight into the relaxation dynamics.
 These traces are marked with squares in the band maps, black squares for the unoccupied band structure, white for the occupied region and green for the region with a significant spectral weight after \qty{4}{\pico\second}.
 Traces for the unoccupied region (black squares, see Fig. \ref{fig:TaTe_dyn_betw} (a)-(c)) shows a sharp population within the duration of the pump pulse.
-The ultrafast population is followed by a fast decay which becomes increasingly longer when approaching $E_F$, in accordance with the scattering rate $\tau \propto \sqrt{E-E_F}$.
+The ultrafast population is followed by a fast decay which becomes increasingly longer when approaching $E_F$.
 In each trace, the population has decayed within \qty{4}{\pico\second}.
 Similarly the depopulation of the occupied state in Fig. \ref{fig:TaTe_dyn_betw} (d) is created within the pump pulse duration and recovers on the same time scale.
 
@@ -180,9 +180,10 @@ Strikingly, the breaking of the CDW order does not occur at $t_0$.
 Fitting a single exponential decay model retrieves a time zero of $t_0=\qty{388}{\femto\second}$, introducing a significant delay of approximately \qty{320}{\femto\second} when compared to the time zero of all other curves.
 
 This delayed response becomes very apparent, when the delay trace is overlapped with the dynamics of the fast de- or population (see Fig. \ref{fig:TaTe_CDW_comp}).
-In most studies on CDW hosting materials the respective is quenched instantaneously after pump excitation, underlining the electronic behavior of the charge order.
-Here, the clear delayed response rules out a solely electronic character and instead established the structural component as the dominant contribution for the CDW order in \ce{TaTe2}.
-In other words, instead of the electromagnetic field of the pump pulse directly disrupting the charge order, the more likely scenario is an impulsive response of the lattice to the intense light illumination, resulting in an excitation of phonon modes on ultrafast time scales, which couple to the charge order via the strong electron-phonon coupling of the system.
+Many ultrafast studies have looked at the dynamics of the CDW and while the timescales typically differ, depending on the mechanism, a common observation is that the quench of the charge order starts together with the arrival of the pump pulse. \cite{} rossnagel etc.
+In contrast, here a quench on the timescale of few hundred \unit{\femto\second} is observed, which would traditionally be associated with a Peierls type CDW, but the onset of the quench is delayed with respect to time zero $t_0$.
+The delayed response rules out a solely electronic character and instead established the structural component as the dominant contribution for the CDW order in \ce{TaTe2}.
+In other words, instead of the electromagnetic field of the pump pulse directly disrupting the charge order e.g. via buildup of free charges and subsequent screening, the more likely scenario is an coherent response of the lattice to the intense light illumination, resulting in an excitation of phonon modes on ultrafast time scales, which couple to the charge order via the strong electron-phonon coupling of the system.
 
 \begin{figure}[t]
 	\centering
@@ -242,11 +243,11 @@ A relaxation time of $\tau_{CDW}=\qty{500}{\femto\second}$ can be extracted by f
 
 Coming back to the residual spectral weight visible in the difference map at \qty{4}{\pico\second} in Fig. \ref{fig:TaTe_bandmap_dyn_betw}, the corresponding delay trace of the green square (see Fig. \ref{fig:TaTe_dyn_betw}) shows the same fast population within the pump pulse duration, with an initial decay, but the population does not return to the initial state.
 Instead a sharp feature is visible above $E_F$.
-A more detailed analysis of this feature, including measurements on longer time scales, will be done in a following section of the chapter.
+A more detailed analysis of this feature, including measurements on longer time scales, will be done in section \ref{sec:meta}.
 Also a common feature in the delay traces are strong coherent oscillation of the intensity.
-A detailed analysis of these oscillations will also be tackled in the next section.
+A detailed analysis of these oscillations will also be tackled in the next sectionm\ref{sec:phonon_osc}.
 
-This series of dynamics is not only visible in proximity to $\Gamma$ but can also be observed directly at $\Gamma$, as well as the edge of the FBZ at M$_1$.
+This series of dynamics is not only visible in proximity to $\Gamma$ but can also be observed directly at $\Gamma$, as well as at the edge of the FBZ at M$_1$.
 Figure \ref{fig:TaTe_bandmap_dyn_bzb} shows the excited bandmap at $t_0$, followed by difference maps at specific time delays.
 In both, the same instantaneous de-/population of the occupied/unoccupied bands is visible, as well as a quench of a CDW gap that also shows a delayed response of multiple hundreds of \unit{\femto\second} (see Fig. \ref{fig:TaTe_bandmap_dyn_bzb} (c)-(d)).
 The only difference in the dynamics is an absence of residual spectral weight at M$_1$, but this measurement has been performed at a lower pump fluence, which is the reason for the absence.
@@ -262,7 +263,7 @@ Comparing the dynamics of the LT phase to the RT phase, reveals significant diff
 First a direct population of the occupied states can be observed within the pump pulse duration.
 But, unlike the LT case, the population seems to be disproportionately located in the region just above $E_F$, whereas the unoccupied states at higher energies appear to be less populated.
 While the LT phase was additionally characterized by strong changes to the band structure after the first few hundred \unit{\femto\second}, no changes occur in the RT phase.
-Instead, the population of the unoccupied bands, as well as the depopulation of the occupied parts simply decay.
+Instead, the population of the unoccupied bands, as well as the depopulation of the occupied parts simply decays.
 After \qty{3}{\pico\second} some spectral weight still remains close to $E_F$, but no discrete spectral feature can be observed.
 The full time dynamic for selected regions can be seen in Fig. \ref{fig:TaTe_dyn_betw_rt}.
 Those traces show similar relaxation times as the LT ones.
@@ -326,9 +327,10 @@ Additionally, there is no band reordering associated with this residual spectral
 \end{figure}
 
 \section{Energy and momentum resolved electron-phonon coupling}
+\label{sec:phonon_osc}
 
 The previous section was dedicated to the dynamics both at LT and RT.
-Those dynamics already revealed strong oscillation in the intensity of each trace, which will be the subject of this section.
+Those dynamics already revealed strong oscillations in the intensity of each trace, which will be the subject of this section.
 
 Coherent oscillations in delay traces of a trARPES measurement typically are a sign of interaction with phonons.
 Since ARPES only measures the single particle wavefunction of photoemitted electrons, it is not possible to directly observe quasiparticles like phonons.
@@ -336,14 +338,14 @@ But the information of phonons is still imprinted into the measured photoelectro
 If this electron-phonon coupling becomes sufficiently large it is possible to observe oscillations is the time traces of a trARPES experiment.
 Tellurides, and especially \ce{TaTe2} seem to carry an exceptionally high electron-phonon coupling.
 Due to this, it is not only possible to observe oscillations in a large, integrated region of the band structure, but rather for each momentum and energy coordinate individually.
-With this it is possible to perform a full band mapping of the electron-phonon coupling constant.
+With this it is possible to perform a band mapping of the electron-phonon coupling constant in a large energy-momentum region.
 Additionally, by carrying out a fourier analysis of the delay trace we can extract the frequency of the oscillation and assign it to known vibrational modes.
 
-For this procedure a small binning is applied to the raw data to slightly increase the signal to noise ration.
+For this procedure a small binning of four pixel in both the momentum and energy coordinate is applied to the raw data to slightly increase the signal to noise ration and reduce the amount of pixels for which the calculations have to run while slightly reducing the fidelity of the bandmaps.
 After this, a single exponential decay model is fit to each $E(k)$-coordinate to account for the population decay.
 The exponential decay is then subtracted from the raw data trace, only leaving a residual behind containing the oscillating component.
 A fast Fourier transform function is then applied to the residual trace, revealing the frequency of the oscillatory components.
-This transform the original 3D data cube from $I(E,k,t)$ to $I(E,k,f)$.
+This transforms the original 3D data cube from $I(E,k,t)$ to $I(E,k,f)$, with frequency $f$ being the Fourier transformed of the the time axis.
 Fig. \ref{fig:TaTe_fit_procedure} shows the steps from a delay trace to the FFT trace that can be associated with a particular phonon mode.
 
 \begin{figure}[t!]
@@ -397,7 +399,7 @@ In Fig. \ref{fig:TaTe_FFT_traces_betw} some exemplary time traces are shown in (
 These traces help visualizing the difference in the modes and give further insight into their respective nature.
 While the \qtylist{1.45; 2.3}{\tera\hertz} phonon modes oscillate around the exponential decay, it appears as if the \qty{0.4}{\tera\hertz} mode strongly modulates the intensity in the trace, almost resulting in a re-population after the decay has already set in.
 Additionally, oscillations due to the electron-phonon coupling seem to set in right after the excitation with the IR pump pulse.
-This observation agrees as well with the fact, that the CDW is not disrupted immediately by the light pulse, but through the interaction with the phonons, with the the CDW gap being fully quenched after \qty{350}{\femto\second}.
+This observation agrees as well with the fact, that the CDW is not disrupted immediately by the light pulse, but through the interaction with the phonons, with the the CDW gap being quenched after \qty{350}{\femto\second}.
 Similar observations can be made for the two other cuts at $\Gamma$ and M$_1$, that have been analyzed before in terms of their dynamics.
 Both cuts show the three phonon modes listed above and show them couple to different bands in band structure.
 
@@ -440,19 +442,21 @@ Both of these modes have been previously observed by transient reflectivity and 
 I attribute the absence of this mode in the HT phase to the probe energy used in the transient reflectivity data.
 The \qty{2.3}{\tera\hertz} is basically not effected by the phase transition, apart from a slight red shift which has also been reported by \cite{luo, hu_optical_2022}.
 More importantly the band resolved electron-phonon coupling is also unchanged, therefore the \qty{2.3}{\tera\hertz} mode likely does not play a major role in the phase transition.
-While the \qty{1.45}{\tera\hertz} also appears in both LT and HT phase, the band specific electron-phonon coupling changes quite significantly, especially in the center of the of BZ close to $\Gamma$ and in the places of minigap formation.
-Here appears the \qty{0.4}{\tera\hertz} mode at LT, coupling to the bands that are affected by the CDW gap formation.
+While the \qty{1.45}{\tera\hertz} also appears in both LT and HT phase, the band specific electron-phonon coupling changes quite significantly, especially in the center of the of BZ close to $\Gamma$ and in the location of the minigap formation.
+In these regions the \qty{0.4}{\tera\hertz} mode appears at LT, coupling to the bands that are affected by the CDW gap formation.
 A possible explanation for these observations could be the strong orbital character of the bands, and the different Ta d-orbitals which mainly make up the band structure close to $E_F$ \cite{mitsuishi_unveiling_2024}.
-The orbital which is most affected by the structural phase transition is the $d_{xy}$ orbital, it is possible that the changed overlap due to the heptamere formation effects the electron-phonon coupling.
+The orbital which is most affected by the structural phase transition is the $d_{xy}$ orbital, it is likely that the changed overlap due to the heptamere formation affects the electron-phonon coupling due to the localized bonding character of the material in general.
 This would then allow for the CDW order to establish itself, mediated by the \qty{0.4}{\tera\hertz} phonon.
 
 \section{Metastability}
+\label{sec:meta}
 
 Lastly I want to focus on the residual spectral weight, that was shown in the LT phase dynamics see \ref{fig:TaTe_bandmap_dyn_betw}.
-Recently two groups have reported on a metastable state, observed in pump probe electron diffraction measurements \cite{siddiqui_ultrafast_2021, domrose_femtosecond_2024}.
+Recently two groups have reported on a metastable state persisting into the \unit{\nano\second} regime, observed in pump probe electron diffraction measurements \cite{siddiqui_ultrafast_2021, domrose_femtosecond_2024}.
 These results only provide insight on the structural dynamics of the material.
 But especially for compounds with such strong electron-phonon coupling it is imperative to also understand the electronic side of the out of equilibrium dynamics in order to disentangle the multiple different reordering and relaxation processes.
-Therefore I will expand on these reports in this section, providing information on the electronic structure at long delays after pump excitation and the various dynamics occurring at different timescales.
+In the previous sections I introduced the ultrafast electronic dynamics.
+Here, I will concentrate on the possible long term modifications of the electronic band structure and the different time scales leading up to the metastable state.
 For this measurements of the valence states at longer time scales have been performed, both at LT and RT, as well as pump probe measurements on the Te 4d core states.
 
 \begin{figure}[t!]
@@ -472,14 +476,14 @@ For this measurements of the valence states at longer time scales have been perf
 
 I will first focus on the dynamics of the band structure as a whole by looking at difference maps of a momentum cut close to BZ center.
 The cut was taken in the LT phase at $\approx$\qty{77}{\kelvin} in the  K$_2$-$\Gamma$-K$_2$ direction, similar to Fig. \ref{fig:TaTe_bandmap_dyn_betw}.
-This time the range of delay steps was increased heavily, measuring with a relatively fine step size of \qty{250}{\femto\second} from before $t_0$ to \qty{5}{\pico\second}, followed by progressively increased step sizes up to \qty{200}{\pico\second} after pulse excitation.
+In this measurement the range of delay steps was increased, measuring with a relatively fine step size of \qty{250}{\femto\second} from before $t_0$ to \qty{5}{\pico\second}, followed by progressively increased step sizes up to \qty{200}{\pico\second} after pulse excitation.
 The corresponding band map \qty{250}{\femto\second} after pulse excitation is shown in \ref{fig:tateltmetasteps} (a), together with the difference maps at selected time delays in Fig. \ref{fig:tateltmetasteps} (b).
 In the first four difference maps between \qtyrange{250}{2000}{\femto\second} the same dynamics, which have been discussed in the previous section can be observed.
 First an immediate de- \& population of the respective states occurs, which is followed by a delayed response of the charge order and a full quench of the CDW gaps $\approx$\qty{500}{\femto\second} after laser excitation.
 The charger order recovers within \qty{1.5}{\pico\second} after the phonon mediated quench occurred.
 During this recovery a reordering of the band structure sets in.
 This transient reordering stabilizes after \qty{5}{\pico\second} and settles into band structure distinctly different from the equilibrium structure.
-The new electronic structure is stable beyond \qty{200}{\pico\second} after excitation.
+The new electronic structure is stable beyond \qty{200}{\pico\second} after excitation and fully recovers on \unit{\milli\second} timescales.
 
 \begin{figure}[t!]
 	\centering
@@ -518,7 +522,7 @@ Fig. \ref{fig:tateltmetasteps} (a) \& (b) correspond to the full range of moment
 The traces of (a) \& (b) illustrate well the changes observed in the difference maps.
 Above \qty{150}{\milli\electronvolt} a instantaneous population is observed, which has fully decayed after \qty{2}{\pico\second}, with no trace of any metastability.
 Only in region between $E_F$ and \qty{150}{\milli\electronvolt} can a persistent occupation be observed.
-Here after the initial excitation, the population decay and stabilized after \qty{10}{\pico\second} and barely changes in intensity until \qty{200}{\pico\second} after pump excitation.
+Here after the initial excitation, the population decays and stabilizes after \qty{10}{\pico\second} and barely changes in intensity until \qty{200}{\pico\second} after pump excitation.
 A similar behavior can be observed in the occupied states for trace (c) where, after the initial depopulation, the intensity is stable until after \qty{200}{\pico\second}.
 
 Trace (d) provides some more detailed insight into the formation dynamics, by tracing the region in which the distinct spectral feature is formed above $E_F$ ($k_\parallel\approx$\qty{0.5}{\angstrom^{-1}}).
@@ -553,7 +557,7 @@ The peak position time evolution of the higher band is analyzed for pump-probe e
 Fig. \ref{fig:tate_core} (b) shows the peak position for up to \qty{50}{\pico\second} after pump excitation.
 A sharp increase in binding energy can be seen for both the RT and the LT phase, corresponding to a shift of around \qty{40}{\milli\electronvolt}.
 After this sudden shift a relaxation occurs within few \unit{\pico\second} before the band return to the equilibrium position after around \qty{5}{\pico\second} in the RT phase.
-While in the LT phase a similar relaxation timescale can be observed, the band does not relax back to the equilibrium energy position, but rather overshoots to a binding energy \qty{30}{\milli\electronvolt} below its equilibrium.
+While in the LT phase a similar relaxation timescale can be observed, the core level does not relax back to the equilibrium energy position, but rather overshoots to a binding energy \qty{30}{\milli\electronvolt} below its equilibrium.
 The overshoot is followed by a second relaxation, before the band settles at a binding energy $E_B=\qty{15}{\milli\electronvolt}$ below the original position, not relaxing back in the following \qty{45}{\pico\second}.
 
 Apart from the existence of this metastable state and the obvious implication from a application/engineering perspective, the existence of the metastable state might as well help us understand the fundamental physics of the equilibrium phase transition in \ce{TaTe2}.
@@ -561,16 +565,16 @@ Reports on the structure of \ce{TaTe2} have suggested that the ribbons in it's H
 In addition, STM studies suggest that the HT (3 x 1)-symmetry coexists at LT with the (3 x 3) structure, with the two symmetries being in competition \cite{feng_charge_2016}.
 From the structural perspective it therefore seems reasonable to suggest that, while the material settles into it's observed LT state when cooled adiabtically, these fluctuations and resulting competition enable the existence of local minima in the free energy landscape.
 
-Perturbing the LT ground state of the material clearly does not only lead to an excitation of the electron bath, but instead launches many strong phonon, either impulsively or through the strong electron-phonon coupling.
+Perturbing the LT ground state of the material clearly does not only lead to an excitation of the electron bath, but instead launches many strongly coupled phonons, likely via an displacive excitation of coherent phonons (DECP) \cite{} arxiv bauer, tio.
 This perturbation of the lattice through vibrational modes destabilizes the charge order, which further has an impact on the out of equilibrium structure.
 While a decay back to equilibrium at RT or in the HT phase should lead to a return to the equilibrium structure, it is clearly not the case when the decay is accelerated through the lower temperature, effectively freezing the structure and the electronic order.
 A persistent change of the crystal structure, similar to persistent changes of the electronic structure, has been observed in previous ultrafast electron diffraction measurements \cite{siddiqui_ultrafast_2021, domrose_femtosecond_2024}, where the (3 x 1) structure was suppressed on long time scales.
 The difference maps in \ref{fig:tateltmetasteps} visualize well that the reordering process of the band structure starts during the reformation of the CDW gaps and doesn't stop until \qty{5}{\pico\second} after the excitation.
-It underlines the cooperative character the charge order and structure have on each other, when establishing the ground state.
+It underlines the cooperative character of the charge and structural order when establishing the ground state.
 This will most likely also be the case during the adiabatic phase transition, where neither the structure nor the charge order are solely responsible for the unperturbed ground state.
-The spectral weight further signifies the new metastable equilibrium that has been reached.
+The spectral weight further signifies that a the new metastable equilibrium that has been reached.
 A persisting occupation above $E_F$ represents a change in chemical potential $\mu$, which is a direct consequent of the change in free energy.
-The persisting change in the core level binding energy of the \ce{Te} 4d orbital, also reflects this change, although the magnitude of the shifted core level is not the same as the increase of $\mu$ at $E_F$.
+The persisting change in the core level binding energy of the \ce{Te} 4d orbital, also reflects this change, although the magnitude of the shifted core level is not the same as the increase of $\mu$ at $E_F$ ($>$\qty{100}{\milli\electronvolt}).
 
 In any pump probe experiment, especially if changes to the band structure beyond a simple de-/population are induced, the dependence of the effect from the pump fluence becomes relevant.
 For this reason two measurements have been performed at a fixed delay of \qtylist{-1; 20}{\pico\second}, ramping the pump fluence in discrete steps.
@@ -578,8 +582,8 @@ A way of analyzing the fluence dependence is by plotting the difference map of \
 This assumption was confirmed to be correct by also measuring static reference maps at equilibrium and ensuring that the maps have not changed.
 Fig. \ref{fig:tate_fluence} shows three difference maps taken at different fluences.
 A distinct difference is visible in the region marked by a lack square.
-While the left difference map, representing a low fluence, shows to bands dispersing to the left side without any kinks, the two other maps show these bands bending to the edge in the marked area.
-This kinked structure looks more like the metastable bandmaps plotted in \ref{fig:tateltmetasteps}, whereas the bandmap on the left rather looks the equilibrium band structure albeit with an elevated population compared to equilibrium.
+While the left difference map, representing a low fluence, shows to bands dispersing to the left side without bending, the two other maps show these bands bending to the edge in the marked area.
+This bend structure looks more like the metastable bandmaps plotted in \ref{fig:tateltmetasteps}, whereas the bandmap on the left rather looks the equilibrium band structure albeit with an elevated population compared to equilibrium.
 
 
 \begin{figure}
@@ -593,45 +597,45 @@ This kinked structure looks more like the metastable bandmaps plotted in \ref{fi
 		\includegraphics[width=\textwidth]{images/tate2/Meta_fluence_perc}
 		\caption{}
 	\end{subfigure}
-	\caption{(a) Difference maps between before $t_0$ and \qty{20}{\pico\second} for three selected fluences. The region of the black rectangle shows a kink in the band, that has not decayed within \qty{20}{\pico\second} and represents the metastable band reordering. (b) Integrated intensity of the black rectangle region in (a). A sharp threshold fluence, needed to reach a persistent metastable state beyond \qty{20}{\pico\second}, is observed.}
+	\caption{(a) Difference maps between before $t_0$ and \qty{20}{\pico\second} for three selected fluences. The region of the black rectangle shows a bend in the band, that has not decayed within \qty{20}{\pico\second} and represents the metastable band reordering. (b) Integrated intensity of the black rectangle region in (a). A sharp threshold fluence, needed to reach a persistent metastable state beyond \qty{20}{\pico\second}, is observed.}
 	\label{fig:tate_fluence}
 \end{figure}
 
-Following the evolution of the integrated area within the black rectangle shows a clear threshold fluence at which the band structure changes from the straight to the kinked band.
+Following the evolution of the integrated area within the black rectangle shows a clear threshold fluence at which the band structure changes from the straight to bend.
 This evolution can be observed in Fig. \ref{fig:tate_fluence}.
-A fluence of 9\% shows a strong increase in intensity for the marked area, corresponding to the appearance of the kink.
-At higher fluences the kink structure persists but charge effects seem to play a role, which can be identified by rigid band shift to higher energies.
+A fluence of 9\% shows a strong increase in intensity for the marked area, corresponding to the appearance of the bend.
+At higher fluences the bend persists but charge effects seem to play a role, which can be identified by rigid band shift to higher energies.
 In the integrated signal of the rectangle a slight reduction of intensity is observed at high fluences, which is a result of the upwards shift of the bands due to charging.
 Additionally the data quality becomes overall much noisier at high fluences, leading to the variations in the integrated signal at high fluences.
 
-The fact that a cutoff fluence shows in this graph does not necessarily mean that it is a minimum fluence to enter this metastable state.
+The fact that a cutoff fluence appears in this graph does not necessarily mean that it is a minimum fluence to enter this metastable state.
 It rather means that the pump fluence is proportional to how long the material occupies the local minimum in the free energy landscape.
 A similar observation has been made with ultrafast diffraction \cite{domrose_femtosecond_2024}.
 In this report the metastable state was found to last between \unit{\pico\second} up to the \unit{\nano\second} regime, depending on the pump fluence.
-Additionally they show, that it is a highly nonlinear process, as would be expected from a process that relies on modification of the free energy landscape.
+Additionally they observe that the process scales highly non-linear with fluence, which is common for processes that are a result of a modification of the free energy landscape.
 
 \section{Conclusion and Outlook}
 
-After analyzing the various electronic signatures, their dynamics and couplings in detail it is important to overall physics at play.
-While each of these items have been separated into individual sections, it is important to remember that they can't be discussed as isolated entities in a vacuum.
+After analyzing the various electronic signatures, their dynamics and couplings in detail it is important to look at the fundamental physics at play.
+While each of these items have been separated into individual sections, it is important to remember that they can't be discussed as isolated entities.
 Instead the case of \ce{TaTe2} stresses why it is necessary to look at the features and their dynamics as one.
 
 In general, many properties related to the electronic structure from previous studies could be confirmed in this chapter.
 First and foremost, a HT and LT phase transition is observed, which results in a complex rearrangement and back folding of bands.
 The Fermi surface only shows small, but nonetheless noticeable changes after crossing the phase transition.
-In both phases the Fermi surfaces shows a strong 1D character with two Fermi surface sheets that could fulfill nesting conditions.
+In both phases the Fermi surfaces shows a a quasi 2D character with two Fermi surface sheets that could fulfill nesting conditions.
 Additionally a CDW phase exists in the LT phase and in ARPES small small minigaps can be observed accordingly.
 The origin of the CDW is also more complex than a simple Peierls scenario, as the nesting vector is of different amplitude then the vector of the LT PLD.
 
 With this in mind, many question have been centered around the atypical resistivity behavior when cooling into a CDW phase, as well as the hierarchy of the phase transition and CDW ordering.
 Here it was possible to understand and interpret many things from the out of equilibrium studies presented in this chapter.
 
-A quench of the CDW gaps was observed, but it could be shown that the quench was a delayed reaction to the laser excitation.
-Typically the standard way of thinking is that the electromagnetic field couples directly to the charge order, disrupting it and ultimately disturbing the CDW.
-While this might be the case for other materials where a direct response is observed, the delayed quench in \ce{TaTe2} demonstrates that the charge order is quite resilient against intense femtosecond light illumination and the dominant contribution to the disruption comes from lattice vibrations.
+A quench of the CDW gaps was observed, and it could be shown that the quench was a delayed reaction to the laser excitation.
+In a traditional picture, a Mott type CDW collapses after ultrafast excitation within the intrinsic electron hopping timescales while a Peierls type CDW is suppressed within a half cycle of the amplitude mode oscillation.
+While this might be the case for other, more prototypical materials where a direct response is observed, the delayed quench in \ce{TaTe2} demonstrates that the charge order is quite resilient against intense femtosecond light illumination and the dominant contribution to the disruption comes from lattice vibrations.
 
-These lattice vibrations are either launched impulsively or through the strong electron-phonon coupling, or a combination.
-Either way it is important to think about the phononic contribution being relevant at the earliest time intervals after excitation and certainly not only setting in after few hundreds of \unit{\femto\second} as is often the case in literature.
+These lattice vibrations are likely launched in a DECP process and mediated by the strong electron-phonon coupling.
+And it is important to think about the phononic contribution as a relevant contribution at the earliest time intervals after excitation and not only setting after few hundreds of \unit{\femto\second}, as is often the case in literature.
 The case of the CDW quench illustrates this again.
 In addition, the example of \ce{TaTe2} shows quite well the power of trARPES for materials with sufficiently large electron-phonon coupling.
 Not only is it possible to map phonon vibrations to specific bands with high energy and momentum resolution via Fourier analysis, it is also possible find oscillations down to \qty{0.4}{\tera\hertz}, a frequency range that is hard to access even with techniques dedicated to the observation of phonons.
@@ -643,15 +647,15 @@ Two previous out of equilibrium studies studying the structure with ultrafast el
 The insight from the electronic signatures in this chapter help to further explain this metastable state and address questions regarding the adiabatic phase transition.
 In one study \cite{domrose_femtosecond_2024} a suppression of the (3 x 3) within \qty{500}{\femto\second} was observed.
 But with the restriction to the structure it is impossible to distinguish the different contributions like CDW behavior, which is especially crucial in a material with strong electron-phonon coupling.
-I already argued that vibrational modes are exited on ultrafast timescales, directly impacting the crystal structure.
-Within \qty{450}{\femto\second} the CDW is fully quenched further influencing the destabilized system.
+I already argued that vibrational modes are excited on ultrafast timescales, directly impacting the crystal structure.
+Within \qty{450}{\femto\second} the CDW is quenched, further influencing the destabilized system.
 In both ultrafast diffraction studies a thermalization into the out of equilibrium state is observed within the following few \unit{\pico\second} as a direct consequence of the (3 x 3) quench.
 Here we observe that the CDW gaps reappear after \qty{2}{\pico\second}.
 During this reformation the band structure starts to reorder as well and has reached the quasi stable out of equilibrium state $\approx$\qty{5}{\pico\second} after excitation as seen from both valence and core states.
 
 The occurring dynamics paint a more complete picture of what is happening in the material.
 Fluctuating \ce{Ta} dimers at RT and the strong molecular character of the bonding, not only lead to an equilibrium ground state that enables a coexistence and competition between (3 x 3) and (3 x 1) symmetries, but also seem to enable a free energy landscape with local minima that can be accesses with relative ease and be populated for long times.
-A disturbed structure and a perturbed charge order at low temperature seem to lead to the occupation of this local minima with the emergence of the metastable state.
+A disturbed structure and a perturbed charge order at low temperature lead to the occupation of this local minima with the emergence of the metastable state.
 This metastable state is characterized by a electronic band structure different from the equilibrium, with an increased chemical potential and shifted core levels.
 It is possible that charge order as well as the crystal structure have formed differently than at equilibrium, but future studies need to address this in more depth.
 The life time of the metastable state depends on the fluence of the pump pulse and is reported to last from \unit{\pico\second} to \unit{\nano\second}.
