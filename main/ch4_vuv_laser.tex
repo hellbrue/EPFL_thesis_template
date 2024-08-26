@@ -1,20 +1,20 @@
 \chapter{High resolution trARPES in the VUV regime}
 
 The field of strongly correlated quantum matter is already a very established field, with the discovery of high T$_c$ superconductors dating back more than 30 years \cite{anderson_resonating_1987}.
-This ever growing field has changed in many regards since then, with the introduction of ultrafast spectroscopies being among the more notable ones.
-For very long times researchers focused their interest on the ground state of these materials and an enormous effort was spent of reducing any environmental effect on the materials.
-Since then an almost paradigm change occurred, and thanks to many groundbreaking studies \cite{eesley_relaxation_1990, han_femtosecond_1990, giannetti_revealing_2011, smallwood_tracking_2012} ultrafast out of equilibrium studies have become not only an accepted tool in this field, but also a very powerful one \cite{orenstein_ultrafast_2012, maiuri_ultrafast_2020, boschini_time-resolved_2024, giannetti_ultrafast_2016, lloyd-hughes_2021_2021}.
+This ever growing field has changed in many regards since then, with the introduction of ultrafast spectroscopies being among the most notable ones.
+For very long times researchers focused their interest on the ground state, while out of equilibrium studies were seen as too messy for the already complex materials.
+Since then an almost paradigm change occurred, and thanks to many groundbreaking studies \cite{eesley_relaxation_1990, han_femtosecond_1990, giannetti_revealing_2011, smallwood_tracking_2012} ultrafast out of equilibrium studies have become a very powerful tool in this field \cite{orenstein_ultrafast_2012, maiuri_ultrafast_2020, boschini_time-resolved_2024, giannetti_ultrafast_2016, lloyd-hughes_2021_2021}.
 Out of equilibrium techniques can not only provide information on the formation of certain phases, or pairings relevant for the ground state, but can also demonstrate the formation of metastable excited states and can provide an avenue of control via light illumination.
 The two previous chapters on metastable states in \ce{Bi}2212 and \ce{TaTe2} are an example for this.
 
 New groundbreaking discoveries are often a result of technological advancements that allow a more precise measurement, revealing new features that expand our knowledge in the field.
 Therefore developing and improving the available tools is inherent part of advancing the understanding of strongly correlated quantum physics and science in general.
-Ultrafast techniques have experienced intense development of the years, most notably in the development of ultrafast light sources \cite{keller_recent_2003}.
-From the use of maintenance heavy dye lasers, over the development of few \unit{\femto\second} Titanium doped Sapphire (Ti:Sa) lasers, to the nowadays often preferred ultrafast fiber based turn-key solutions, light sources have become more precise, stable and user-friendly.
+Ultrafast techniques have experienced intense development over the years, most notably in the development of ultrafast light sources \cite{keller_recent_2003}.
+From the use of maintenance-heavy dye lasers, over the development of few \unit{\femto\second} Titanium doped Sapphire (Ti:Sa) lasers, to the nowadays often preferred ultrafast fiber based turn-key solutions, light sources have become brighter, more stable, and user-friendly.
 Further developments of better detection schemes, vacuum systems, sample quality are naturally of similar importance.
 In general, the challenge is to bring together all recent advances, bringing them together and creating an overall better performing tool.
 In this chapter I will introduce a technical development in trARPES with the expansion of the technique into the VUV regime, at high repetition rates, high energy resolution, while still allowing for the exploration of the time domain with reasonably high detail.
-The technique and instrumentation have already been published and the paper is integrated into this chapter \cite{hellbruck_high-resolution_2024}, but here I will expand more on the rational for this type of trARPES, it's up- and downsides, the context in which it is used in the LACUS facility and the ongoing developments of it.
+The technique and instrumentation have already been published and the paper is integrated into this chapter \cite{hellbruck_high-resolution_2024}, but here I will expand more on the rational for this type of trARPES setup, it's up- and downsides, the context in which it is used in the LACUS facility and the ongoing developments of it.
 
 \section{The Harmonium beamline}
 
@@ -28,36 +28,41 @@ The technique and instrumentation have already been published and the paper is i
 		\includegraphics[width=\textwidth]{images/vuv/HHG_spectrum_100}
 		\caption{}
 	\end{subfigure}
-	\caption{(a) Spectrum of Harmonium beamline operated in the \qtyrange{28}{48}{\electronvolt} range. The higher harmonics are generated in Argon. (b) Spectrum of Harmonium with higher harmonics generated in Neon}
+	\caption{(a) Spectrum of Harmonium beamline operated in the \qtyrange{28}{48}{\electronvolt} range. The higher harmonics are generated in Argon. (b) Spectrum of Harmonium with higher harmonics generated in Neon. Both spectra have been taken from \cite{ojeda_harmonium_2015}.}
 	\label{fig:hhgspectrum}
 \end{figure}
 
 
 Before delving into the new capabilities, I will give a short overview on the setup that existed before the newest extensions.
 The trARPES at LACUS used a higher hamonics based laser system, paired with a Phoibos 150 2D hemispherical analyzer and a 4-axis manipulator for experiments.
-This beam line is called Harmonium and functions on the principle of higher harmonic generation (HHG) \cite{arrell_harmonium_2017}.
-Figure \ref{fig:beamline_cad} shows a top and iso view of the full beamline with specification to the various light sources.
+This beam line is called Harmonium and is based on the higher harmonic generation (HHG) effect \cite{arrell_harmonium_2017}.
+Figure \ref{fig:beamline_cad} shows a top and isometric view of the full beamline with specification of the various light sources.
 A Titanium Sapphire (Ti:Sa) oscillator ("Vitara" by Coherent) is used to generate IR (\qty{1.55}{\electronvolt} or \qty{800}{\nano\meter}) pulses at a repetition rate of \qty{80}{\mega\hertz}.
-These pulses are amplified in one of the two existing amplifier systems (KMLabs Wyvern or Coherent Astrella) from pulse power a to b
+These pulses are amplified in one of the two existing amplifier systems (KMLabs Wyvern or Coherent Astrella) to a pulse energy of \qty{2}{\milli\joule} (Wyvern) or \qty{1}{\milli\joule} (Astrella) at a repetition rate of \qty{6}{\kilo\hertz}.
 A high peak power is necessary to drive the highly non-linear process of HHG.
 In such a process, an ultrashort light pulse is used to ionize a noble gas, typically Argon or Neon \cite{rudawski_high-flux_2013}.
-After ionization, the now free electron is accelerated in the electric field of the IR driving pulse, gaining kinetic energy.
-Some electrons recombine with the ionized atom, at which point they generate an extreme ultraviolet (EUV) emission.
-The EUV pulse generated in such a process consists in the frequency domain of a multiple harmonics with an energy of the odd multiple of the seed pulse $(2n+1) \hbar\omega$ and form an harmonic comb.
+After ionization, the electron is accelerated in the electric field of the IR driving pulse, gaining kinetic energy.
+Some electrons recombine with the ionized parent atom,emitting an extreme ultraviolet (EUV) photon.
+The EUV spectrum generated in such a process consists of multiple harmonics with an energy of an odd multiple of the seed pulse $(2n+1) \hbar\omega$, thereby forming an harmonic comb.
 
-Mainly two different methods for HHG exist, with the generation process either happening in a gas jet or a gas filled fiber \cite{paul_quasi-phase-matched_2003, heckl_high_2009, sudmeyer_femtosecond_2008, roser_131w220fs_2005}.
-In both cases, a comb of harmonics is emitted from the gas with the spectrum of the harmonics depending on phase matching conditions, which can be adjusted to optimize for different energies.
+Mainly three different methods of gas delivery for HHG exist, with the generation process either happening in a gas cell, gas jet or a gas filled fiber \cite{paul_quasi-phase-matched_2003, heckl_high_2009, sudmeyer_femtosecond_2008, roser_131w220fs_2005}.
+In all cases, a comb of harmonics is emitted from the gas with the spectrum of the harmonics depending on phase matching conditions, which can be adjusted to optimize for different energies.
+Phase matching is achieved by minimizing the phase mismatch between the n-th harmonic and the fundamental
+\begin{equation}
+	\Delta k = k_n - k_1
+\end{equation}
+with the respective wavenumber k.
+The ideal phase matching condition is reached for $\Delta k=0$.
 For example, in different gases different phase matching conditions can be realized, allowing for better access to different spectral ranges.
 Typically, Argon is used to create energies between \qtylist{20; 40}{\electronvolt} and Neon between \qtylist{40; 110}{\electronvolt} (see Fig. \ref{fig:hhgspectrum}) \cite{rudawski_high-flux_2013}.
 Furthermore gas pressure, laser intensity and target position relative to the focus are all parameters that can be adjusted for the phase matching conditions and optimize the output of the desired harmonic.
-The small cross section of the HHG process, due to the low probability of the electron recombining with the ionized gas atom, as wells as the non-perturbative nature of the process are the reason for the need of high peak fluences at high repetition rates, as previously mentioned.
+The small cross section of the HHG process, due to the low probability of the electron recombining with the ionized gas atom, as wells as the non-perturbative nature of the process are the reason for the need of high peak fluences at high repetition rates, furthermore for PES studies, high repetition rates are desirable due to space charge effects, as can be seen in section \ref{sec:space_charge}.
 
-From the many harmonics emitted simultaneously, one is selected for a trARPES measurement, with the help of a monochromator.
-The monochromator consists of multiple different gratings with different amounts of grooves per \unit{cm} (\unit{g\per\cm}), with the different gratings being used for different energy ranges.
+From the many harmonics emitted simultaneously, one is selected for a trARPES measurement, with the help of a monochromator, which consists of two toroidal mirrors, a grating and slit module
+After the EUV generation, a first toriodal mirrir is used to collimate the beam onto a grating, from which the harmonic comb is dispersed and after refocused by the second toriodal mirror onto an adjustable slit.
+One grating is selected from a set of multiple different gratings each with different amounts of grooves per \unit{cm} (\unit{g\per\cm}), with the different gratings being used for different energy ranges.
 The gratings are illuminated at grazing incidence, and are aligned with their grooves parallel to the propagation direction to reduce the pulse front tilt of the wavefront \cite{poletto_time-preserving_2010}.
-Additionally, two torriodal mirrors are used as focusing optics.
-The first focuses the harmonics beam onto an adjustable slit, which is located behind the gratings to isolated the selected harmonic.
-The single harmonic probe beam is then focused by a second torroidal mirror onto the sample.
+A third The single harmonic probe beam is then focused by a second torroidal mirror onto the sample.
 
 \begin{figure}
 	\centering
@@ -74,24 +79,25 @@ The single harmonic probe beam is then focused by a second torroidal mirror onto
 \end{figure}
 
 
-Part of the amplified IR beam is split of before the HHG process and used to excite the sample.
-After compensating for the beam path of the probe pulse a telescope consisting of two curved mirrors is used to focus the pump beam onto the sample adjust the spot size at the sample position.
+Part of the amplified IR beam is split before the HHG process and used to excite the sample.
+After compensating for the beam path of the probe pulse a telescope consisting of two curved mirrors is used to focus the pump beam onto the sample and adjust the spot size at the sample position.
 Pump and probe beam co-propagate with a small angle between each other, due to geometrical constraints.
-A $\beta$-bariumborate (BBO) crystal can be inserted between the two focusing mirrors to double the pump energy from \qty{1.55}{\electronvolt} to \qty{3.1}{\electronvolt}.
+A $\beta$-bariumborate (BBO) crystal can be inserted into the pump beam path to double the pump energy from \qty{1.55}{\electronvolt} to \qty{3.1}{\electronvolt}.
 
-The HHG beamline can produce high flux (flux number) harmonics between \qtyrange{20}{110}{\electronvolt}.
-An energy resolution of $\approx$\qty{150}{\milli\electronvolt} can be achieved, which is mainly determined by the chosen harmonic and grating combination as well as vacuum space charge effects, which will be discusse din greater detail in the next section.
-The time resolution amounts to $<\qty{100}{\femto\second}$, which is a result of the cross-correlation of pump and probe pulse.
-While the HHG probe pulses have an intrinsically small pulse duration, only limited by the spread in recombination times within the gas jet, the probe beam experiences a pulse front tilt due to the single grating monochromator.
+The HHG beamline can produce a high flux of up to \qty{2.3e11}{\pps} (at \qty{36}{\electronvolt}) for harmonics between \qtyrange{20}{110}{\electronvolt}.
+An energy resolution of $\approx$\qty{150}{\milli\electronvolt} can be achieved, which is mainly determined by the chosen harmonic and grating combination, as well as vacuum space charge effects, which will be discussed in greater detail in the next section.
+The time resolution amounts to $<\qty{100}{\femto\second}$, as calculated from the FWHM of the temporal cross correlation, measured with the laser assisted photoemission (LAPE) effect \cite{ojeda_harmonium_2015}.
+While the HHG pulses have an intrinsically short pulse duration, only limited by the spread in recombination times within the gas jet, the probe beam experiences a pulse front tilt due to the single grating monochromator.
 The pulse front tilt leads to a increase in pulse duration over the spot size, which together with the pump pulse duration of $\approx$\qty{50}{\femto\second} results in the above time resolution \cite{arrell_harmonium_2017}.
 The high time resolution is due to the monochromator design, using a time preserving single grating type monochromator \cite{poletto_time-preserving_2010}, which compensates the pulse front tilt, typically induced a reflective grating.
 Time preserving monochromators and the effect of pulse front tilt are discussed in a following section.
 
 \section{Vacuum space charge effects}
+\label{sec:space_charge}
 
-One of the main limiting factors for the energy resolution in ARPES experiments are vacuum space charge effects.
-This effect refers to the fact that a cloud of electrons traveling in vacuum experience a repulsive force between each other due to coulomb interaction.
-If a certain density of electrons is reached, the space charge effect becomes strong enough to significantly change the distribution of the electron cloud, which alters the energy, momentum and time information carried by the individual electrons, resulting in a reduced measurement resolutions.
+One of the main limiting factors for the energy resolution in high resolution or time resolved ARPES experiments are vacuum space charge effects.
+This effect refers to the fact that electrons traveling in vacuum experience a repulsive force between each other due to coulomb interaction.
+If a certain density of electrons is reached, the space charge effect becomes strong enough to significantly change the distribution of the electron cloud, which alters the energy, momentum and time information carried by the individual electrons, resulting in a reduced measurement resolutions and artifacts.
 
 \begin{figure}[b!]
 	\centering
@@ -100,9 +106,9 @@ If a certain density of electrons is reached, the space charge effect becomes st
 	\label{fig:spacechargelit}
 \end{figure}
 
-The resulting spread due to space charge effects can strongly differ depending on the kinetic energy of the electrons and the time duration of the light pulse generating the electron cloud.
+The resulting energy spread due to space charge effects can strongly differ depending on the kinetic energy of the electrons and the time duration of the light pulse generating the electron cloud.
 Many studies have been carried out to quantify the influence of vacuum space charge on the energy resolution for light pulses of different energy and pulse duration, as well as the influence of an additional pump pulse\cite{corder_ultrafast_2018,plotzing_spin-resolved_2016,hellmann_vacuum_2009,graf_vacuum_2010,frietsch_high-order_2013}.
-Generally speaking, electron bunches resulting from one-photon photoemssion processes in the range of \qtyrange{5}{100}{\electronvolt} and pulse duration in the sub \unit{\pico\second} regime, a linear dependence of the space charge effects to the electron density can be found.
+Generally speaking, electron bunches resulting from one-photon photoemission processes in the range of \qtyrange{5}{100}{\electronvolt} and pulse duration in the sub \unit{\pico\second} regime, a linear dependence of the space charge effects to the electron density can be found.
 This linear dependence refers both to shifts and broadening of the measured photoemission spectra \cite{corder_ultrafast_2018,plotzing_spin-resolved_2016}
 The emitted photoelectron density being $\rho=N/D$, with $N$ the amount of emitted electrons and $D$ the spot size of the light on the sample.
 $N$ can be translated into a measurable current $I_{sample}$ at the sample, with which the broadening and shift in energy can be calculated by
@@ -111,8 +117,8 @@ $N$ can be translated into a measurable current $I_{sample}$ at the sample, with
 	\label{eq:spacecharge}
 \end{equation}
 with $f_{rep}$ the light source repetition rate and $m_{s,b}$ an empirical scaling factor for the energy broadening (b) and shift (s) respectively.
-The scaling factors have been determined as $m_b=$\qty{2.1e-6}{\electronvolt} and$m_s=$\qty{2.1e-6}{\electronvolt} \cite{plotzing_spin-resolved_2016}.
-The space charge effects are even stronger for the case of pump probe ARPES.
+The scaling factors have been determined as $m_b=$\qty{2.1e-6}{\electronvolt} and $m_s=$\qty{2.1e-6}{\electronvolt} \cite{plotzing_spin-resolved_2016}.
+The space charge effects can also occur due to photoemission from the pump laser pulses.
 Here the effect of a high fluence pump pulse results in the additional creating of photoelectrons due to multiphoton processes \cite{al-obaidi_ultrafast_2015}.
 Further experiments and calculations were performed by Graf et al. \cite{graf_vacuum_2010} in the low energy (\qty{6}{\electronvolt}) and few \unit{\pico\second} regime.
 Similarly to eq. \ref{eq:spacecharge} a linear dependence between the photoelectron density and the energy shift as well as the broadening was observed.
@@ -131,14 +137,15 @@ The energy shift $\Delta_E$ and the energy broadening $\Gamma_E$ can be expresse
 
 Keeping the number of electrons equal for a period of \qty{1}{\second}, it becomes quite clear that the repetition rate has a strong effect on energy spread, which can also be seen from the inverse proportionality in the equation above.
 Dividing the N generated photoelectrons into 1 million bunches (corresponding to a \unit{\mega\hertz} system) greatly reduces the space charge effects when compared to only dividing them into 6000 bunches, as would be the case for a typical HHG system like Harmonium.
-Therefore a transition of trARPES experiments, or ARPES in general, to include high repetition rate light sources would also be step in improving the overall resolution of these systems.
+Therefore a transition of trARPES experiments, or ARPES in general, to include high repetition rate light sources is a fundamental step in improving the overall resolution of these systems.
 Figure \ref{fig:spacechargelit}, taken from \cite{corder_ultrafast_2018}, shows the highest possible photocurrent depending on the energy resolution, when evaluating equation \ref{eq:spacecharge} for different repetition rates, at a beam spot size of \qty{1}{\milli\meter}.
 Different markers are added from multiple light sources referenced in \cite{corder_ultrafast_2018}.
 The figure illustrates very well the strong effect higher repetition rates have on the highest attainable number of photoelectrons for high energy resolutions.
 
-It is to note here that, while vacuum space charge effects are not the limiting factor in improving the time and energy resolution in the Harmonium beamline, it is still a fundamental physical limitation which provides a further reason to move to high repetition rate systems.
-For example, the energy resolution could be improved by better ARPES analyzers, which can provide energy resolutions of up to insert number, instead of the insert number of currently used model. Ask michele
-Additionally, the time resolution is rather limited by the pump pulse duration, which could be shortened via pulse compression to the few \unit{\femto\second} regime \cite{nisoli_compression_1997}, or the pulse front tilt introduced by the monochromator.
+Due to the space charge effects a majority of the EUV photons has to be removed in a trARPES experiment in the Harmonium beamline, which provides a further reason to move to high repetition rate systems.
+Apart from the space charge effect which impacts the energy resolution, further limits regarding the time resolution have to be addressed.
+For example, the time resolution of Harmonium is rather limited by the pump pulse duration, which could be shortened via pulse compression to the few \unit{\femto\second} regime \cite{nisoli_compression_1997}.
+Further limits are imposed by the pulse front tilt introduced by the monochromator.
 The latter will be described in greater detail in the following section.
 	
 \section{Time resolution limit due to pulse front tilt}
