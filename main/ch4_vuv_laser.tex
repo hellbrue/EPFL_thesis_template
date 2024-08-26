@@ -152,8 +152,8 @@ The latter will be described in greater detail in the following section.
 
 In any trARPES measurement the time resolution of the experiment is determined by the cross-correlation of pump and probe pulses.
 Therefore it is important to keep the pulse duration of each pulse as short as possible.
-It has already been mentioned that short pump pulses are relatively easy to achieve by pulse compression.
-Additionally the probe pulse in the case of a typical HHG beamline like Harmonium is intrinsically shorter than the initial seed pulse, typically also used as the optical pump, and only limited by Fourier transform.
+It has already been mentioned that short pump pulses are relatively easy to achieve by pulse compression via white light generation and subsequent re-compression \cite{nisoli_compression_1997}.
+Additionally the probe pulse in the case of a typical HHG beamline like Harmonium is intrinsically shorter than the initial seed pulse, typically also used as the optical pump.
 In the case of a Gaussian pulse not experiencing any change in phase or frequency this time duration can be expressed as
 
 \begin{equation}
@@ -162,18 +162,14 @@ In the case of a Gaussian pulse not experiencing any change in phase or frequenc
 
 with the central wavelength $\lambda$ and the spectral width at half-height $\Delta\lambda$.
 But in the case of HHG a full comb of harmonics is generated at the same and a monochromator has to be employed to select a single harmonic for the ARPES experiment.
-Such a monochromator has to be carefully engineered in order to keep the pulse duration as close as possible to the Fourier-limit, while keeping the desired energy resolution in mind.
+Such a monochromator has to be carefully engineered in order to keep the pulse duration as close as possible to the input pulse duration, while keeping the desired energy resolution in mind.
 
-Some fundamental conditions have to be met in order to build such a time preserving monochromator.
-First, the bandwidth of the selected probe pulse after passing the monochromator has to be larger then the spectral width $\Delta\lambda$ of the harmonic before the monochromator, therefore it has to be ensured that the spectrum of the harmonic is not cut when passing through the monochromator.
-Furthermore, the so called transfer function has to be constant within the bandwidth of the pulse, which is typically the case for optics used in reflection.
-
-Typically, monochromators which allow for tunable output of the HHG spectrum use reflection gratings used at grazing angle, which fulfill both of the above conditions and could in principle achieve Fourier-limited pulse duration.
-But instead gratings have the problem of inducing a tilt of the pulse wavefront of the diffracted light pulse.
+Typically, monochromators which allow for tunable output of the HHG spectrum use reflection gratings, which can contain a large spectral band of operation, when used in grazing incident.
+But the problem with gratings is, that they induce a tilt of the pulse wavefront, after a light pulse is diffracted off of them.
 This is due to the fact, that each ray which is diffracted off of different neighboring grooves experiences a path delay equal to $m\lambda$, corresponding to the diffraction order $m$.
 The total path difference across the full spatial pulse distribution can be summed to $m\lambda N$, with N totaling the number of illuminated grooves.
 Depending on the properties of the chosen harmonic and the employed grating this contribution can be quite substantial, especially when the goal is a time resolution in the femtosecond regime.
-Therefore it is important to compensate for this pulse front tilt, when designing a time preserving monochromator.
+Therefore it is important to compensate or minimize for this pulse front tilt, when designing a time preserving monochromator.
 
 The compensation can be achieved by simply introducing a second grating, which exactly compensates the tilt introduced by the first grating \cite{villoresi_compensation_1999}.
 The downside of this method is the added complexity to the overall monochromator, as well as the reduced transmission.
@@ -197,7 +193,8 @@ The clear upside of higher repetition rate HHG systems is strongly increasing th
 On the other hand two downsides emerge with this approach.
 One is the higher technical difficulty to continuously operate the system compared to a simple gas jet or fiber based HHG system.
 But while technical challenges can be addressed, a fundamental challenge emerges when including the high repetition rate pump pulses into the picture.
-Here the relevant quantity for out of equilibrium phenomena is the peak power in \unit{\milli\joule\per\centi\meter^2}.
+
+Here, the relevant quantity for out of equilibrium phenomena is the energy density in \unit{\milli\joule\per\centi\meter^2}.
 Keeping this parameter constant, it is obvious that the average power increases by 5 orders of magnitude when moving from \qty{1}{\kilo\hertz} to \qty{100}{\mega\hertz} (assuming all other beam parameters remain the same), at which point thermalization becomes the limiting factor.
 Strongly increasing the average power is necessarily accompanied with a higher thermal load on the sample, and heat dissipation from pulse to pulse becomes a problem, leading to a temperature build up and accelerated sample degradation.
 Thermalization puts a hard limitation on the use case of these high repetition trARPES setups.
@@ -234,9 +231,9 @@ The HCHG process requires two driving pulses, one pulse being the second harmoni
 In our case a fundamental light pulse with a wavelength of \qty{1030}{\nano\meter} is used, which is a standard output wavelength of an \ce{Yb}-doped fiber-based oscillators.
 The oscillator ("YLMO" by Menlo Systems) provides pulses at a repetition rate of \qty{50}{\mega\hertz}, $<$\qty{80}{\femto\second} pulse duration and with a pulse energy of $>$\qty{40}{\nano\joule}.
 In order to drive the HCHG process higher pulse energies are necessary, which are reached in two subsequent amplification steps.
-The oscillator output is monitored within the laser software and at \qty{1}{\mega\hertz} a typical average power of \qtyrange{220}{260}{\milli\watt} is observed.
+The oscillator output is monitored within the laser software and a typical average power of \qtyrange{220}{260}{\milli\watt} can be observed.
 After the pulses leave the fiber oscillator they pass through a first stretcher, increasing the pulse duration, allowing for better amplification via chirped pulse amplification (CPA) \cite{strickland_compression_1985,maine_generation_1988,strickland_chirped_2021}.
-CPA allows pulses to be amplified without breaking the gain medium, by distributing the pulse energy in a greater spectral range. Additionally, an electro-optic pulse picker reduces the repetition to \qtyrange{0.5}{2}{\mega\hertz}, depending on the needs of the trARPES experiment.
+CPA allows pulses to be amplified without damaging the gain medium, by distributing the pulse energy in a greater temporal range. Additionally, an electro-optic pulse picker reduces the repetition to \qtyrange{0.5}{2}{\mega\hertz}, depending on the needs of the trARPES experiment.
 The pulses are the pre-amplified by the fiber based booster amplifier from \unit{\nano\joule} to a few \unit{\micro\joule}, at a boster diode current of \qty{2.69}{\ampere}.
 
 A second stretcher is used to further increase the pulse duration of the IR pulses with the help of a transmission grating.
@@ -244,7 +241,7 @@ Typically an average power of \qtyrange{950}{1050}{\milli\watt} can be measured,
 A fiber based rod-amplifier ("AeroGain" by NKT Photonics) then increases the pulse energies from few \unit{\micro\joule} to $>$\qty{10}{\micro\joule}.
 The amplification is done by coupling the pre-amplified pulses as a seed into a single-mode gain fiber, which is pumped by a counter-propagating continuous-wave (CW) diode at \qty{976}{\nano\meter} with current of \qty{8.17}{\ampere}.
 The amplified pulses are then re-compressed by a pair of gratings to \qty{200}{\femto\second} at up to \qty{12}{\micro\joule}.
-Table \ref{tab:laser_param} contains an overview of the most essential laser parameters, which can be expected in an every day use case.
+Table \ref{tab:laser_param} contains an overview of the laser parameters, at various stages of amplification.
 
 \begin{figure}
 	\centering
@@ -259,13 +256,15 @@ The \qty{5}{\micro\joule} are split into two beams, with one arm containing a BB
 The second harmonic beam is passing over a delay stage before the two arms are overlapped again and co-propagate to the fiber.
 This delay stage ensures that fundamental and second harmonic pulses arrive in the fiber at the same time, which is necessary to create the third harmonic and start the HCHG process.
 A waveplate - polarizing prism pair is used to adjust the relative power between the two arms.
-Typically the highest VUV output is achieved by having an equal amount of power for the fundamental and second harmonic before entering the fiber.
+Typically the highest VUV output is achieved by having an equal amount of average power for the fundamental and second harmonic before entering the fiber.
 Additionally a waveplate in the green arm ensures that both beams a co-linearly polarized before entering the fiber.
 While the cascaded process has also been demonstrated with capillary waveguides with large diameters ($>$\qty{100}{\micro\meter}) \cite{misoguti_generation_2001}, those setups were based on Ti:Sa oscillators, working with much shorter pulse durations and higher pulse energies \cite{misoguti_generation_2001,durfee_phase_2002,misoguti_nonlinear_2005}.
 The light source here uses negative-curvature hollow-core photonic crystal fibers (HCPCF) of smaller diameters (\qty{50}{\micro\meter}), which enables the use of the fiber laser with longer pulse durations \cite{couch_ultrafast_2020}.
+HCPCF are fibers with a complex structure, using photonic crystals to strongly localize the light within the photonic band gap of the material.
+To further confine the light, the fiber is structured in a way, that core boundary shows a negative curvature, hence the term negative-curvature HCPCF.
 Figure \ref{fig:hchgsketch} (a) (taken from \cite{couch_ultrafast_2020}) shows a sketch of the generation process together with a view of the structured face of the HCPCF.
 
-The HCPCF is filled with xenon gas at a pressure of $\approx$\qty{100}{\kilo\pascal} in which the third harmonic is created in a four-wave-mixing process, combining two photons of the second harmonic and creating one photon of the fundamental and third harmonic.
+The HCPCF is filled with xenon gas at a pressure of $\approx$\qty{100}{\kilo\pascal} (measured from vacuum) in which the third harmonic is created in a four-wave-mixing process, combining two photons of the second harmonic and creating one photon of the fundamental and third harmonic.
 Once the third harmonic is generated it can combine with the fundamental or second harmonic in additional four-wave mixing processes, successively creating the higher harmonics up to the 15th order (see Fig. \ref{fig:hchgsketch} (b)).
 For the generation of the fourth harmonic onward multiple options of combining photons arise to create the respective harmonics.
 For example the 7th harmonic $\omega_7$ can be created by either:
@@ -307,13 +306,9 @@ The simulations matched roughly the measured output, which is consistent with a 
 
 Couch et al. \cite{couch_ultrafast_2020} have also reported that high resolution spectra of the higher harmonics have a higher bandwidth full-width at half-maximum (FWHM) than the driving pulse (\qty{40}{\milli\electronvolt} instead of \qty{8}{\milli\electronvolt}), indicating that the HCHG process creates shorter pulse duration than the one of the driving pulse, similar to HHG \cite{gagnon_soft_2007}.
 In our paper \cite{hellbruck_high-resolution_2024} we found that the time resolution measured in the ARPES experiment is quite longer than the one of the driving pulse, but found that the resolution and with it the VUV pulse duration is limited by the pulse front tilt of the monochromator grating, suggesting that the pulse duration is indeed shorter than the one of the driving pulse.
-Measurements with a time compensated monochromator could help identifying the time duration of the pulse.
+Measurements with a time compensated monochromator could help identifying the time duration of the pulse, at the output of the fiber.
 
-An additional benefit of this VUV light source stems from the high focusability of the beam.
-But the current layout does not allow to focus the beam this tight without major chamber redesigns and due to geometrical constraints.
-Nonetheless it is possible to enable micrometer spot-sizes and move into the direction of $\mu$-ARPES with much higher spatial resolution in the future.
-
-Lastly, a big upside of this laser system lies in its usability.
+Lastly, a big upside of this laser system lies in its reliability and ease of use.
 The VUV laser uses a fiber based oscillator and two fiber based amplifiers, this does not only make the source more compact, but also significantly increase its stability.
 For example it is not necessary to realign the oscillator at all, and the amplifier only needs small adjustments every few months.
 This greatly reduces the time spent re-aligning the system, which can be used to focus on other parts of the experiment.
