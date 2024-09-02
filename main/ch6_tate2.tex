@@ -23,6 +23,7 @@ At \qty{170}{\kelvin} the material undergoes a structural phase transitions, whe
 Simultaneously the stripe-like charge ordering at RT is modulated by the structural distortion and a hexagonal "star of david"-like charge order occurs below the phase transition.
 This structural phase transition and the formation of the LT commensurate charge density wave (CDW), which has been observed both by gap formation (close to $E_F$) in ARPES \cite{lin_evidence_2022, mitsuishi_unveiling_2024} and the formation of a periodic lattice distortion (PLD) in STM and diffraction \cite{feng_charge_2016, siddiqui_ultrafast_2021, domrose_femtosecond_2024}.
 The exact mechanism of how this phase transition occurs and what the interplay with the CDW is have still not been understood.
+Before diving deeper into the specific CDW phases and their importance for \ce{TaTe2}, I will first introduce the concept of CDW in general.
 
 \begin{figure}
 	\centering
@@ -41,6 +42,70 @@ The exact mechanism of how this phase transition occurs and what the interplay w
 	\label{fig:tate_structure}
 \end{figure}
 
+\section{Charge Density Waves in strongly correlated matter}
+
+Charge density waves are collective modulations of the electron density, in which electron-hole pairs can form a condensate and behave like a macroscopic quantum state.
+Additionally, CDWs are always accompanied by a periodic distortion of the lattice due to the coupling of electrons and phonons.
+The concept of CDWs and PLDs has first been postulated by Peierls in 1955 \cite{} peierls for the case of a 1D atomic chain.
+Since then, a lot of effort was spent on understanding the mechanisms of CDWs on a microscopic level, and is now well understood for the 1D case.
+The challenge arises when the dimensionality is increased and strong couplings come at play.
+For those cases the understanding is much lower and is a topic of current research and intense debate.
+In this section I will do short description of the 1D CDW as postulated by Peierls and after introduce the complications that arise from higher dimensionality and strong couplings, with a special focus on TMDs.
+The description will be based on two reviews by Kai Rossnagel \cite{} rossnagel and by Jean-Paul Pouget and Enric Canadell \cite{} Pouget.
+
+Starting from the 1D atomic chain of a metal with a lattice spacing $a$, a cosinusoidally modulated electron density can be described by
+\begin{equation}
+	\rho(\mathbf{r}) = \rho_0(\mathbf{r})[1+\rho_1 \cos(\mathbf{q}_0\mathbf{r}+\phi)]
+	\label{eq:cdw}
+\end{equation}
+with the unperturbed electron density $\rho_0$, $\rho_1$ the amplitude, $q_0$ the wavevector and $\phi$ the phase of the electron density modulation.
+$\rho_1 \cos(\mathbf{q}_0\mathbf{r}+\phi)$ from above's equation represents the CDW and is a standing wave of wavelength $\lambda_0 = 2\pi/\lvert \mathbf{q}_0\rvert$.
+The modulation of the charges as a function $\mathbf{r}$ results in an effective potential, with each ion feeling the presence of a different part of said potential.
+This results in the ions moving away from their respective equilibrium position, in order to accommodate this new modulated potential.
+The result of this movement is a distorted lattice, which is referred to as a periodic lattice distortion (PLD), which is of the form
+\begin{equation}
+	u_n = u_0 \sin(n\lvert \mathbf{q}_0\rvert a+\phi)
+	\label{eq:pld}
+\end{equation}
+with the integer number $n$ describing the atom position and the amplitude of the distortion $u_0$.
+While the mentioned case assumes an existing electron density modulation, or CDW, which then results in the formation of the PLD, the same equations will arise when starting from an existing PLD as in \ref{eq:pld}.
+In that case, the existing PLD leads to a new effective potential, which the conduction electrons will try to screen, which will then result in a modulation of the charge density as described by equation \ref{eq:cdw}.
+Therefore charge density waves and periodic lattice distortions always occur together. rossnagel, 6 chan and 13 johannes m d
+
+The transition to a 1D CDW state as described by Peierls relies on the fact that the material is described as a Fermi liquid, with the electron gas only experiencing weak coupling with the ions via phonons.
+In this picture the phonons connect different parts of the Fermi surface with momentum $+k_f$ and $-k_f$, which refers to Fermi surface nesting (FSN).
+The connection of electrons with different Fermi momenta creates an instability at the Fermi surface, which drives a structural phase transition, mediated by the electron-phonon coupling.
+Since the CDW formation and the FSN depend on the Fermi momenta ($k_f$), the CDW necessarily depends on the conduction band filling.
+Additionally, the potential created by the CDW and PLD results in a gap opening at the Fermi level.
+This potential is, for a given phonon mode $\mathbf{q}$ with the corresponding displacement $u_\mathbf{q}$, defined by
+\begin{equation}
+	v_\mathbf{q} = g_\mathbf{q} u_\mathbf{q} \sqrt{\frac{2M\omega_\mathbf{q}}{\hbar}}
+\end{equation}
+with the mass of the ion $M$.
+Opening a gap at $E_F$ clearly lowers the energy of the occupied states while simultaneously increasing the energy of the unoccupied part of the band structure.
+The energy change due to the gap opening caused by the potential $v_\mathbf{q}$ amounts to
+\begin{equation}
+	\delta E_{band} = -\lvert v_\mathbf{q}\rvert^2 \chi_0(\mathbf{q})
+\end{equation}
+with the non-interacting electronic susceptibility
+\begin{equation}
+	\chi_0(\mathbf{q}) = \frac{1}{L} \sum_{k}^{} \frac{f_{\mathbf{k}+\mathbf{q}}-f_\mathbf{k}}{\epsilon_\mathbf{k}-\epsilon_{\mathbf{k}+\mathbf{q}}}>0
+\end{equation}
+$\chi_0$ represents therefore the net energy gain of the gapped band, and is dependent on the length of the atomic chain $L$ and the Fermi function $f(\epsilon_k)$ of the two nested states.
+If the energy gain of the band exceeds the energy cost of the  strained lattice, which is given by
+\begin{equation}
+	\delta E_{lattice} = \frac{1}{2} M\omega_\mathbf{q}^2 u_\mathbf{q}^2
+\end{equation}
+than the CDW and PLD are self-sustaining and will be the new ground state of the system.
+
+With the above equations in mind, and by including Coulomb and exchange interactions, it is possible to formulate a criterion \cite{} chan 6
+\begin{equation}
+	\frac{4g_\mathbf{q}^2}{\hbar\omega_\mathbf{q}}-2U_\mathbf{q}+V_\mathbf{q}\geq\frac{1}{\chi_0(\mathbf{q})},
+\end{equation}
+for which a CDW state is formed.
+This criterion indicates, that strong electron-phonon coupling $g_\mathbf{q}$, small Coulomb interaction, strong electron-electron interaction $V_\mathbf{q}$, small lattice strain energy $\omega_\mathbf{q}$ and a large $\chi_0(\mathbf{q})$ are the ingridients to form a CDW state. 
+
+\section{CDW TaTe2}
 
 The reason for the lack of understanding stems from the electronic reaction to the phase transition, especially in comparison to the \ce{TaX2} sister compounds.
 Typically, entering a CDW phase by cooling the sample down from RT leads to an increase in resistivity due to the reduced density of states (DOS) in proximity to the Fermi level $E_F$.

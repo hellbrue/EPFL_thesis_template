@@ -154,22 +154,23 @@ In any trARPES measurement the time resolution of the experiment is determined b
 Therefore it is important to keep the pulse duration of each pulse as short as possible.
 It has already been mentioned that short pump pulses are relatively easy to achieve by pulse compression via white light generation and subsequent re-compression \cite{nisoli_compression_1997}.
 Additionally the probe pulse in the case of a typical HHG beamline like Harmonium is intrinsically shorter than the initial seed pulse, typically also used as the optical pump.
-In the case of a Gaussian pulse not experiencing any change in phase or frequency this time duration can be expressed as
+In the case of a Gaussian pulse not experiencing any change in phase or frequency the time duration of such pulses can be expressed as
 
 \begin{equation}
 	\Delta\tau = \frac{2 \ln{2}}{\pi c}\frac{\lambda^2}{\Delta\lambda} = \frac{0.44}{c}\frac{\lambda^2}{\Delta\lambda}
 \end{equation}
 
 with the central wavelength $\lambda$ and the spectral width at half-height $\Delta\lambda$.
-But in the case of HHG a full comb of harmonics is generated at the same and a monochromator has to be employed to select a single harmonic for the ARPES experiment.
-Such a monochromator has to be carefully engineered in order to keep the pulse duration as close as possible to the input pulse duration, while keeping the desired energy resolution in mind.
+But in the case of HHG a full comb of harmonics is generated instead of a single pulse, which necessitates the use of a monochromator to select a single harmonic for the ARPES experiment.
+Therefore the influence of a monochromator on the time duration has to be taken into account.
 
-Typically, monochromators which allow for tunable output of the HHG spectrum use reflection gratings, which can contain a large spectral band of operation, when used in grazing incident.
-But the problem with gratings is, that they induce a tilt of the pulse wavefront, after a light pulse is diffracted off of them.
-This is due to the fact, that each ray which is diffracted off of different neighboring grooves experiences a path delay equal to $m\lambda$, corresponding to the diffraction order $m$.
+Since HHG beamlines provide a wide spectrum of harmonics, it is desirable to employ monochromators that can take advantage of this fact and whose output can be tuned in a wide frequency range.
+Typically, such monochromators use reflection gratings, which contain a large spectral band when used in grazing incident.
+The problem of gratings arises from the fact that they induce a tilt of the pulse wavefront, after a light pulse is diffracted off of them.
+The pulse front tilt is a result of the light rays being diffracted off of different neighboring grooves, which creates a path delay equal to $m\lambda$, with $m$ corresponding to the order of diffraction.
 The total path difference across the full spatial pulse distribution can be summed to $m\lambda N$, with N totaling the number of illuminated grooves.
 Depending on the properties of the chosen harmonic and the employed grating this contribution can be quite substantial, especially when the goal is a time resolution in the femtosecond regime.
-Therefore it is important to compensate or minimize for this pulse front tilt, when designing a time preserving monochromator.
+Therefore it is important to compensate or minimize this pulse front tilt, when designing a time preserving monochromator.
 
 The compensation can be achieved by simply introducing a second grating, which exactly compensates the tilt introduced by the first grating \cite{villoresi_compensation_1999}.
 The downside of this method is the added complexity to the overall monochromator, as well as the reduced transmission.
@@ -180,8 +181,8 @@ A different option is the use of a single grating, for which it can be shown tha
 \end{equation}
 
 which is only slightly higher than the Fourier-limited case \cite{poletto_time-preserving_2010,nugent-glandorf_laser-based_2002,poletto_time-compensated_2004,poletto_time-delay_2006}.
-A downside of this version however is that the energy resolution is lower, the shorter the pulse duration of the pulse is before monochromatization.
-Nonetheless this option is used in the Harmonium beamline, with the goal of a high temporal resolution, while sacrificing some energy resolution.
+A downside of this version however is that the energy resolution is reduced, the shorter the pulse duration of the pulse is before monochromatization.
+Nonetheless this option is used in the Harmonium beamline, with the goal of a high temporal resolution, while only sacrificing some energy resolution.
 
 \section{High repetition rate VUV trARPES}
 \label{sec:high_rep_vuv}
@@ -260,8 +261,8 @@ Typically the highest VUV output is achieved by having an equal amount of averag
 Additionally a waveplate in the green arm ensures that both beams a co-linearly polarized before entering the fiber.
 While the cascaded process has also been demonstrated with capillary waveguides with large diameters ($>$\qty{100}{\micro\meter}) \cite{misoguti_generation_2001}, those setups were based on Ti:Sa oscillators, working with much shorter pulse durations and higher pulse energies \cite{misoguti_generation_2001,durfee_phase_2002,misoguti_nonlinear_2005}.
 The light source here uses negative-curvature hollow-core photonic crystal fibers (HCPCF) of smaller diameters (\qty{50}{\micro\meter}), which enables the use of the fiber laser with longer pulse durations \cite{couch_ultrafast_2020}.
-HCPCF are fibers with a complex structure, using photonic crystals to strongly localize the light within the photonic band gap of the material.
-To further confine the light, the fiber is structured in a way, that core boundary shows a negative curvature, hence the term negative-curvature HCPCF.
+HCPCF are fibers with a complex structure, using photonic crystals to strongly localize the light within the photonic band gap of the material. \cite{kolyadin_negative_2015, wei_negative_2017}
+To further confine the light, the fiber is structured in a way, that core boundary shows a negative curvature, hence the term negative-curvature HCPCF \cite{wei_negative_2017}.
 Figure \ref{fig:hchgsketch} (a) (taken from \cite{couch_ultrafast_2020}) shows a sketch of the generation process together with a view of the structured face of the HCPCF.
 
 The HCPCF is filled with xenon gas at a pressure of $\approx$\qty{100}{\kilo\pascal} (measured from vacuum) in which the third harmonic is created in a four-wave-mixing process, combining two photons of the second harmonic and creating one photon of the fundamental and third harmonic.
@@ -396,7 +397,7 @@ Furthermore it solves a problem when taking Fermi surface maps.
 Due to the sample geometry, the center of rotation is often not the point imaged by the electron analyzer.
 This mean that the illuminated spot slightly changes under sample rotation of a Fermi surface scan, resulting in the possibility to image adjacent domains.
 To compensate for this the $x$ and $y$ coordinate have to adjusted when changing from one angle to the next to image the same sample position.
-While this was possible with the old manipulator, it makes data acquisition very tedious if after every angle the Cartesian coordinates have to be adjusted by hand.
+This process was automated due to the availability of the additional motorized degrees of freedom.
 Instead, with the motorization of the new manipulator more complex movements are possible, where the $x$ and $y$ coordinates can be dynamically adjusted during a Fermi surface scan.
 
 Another big advantage of the new manipulator is a better temperature control.
@@ -421,15 +422,16 @@ This would allow for more precise temperature scan, for example when crossing ph
 
 A further development concerns the polarization control of the VUV beamline.
 While control over the pump polarization is easily implemented with a IR waveplate, the situation is more difficult for the probe.
-It is in principal possible to rotate the polarization of both IR and green beam before entering the fiber and create harmonics with the corresponding polarization, it is only possible to use the monochromator with p-polarization.
+It is in principal possible to rotate the polarization of both IR and green beam before entering the fiber and create harmonics with the corresponding polarization.
+But due to a polarization dependent rejector it is only possible to use the monochromator with p-polarization.
 Using the monochromator at s-polarization does not remove the residual IR and green from the seed, which leads to a degradation of the optics and intense stray light passing through the monochromator.
 Therefore it is necessary to instead rotate the polarization of the VUV light after the monochromator.
-At these energies optics working in transmission are not readily available, but a custom made wave-plate for \qty{10.8}{\electronvolt} was found.
-With the help of a vacuum compatible rotational mount it is possible to rotate the polarization.
-First tests are ongoing and hopefully show full control over the polarization at \qty{10.8}{\electronvolt}.
-The control over the polarization is important in ARPES due to the dipole matrix element.
-It is possible that the lack of photo-emission signal from \ce{Bi}2212 is due to a strong dipol matrix element at low energies.
-This question could for example be addressed by having polarization control.
+An example for the importance of polarization control can be seen in ARPES measurements on \ce{Bi}2212 at low probe energies (\qty{7}{\electronvolt}), where a strong dependence of the photoelectron yield from the light polarization is found, which stems from a strong polarization dependent matrix element \cite{fanciulli_spin_2018}.
+Similar tests with a probe energy of \qty{10.8}{\electronvolt} have resulted in photoemission spectra with low photoelectron yield and no resolvable band structure, when measured with s-polarized light.
+The question naturally arises if a similar polarization dependent effect is at play or if the dipol matrix element results in a low photoelectron yield independent of the polarization.
+The problem in rotating the polarization at these photon energies is the lack of readily available half-wave plates (HWP).
+Due to the low transmission in most materials a HWP has to be specifically made for this use case (manufactured by Kogakugiken Corp.).
+The initial implementation and first tests are ongoing and will hopefully provide full control over the polarization at \qty{10.8}{\electronvolt}, and allow the study of the matrix element in \ce{Bi}2212.
 
 \begin{figure}[t]
 	\centering
@@ -470,8 +472,8 @@ In order to measure both on and off signals a chopper wheel is used, which is se
 With the VUV laser set to \qty{1}{\mega\hertz}, both camera and chopper are set to \qty{1}{\kilo\hertz}.
 This results in each acquired camera shot, reflecting the data of 1000 probe pulses, with pumped and unpumped shots following one after the other.
 A more detailed sketch of the detection scheme is shown in Fig. \ref{fig:triggerscheme}.
-The VUV laser is set to a repetition rate of \qty{1}{\mega\hertz}, with the trigger reference signal being send to a frequency divider (F-DIV) or Delay Generator.
-The F-DIV can adjust divide the electric input signal for multiple channels individually.
+The VUV laser is set to a repetition rate of \qty{1}{\mega\hertz}, with the trigger reference signal being send to a frequency divider (F-DIV) and Delay Generator.
+The F-DIV can divide the electric input signal for multiple channels individually, while the delay generator is can be used to adjust the timing of the different signals.
 For example, in a typical use case one channel is set to a division by a factor $1000$, resulting in a trigger rate of \qty{1}{\kilo\hertz}, which is send to the camera.
 A second channel is set to a factor $2000$, which results in a \qty{500}{\hertz} trigger, which is sent to a chopper controller.
 The chopper controller then synchronizes the chopper to turn at speed necessary to create pump on and off frames at the correct repetition rate.
@@ -486,8 +488,8 @@ A typical acquisition scheme of a trARPES experiment looks the following:
 \begin{itemize}[topsep=-0.5em]
 	\setlength\itemsep{-0.5em}
 	\item [$\bullet$] \qty{1000}{\hertz} repetition rate of each camera shot
-	\item [$\bullet$] summing for \qty{1}{\second} with chopper letting pump pulse
-	\item [$\bullet$] summing for \qty{1}{\second} with chopper blocking pump pulse
+	\item [$\bullet$] setting integration window for both on and off signal to \qty{200}{\milli\second}
+	\item [$\bullet$] summing for \qty{1}{\second}, while sorting the pictures in corresponding on and off bin
 	\item [$\bullet$] move stage to next delay position and repeat on and off picture
 	\item [$\bullet$] after finishing delay list, start at first delay and repeat loop
 \end{itemize}
@@ -502,9 +504,11 @@ Initial tests with this new detection scheme have been carried out with the Harm
 While it could be shown that the the detection scheme has been correctly implemented, an improvement in signal quality has not been observed, which can be due to multiple reasons.
 The correct implemented was shown by observing the excitonic state above $E_F$ only in the pump on frames.
 But no signal improvement was observed when plotting the on/off frames compared to the only on frames.
-A first reason for this can be, that the measurement was taken far out of equilibrium, which is not the best use case for this detection scheme.
-Second, no big changes to the band structure have been observed below the Fermi level, which is the region where signal improvements would be expected, while the region above Fermi containing the excitonic state has intrinsically no background signature and therefore shouldn't show improvements when plotting any on/off images.
-More tests have to be carried out with samples that show changes in the low perturbation regime and in the occupied region of the band structure.
+A first reason for this can be, that the measurement was taken far out of equilibrium, where comparatively high signal is expected, but at the same time where pump induced artifacts might hinder the observation of nuanced features.
+Second, no big changes to the band structure have been observed below the Fermi level, which is the region where signal improvements would be expected, while the region above Fermi containing the excitonic state has intrinsically no background and therefore shouldn't show improvements when plotting any on/off images.
+The clear disadvantage is that the on/off detection scheme naturally reduces the statistics taken in the same time frame by a factor of 2.
+Therefore improvements can only be expected if the noise levels of the traditional pump probe scheme are to high and prevent the observation of pump induced effects.
+Further tests have to be carried out with samples that show changes in the low perturbation regime and in the occupied region of the band structure, to test the on/off scheme in a more appropriate use case.
 
 \begin{figure}
 	\centering
