@@ -90,6 +90,7 @@ The energy change due to the gap opening caused by the potential $v_\mathbf{q}$ 
 with the non-interacting electronic susceptibility
 \begin{equation}
 	\chi_0(\mathbf{q}) = \frac{1}{L} \sum_{k}^{} \frac{f_{\mathbf{k}+\mathbf{q}}-f_\mathbf{k}}{\epsilon_\mathbf{k}-\epsilon_{\mathbf{k}+\mathbf{q}}}>0
+	\label{eq:susz}
 \end{equation}
 $\chi_0$ represents therefore the net energy gain of the gapped band, and is dependent on the length of the atomic chain $L$ and the Fermi function $f(\epsilon_k)$ of the two nested states.
 If the energy gain of the band exceeds the energy cost of the  strained lattice, which is given by
@@ -103,9 +104,69 @@ With the above equations in mind, and by including Coulomb and exchange interact
 	\frac{4g_\mathbf{q}^2}{\hbar\omega_\mathbf{q}}-2U_\mathbf{q}+V_\mathbf{q}\geq\frac{1}{\chi_0(\mathbf{q})},
 \end{equation}
 for which a CDW state is formed.
-This criterion indicates, that strong electron-phonon coupling $g_\mathbf{q}$, small Coulomb interaction, strong electron-electron interaction $V_\mathbf{q}$, small lattice strain energy $\omega_\mathbf{q}$ and a large $\chi_0(\mathbf{q})$ are the ingridients to form a CDW state. 
+This criterion indicates, that strong electron-phonon coupling $g_\mathbf{q}$, small Coulomb interaction, strong electron-electron interaction $V_\mathbf{q}$, small lattice strain energy $\omega_\mathbf{q}$ and a large $\chi_0(\mathbf{q})$ are the ingridients to form a CDW state.
+The magnitude of aforementioned gap can be calculated by looking at the splitting of the normal-state band $\epsilon_\mathbf{k}$, assuming a tight-binding dispersion $\epsilon_\mathbf{k}=-E_F\cos(ka)$.
+The splitting of the band occurs due to the fact, that the PLD superstructure wavevector $\mathbf{q}_0$ is equal to Fermi points $\pm\mathbf{k}_F$, which describe the Fermi nesting condition, which describes a energy discontinuity and the split band can be described by
+\begin{equation}
+	E_{1,2}(\mathbf{k})=\frac{\epsilon_{\mathbf{k}}+\epsilon_{\mathbf{k}+\mathbf{q}_0}}{2}\pm\sqrt{\left( \frac{\epsilon_{\mathbf{k}}+\epsilon_{\mathbf{k}+\mathbf{q}_0}}{2}\right)^2 + \Delta^2 }.
+\end{equation}
+$2\Delta$ represents the magnitude of the energy gap, which depends on the displacement amplitude of the PLD, the electron-phonon coupling $g_{\mathbf{q}_0}$ and the phonon frequency $\omega_{\mathbf{q}_0}$ \cite{} 25, with
+\begin{equation}
+	\Delta=u_{\mathbf{q}_0} + g_{\mathbf{q}_0} \sqrt{\frac{2M\omega_{\mathbf{q}_0}}{\hbar}}.
+\end{equation}
+
+Apart from the changes to the electronic band structure, the strong electron-phonon coupling also leads to a change of the phonon dispersion.
+With a similar argument as before, the non-interacting susceptibility from \ref{eq:susz} diverges at low temperatures, when PLD wavevector $\mathbf{q}_0$ and nesting vector $2\mathbf{k}_F$ are equal.
+$chi_0(\mathbf{q})$ can be expressed as a function of temperature and the density of states DOS$(E_F)$ at the Fermi level, which clearly indicates the diverging behavior
+\begin{equation}
+	\chi_0 (2\mathbf{k}_F, T)=\frac{1}{2}DOS(E_F)\ln\left( \frac{2.28E_F}{k_BT}\right).
+\end{equation}
+The divergence in the temperature dependent susceptibility indicates a renormalization of phonons in a wavevector in the range corresponding to $\mathbf{q}_0$, and is typically referred to as a Kohn anomaly.
+The renormalized phonon can be expressed by
+\begin{equation}
+	\widetilde{\omega}_\mathbf{q}^2 = \omega_\mathbf{q}^2 \left( 1-\frac{4g_\mathbf{q}^2}{\hbar\omega_\mathbf{q}^2} \chi_0(\mathbf{q}) \right)
+	\label{eq:kohn}
+\end{equation}
+and which reaches $0$ at finite temperatures $T_0$, if the electron-phonon coupling constant $g_{\mathbf{q}_0}>0$, resulting in the full softening of the phonon mode.
+
+The finite temperature at which the phonon completely softens corresponds to the transition temperature between normal- and CDW-state.
+From the equation \ref{eq:kohn} expressing the Kohn anomaly and by minimizing the total energy change of band and lattice $\delta E_{band}+\delta E_{lattice}$, it can be shown that, at $T=0$, the gap fulfills the following equation
+\begin{equation}
+	\Delta(0)=4E_F\exp(-\frac{1}{\lambda}),
+\end{equation}
+with the electron-phonon coupling constant $\lambda=\frac{2g_{\mathbf{q}_0}^2DOS(E_F)}{\hbar\omega_{\mathbf{q}_0}}$ \cite{} 34. 
+Which leads to the famous Bardeen-Cooper-Schrieffer (BCS) relation, between the energy gap at zero temperature and the transition temperature
+\begin{equation}
+	2\Delta(0)=3.52k_BT_0.
+\end{equation}
+
+This description contains a full microscopic theory on CDW formation under the assumption of a 1D metal without the inclusion of electron-electron interactions.
+Here it is important to mention, that for most materials these assumptions do not hold up.
+The solution for the 1D chain, which predicts the long range order at a finite transition temperature $T_0$ does not hold for higher dimensions and is only relevant for quasi-1D systems.
+Additionally, the Peierls instability at $E_F$ only materializes due to the exclusion of electron-electron interactions, expressed by the non-interacting susceptibility $\chi_0$.
+With the interactions included, a material might be stable, even at the lowest temperatures.
+Due to these facts, I will further discuss the consequences that higher dimensionality and strong electron-phonon coupling have on the CDW formation.
+Both of which are the case for \ce{TaTe2}.
+
+To recapitulate, in the 1D case the CDW formation is driven by the instability of the non-interacting susceptibility, which is a result of a coupling of many states with mode $\mathbf{q}$, most of which are coupled close to $E_F$.
+While in 1D a metal has a planar Fermi surface, which can coincide for a given wavevector $\mathbf{q}$ with the $k_f$ points of the instability, this is not the case in 2D.
+Here the Fermi surface is generally not planar and the Brillouin zone edges do not intersect with the Fermi surface, which only results in a partial gap.
+This partial gapping can occur when the Fermi surface of a 2D material behaves quasi-1D, where parts of the Fermi surface can be translated onto each other.
+The result of the less ideal Fermi surface nesting in higher dimensions is that $\chi_0$ does not show a divergence at a specific wavevector $\mathbf{q}$ anymore, instead it rather shows a broader peak.
+A broad peak in $\chi_0$ then requires stronger electron-phonon coupling to compensate for the smaller effect of $\chi_0$ in order to form a CDW.
+
+Including stronger electron-phonon coupling, generally makes these observations even stronger.
+A strong electron-phonon coupling generally leads to larger amplitude of the distortion and a larger energy gap, although the gap is larger its energy gain is not anymore concentrated to Fermi momenta $k_F$, but rather distributed across the whole Brillouin zone.
+This shows further diminished factor that the Fermi surface nesting play in the formation of the CDW.
+Another result of the stronger electron-phonon coupling lies in a shorter coherence length, which has implications for the way order is established in a CDW phase.
+In the strong coupling regime order is established via local chemical bonds \cite{} rossnagel 24, 39, 40, 41.
+Since the distortion amplitudes are larger, non-linear terms in the electron-phonon coupling become increasingly important, which results in the formation of pairs with shortened bonds or atom clusters.
+The CDW will then tend to be commensurate with the distorted crystal lattice \cite{} rossnagel.
+As will be further discussed in section \ref{sec:cdw_tate2}, the strong electron-phonon coupling will be an important factor for the description of the CDW phase in \ce{TaTe2}, which also tends to show strong local bonds.
+
 
 \section{CDW TaTe2}
+\label{sec:cdw_tate2}
 
 The reason for the lack of understanding stems from the electronic reaction to the phase transition, especially in comparison to the \ce{TaX2} sister compounds.
 Typically, entering a CDW phase by cooling the sample down from RT leads to an increase in resistivity due to the reduced density of states (DOS) in proximity to the Fermi level $E_F$.
