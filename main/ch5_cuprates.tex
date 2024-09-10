@@ -1,15 +1,70 @@
-\chapter{High Tc Cuprates}
-Here you can see a citation: \cite{atc13}.
-
-test2 \cite{atc13}
+\chapter{Photoinduced topology change in \ce{Bi}2212}
 
 
-\lipsum[7]
 
-\section{Lifshitz Bi2212}
+\section{General aspects of \ce{Bi}2212}
+\label{sec:bscco_general}
 
-\lipsum[3]
 
-\subsection{PSI Bi2223}
+describe bandstructure and FS
 
-\lipsum[3]
+\section{Sample characterization}
+
+
+
+\section{Photoinduced change of Fermi momenta k$_F$}
+
+In this section I will present the fundamental changes to the band structure after pulse excitation and the discussion of the changes will be based on the description of the electronic structure at equilibrium of optimally doped \ce{Bi}2212 (see Sec. \ref{sec:bscco_general}).
+All measurements performed in this chapter were done at a temperature of $\approx$\qty{70}{\kelvin}, within the superconducting phase of the material.
+The Harmonium beamline \cite{arrell_harmonium_2017} was used to probe the band structure with a photon energy of \qty{28}{\electronvolt}.
+The excitation is created by an infrared pump pulse with an energy of \qty{1.55}{\electronvolt}, which is resonant with the charge transfer gap.
+
+The discussion of the spectral features in this section will be centered around the quasiparticle peaks and the parabola like feature and how they behave under intense light excitation.
+For this purpose the sample was oriented in a way, that the anti-node is parallel the detector slit, resulting in a Fermi surface (FS) as shown in Fig. \ref{fig:fs_cut} (a).
+A cut in the region between node and anti-node is selected, which is marked by a white dashed line in Fig. \ref{fig:fs_cut} (a), and the corresponding bandmap is displayed in \ref{fig:fs_cut} (b).
+The bandmap shows the features discused in Sec. \ref{sec:bscco_general}, containing the quasiparticle peaks close to $E_F$, the parabolic low energy feature, the high energy \ce{Cu} d-bands, and the incoherent "waterfall" feature connecting the two.
+Here it is important to note, that it is not possible to observe the superconducting gap in the measurements presented in this chapter due to the relatively low energy resolution of Harmonium ($\approx$\qty{100}{\milli\electronvolt}), which for the remaining spectral weight even close to the anti-node.
+Additionally this results in the observation of the quasiparticle peak at the Fermi level with a corresponding Fermi momentum $k_F$.
+
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/femri_surface_hhg}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/fs_cut}
+		\caption{}
+	\end{subfigure}
+	\caption{(a) Fermi surface of \ce{Bi}2212 (show real FS). The nodal and anti-nodal regions are marked. The white dashed line indicates a cut for which the bandmap in (b) is taken.}
+	\label{fig:fs_cut}
+\end{figure}
+
+Determining the correct $k_F$ points will be crucial for the discussion of this chapter.
+Therefore it is important to ensure that Fermi surface is well centered and aligned with the analyzer slit.
+The old manipulator of the ARPES setup in the LACUS facility did not have a dedicated in plane axis for the alignment of the polar component of the sample.
+Instead the sample was manually rotated in a cylindrical hole with the help of a wobble stick, which resulted in a typical error of $\pm$\qty{5}{\degree}.
+The Fermi arcs where fitted by Lorentzian peaks to correct for any error in the polar degree of freedom, as well as any tilt offsets resulting from a sample termination which is not perfectly parallel to the manipulator surface.
+
+The fitting procedure consisted of extracting a momentum distribution curve (MDC) in a range of $\pm$\qty{100}{\electronvolt} for various momentum points along $k_x$ and $k_y$ and fitting a double Lorentzian to each MDC, essentially extracting the $k_F$ points for $\pm k_y$ and $\pm k_x$.
+From these $k_F$ points, the coordinate offsets for the polar ($\chi$), tilt ($\Theta$) and rotational scan axis ($\Phi$) are calculated and applied to the Fermi surface.
+This procedure is then repeated until the FS  is well centered.
+With the help of the corrected FS it is possible to accurately determine the parallel momentum component at which the cut in \ref{fig:fs_cut} (b) was taken.
+The bandmap was measured at a manipulator angle of \qty{-13}{\degree}.
+From the FS centering the offset in the $\Phi$ coordinate was determined to be \qty{-3.95}{\degree}, which results in a scan angle of \qty{-9.05}{\degree}.
+Converting this to the corresponding momentum coordinate results in a parallel momentum component of \qty{-0.423}{\angstrom^{-1}}.
+
+\section{Nodal vs anti-nodal behavior}
+
+
+
+\section{Distinguishing effects of photodoping and screening}
+
+
+
+\section{Modeling the Fermi surface: A tight binding approach}
+
+
+
+\section{Effect duration and metastability}
