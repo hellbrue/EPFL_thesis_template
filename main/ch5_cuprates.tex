@@ -1,4 +1,4 @@
-\chapter{Photoinduced topology change in \ce{Bi}2212}
+\chapter{Photoinduced Lifshitz transition in \ce{Bi}2212}
 
 
 
@@ -13,6 +13,7 @@ describe bandstructure and FS
 
 
 \section{Photoinduced change of Fermi momenta k$_F$}
+\label{sec:larger_effect}
 
 In this section I will present the fundamental changes to the band structure after pulse excitation and the discussion of the changes will be based on the description of the electronic structure at equilibrium of optimally doped \ce{Bi}2212 (see Sec. \ref{sec:bscco_general}).
 All measurements performed in this chapter were done at a temperature of $\approx$\qty{70}{\kelvin}, within the superconducting phase of the material.
@@ -21,23 +22,22 @@ The excitation is created by an infrared pump pulse with an energy of \qty{1.55}
 
 The discussion of the spectral features in this section will be centered around the quasiparticle peaks and the parabola like feature and how they behave under intense light excitation.
 For this purpose the sample was oriented in a way, that the anti-node is parallel the detector slit, resulting in a Fermi surface (FS) as shown in Fig. \ref{fig:fs_cut} (a).
-A cut in the region between node and anti-node is selected, which is marked by a white dashed line in Fig. \ref{fig:fs_cut} (a), and the corresponding bandmap is displayed in \ref{fig:fs_cut} (b).
+A cut in the region between node and anti-node is selected, which is marked by a black dashed line in Fig. \ref{fig:fs_cut} (a), and the corresponding bandmap is displayed in \ref{fig:fs_cut} (b).
 The bandmap shows the features discused in Sec. \ref{sec:bscco_general}, containing the quasiparticle peaks close to $E_F$, the parabolic low energy feature, the high energy \ce{Cu} d-bands, and the incoherent "waterfall" feature connecting the two.
 Here it is important to note, that it is not possible to observe the superconducting gap in the measurements presented in this chapter due to the relatively low energy resolution of Harmonium ($\approx$\qty{100}{\milli\electronvolt}), which for the remaining spectral weight even close to the anti-node.
 Additionally this results in the observation of the quasiparticle peak at the Fermi level with a corresponding Fermi momentum $k_F$.
 
-
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}[b]{0.49\textwidth}
-		\includegraphics[width=\textwidth]{bi2212/femri_surface_hhg}
+		\includegraphics[width=\textwidth]{bi2212/fermi_surface_hhg}
 		\caption{}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{bi2212/fs_cut}
 		\caption{}
 	\end{subfigure}
-	\caption{(a) Fermi surface of \ce{Bi}2212 (show real FS). The nodal and anti-nodal regions are marked. The white dashed line indicates a cut for which the bandmap in (b) is taken.}
+	\caption{(a) Fermi surface of \ce{Bi}2212 (show real FS). The nodal and anti-nodal regions are marked. The black dashed line indicates a cut for which the bandmap in (b) is taken.}
 	\label{fig:fs_cut}
 \end{figure}
 
@@ -55,27 +55,152 @@ The bandmap was measured at a manipulator angle of \qty{-13}{\degree}.
 From the FS centering the offset in the $\Phi$ coordinate was determined to be \qty{-3.95}{\degree}, which results in a scan angle of \qty{-9.05}{\degree}.
 Converting this to the corresponding momentum coordinate results in a parallel momentum component of \qty{-0.423}{\angstrom^{-1}}.
 
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=1\textwidth]{images/bi2212/EDM_collection}
+	\caption{The figure shows a collection of bandmaps all taken at the same parallel momentum, which is marked by the black dashed line in Fig. \ref{fig:fs_cut} (a). Each bandmap represents a scan with a different pump fluence, from the pump being blocked to a pump fluence of \qty{3.33}{\milli\joule/\centi\meter\squared}. The evolution shows a closing of the parabola which also shows in the quasiparticle peaks moving closer to \qty{0}{\per\angstrom}. Additionally the leading edge of the \ce{Cu} d-bands (at \qty{1.2}{\electronvolt}) shifts slightly upwards with increasing fluence. At a fluences above \qty{1.74}{\milli\joule/\centi\meter\squared} a slight upward shift of the Fermi level is visible.}
+	\label{fig:edm_collection}
+\end{figure}
+
 The cut at \qty{-0.423}{\angstrom^{-1}} was selected to investigate the the out of equilibrium response in the high pump fluence regime.
 For this reason a pump fluence dependence was performed in a fluence range from \qtyrange{0}{3.33}{\milli\joule/\centi\meter\squared}, and the changes of the band structure were recorded.
-The corresponding bandmaps are shown in Fig. \ref{}.
+The corresponding bandmaps are shown in Fig. \ref{fig:edm_collection}.
 In these bandmaps clear changes to the parabolic feature are visible, as well as changes to the $k_F$ points and the onset of the \ce{Cu} d-bands.
 Here, a continuous closing of the parabola can be observed.
-Additionally, the change in the Fermi momenta becomes especially apparent when plotting the MDC as a function of fluence (see Fig. \ref{label}).
+Additionally, the change in the Fermi momenta becomes especially apparent when plotting the MDC as a function of fluence (see Fig. \ref{fig:fluence_map}).
 This colormap shows the Fermi momenta for positive and negative $k_\parallel$ moving towards the \qty{0}{\per\angstrom} point, with the $k_F$ points at positive momenta showing a stronger change.
 The asymmetric $k_F$ change is due to the planar offset $\chi$.
 
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=1\textwidth]{images/bi2212/MDC_fits}
+	\caption{The figure shows a collection of the MDCs corresponding to the bandsmaps in Fig. \ref{fig:edm_collection}. The MDCs is a result of the integration at $E_F$ in a $\pm$\qty{100}{\milli\electronvolt} window. Triple or Double Lorentzians were used to fit the peak position. The two outer Lorentzians correspond to the position of the quasiparticle peak, and the third corresponds to the Umklappband crossing the spectrum (see Fig. \ref{fig:fs_cut} (a)). The MDCs are fitted for a fluence between \qtyrange{0}{3.33}{\milli\joule/\centi\meter\squared} with the individual plots labeled as such. The distance of the quasiparticle peaks $\Delta k_\parallel$ is given in the respective MDCs.}
+	\label{fig:mdc_fits}
+\end{figure}
+
 Apart from visually observing the changes to the bandmaps it is important to quantify the pump induced changes to the parabola, which can be done by extracting the position of the $k_F$ points.
-For this the MDCs are plotted in a $\pm$\qty{100}{\milli\electronvolt} range around $E_F$ (see Fig. \ref{label}).
+For this the MDCs are plotted in a $\pm$\qty{100}{\milli\electronvolt} range around $E_F$ (see Fig. \ref{fig:mdc_fits}).
 Two peaks are visible in each MDC, corresponding to the $k_F$ point at positive and negative momentum.
 The MDC is then fitted by a triple Lorentzian, two Lorentzians corresponding to the two $k_F$ points, and a third to account for the Umklappband crossing the anti-nodal region (see Fig. \ref{fig:fs_cut}).
-Repeating this process for each fluence steps reveal a linear relation between the distance of the $k_F$ points and the used pump fluence, which can be seen in figure \ref{}.
+Repeating this process for each fluence steps reveal a linear relation between the distance of the $k_F$ points and the used pump fluence, which can be seen in figure \ref{fig:fluence_map} (b).
+The linear trend can not only be observed in the peak distance, but also in the individual peak position (see. Fig. \ref{fig:fluence_map} (b) and (c)).
+Figure \ref{fig:fluence_map} (c) shows on top of that the asymmetric change of positive and negative peaks, as discussed before.
 
-Similar observations have been made previously in bandmaps recorded at the nodal position.
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.25\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/fluence_map}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.35\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/Peak_distance_fluence}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.35\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/Peak_position_fluence}
+		\caption{}
+	\end{subfigure}
+	\caption{(a) The figure shows the intensity distribution at $E_F$ for a fluence range from \qtyrange{0}{1.74}{\milli\joule/\centi\meter\squared}. The figure visualizes the closing of the parabola seen in Fig. \ref{fig:edm_collection}. (b) The graph shows a the distance between the two quasiparticle peak as determined by the MDC fitts from Fig. \ref{fig:mdc_fits}. The error is determined from the standard deviation of the two Lorentzian peaks. (c) The graph shows the peak position individually for positive and negative momenta. A linear but asymmetric change for each peak can be observed, which is also visible in the fluence map of (a).}
+	\label{fig:fluence_map}
+\end{figure}
+
+Similar observations have been made previously in bandmaps recorded at the nodal position \cite{bibid} rameau.
 In these measurements the shift of the Fermi momenta was considerably smaller for similar pump fluences.
 This difference hints at a possible momentum dependence of the effect, which is a known fact regarding the FS changes for differently doped \ce{Bi}2212 samples, and motivates studies a larger momentum space.
 
 \section{Nodal vs anti-nodal behavior}
 
+\ce{Bi}2212 is known for the anisotropy between the nodal and anit-nodal regions, which is clearly evident from the d-wave type superconductivty, which results in a superconducting gap at the anti-node but not at the node.
+The anisotropic is furthermore visible in the chemical doping dependent evolution of the Fermi surface.
+Here, the Fermi arcs change significantly in the region close to the anti-node, while remaining largely unchanged in the nodal area.
+In this section I want to explore if a similar anisotropic behavior can be observed when investigating the light induced effects presented in the previous section (Sec. \ref{sec:larger_effect}).
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/bi2212/fermi_map_ang_dep}
+	\caption{The figure shows the FS of Bi2212 as in Fig. \ref{fig:fs_cut}. The black dashed lines indicate the series of cuts for which a fluence dependence was recorded.}
+	\label{fig:fermimap_angdep}
+\end{figure}
+
+A series of cuts between the nodal and anti-nodal region is analyzed, in order to address the question of anisotropy.
+The cuts were performed at parallel momentum $k_p$ of \qtylist{0.41;0.452;0.494;0.535}{\per\angstrom}.
+Figure \ref{fig:fermimap_angdep} shows the same FS as before in Fig. \ref{fig:fs_cut} (a), with the black dashed lines indicating the $k_p$ position of the selected cuts.
+For each cut a fluence dependence similar to the case in section \ref{sec:larger_effect} was measured, with the fluences ranging between \qtyrange{0.09}{1.15}{\milli\joule/\centi\meter\squared}.
+The resulting bandmaps of this fluence and momentum dependent study are shown in figure \ref{fig:effect_angle}.
+
+\begin{figure}[b!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{images/bi2212/ang_dep_deltak}
+	\caption{The figure shows the distance of the quasiparticle peaks at the Fermi level $E_F$ as a function of fluence, for each of the four selected cuts. In each fluence series a linear dependence of the peak distance $\Delta k_\parallel$ to the pump fluence can be observed. The magnitude of the effect increases when approaching the anti-node.}
+	\label{fig:angdep_deltak}
+\end{figure}
+
+\begin{figure}[t!]
+	\centering
+	\begin{subfigure}[b]{0.95\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/Dispersion_8deg}
+		\caption{}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.95\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/Dispersion_9deg}
+		\caption{}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.95\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/Dispersion_10deg}
+		\caption{}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.95\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/Dispersion_11deg}
+		\caption{}
+	\end{subfigure}
+	\caption{The figure shows a series of bandmaps for four different cuts corresponding to (a) \qty{0.41}{\per\angstrom} (b) \qty{0.452}{\per\angstrom} (c) \qty{0.494}{\per\angstrom} (d) \qty{0.535}{\per\angstrom}, as indicated in Fig. \ref{fig:fermimap_angdep}. For each cut a series of fluences between \qtyrange{0.09}{1.15}{\milli\joule/\centi\meter\squared} is shown.}
+	\label{fig:effect_angle}
+\end{figure}
+
+Similarly to the previous case, a closing of the parabola can be seen for the higher momentum cuts, whereas in the case of \qty{0.41}{\per\angstrom}, barely any change is visible.
+In addition, a small shift of the leading edge is again visible for all four cases.
+The same analysis as in the previous section can be performed for each of the momentum cuts, with an MDC taken at $E_F$ in $\pm$\qty{100}{\milli\electronvolt} range, and fitting triple Lorentzian to the resulting MDCS to extract the peak positions.
+This analysis quantifies the shift of the quasiparticle peak and closing of the parabola.
+In particular it shows that as the fluence increases a decrease in the peak distance can be observed for each of the cut.
+The amount at which the distance decreases changes substantially between the cut closest to the node and the cut closest to the anti-node.
+At a parallel momentum of \qty{0.535}{\per\angstrom} the observed change is the most significant with a $20\%$ reduction in the peak distance.
+In the other cuts this change is reduced to a $5\%$, $3\%$ and $2.7\%$ reduction respectively, when the fluence is increased from \qty{0.09}{\milli\joule/\centi\meter\squared} to \qty{1.15}{\milli\joule/\centi\meter\squared}, but remains noticeable for all cases.
+The peak distances for each momentum cut can be plotted as a function of fluence (see Fig. \ref{fig:angdep_deltak}).
+This plot reveals the increasing movement of the quasiparticle peaks, when approaching the anti-node.
+Additionally it shows that for each momentum cut, the closing of the distance between the two peaks remains linearly with the used pump fluence, as it was the case in the previous section.
+
+From the MDC fits it is is possible to locate the specific momentum point in the FS for each of the peaks.
+To cross check that no alignment or fitting errors are adopted, the data points of the \qty{0.09}{\milli\joule/\centi\meter\squared} fluence are compared to previously published literature data of optimally doped \ce{Bi}2212 FS.
+This comparison clearly shows that the data points extracted from the fluence series agree well with the literature data.
+The data points for each cut at each fluence are plotted together in constant energy map, together with the literature data, but instead of showing the full Fermi surface here, a zoom of the anti-nodal region (see Fig. \ref{fig:FS_points_zoom} (a)) and the nodal (see Fig. \ref{fig:FS_points_zoom} (b)) region are displayed respectively.
+The zoom is chosen to better visualize the small movement of the quasiparticles due to the pump excitation.
+Comparing the zoomed in areas of the FS with published data on the FS of differently doped \ce{Bi}2212 samples, one can see the similarity between the data points of increased pump fluence and the behavior of the FS observed when increasing the hole doping via chemical doping of the compound \cite{} lanzare revisiting the FS nautre.
+
+\begin{figure}[b!]
+	\centering
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/FS_points_antinode}
+		\caption{}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/FS_points_node}
+		\caption{}
+	\end{subfigure}
+	\caption{The figure shows a series of bandmaps for four different cuts corresponding to (a) \qty{0.41}{\per\angstrom} (b) \qty{0.452}{\per\angstrom} (c) \qty{0.494}{\per\angstrom} (d) \qty{0.535}{\per\angstrom}, as indicated in Fig. \ref{fig:fermimap_angdep}. For each cut a series of fluences between \qtyrange{0.09}{1.15}{\milli\joule/\centi\meter\squared} is shown.}
+	\label{fig:FS_points_zoom}
+\end{figure}
+
+The evolution of the quasiparticle peaks at different momenta is one of the key findings presented in this chapter and represents the main observable from the data.
+Further analysis in this chapter will be based on these $k_F$ points.
+It is important to note here, that scans at even higher momenta (closer to the anti-node) were performed to increase the amount of data points, but it was not possible to obtain reliable MDCs.
+The main reason for this lies in the broad distribution of the spectral intensity of the incoherent quasiparticle peaks, that make up the Fermi arcs, due to the presence of the pseudo gap \cite{bibid} Norman, M. R et al., Nature 392, 157 (1998).
+This broadening, paired with the relatively low energy resolution of the Harmonium beamline made it impossible to resolve the two distinct peaks and reliably extract their momentum coordinate.
+In one of the next sections I will present a full reconstruction of the FS based upon these four momentum cuts, to better describe the evolution of the material under intense femtosecond light illumination.
+But before this is attempted, an additional quantity can be extracted from the bandmaps which will help immensely in the description of the Fermi surface evolution later.
 
 
 \section{Distinguishing effects of photodoping and screening}
