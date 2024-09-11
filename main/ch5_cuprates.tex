@@ -205,7 +205,42 @@ But before this is attempted, an additional quantity can be extracted from the b
 
 \section{Distinguishing effects of photodoping and screening}
 
+As mentioned at the end of the last section, apart from the quasiparticle peak movement, additional information can be gained from the fluence dependent series of bandmaps.
+When simply looking at the change of the $k_F$ points, keeping in mind that those are the endpoints terminating the parabolic dispersion, two distinct causes could result in the change of the observed momentum.
+The first possibility is that an actual shift of $k$ across the parabolic feature causes the quasiparticle to appear at momenta closer to \qty{0}{\per\angstrom}.
+A second possibility could lie in an upwards shift of the whole band structure, which would result in smaller $k_F$ if the same energy slice is chosen for the MDC used in the peak fit procedure.
 
+While both of these causes would show the same result, the movement of the $k_F$ points to the center, the physical cause is very distinct.
+Screening effects are are a reduction of the electric field, caused by mobile charges, as experienced by the system.
+A change in screening could be caused by an induced charge imbalance, which would result in a change of the Coulomb potential.
+In the band structure such a charge imbalance would result in a rearrangement of the momentum of the charges.
+
+Instead changes due to an energy shift of band structure could be caused by two different effects.
+The first possible effect which typically changes the observed energy is called space charge effect.
+This effect is the result of a too dense cloud of photoelectrons, being emitted at the same time, which due to Coulomb repulsion results in a broadening and shift of the detected photoelectron energy.
+A detailed description of this effect can be found in section \ref{sec:space_charge}.
+To ensure that the energy shift is not caused by space charge effects, the Fermi level is meticulously checked for any shifts, since the space charge effect would also influence the detected Fermi level.
+This is generally done by integrating over a momentum range in which no band is observed, in this case the region from \qtyrange{0.4}{0.5}{\per\angstrom} is summed.
+The resulting energy distribution curve (EDC) is fitted by a Fermi-Dirac equation, which is given by
+\begin{equation}
+	test
+\end{equation}
+with explain formula.
+An exemplary EDC with the corresponding fit can be found in Fig. \ref{label}.
+Additionally, Fig. \ref{label} shows the extracted Fermi level, for a selected fluence dependent measurement series.
+The figure shows, that the Fermi level stays approximately at the same value, considering an energy resolution of \qty{150}{\milli\electronvolt}.
+Only for the highest fluence of \qty{1.15}{\milli\joule/\centi\meter\squared} can a broadening and small energy shift be observed.
+
+A second possible effect, responsible for shifting the band structure upwards, is called photodoping.
+It is not uncommon to observe this effect in trARPES measurements.
+This effect is caused by a change in the number of electrons occupying states in the material.
+Here it is to note, that in ARPES measurements the whole system is electronically grounded and the Fermi level is fixed.
+Therefore, if a change in the occupation number occurs, a up- or downward shift of the band structure relative to $E_F$ will be observed.
+An upwards shift band structure, which would result in a shift of the quasiparticle peak towards the center, is the result of a lowered chemical potential, which means a reduction electrons occupying the electronic states of the material.
+In this section I will discuss how the upwards band shift can be quantified and why it can't be the only responsible contribution to the shift of the quasiparticle peaks.
+
+Multiple different spectral features could technically be used to quantify the photodoping effect, but the lower energy resolution restricts the analysis to three different options, the bottom of the parabolic dispersion, the center and the edge of the \ce{Cu} d-band.
+In each case a step function, broadened by a Gaussian distribution is fitted to determine the leading edge of the respective feature, and the evolution of the leading edge as a function of fluence is tracked.
 
 \section{Modeling the Fermi surface: A tight binding approach}
 
