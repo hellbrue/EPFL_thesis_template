@@ -223,13 +223,27 @@ To ensure that the energy shift is not caused by space charge effects, the Fermi
 This is generally done by integrating over a momentum range in which no band is observed, in this case the region from \qtyrange{0.4}{0.5}{\per\angstrom} is summed.
 The resulting energy distribution curve (EDC) is fitted by a Fermi-Dirac equation, which is given by
 \begin{equation}
-	test
+	I = \left[ c + \frac{1}{e^{(E-E_F)/k_BT}+1} \right] * g(E,\Delta E)
 \end{equation}
 with explain formula.
 An exemplary EDC with the corresponding fit can be found in Fig. \ref{label}.
 Additionally, Fig. \ref{label} shows the extracted Fermi level, for a selected fluence dependent measurement series.
 The figure shows, that the Fermi level stays approximately at the same value, considering an energy resolution of \qty{150}{\milli\electronvolt}.
 Only for the highest fluence of \qty{1.15}{\milli\joule/\centi\meter\squared} can a broadening and small energy shift be observed.
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/fermi_fit_1354}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/fermi_fit_fluence_1354}
+		\caption{}
+	\end{subfigure}
+	\caption{The figure shows a series of bandmaps for four different cuts corresponding to (a) \qty{0.41}{\per\angstrom} (b) \qty{0.452}{\per\angstrom} (c) \qty{0.494}{\per\angstrom} (d) \qty{0.535}{\per\angstrom}, as indicated in Fig. \ref{fig:fermimap_angdep}. For each cut a series of fluences between \qtyrange{0.09}{1.15}{\milli\joule/\centi\meter\squared} is shown.}
+	\label{fig:fermi_fit_bi2212}
+\end{figure}
 
 A second possible effect, responsible for shifting the band structure upwards, is called photodoping.
 It is not uncommon to observe this effect in trARPES measurements.
@@ -239,8 +253,22 @@ Therefore, if a change in the occupation number occurs, a up- or downward shift 
 An upwards shift band structure, which would result in a shift of the quasiparticle peak towards the center, is the result of a lowered chemical potential, which means a reduction electrons occupying the electronic states of the material.
 In this section I will discuss how the upwards band shift can be quantified and why it can't be the only responsible contribution to the shift of the quasiparticle peaks.
 
-Multiple different spectral features could technically be used to quantify the photodoping effect, but the lower energy resolution restricts the analysis to three different options, the bottom of the parabolic dispersion, the center and the edge of the \ce{Cu} d-band.
-In each case a step function, broadened by a Gaussian distribution is fitted to determine the leading edge of the respective feature, and the evolution of the leading edge as a function of fluence is tracked.
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/mu_parab_example}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/mu_edge_example}
+		\caption{}
+	\end{subfigure}
+	\caption{The figure shows a series of bandmaps for four different cuts corresponding to (a) \qty{0.41}{\per\angstrom} (b) \qty{0.452}{\per\angstrom} (c) \qty{0.494}{\per\angstrom} (d) \qty{0.535}{\per\angstrom}, as indicated in Fig. \ref{fig:fermimap_angdep}. For each cut a series of fluences between \qtyrange{0.09}{1.15}{\milli\joule/\centi\meter\squared} is shown.}
+	\label{fig:mu_center}
+\end{figure}
+
+Multiple different spectral features could technically be used to quantify the photodoping effect, but the lower energy resolution restricts the analysis to three different options, the bottom of the parabolic dispersion, as well as the center and the edge of the \ce{Cu} d-band.
+In each case a step function, broadened by a Gaussian distribution is fitted to determine the leading edge of the respective feature, and the evolution of the energy coordinate is tracked as a function of fluence.
 
 \section{Modeling the Fermi surface: A tight binding approach}
 
