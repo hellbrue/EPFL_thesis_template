@@ -109,6 +109,7 @@ In these measurements the shift of the Fermi momenta was considerably smaller fo
 This difference hints at a possible momentum dependence of the effect, which is a known fact regarding the FS changes for differently doped \ce{Bi}2212 samples, and motivates studies a larger momentum space.
 
 \section{Nodal vs anti-nodal behavior}
+\label{sec:angle}
 
 \ce{Bi}2212 is known for the anisotropy between the nodal and anit-nodal regions, which is clearly evident from the d-wave type superconductivty, which results in a superconducting gap at the anti-node but not at the node.
 The anisotropic is furthermore visible in the chemical doping dependent evolution of the Fermi surface.
@@ -226,8 +227,8 @@ The resulting energy distribution curve (EDC) is fitted by a Fermi-Dirac equatio
 	I = \left[ c + \frac{1}{e^{(E-E_F)/k_BT}+1} \right] * g(E,\Delta E)
 \end{equation}
 with explain formula.
-An exemplary EDC with the corresponding fit can be found in Fig. \ref{label}.
-Additionally, Fig. \ref{label} shows the extracted Fermi level, for a selected fluence dependent measurement series.
+An exemplary EDC with the corresponding fit can be found in Fig. \ref{fig:fermi_fit_bi2212} (a).
+Additionally, Fig. \ref{fig:fermi_fit_bi2212} (b) shows the extracted Fermi level, for a selected fluence dependent measurement series.
 The figure shows, that the Fermi level stays approximately at the same value, considering an energy resolution of \qty{150}{\milli\electronvolt}.
 Only for the highest fluence of \qty{1.15}{\milli\joule/\centi\meter\squared} can a broadening and small energy shift be observed.
 
@@ -241,7 +242,7 @@ Only for the highest fluence of \qty{1.15}{\milli\joule/\centi\meter\squared} ca
 		\includegraphics[width=\textwidth]{bi2212/fermi_fit_fluence_1354}
 		\caption{}
 	\end{subfigure}
-	\caption{The figure shows a series of bandmaps for four different cuts corresponding to (a) \qty{0.41}{\per\angstrom} (b) \qty{0.452}{\per\angstrom} (c) \qty{0.494}{\per\angstrom} (d) \qty{0.535}{\per\angstrom}, as indicated in Fig. \ref{fig:fermimap_angdep}. For each cut a series of fluences between \qtyrange{0.09}{1.15}{\milli\joule/\centi\meter\squared} is shown.}
+	\caption{(a) The figure shows an EDC for the fluence of \qty{0.09}{\milli\joule/\centi\meter\squared} with the corresponding fit determining the Fermi level. (b) Shows the same EDC for all recorded fluences as a colormap. Red markers shows the center of the Fermi level as determined from the respective fit.}
 	\label{fig:fermi_fit_bi2212}
 \end{figure}
 
@@ -253,9 +254,9 @@ Therefore, if a change in the occupation number occurs, a up- or downward shift 
 An upwards shift band structure, which would result in a shift of the quasiparticle peak towards the center, is the result of a lowered chemical potential, which means a reduction electrons occupying the electronic states of the material.
 In this section I will discuss how the upwards band shift can be quantified and why it can't be the only responsible contribution to the shift of the quasiparticle peaks.
 
-\begin{figure}[t]
+\begin{figure}[b	!]
 	\centering
-	\begin{subfigure}[b]{0.33\textwidth}
+	\begin{subfigure}[b]{0.27\textwidth}
 		\includegraphics[width=\textwidth]{bi2212/mu_parab_example}
 		\caption{}
 	\end{subfigure}
@@ -263,15 +264,88 @@ In this section I will discuss how the upwards band shift can be quantified and 
 		\includegraphics[width=\textwidth]{bi2212/mu_edge_example}
 		\caption{}
 	\end{subfigure}
-	\caption{The figure shows a series of bandmaps for four different cuts corresponding to (a) \qty{0.41}{\per\angstrom} (b) \qty{0.452}{\per\angstrom} (c) \qty{0.494}{\per\angstrom} (d) \qty{0.535}{\per\angstrom}, as indicated in Fig. \ref{fig:fermimap_angdep}. For each cut a series of fluences between \qtyrange{0.09}{1.15}{\milli\joule/\centi\meter\squared} is shown.}
+	\caption{The figure shows part of the bandmap, with a zoom of (a) the parabolic feature at $E_F$ and (b) of the \ce{Cu} d-band. A step function broadened by a Gaussian is used to determine the leading edge of each feature. Red markers indicate the extracted center of the edge. Both bandmaps show the position of the leading edge for a pump fluence of \qty{0.09}{\milli\joule/\centi\meter\squared}.}
 	\label{fig:mu_center}
 \end{figure}
 
 Multiple different spectral features could technically be used to quantify the photodoping effect, but the lower energy resolution restricts the analysis to three different options, the bottom of the parabolic dispersion, as well as the center and the edge of the \ce{Cu} d-band.
 In each case a step function, broadened by a Gaussian distribution is fitted to determine the leading edge of the respective feature, and the evolution of the energy coordinate is tracked as a function of fluence.
+Fig. \ref{fig:mu_center} shows how the feature positions are determined for each case, with (a) showing the parabolic feature and the fit of the bottom of the parabola, and (b) showing the fitted position of the \ce{Cu} d-band.
+In the first case the bottom of the parabola has to be accurately determined, which is done by taking the center of the two quasiparticle peaks.
+The fit of the the broadened step function the extracts the position of the leading edge as shown in Fig. \ref{fig:mu_center} (a).
+This method assumes that the feature is actually parabolic, which in reality is not exactly true as there is a asymmetric spectral weight distribution.
+Additionally, the asymmetric closing of the parabola due to the slight planar misalignment (see Sec. \ref{sec:larger_effect}) makes this problem worse.
+
+Therefore using the leading edge of the \ce{Cu} d-bands presents a better alternative, which additionally benefits from a higher signal to noise ratio.
+For this case the momentum range is divided into \qty{10}{\per\angstrom} sized bin, to further improve the signal quality and the center position of the leading edge is extracted with the help of a broadened step function, across the whole momentum range.
+The extracted position can be seen in Fig. \ref{fig:mu_center} (b), which shows a curved distribution of centers, which is relatively flat under the incoherent waterfall feature.
+For this reason the leading edge of the \ce{Cu} d-band center is used to quantify the shift of the feature as a function of pump fluence.
+The other discussed features will be analyzed in the same to compare if the shifts qualitatively, making sure that the shift is even across the band structure.
+
+\begin{figure}[b!]
+	\centering
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/mu_shift_cuband}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/mu_shift_all}
+		\caption{}
+	\end{subfigure}
+	\caption{}
+	\label{fig:mu_shift}
+\end{figure}
+
+The analysis of the leading edge shift as a function of fluence reveal a shift that is linear with the pump fluence and is approximately \qty{40}{\milli\electronvolt} in amplitude for the maximum fluence of \qty{1.15}{\milli\joule/\centi\meter\squared} (see Fig. \ref{fig:mu_shift}).
+Additionally, figure \ref{fig:mu_shift} (a) shows that both the center and sides of the \ce{Cu} d-band shift by the same amount.
+This is also the case for the parabolic feature apart from the data point at the highest fluence, at which point the feature becomes less clear in general and the fit procedure fails.
+The fitting error for the parabolic feature is also significantly larger than for the \ce{Cu} d-band.
+
+In general, the analysis shows clearly an upwards shift of the band structure, which depends linearly on the fluence and that behavior is similar across the observed bandmap.
+Applying a linear regression to the datapoints reveals a chemical potential shift of \qty{33}{\frac{\milli\electronvolt}{\milli\joule/\centi\meter\squared}}.
+This combined with the fact that the Fermi level does not show a linear upwards shift means that the chemical potential $\mu$ changes and scales linearly with the fluence.
+Therefore, photodoping plays an important part when trying to understand the out of equilibrium dynamics.
+Now it is important to understand if photodoping is the dominating or even sole cause of the observed quasiparticle shift or if screening effects are important to consider as well.
 
 \section{Modeling the Fermi surface: A tight binding approach}
 
+This section will address the the role of screening for the observed quasiparticle shift after light irradiation.
+To answer this question I will use the results on the photodoping and try to recreate the FS within a tight binding approach, which is a standard, but phenomenological way of plotting the FS of \ce{Bi}2212 and performs well in a large doping range.
+At the beginning the tight binding model will be recreated with literature values for the unpumped case, and small changes will be introduced to account for the out of equilibrium FS for the different fluences.
 
+The tight binding model generally includes a series of cosine terms, with their amplitude depending on the hopping parameters.
+In the model used here, terms up to the 3rd order are used and the model is described by
+\begin{equation}
+	E = \frac{\mu}{t} + \frac{1}{2} \left(\cos(k_xa)+\cos(k_ya)\right) + \frac{t'}{t} \cos(k_xa)\cos(k_ya) + \frac{t''}{2t} \left(\cos(2k_xa)+\cos(2k_ya)\right)
+\end{equation}
+with the nearest neighbor (NN) hopping parameter $t$, the next NN (NNN) hopping parameter $t'$ and the second (NNN) hopping parameter $t''$, the chemical potential $\mu$ and the lattice parameter $a=\qty{3.83}{\angstrom}$, reflecting the \ce{Cu}-\ce{Cu} distance.
+Higher order terms, especially terms accounting for the splitting of bonding and anti-bonding bands were ignored, as it is not possible to individually resolve the two branches with the Harmonium beamline.
+
+Additional assumption were made to reduce the amount of free parameters in the model.
+First $t'$ and $t''$ were treated as fixed parameters, with their value taken from previous publications \cite{}.
+Second, the chemical potential is treated the same way as $t'$ and $t''$ for the unpumped case, with the value taken as well from the reference.
+For any higher fluence $\mu$ is still treated as a fixed parameter, but the value is updates in each step according to the relative change extracted in the previous chapter.
+This leaves only the nearest neighbor hopping parameter as a free fitting parameter for each fluence.
+
+In order to recreate the full FS additional points were added to the plot based on the four-fold symmetry of lattice.
+In a first step, the literature data was fitted with the using the fixed values as mentioned before and leaving $t$ as a free parameter, in order to evaluate the consistency of the methodology.
+The resulting values were then used to fit the datapoints for the case of \qty{0.09}{ \qty{1.15}{\milli\joule/\centi\meter\squared}}.
+Fig. \ref{} shows the result of this fit.
+A comparison with the literature data shows a good agreement between the fit and literature data.
+From this point onward the fixed parameters were treated as stated before.
+In addition the fit result for $t$ for a specific fluence is then used as a guess parameter for the next higher fluence.
+This way the FS is reconstructed for the full fluence dependence step-by-step.
+The full reconstructed FS evolution is shown in Fig. \ref{} together with the datapoints.
+
+From the figure it becomes very clear that the FS is modified both in terms of curvature as well as in size of the enclosed area.
+For the lowest fluence of \qty{0.09}{\milli\joule/\centi\meter\squared}, the FS encloses the area around the ($\pi$,$\pi$)-point and forms a hole-pocket.
+Increasing the fluence results in a significant modulation at the anti-node ($\pi$,0), as previously observed in section \ref{sec:angle}.
+Increasing the fluence to  \qty{0.88}{\milli\joule/\centi\meter\squared} results in a change if the enclosed FS area from being centered around ($\pi$,$\pi$) to being centered around $\Gamma$.
+This results in a transformation of the enclosed area from a hole- to an electron-pocket.
+Typically, this transformation is referred to as a Lifshitz transition, which is a well known phenomenon for various hole-doped cuprates, including \ce{Bi}2212, \ce{Bi}2201, LSCO and \ce{Nd}-LSCO \cite{} draft.
+At equilibrium the Lifshitz transition occurs when increasing the hole-doping.
+In \ce{Bi}2212, this transition happens is at a hole doping of $p=0.22$ \cite{} 35 draft.
+
+discuss about tdifferent outcomes of the fit
 
 \section{Effect duration and metastability}
