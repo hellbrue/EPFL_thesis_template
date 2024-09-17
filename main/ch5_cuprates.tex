@@ -1,12 +1,54 @@
-\chapter{Photoinduced Lifshitz transition in \ce{Bi}2212}
+\chapter{Photoinduced Lifshitz transition in \ce{Bi2Sr2CaCu2O8}}
 
 
 
-\section{General aspects of \ce{Bi}2212}
+\section{General aspects of \ce{Bi2Sr2CaCu2O8}}
 \label{sec:bscco_general}
 
+\ce{Bi2Sr2CaCu2O8} (\ce{Bi}2212) are part of the \ce{Bi} based cuprate family.
+They are, similar to all cuprates, characterized by \ce{CuO2} planes which are mainly responsible for the electronic properties of the compound.
+The cuprates form in crystal structures similar to the perovskites, and are typically identified by their amount of \ce{CuO2} planes.
+Fig. \ref{} shows they crystal structure for the single-, bi- and trilayer \ce{Bi}-based cuprates.
 
-describe bandstructure and FS
+The mentioned \ce{CuO2} planes are made up of \ce{Cu^{2+}} and \ce{O^-} ions.
+This results in a $3d^9$ configuration of the transition metal, leading to a single hole occupation per site.
+Due to the crystal field splitting this hole occupies the $3d_{x^2-y^2}$ orbital, as it is the highest energy orbital in this configuration.
+The single hole occupancy can be viewed by a Mott-Hubbard Hamiltonian at half filling, which can help expressing the basic electronic structure of the compound.
+Taking into account the high Hubbard $U$ of approximately \qty{8}{\electronvolt}, a strong splitting of the $d$-band in a upper and lower Hubbard band occurs (UHB \& LHB).
+This would typically result in a Mott-Hubbard insulator, but in the \ce{CuO2} plane the oxygen $2p$ orbitals are situated between the lower and upper HB.
+In this case the charge transfer gap between the \ce{O} $2p$ and the \ce{Cu} $3d$ orbital is smaller, hence the classification as a Charge-Transfer insulator. 
+
+The physics of the cuprates is highly dependent on the amount of charges, which can be adjusted by adding holes or electrons to the system in a chemical doping process.
+In this chapter I restrict myself to the case of hole doped \ce{Bi}2212.
+Adding a small amount of holes to the per unit cell, results in the delocalization of this hole and the formation of the Zhang-Rice singlet (ZRS), which is located at the Fermi-level. (see Fig. \ref{}).
+The various phases of the hole-doped cuprates can be seen in the phase diagram of the material.
+
+As stated before, the undoped compound shows insulating behavior due to the strong correlations expressed by $U$.
+This phase is additionally characterized by a long range antiferromagnetic ordering of the spins, below the Néel temperature of around \qtyrange{300}{400}{\kelvin}.
+Increasing the hole-doping results in the appearance of a superconducting phase, within a doping range of 0.05 to 0.25 holes.
+This phase persists up to a certain doping dependent critical temperature $T_c$, which spans a dome like region.
+The doping for which $T_c$ reaches a maximum is referred to optimal doping (OP) and for \ce{Bi}2212 a $T_c$ of \qty{90}{\kelvin} can be reached at a doping of 0.16.
+Doping levels below or above optimal doping are called underdoped (UD) or overdoped (OD) respectively.
+A microscopic theory for the high $T_c$ superconducting phase is still missing, despite extensive research on the topic.
+
+The superconducting (SC) phase in cuprates shows anisotropic $d$-wave symmetry, which has been observed experimentally by various techniques \cite{}.
+This anisotropy is expressed in a momentum dependent superconducting gap, and it's amplitude is given by
+\begin{equation}
+	\Delta(k_x,k_y) = \frac{\Delta_0}{2}\left[\cos(k_xa)-\cos(ky_a)\right]
+\end{equation}
+with the maximum gap $\Delta_0$, and the lattice constant $a=\qty{3.83}{\angstrom}$ for the \ce{Cu}-\ce{Cu} distance.
+The result of this is the well known Fermi surface consisting of the four Fermi arcs, being divided in two different regions.
+The nodal region, in which no gap can be observed, even in the superconducting state, which is situated along the $\Gamma$ - ($\pi, \pi$) direction.
+And the anti-nodal region, which marks the region with maximum gap amplitude, situated a the ($\pi, 0$) points (see Fig. \ref{}).
+The anisotropic $d$-wave symmetry of the gap stands in contrast to the $s$-wave gap symmetry of the BCS superconductors, which show a full gapping across the Brillouin zone.
+
+For temperatures above $T_c$, in the normal state of the material, multiple different phases appear.
+In the UD regime, the so called pseudogap (PG) phase appear, which is characterized by a partial gap, that also follows a $d$-wave symmetry, slightly different from that of the SC phase.
+The maximum doping, as a function of temperature, for which the pseudogap phase still exists is defined as $p^*$, but variations for $p^*$ exist depending on the technique.
+Similar to the SC phase a microscopic explanation on the formation of the pseudogap is missing, but the evidence points towards a connection to short-range antiferromagnetic correlations \cite{}.
+The interplay and coexistence of the PG and SC phase is one of the big questions in cuprate superconductors.
+When the doping is increased beyond $p^*$ the strange metal phase forms.
+Here the resistivity shows a linear dependence on the temperature.
 
 \section{Sample characterization}
 
@@ -23,14 +65,14 @@ Upon cooling, the crucible was opened to reveal mica-like flakes with glossy cry
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.5\linewidth]{images/bi2212/sample_res}
+	\includegraphics[width=0.7\linewidth]{images/bi2212/sample_res}
 	\caption{Electrical resistance of the sample Bi2212 used in the experiment. $T_{c,\text{onset}}=\qty{92.3}{\kelvin}, T_{c,\text{50\%}}=\qty{90.1}{\kelvin}, T_{c,\text{zero}}=\qty{85.7}{\kelvin}$}
 	\label{fig:sampleres}
 \end{figure}
 
 
 The crystal growth process occurred in air.
-Notably, annealing or heat treatment of \ce{Bi2Sr2CaCu2O8} samples can impact $T_c$.
+Notably, annealing or heat treatment of \ce{Bi}2212 samples can impact $T_c$.
 The crystals exhibited superconducting transitions at approximately \qty{75}{\kelvin} (zero resistance) when grown.
 However, after subjecting the cleaved crystals to air heating at temperatures up to \qty{600}{\degreeCelsius} for as little as a minute, $T_c$ increased to typical values ranging from \qtyrange{85}{90}{\kelvin} (see Fig. \ref{}).
 Characterization of the samples involved electrical resistivity measurements on very thin, regularly shaped single crystals. Electrical contacts were established using 12-micrometer gold wires and silver epoxy cured at \qty{600}{\degreeCelsius}.
