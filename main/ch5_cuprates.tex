@@ -16,7 +16,7 @@ Due to the crystal field splitting this hole occupies the $3d_{x^2-y^2}$ orbital
 The single hole occupancy can be viewed by a Mott-Hubbard Hamiltonian at half filling, which can help expressing the basic electronic structure of the compound.
 Taking into account the high Hubbard $U$ of approximately \qty{8}{\electronvolt}, a strong splitting of the $d$-band in a upper and lower Hubbard band occurs (UHB \& LHB).
 This would typically result in a Mott-Hubbard insulator, but in the \ce{CuO2} plane the oxygen $2p$ orbitals are situated between the lower and upper HB.
-In this case the charge transfer gap between the \ce{O} $2p$ and the \ce{Cu} $3d$ orbital is smaller, hence the classification as a Charge-Transfer insulator. 
+In this case the charge transfer gap between the \ce{O} $2p$ and the \ce{Cu} $3d$ orbital is smaller, hence the classification as a Charge-Transfer insulator \cite{} fra 64. 
 
 The physics of the cuprates is highly dependent on the amount of charges, which can be adjusted by adding holes or electrons to the system in a chemical doping process.
 In this chapter I restrict myself to the case of hole doped \ce{Bi}2212.
@@ -47,8 +47,59 @@ In the UD regime, the so called pseudogap (PG) phase appear, which is characteri
 The maximum doping, as a function of temperature, for which the pseudogap phase still exists is defined as $p^*$, but variations for $p^*$ exist depending on the technique.
 Similar to the SC phase a microscopic explanation on the formation of the pseudogap is missing, but the evidence points towards a connection to short-range antiferromagnetic correlations \cite{}.
 The interplay and coexistence of the PG and SC phase is one of the big questions in cuprate superconductors.
-When the doping is increased beyond $p^*$ the strange metal phase forms.
-Here the resistivity shows a linear dependence on the temperature.
+
+If the doping is further increased beyond $p^*$ the strange metal phase forms.
+Strange metals is another material class or phase, whose microscopic mechanism is still unknown.
+In this phase, the resistivity of the material shows a perfectly linear dependence on the temperature, up to a specific temperature which is up to a few hundreds of kelvin, in the case of cuprates \cite{}.
+The strange metal phase is not exclusive to hole doped cuprates, but is found in a plethora of material classes.
+The strange metal behavior typically occurs in the proximity of a quantum critical point, and is associated with the phenomenon of Planckian dissipation, which shows that the inelastic scattering time $\tau$ is inversely proportional to the temperature with
+\begin{equation}
+	\tau \approx \frac{\hbar}{k_BT}
+\end{equation}
+where $\hbar$ is the Planck constant and $k_B$ the Boltzmann constant \cite{} 12 ataei benhabib .
+A further increase in doping, into the heavily overdoped regime, leads to the appearance of a Fermi-liquid phase \cite{} Fra 18, in which the linear temperature dependence of the strange metal changes to the quadratic dependence $\tau\sim T^2$ \cite{} fra 15-17.
+
+An additional phase in \ce{Bi}2212 and other cuprates is the charge density wave (CDW) phase.
+The physics of CDWs is elucidates in more detail in the chapter tackling the CDW compound \ce{TaTe2}, in section \ref{sec:cdw}.
+In the context it is important to highlight that this phase overlaps with the pseudogap and superconducting phase.
+The competition of the charge order and superconductivity is very active research field and of high importance for understanding the mechanisms behind high $T_c$ superconductivity.
+Recent ultrafast studies found different recovery times of the CDW and superconducting features, showing a potential way of studying the effect the phases have on each other \cite{} wandel.
+
+In this chapter I will discuss the manipulation of the material by femtosecond irradiation, by incuding changes to the microscopic properties of the material.
+For this it is important to have a look at the fundamental physics that describe the \ce{CuO2} placket, which have been briefly touched on at the beginning of this section.
+The three-band Hubbard model (sometimes called Emery model) can describe the contributions from the multiple orbitals as well as their interaction\cite{} avella emery vs hubbard.
+The tight-binding Hamiltonian of the system can then be written as
+\begin{equation}
+\begin{split}
+	H &\quad = \epsilon_d \sum_{i}^{} n_i^d + \epsilon_p \sum_{i}^{} n_j^p \\
+	  &\quad + \sum_{\braket{i,j}}^{} t_{pd}^{ij} \left(d_i^\dagger p_j + h.c.\right) + \sum_{\braket{j,j'}}^{} t_{pp}^{jj'} \left(p_i^\dagger p_j + h.c.\right)\\
+	  &\quad + U_d \sum_{i}^{} n_{i,\uparrow}^d n_{i,\downarrow}^d + U_p \sum_{j}^{} n_{j,\uparrow}^p n_{j,\downarrow}^p + V_{pd} \sum_{\braket{i,j}}^{} n_i^d n_j^p
+\end{split}
+\end{equation}
+expressing the individual contribution of the copper or oxygen orbitals by their respective energy $\epsilon_d$ \& $\epsilon_p$, and the occupation number $n_d$ \& $n_p$ and the nearest neighbor interaction between the copper-oxygen and oxygen-oxygen orbitals with the hopping parameters $t_{pd}$ \& $t_{pp}$.
+The last three term describe the on-site Coulomb interaction of the copper and oxygen orbitals with their respective potential $U_d$ \& $U_p$, as well as the contribution from copper-oxygen Coulomb interaction $V_{pd}$.
+
+This problem can then be reduced to a single-band Hamiltonian, that expressed the interactions of the system by a superexchange that is mediated by the oxygen orbitals.
+The superexchange J is given by
+\begin{equation}
+	J= \frac{4t_pd^4}{\left(\Delta + Vpd \right)^2} \left[\frac{1}{U_d} + \frac{2}{2\Delta + U_p}\right]
+\end{equation}
+where $\Delta$ describes the charge transfer gap.
+This leads to the Heisenberg Hamiltonian
+\begin{equation}
+	H_J = J \sum_{\braket{i,j}}^{} \mathbf{S}_i \mathbf{S}_j
+\end{equation}
+which expresses the system by a squared lattice and localized spins, with their exchange restricted to the nearest neighbors.
+In the case of the cuprates, J is positive with a typical value around \qty{0.1}{\electronvolt}, which gives the antiferromagnetic order that was already mentioned earlier.
+
+The previous two models were used to describe the undoped insulating material.
+At the beginning of this section it was briefly mentioned that the doping with additional holes, leads to a delocalization of that whole and the formation of the ZRS.
+The cause for this delocalization stems from the strong Coulomb repulsion on the copper sites, which prevent to occupation of an additional hole.
+Instead the hole occupies a state in the oxygen orbitals.
+This situation can be described by the so-called t-J model, which is an effective model, describing the single-band resulting from the Zhang-Rice singlet.
+Zhang and Rice showed that the singlet superposition of a superposition of the oxygen $p_{x,y}$ orbitals has the lowest energy,
+
+briefly tj
 
 \section{Sample characterization}
 
