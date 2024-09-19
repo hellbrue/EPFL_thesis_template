@@ -8,7 +8,15 @@
 \ce{Bi2Sr2CaCu2O8} (\ce{Bi}2212) are part of the \ce{Bi} based cuprate family.
 They are, similar to all cuprates, characterized by \ce{CuO2} planes which are mainly responsible for the electronic properties of the compound.
 The cuprates form in crystal structures similar to the perovskites, and are typically identified by their amount of \ce{CuO2} planes.
-Fig. \ref{} shows they crystal structure for the single-, bi- and trilayer \ce{Bi}-based cuprates.
+Fig. \ref{fig:bscco_structure} shows they crystal structure for the single-, bi- and trilayer \ce{Bi}-based cuprates.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/bi2212/BSCCO_structure}
+	\caption{}
+	\label{fig:bscco_structure}
+\end{figure}
+
 
 The mentioned \ce{CuO2} planes are made up of \ce{Cu^{2+}} and \ce{O^-} ions.
 This results in a $3d^9$ configuration of the transition metal, leading to a single hole occupation per site.
@@ -17,11 +25,26 @@ The single hole occupancy can be viewed by a Mott-Hubbard Hamiltonian at half fi
 Taking into account the high Hubbard $U$ of approximately \qty{8}{\electronvolt}, a strong splitting of the $d$-band in a upper and lower Hubbard band occurs (UHB \& LHB).
 This would typically result in a Mott-Hubbard insulator, but in the \ce{CuO2} plane the oxygen $2p$ orbitals are situated between the lower and upper HB.
 In this case the charge transfer gap between the \ce{O} $2p$ and the \ce{Cu} $3d$ orbital is smaller, hence the classification as a Charge-Transfer insulator \cite{} fra 64. 
+Figure \ref{fig:cuo_dos} shows a sketch of the main constituents of the \ce{CuO} placket, and the corresponding density of states (DOS) for the doped and undoped case.
 
 The physics of the cuprates is highly dependent on the amount of charges, which can be adjusted by adding holes or electrons to the system in a chemical doping process.
 In this chapter I restrict myself to the case of hole doped \ce{Bi}2212.
-Adding a small amount of holes to the per unit cell, results in the delocalization of this hole and the formation of the Zhang-Rice singlet (ZRS), which is located at the Fermi-level. (see Fig. \ref{}).
+Adding a small amount of holes to the per unit cell, results in the delocalization of this hole and the formation of the Zhang-Rice singlet (ZRS), which is located at the Fermi-level. (see Fig. \ref{fig:cuo_dos}).
 The various phases of the hole-doped cuprates can be seen in the phase diagram of the material.
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/Cu_plackett}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/dos}
+		\caption{}
+	\end{subfigure}
+	\caption{}
+	\label{fig:cuo_dos}
+\end{figure}
 
 As stated before, the undoped compound shows insulating behavior due to the strong correlations expressed by $U$.
 This phase is additionally characterized by a long range antiferromagnetic ordering of the spins, below the Néel temperature of around \qtyrange{300}{400}{\kelvin}.
@@ -39,7 +62,7 @@ This anisotropy is expressed in a momentum dependent superconducting gap, and it
 with the maximum gap $\Delta_0$, and the lattice constant $a=\qty{3.83}{\angstrom}$ for the \ce{Cu}-\ce{Cu} distance.
 The result of this is the well known Fermi surface consisting of the four Fermi arcs, being divided in two different regions.
 The nodal region, in which no gap can be observed, even in the superconducting state, which is situated along the $\Gamma$ - ($\pi, \pi$) direction.
-And the anti-nodal region, which marks the region with maximum gap amplitude, situated a the ($\pi, 0$) points (see Fig. \ref{}).
+And the anti-nodal region, which marks the region with maximum gap amplitude, situated a the ($\pi, 0$) points (see Fig. \ref{fig:phase_diag}).
 The anisotropic $d$-wave symmetry of the gap stands in contrast to the $s$-wave gap symmetry of the BCS superconductors, which show a full gapping across the Brillouin zone.
 
 For temperatures above $T_c$, in the normal state of the material, multiple different phases appear.
@@ -58,6 +81,20 @@ The strange metal behavior typically occurs in the proximity of a quantum critic
 \end{equation}
 where $\hbar$ is the Planck constant and $k_B$ the Boltzmann constant \cite{} 12 ataei benhabib .
 A further increase in doping, into the heavily overdoped regime, leads to the appearance of a Fermi-liquid phase \cite{} Fra 18, in which the linear temperature dependence of the strange metal changes to the quadratic dependence $\tau\sim T^2$ \cite{} fra 15-17.
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/phase_manip}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/d_Wave_gap}
+		\caption{}
+	\end{subfigure}
+	\caption{}
+	\label{fig:phase_diag}
+\end{figure}
 
 An additional phase in \ce{Bi}2212 and other cuprates is the charge density wave (CDW) phase.
 The physics of CDWs is elucidates in more detail in the chapter tackling the CDW compound \ce{TaTe2}, in section \ref{sec:cdw}.
@@ -82,7 +119,7 @@ The last three term describe the on-site Coulomb interaction of the copper and o
 This problem can then be reduced to a single-band Hamiltonian, that expressed the interactions of the system by a superexchange that is mediated by the oxygen orbitals.
 The superexchange J is given by
 \begin{equation}
-	J= \frac{4t_pd^4}{\left(\Delta + Vpd \right)^2} \left[\frac{1}{U_d} + \frac{2}{2\Delta + U_p}\right]
+	J= \frac{4t_{pd}^4}{\left(\Delta + V_{pd} \right)^2} \left[\frac{1}{U_d} + \frac{2}{2\Delta + U_p}\right]
 \end{equation}
 where $\Delta$ describes the charge transfer gap.
 This leads to the Heisenberg Hamiltonian
@@ -93,13 +130,23 @@ which expresses the system by a squared lattice and localized spins, with their 
 In the case of the cuprates, J is positive with a typical value around \qty{0.1}{\electronvolt}, which gives the antiferromagnetic order that was already mentioned earlier.
 
 The previous two models were used to describe the undoped insulating material.
-At the beginning of this section it was briefly mentioned that the doping with additional holes, leads to a delocalization of that whole and the formation of the ZRS.
-The cause for this delocalization stems from the strong Coulomb repulsion on the copper sites, which prevent to occupation of an additional hole.
-Instead the hole occupies a state in the oxygen orbitals.
-This situation can be described by the so-called t-J model, which is an effective model, describing the single-band resulting from the Zhang-Rice singlet.
-Zhang and Rice showed that the singlet superposition of a superposition of the oxygen $p_{x,y}$ orbitals has the lowest energy,
+At the beginning of this section it was briefly mentioned that the doping with additional holes, leads to a delocalization of that hole and the formation of the ZRS.
+The cause for this delocalization stems from the strong Coulomb repulsion on the copper sites, which prevents the occupation of an additional hole.
+Zhang and Rice showed that due to the presence of an added hole, a singlet state emerges, and that the occupation of this state is energetically favored.
+The singlet is formed from a symmetric superposition of four oxygen $2p_{x,y}$ orbitals and the hybridization with the \ce{Cu} $3d_{x^2-y^2}$ orbital.
+One can think of the ZRS as a hole moving through the antiferromagnetic square lattice, described by the Heisenberg-Hamiltonian, and whose movement is expressed by the superexchange $J$.
+The low-energy nature of the singlet state allows to reduce the previous 3 band model, to an effective 1 band Hamiltonian.
+In the effective 1 band model the hopping of the ZRS is expressed by an effective hopping parameter $t_{i,j}$.
+This model is commonly referred to as the t-J-model, which can be expressed by
+\begin{equation}
+	H_\text{eff} = - \sum_{\braket{i,j}\sigma} P \left( t_{ij} c_{i\sigma}^\dagger c_{j\sigma} + h.c. \right) P + J \sum_{\braket{i,j}} \left[\mathbf{S}_i \mathbf{S}_j - \frac{1}{2} n_i n_j\right]
+\end{equation}
+where P is the Gutzwiller projector, which excludes any double occupancy on a site $i$.
+Apart from the nearest neighbor hopping $t$, higher orders can included as well, with the next nearest neighbor hopping $t'$ etc.
 
-briefly tj
+The t-J model highlights the importance of the hopping parameters for electronic properties of the \ce{CuO2} plane.
+By performing ARPES measurements on the cuprates, the parameters of this model can be estimated by fitting the Fermi surface.
+In this chapter I will discuss how intense femtosecond infrared irradiation, changes the Fermi surface and with it these microscopic parameters.
 
 \section{Sample characterization}
 
