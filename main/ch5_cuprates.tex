@@ -24,18 +24,33 @@ Due to the crystal field splitting this hole occupies the $3d_{x^2-y^2}$ orbital
 The single hole occupancy can be viewed by a Mott-Hubbard Hamiltonian at half filling, which can help expressing the basic electronic structure of the compound.
 Taking into account the high Hubbard $U$ of approximately \qty{8}{\electronvolt}, a strong splitting of the $d$-band in a upper and lower Hubbard band occurs (UHB \& LHB).
 This would typically result in a Mott-Hubbard insulator, but in the \ce{CuO2} plane the oxygen $2p$ orbitals are situated between the lower and upper HB.
-In this case the charge transfer gap between the \ce{O} $2p$ and the \ce{Cu} $3d$ orbital is smaller, hence the classification as a Charge-Transfer insulator \cite{} fra 64. 
+In this case the charge transfer gap between the \ce{O} $2p$ and the \ce{Cu} $3d$ orbital is smaller, hence the classification as a Charge-Transfer insulator \cite{zaanen_band_1985} fra 63. 
 Figure \ref{fig:cuo_dos} shows a sketch of the main constituents of the \ce{CuO} placket, and the corresponding density of states (DOS) for the doped and undoped case.
 
-The physics of the cuprates is highly dependent on the amount of charges, which can be adjusted by adding holes or electrons to the system in a chemical doping process.
-In this chapter I restrict myself to the case of hole doped \ce{Bi}2212.
-Adding a small amount of holes to the per unit cell, results in the delocalization of this hole and the formation of the Zhang-Rice singlet (ZRS), which is located at the Fermi-level. (see Fig. \ref{fig:cuo_dos}).
-The various phases of the hole-doped cuprates can be seen in the phase diagram of the material.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/bi2212/fs_bi2212}
+	\caption{}
+	\label{fig:fsbi2212}
+\end{figure}
+
+
+In the cuprates the \ce{Cu} $d$-bands and the \ce{O} $p$-bands make up the valence states of the compound and are therefore largely responsible for the electronic properties.
+Additionally, the physics of the cuprates is highly dependent on the amount of charges, which can be adjusted by adding holes or electrons to the system in a chemical doping process.
+In this chapter I restrict myself to the case of hole doped \ce{Bi}2212, since all measurements have been performed on the hole doped compound..
+Adding a small amount of holes to the compound, results in the delocalization of this hole and the formation of the Zhang-Rice singlet (ZRS), which is located at the Fermi-level. (see Fig. \ref{fig:cuo_dos}).
+Looking at the Fermi surface in ARPES, shows four Fermi arcs, which in the normal state leads to an enclosed hole-like Fermi pocket which is centered around the ($\pi, \pi$) points.
+Changing the hole-doping content of the material changes alters the shape of the arcs.
+At a certain doping around 0.22 holes, the enclosed Fermi surface area changes from being centered around ($\pi, \pi$), to being centered around $\Gamma$ and leads to an enclosed electron-like pocket.
+Two distinct aread exist in the Fermi-surface.
+The region around the ($\pi, 0$) points is called the anti-node and corresponds to the region in which a superconducting gap opens below the superconducting transition temperature $T_c$.
+The second region corresponds instead to the area at the center of the arcs and is called the nodal-area.
+As its name suggests, no Fermi-surface opens up in this region, even when entering the superconducting phase.
 
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}[b]{0.49\textwidth}
-		\includegraphics[width=\textwidth]{bi2212/Cu_plackett}
+		\includegraphics[width=\textwidth]{bi2212/cuo}
 		\caption{}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\textwidth}
@@ -46,6 +61,8 @@ The various phases of the hole-doped cuprates can be seen in the phase diagram o
 	\label{fig:cuo_dos}
 \end{figure}
 
+Since the electronic properties of the cuprates are so heavily dependent on the amount of doped holes, a very rich phase diagram can be observed with various exotic phases.
+Figure \ref{fig:phase_diag} (a) shows a sketch of the hole doped cuprate phase diagram.
 As stated before, the undoped compound shows insulating behavior due to the strong correlations expressed by $U$.
 This phase is additionally characterized by a long range antiferromagnetic ordering of the spins, below the Néel temperature of around \qtyrange{300}{400}{\kelvin}.
 Increasing the hole-doping results in the appearance of a superconducting phase, within a doping range of 0.05 to 0.25 holes.
@@ -54,42 +71,40 @@ The doping for which $T_c$ reaches a maximum is referred to optimal doping (OP) 
 Doping levels below or above optimal doping are called underdoped (UD) or overdoped (OD) respectively.
 A microscopic theory for the high $T_c$ superconducting phase is still missing, despite extensive research on the topic.
 
-The superconducting (SC) phase in cuprates shows anisotropic $d$-wave symmetry, which has been observed experimentally by various techniques \cite{}.
+The superconducting (SC) phase in cuprates shows anisotropic $d$-wave symmetry, which has been observed experimentally by various techniques \cite{} 102-113 anme techniques + recent arpes sign change gap.
 This anisotropy is expressed in a momentum dependent superconducting gap, and it's amplitude is given by
 \begin{equation}
 	\Delta(k_x,k_y) = \frac{\Delta_0}{2}\left[\cos(k_xa)-\cos(ky_a)\right]
 \end{equation}
 with the maximum gap $\Delta_0$, and the lattice constant $a=\qty{3.83}{\angstrom}$ for the \ce{Cu}-\ce{Cu} distance.
-The result of this is the well known Fermi surface consisting of the four Fermi arcs, being divided in two different regions.
-The nodal region, in which no gap can be observed, even in the superconducting state, which is situated along the $\Gamma$ - ($\pi, \pi$) direction.
-And the anti-nodal region, which marks the region with maximum gap amplitude, situated a the ($\pi, 0$) points (see Fig. \ref{fig:phase_diag}).
-The anisotropic $d$-wave symmetry of the gap stands in contrast to the $s$-wave gap symmetry of the BCS superconductors, which show a full gapping across the Brillouin zone.
+The result of this is the Fermi surface consisting of the four Fermi arcs, being divided into the nodal and anti-noadl regiond discussed in the beginning.
+The anisotropic $d$-wave symmetry of the gap stands in contrast to the $s$-wave gap symmetry of the BCS superconductors \cite{} fra 7, which show a full gapping across the Brillouin zone.
 
 For temperatures above $T_c$, in the normal state of the material, multiple different phases appear.
 In the UD regime, the so called pseudogap (PG) phase appear, which is characterized by a partial gap, that also follows a $d$-wave symmetry, slightly different from that of the SC phase.
 The maximum doping, as a function of temperature, for which the pseudogap phase still exists is defined as $p^*$, but variations for $p^*$ exist depending on the technique.
-Similar to the SC phase a microscopic explanation on the formation of the pseudogap is missing, but the evidence points towards a connection to short-range antiferromagnetic correlations \cite{}.
+Similar to the SC phase a microscopic explanation on the formation of the pseudogap is missing, but the evidence points towards a connection to short-range antiferromagnetic correlations \cite{} fra 38.
 The interplay and coexistence of the PG and SC phase is one of the big questions in cuprate superconductors.
 
 If the doping is further increased beyond $p^*$ the strange metal phase forms.
 Strange metals is another material class or phase, whose microscopic mechanism is still unknown.
-In this phase, the resistivity of the material shows a perfectly linear dependence on the temperature, up to a specific temperature which is up to a few hundreds of kelvin, in the case of cuprates \cite{}.
+In this phase, the resistivity of the material shows a perfectly linear dependence on the temperature, up to a specific temperature which is up to a few hundreds of kelvin, in the case of cuprates \cite{} fra 39-41.
 The strange metal phase is not exclusive to hole doped cuprates, but is found in a plethora of material classes.
-The strange metal behavior typically occurs in the proximity of a quantum critical point, and is associated with the phenomenon of Planckian dissipation, which shows that the inelastic scattering time $\tau$ is inversely proportional to the temperature with
+The strange metal behavior typically occurs in the proximity of a quantum critical point \cite{} fra 41,43,44, and is associated with the phenomenon of Planckian dissipation, which shows that the inelastic scattering time $\tau$ is inversely proportional to the temperature with
 \begin{equation}
 	\tau \approx \frac{\hbar}{k_BT}
 \end{equation}
-where $\hbar$ is the Planck constant and $k_B$ the Boltzmann constant \cite{} 12 ataei benhabib .
-A further increase in doping, into the heavily overdoped regime, leads to the appearance of a Fermi-liquid phase \cite{} Fra 18, in which the linear temperature dependence of the strange metal changes to the quadratic dependence $\tau\sim T^2$ \cite{} fra 15-17.
+where $\hbar$ is the Planck constant and $k_B$ the Boltzmann constant \cite{ataei_electrons_2022}, fra 47.
+A further increase in doping, into the heavily overdoped regime, leads to the appearance of a Fermi-liquid phase \cite{barisic_evidence_2019}, in which the linear temperature dependence of the strange metal changes to the quadratic dependence of the resistivity $\rho\sim T^2$ \cite{nakamae_electronic_2003,hussey_coherent_2003,plate_fermi_2005}.
 
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}[b]{0.49\textwidth}
-		\includegraphics[width=\textwidth]{bi2212/phase_manip}
+		\includegraphics[width=\textwidth]{bi2212/phase_diag}
 		\caption{}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{bi2212/d_Wave_gap}
+		\includegraphics[width=\textwidth]{bi2212/fs_dwave}
 		\caption{}
 	\end{subfigure}
 	\caption{}
@@ -99,12 +114,12 @@ A further increase in doping, into the heavily overdoped regime, leads to the ap
 An additional phase in \ce{Bi}2212 and other cuprates is the charge density wave (CDW) phase.
 The physics of CDWs is elucidates in more detail in the chapter tackling the CDW compound \ce{TaTe2}, in section \ref{sec:cdw}.
 In the context it is important to highlight that this phase overlaps with the pseudogap and superconducting phase.
-The competition of the charge order and superconductivity is very active research field and of high importance for understanding the mechanisms behind high $T_c$ superconductivity.
-Recent ultrafast studies found different recovery times of the CDW and superconducting features, showing a potential way of studying the effect the phases have on each other \cite{} wandel.
+The competition of the charge order and superconductivity is very active research field and of high importance for understanding the mechanisms behind high $T_c$ superconductivity \cite{} fra 59.
+Recent ultrafast studies found different recovery times of the CDW and superconducting features, showing a potential way of studying the effect the phases have on each other \cite{wandel_enhanced_2022}.
 
 In this chapter I will discuss the manipulation of the material by femtosecond irradiation, by incuding changes to the microscopic properties of the material.
 For this it is important to have a look at the fundamental physics that describe the \ce{CuO2} placket, which have been briefly touched on at the beginning of this section.
-The three-band Hubbard model (sometimes called Emery model) can describe the contributions from the multiple orbitals as well as their interaction\cite{} avella emery vs hubbard.
+The three-band Hubbard model (sometimes called Emery model) can describe the contributions from the multiple orbitals as well as their interaction\cite{avella_emery_2013} fra 61 62.
 The tight-binding Hamiltonian of the system can then be written as
 \begin{equation}
 \begin{split}
@@ -116,7 +131,7 @@ The tight-binding Hamiltonian of the system can then be written as
 expressing the individual contribution of the copper or oxygen orbitals by their respective energy $\epsilon_d$ \& $\epsilon_p$, and the occupation number $n_d$ \& $n_p$ and the nearest neighbor interaction between the copper-oxygen and oxygen-oxygen orbitals with the hopping parameters $t_{pd}$ \& $t_{pp}$.
 The last three term describe the on-site Coulomb interaction of the copper and oxygen orbitals with their respective potential $U_d$ \& $U_p$, as well as the contribution from copper-oxygen Coulomb interaction $V_{pd}$.
 
-This problem can then be reduced to a single-band Hamiltonian, that expressed the interactions of the system by a superexchange that is mediated by the oxygen orbitals.
+This problem can then be reduced to a single-band Hamiltonian, that expresses the interactions of the electrons on the copper sites by a superexchange, mediated by the oxygen orbitals \cite{} 65 66 67.
 The superexchange J is given by
 \begin{equation}
 	J= \frac{4t_{pd}^4}{\left(\Delta + V_{pd} \right)^2} \left[\frac{1}{U_d} + \frac{2}{2\Delta + U_p}\right]
@@ -132,7 +147,7 @@ In the case of the cuprates, J is positive with a typical value around \qty{0.1}
 The previous two models were used to describe the undoped insulating material.
 At the beginning of this section it was briefly mentioned that the doping with additional holes, leads to a delocalization of that hole and the formation of the ZRS.
 The cause for this delocalization stems from the strong Coulomb repulsion on the copper sites, which prevents the occupation of an additional hole.
-Zhang and Rice showed that due to the presence of an added hole, a singlet state emerges, and that the occupation of this state is energetically favored.
+Zhang and Rice showed that due to the presence of an added hole, a singlet state emerges, and that the occupation of this state is energetically favored \cite{} fra 66.
 The singlet is formed from a symmetric superposition of four oxygen $2p_{x,y}$ orbitals and the hybridization with the \ce{Cu} $3d_{x^2-y^2}$ orbital.
 One can think of the ZRS as a hole moving through the antiferromagnetic square lattice, described by the Heisenberg-Hamiltonian, and whose movement is expressed by the superexchange $J$.
 The low-energy nature of the singlet state allows to reduce the previous 3 band model, to an effective 1 band Hamiltonian.
@@ -145,7 +160,7 @@ where P is the Gutzwiller projector, which excludes any double occupancy on a si
 Apart from the nearest neighbor hopping $t$, higher orders can included as well, with the next nearest neighbor hopping $t'$ etc.
 
 The t-J model highlights the importance of the hopping parameters for electronic properties of the \ce{CuO2} plane.
-By performing ARPES measurements on the cuprates, the parameters of this model can be estimated by fitting the Fermi surface.
+By performing ARPES measurements on the cuprates, the parameters of this model can be estimated by fitting the Fermi surface \cite{} fra 69.
 In this chapter I will discuss how intense femtosecond infrared irradiation, changes the Fermi surface and with it these microscopic parameters.
 
 \section{Sample characterization}
@@ -188,7 +203,7 @@ The excitation is created by an infrared pump pulse with an energy of \qty{1.55}
 The discussion of the spectral features in this section will be centered around the quasiparticle peaks and the parabola like feature and how they behave under intense light excitation.
 For this purpose the sample was oriented in a way, that the anti-node is parallel the detector slit, resulting in a Fermi surface (FS) as shown in Fig. \ref{fig:fs_cut} (a).
 A cut in the region between node and anti-node is selected, which is marked by a black dashed line in Fig. \ref{fig:fs_cut} (a), and the corresponding bandmap is displayed in \ref{fig:fs_cut} (b).
-The bandmap shows the features discused in Sec. \ref{sec:bscco_general}, containing the quasiparticle peaks close to $E_F$, the parabolic low energy feature, the high energy \ce{Cu} d-bands, and the incoherent "waterfall" feature connecting the two.
+The bandmap shows the features discussed in Sec. \ref{sec:bscco_general}, containing the quasiparticle peaks close to $E_F$, the parabolic low energy feature, the high energy \ce{Cu} d-bands, and the incoherent "waterfall" feature connecting the two.
 Here it is important to note, that it is not possible to observe the superconducting gap in the measurements presented in this chapter due to the relatively low energy resolution of Harmonium ($\approx$\qty{100}{\milli\electronvolt}), which for the remaining spectral weight even close to the anti-node.
 Additionally this results in the observation of the quasiparticle peak at the Fermi level with a corresponding Fermi momentum $k_F$.
 
@@ -212,7 +227,7 @@ The old manipulator of the ARPES setup in the LACUS facility did not have a dedi
 Instead the sample was manually rotated in a cylindrical hole with the help of a wobble stick, which resulted in a typical error of $\pm$\qty{5}{\degree}.
 The Fermi arcs where fitted by Lorentzian peaks to correct for any error in the polar degree of freedom, as well as any tilt offsets resulting from a sample termination which is not perfectly parallel to the manipulator surface.
 
-The fitting procedure consisted of extracting a momentum distribution curve (MDC) in a range of $\pm$\qty{100}{\electronvolt} for various momentum points along $k_x$ and $k_y$ and fitting a double Lorentzian to each MDC, essentially extracting the $k_F$ points for $\pm k_y$ and $\pm k_x$.
+The fitting procedure consisted of extracting a momentum distribution curve (MDC) in a range of $\pm$\qty{100}{\milli\electronvolt} for various momentum points along $k_x$ and $k_y$ and fitting a double Lorentzian to each MDC, essentially extracting the $k_F$ points for $\pm k_y$ and $\pm k_x$.
 From these $k_F$ points, the coordinate offsets for the polar ($\chi$), tilt ($\Theta$) and rotational scan axis ($\Phi$) are calculated and applied to the Fermi surface.
 This procedure is then repeated until the FS  is well centered.
 With the help of the corrected FS it is possible to accurately determine the parallel momentum component at which the cut in \ref{fig:fs_cut} (b) was taken.
@@ -634,7 +649,7 @@ In the here sketched scenario, it could open the possibility of driving a insula
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{images/bi2212/phase_manip}
+	\includegraphics[width=0.7\linewidth]{images/bi2212/phase_manip.pdf}
 	\caption{The figure shows the generic phase diagram of hole-doped cuprates. \cite{} Keimer. The red arrow marks a potential lightinduced insulator-to-superconductor transition, as a Gedankenexperiment and extension to the here shown lightinduced effects.}
 	\label{fig:phasemanip}
 \end{figure}
