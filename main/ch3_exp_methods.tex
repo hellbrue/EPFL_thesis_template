@@ -5,12 +5,52 @@ In many of these materials, interactions and correlations of electrons have a hu
 Understanding what the impact of the electrons on these phases is and how the interactions can lead to the emergent phenomena is crucial.
 
 Angle resolved photoemission spectroscopy stands out here as a unique technique, capable of measuring the single particle wavefuntion and by extension mapping out the band structure in the full 3D Brillouin zone (BZ).
+The technique relies on the photoelectric effect, first observed by Hertz in 1887 and later described by Einstein in 1905 and is fundamentally a photon-in electron-out technique.
+In recent years ARPES has matured as a technique, as can be seen in the extensive reviews on the topic \cite{}, and was adapted to several different sub-techniques addressing certain needs, such as spin-ARPES, $\mu$- or $n$-ARPES, or tr-ARPES.
 
-
+Focusing on time- and angle- resolved PES (trARPES), rapid development led to a sound understanding of this technique over the last decades, which is summarized in some of the recent reviews dedicated to trARPES \cite{}.
+In this chapter I will give a brief description of the technique and the information gathered by it.
+First for the general static case and then as an extension to the time domain.
 
 \section{General description}
 
+Before focusing on the time domain approach it is necessary to introduce the equilibrium case first.
+As mentioned before ARPES is a photon-in, electron out technique relying on the photoelectric effect.
+Therefore, if an incoming photon has an energy $h\nu$ that is greater than the workfunction of the material $\phi$, an electron may leave the sample with a kinetic energy corresponding to the energy difference.
+If electrons are bound stronger than at the Fermi-level, the binding energy has to be considered as well, which leads to energy conservation formula as
+\begin{equation}
+	E_\text{kin} = h\nu - \phi - E_\text{Bin}.
+\end{equation}
+The photoelectrons that leave the sample will be collected by spectrometer, such as a hemispherical analyzer and the initial density of states can be observed.
+In addition, it is possible to relate the angle at which the photoelectrons leave the sample and their respective kinetic energy to the crystal moment, that the electrons possessed inside the crystal due to momentum conservation rules.
+The relation is given by
+\begin{equation}
+	\hbar \mathbf{k}_\parallel = \sqrt{2m_eE_\text{kin}} \sin\theta
+\end{equation}
+and is only valid for the in-plane momentum component.
+The out of plane component $\mathbf{k}_\perp$ is not conserved, due to an additional potential resulting from the broken symmetry at the sample surface.
+In fact $\mathbf{k}_\perp$ depends on the inner potential $V_0$, that is typically unknown before a measurement.
+The equation for the out of plane component is given by
+\begin{equation}
+	\hbar k_\perp = \sqrt{2m_e(E_\text{kin}\cos^2\theta+V_0)}
+\end{equation}
+Instead the perpendicular momentum component can be obtained by performing photonenergy dependent scans.
 
+For ARPES measurements at equilibrium, within the sudden approximation and for single bands, the measured intensity is calculated via Fermi's golden rule, considering the matrix element $M(\mathbf{k}, \omega)$, the Fermi-Dirac distribution $f(\mathbf{k}, \omega)$ and the spectral function $A(\mathbf{k}, \omega)$.
+The intensity is then given by
+\begin{equation}
+	I(\mathbf{k}, \omega) = A(\mathbf{k}, \omega)\left|M(\mathbf{k}, \omega)\right|^2f(\omega)
+\end{equation}
+The dipole matrix element corresponds to the probability of a transition between an initial and corresponding final state.
+Additionally $A(\mathbf{k}, \omega)=-(1/\pi)\text{Im}G(\mathbf{k}, \omega)$ is the single-particle spectral function, containing both information on the bare band dispersion of the single-particle $\epsilon_\mathbf{k}$ and its self energy $\Sigma(\mathbf{k}, \omega)$, representing the many body correlation effects influencing the single-particle. \cite{} mahan
+The Green's function captures the inherent nature of the photoemission process leaving the system in an excited state and not strictly speaking at equilibrium.
+It specifically treats the fact that a an electron is removed from the system and the probability of how the system will evolve after the removal.
+It is due to that fact that correlations and interactions are already embedded into the information of the measured photoelectron.
 
-\section{Time domain approach}
+The complete spectral function is described by
+\begin{equation}
+	A(\mathbf{k}, \omega)= -\frac{1}{\pi} \frac{\Sigma''(\mathbf{k}, \omega)}{\left[ \omega - \epsilon_\mathbf{k} - \Sigma'(\mathbf{k}, \omega) \right]^2 + \left[ \Sigma''(\mathbf{k}, \omega) \right]^2}
+\end{equation}
+
+\section{TR-ARPES: a stroboscopic time domain approach}
 
