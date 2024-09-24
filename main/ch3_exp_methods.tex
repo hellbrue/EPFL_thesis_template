@@ -38,7 +38,14 @@ The equation for the out of plane component is given by
 \begin{equation}
 	\hbar k_\perp = \sqrt{2m_e\left(E_\text{kin}\cos^2\theta+V_0\right)}
 \end{equation}
+
 Instead the perpendicular momentum component can be obtained by performing photonenergy dependent scans.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/trarpes/arpes_sketch}
+	\caption{}
+	\label{fig:arpes_sketch}
+\end{figure}
 
 For ARPES measurements at equilibrium, within the sudden approximation and for single bands, the measured intensity is calculated via Fermi's golden rule, considering the matrix element $M(\mathbf{k}, \omega)$, the Fermi-Dirac distribution $f(\mathbf{k}, \omega)$ and the spectral function $A(\mathbf{k}, \omega)$.
 The intensity is then given by
@@ -92,5 +99,31 @@ This is especially true at short delays $\Delta t \sim 0$, where the direct phot
 After thermalization processes set in the Fermi-Dirac function starts to populate the entire BZ becoming again more isotropic.
 The state at these time scales can be described in an effective temperature model, in which an effective, time dependent electronic temperature is contained in the Fermi-Dirac equation.
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{images/trarpes/example_bandstructure}
+	\caption{}
+	\label{fig:example_bandstructure}
+\end{figure}
 
 
+Additionally one has to consider the effect of a potentially time dependent matrix element.
+At equilibrium the matrix element connects an initial and final state by the light-matter interaction Hamiltonian $H \propto \mathbf{A\cdot\mathbf{p}}$.
+Here, $\mathbf{A}$ describes the electromagnetic vector potential and $\mathbf{p}$ the electron momentum operator.
+Therefore, in ARPES both the measurement geometric, light polarization and sample geometry are relevant for the signal, which contains orbital information of the initial state of the emitted photoelectron.
+Typically, any time evolution of the matrix element is ignored in trARPES measurements, but it has been shown that such an evolution can occur \cite{} boschini freericks and krish.
+This shows that polarization dependent studies should be considered for trARPES experiments.
+
+The third contribution to the signal at equilibrium was the spectral function $A(\mathbf{k}, \omega)$.
+In trARPES measurements the spectral function $A(\mathbf{k}, \omega, \Delta t)$ encompasses transient changes of many body interactions, which are contained in the self-energy, or coupling to bosonic modes (e.g. phonons)
+For example the coupling to phonons will result in a oscillatory modulation of the bare band dispersion, which can be seen in chapter \ref{ch_tate2}.
+A detailed description with examples for the complexity of the trARPES signal is given in the review by Boschini et al. \ref{} boschini
+
+This description of the trARPES signal is valid only in the quasi-equilibrium scenario.
+At time delays corresponding to an overlap between pump and probe, and until initial scattering leads to thermalization, an out of equilibrium approach has to be chosen.
+Modeling these effects is a big theoretical challenge.
+This becomes especially evident when considering effects like Floquet-Bloch states, which do not exist without the presence of a light pulse.
+
+In general trARPES is a powerful technique, capable of observing many transient effects such as band structure changes, renormalizations due to changes in many-body effects, couplings with phonons.
+It can not only provide insight into the electronic properties at equilibrium but also observe pure light-induced phenomena.
+The chapters \ref{ch:bi2212} and \ref{ch:tate2} will discuss two studies on \ce{Bi}2212 and \ce{TaTe2} that demonstrate the importance of trARPES for out of equilibrium studies.
