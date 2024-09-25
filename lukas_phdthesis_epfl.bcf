@@ -2387,30 +2387,32 @@
     <bcf:citekey order="4" intorder="1">smallwood_ultrafast_2016</bcf:citekey>
     <bcf:citekey order="4" intorder="2">huang_high-resolution_2022</bcf:citekey>
     <bcf:citekey order="4" intorder="3">boschini_time-resolved_2024</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">gierz_illuminating_2011</bcf:citekey>
-    <bcf:citekey order="5" intorder="2">cao_mapping_2013</bcf:citekey>
-    <bcf:citekey order="5" intorder="3">zhu_layer-by-layer_2013</bcf:citekey>
-    <bcf:citekey order="5" intorder="4">schuler_polarization-modulated_2022</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">mahan_many-particle_2000</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">norman_extraction_1999</bcf:citekey>
-    <bcf:citekey order="7" intorder="2">freericks_what_2021</bcf:citekey>
-    <bcf:citekey order="7" intorder="3">kurleto_about_2021</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">damascelli_angle-resolved_2003</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">damascelli_multiphoton_1996</bcf:citekey>
-    <bcf:citekey order="9" intorder="2">bartoli_nonlinear_1997</bcf:citekey>
-    <bcf:citekey order="9" intorder="3">hofer_time-resolved_1997</bcf:citekey>
-    <bcf:citekey order="9" intorder="4">cui_transient_2014</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">freericks_what_2021</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">boschini_time-resolved_2024</bcf:citekey>
-    <bcf:citekey order="11" intorder="2">neufeld_time-_2022</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">boschini_time-resolved_2024</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">hufner_photoelectron_1995</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">hufner_photoelectron_1995</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">gierz_illuminating_2011</bcf:citekey>
+    <bcf:citekey order="7" intorder="2">cao_mapping_2013</bcf:citekey>
+    <bcf:citekey order="7" intorder="3">zhu_layer-by-layer_2013</bcf:citekey>
+    <bcf:citekey order="7" intorder="4">schuler_polarization-modulated_2022</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">mahan_many-particle_2000</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">norman_extraction_1999</bcf:citekey>
+    <bcf:citekey order="9" intorder="2">freericks_what_2021</bcf:citekey>
+    <bcf:citekey order="9" intorder="3">kurleto_about_2021</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">damascelli_angle-resolved_2003</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">damascelli_multiphoton_1996</bcf:citekey>
+    <bcf:citekey order="11" intorder="2">bartoli_nonlinear_1997</bcf:citekey>
+    <bcf:citekey order="11" intorder="3">hofer_time-resolved_1997</bcf:citekey>
+    <bcf:citekey order="11" intorder="4">cui_transient_2014</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">freericks_what_2021</bcf:citekey>
     <bcf:citekey order="13" intorder="1">boschini_time-resolved_2024</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">boschini_role_2020</bcf:citekey>
-    <bcf:citekey order="14" intorder="2">freericks_constant_2016</bcf:citekey>
+    <bcf:citekey order="13" intorder="2">neufeld_time-_2022</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">boschini_time-resolved_2024</bcf:citekey>
     <bcf:citekey order="15" intorder="1">boschini_time-resolved_2024</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">schuler_theory_2021</bcf:citekey>
-    <bcf:citekey order="16" intorder="2">freericks_what_2021</bcf:citekey>
-    <bcf:citekey order="16" intorder="3">neufeld_time-_2022</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">boschini_role_2020</bcf:citekey>
+    <bcf:citekey order="16" intorder="2">freericks_constant_2016</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">boschini_time-resolved_2024</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">schuler_theory_2021</bcf:citekey>
+    <bcf:citekey order="18" intorder="2">freericks_what_2021</bcf:citekey>
+    <bcf:citekey order="18" intorder="3">neufeld_time-_2022</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
