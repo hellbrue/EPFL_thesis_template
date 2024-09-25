@@ -6,15 +6,15 @@ Understanding what the impact of the electrons on these phases is and how the in
 
 Angle resolved photoemission spectroscopy stands out here as a unique technique, capable of measuring the single particle spectral function and by extension mapping out the band structure in the full 3D Brillouin zone (BZ).
 The technique relies on the photoelectric effect, first observed by Hertz in 1887 and later described by Einstein in 1905 and is fundamentally a photon-in electron-out technique.
-In recent years ARPES has matured as a technique, as can be seen in the extensive reviews on the topic \cite{}, and was adapted to several different sub-techniques addressing certain needs, such as spin-ARPES, $\mu$- or $n$-ARPES, or tr-ARPES.
+In recent years ARPES has matured as a technique, as can be seen in the extensive reviews on the topic, especially in the context of complex matter \cite{}, and was adapted to several different sub-techniques addressing certain needs, such as spin-ARPES, $\mu$- or $n$-ARPES, or tr-ARPES.
 
 Focusing on time- and angle- resolved PES (trARPES), rapid development led to a sound understanding of this technique over the last decades, which is summarized in some of the recent reviews dedicated to trARPES \cite{}.
+Due to the techniques ability of measuring the transient changes to the electronic band structure, as well as interactions with other electrons or bosons (e.g. phonons) it is a powerful tool to observe out of equilibrium dynamics.
+Further it can observe lightinduced states and establish a hierarchy in formation process, or the melting process of equilibrium orders.
+This provides profound inside into the understanding of correlated material, as well as path a way of manipulating and controlling such materials.
 
-
-write a bit more pver trarpes
-
-In this chapter I will give a brief description of the technique and the information gathered by it.
-First for the general static case and then as an extension to the time domain.
+In this chapter I will give a brief description of the technique and where the measured signal originates from.
+This will first be done by looking at the general equilibrium case, I will then extend the description to the time domain by looking mainly at the quasi-equilibrium regime, and briefly touching onto the out of equilibrium case.
 
 \section{General description}
 
@@ -36,7 +36,7 @@ The out of plane component $\mathbf{k}_\perp$ is not conserved, due to an additi
 In fact $\mathbf{k}_\perp$ depends on the inner potential $V_0$, that is typically unknown before a measurement.
 The equation for the out of plane component is given by
 \begin{equation}
-	\hbar k_\perp = \sqrt{2m_e\left(E_\text{kin}\cos^2\theta+V_0\right)}
+	\hbar \mathbf{k}_\perp = \sqrt{2m_e\left(E_\text{kin}\cos^2\theta+V_0\right)}
 \end{equation}
 
 Instead the perpendicular momentum component can be obtained by performing photonenergy dependent scans.
@@ -48,15 +48,24 @@ Instead the perpendicular momentum component can be obtained by performing photo
 \end{figure}
 
 For ARPES measurements at equilibrium, within the sudden approximation and for single bands, the measured intensity is calculated via Fermi's golden rule, considering the matrix element $M(\mathbf{k}, \omega)$, the Fermi-Dirac distribution $f(\mathbf{k}, \omega)$ and the spectral function $A(\mathbf{k}, \omega)$.
+Here the sudden approximation describes the scenario in which the photoemission process occurs suddenly, meaning that no interaction between the created photoelectron and the system occur post photon absorption.
 The intensity is then given by
 \begin{equation}
 	I(\mathbf{k}, \omega) = A(\mathbf{k}, \omega)\left|M(\mathbf{k}, \omega)\right|^2f(\omega)
 	\label{eq:arpes_signal}
 \end{equation}
 The dipole matrix element corresponds to the probability of a transition between an initial and corresponding final state.
+It not only contains the probability for a direct transition between an initial and finial state $\Phi_i$ and $\Phi_f$, but also information that is sensitive to the sample geometry, light polarization and ARPES setup due to the light-matter interaction Hamiltonian,
+with the matrix element being given by
+\begin{equation}
+	M = \braket{\Phi_f\left|H_\text{int}\right|\Phi_i} =\braket{\Phi_f\left| \mathbf{A} \cdot \mathbf{p} \right|\Phi_i}
+\end{equation}
+with the vector potential $\mathbf{A}$ and the electron momentum operator $\mathbf{p}$.
+This way depending on the parity of the initial state and vector potential, the intensity of bands can be fully suppressed depending on the probe light polarization.
+
 Additionally $A(\mathbf{k}, \omega)=-(1/\pi)\text{Im}G(\mathbf{k}, \omega)$ is the single-particle spectral function, containing both information on the bare band dispersion of the single-particle $\epsilon_\mathbf{k}$ and its self energy $\Sigma(\mathbf{k}, \omega)$, representing the many body correlation effects influencing the single-particle. \cite{} mahan
 The Green's function captures the inherent nature of the photoemission process leaving the system in an excited state and not strictly speaking at equilibrium.
-It specifically treats the fact that a an electron is removed from the system and the probability of how the system will evolve after the removal.
+It specifically treats the fact that an electron is removed from the system and the probability of how the system will evolve after the removal.
 It is due to that fact that correlations and interactions are already embedded into the information of the measured photoelectron.
 
 The complete spectral function is described by
@@ -70,6 +79,7 @@ A typical way of analyzing ARPES data with the purpose of extracting information
 Analyzing the position of and width of the corresponding spectral features provides insight into the self-energy.
 Also, intimate knowledge of the bare-band dispersion is beneficial for the interpretation of the ARPES signal.
 
+A more deteiles description of the equilibrium ARPES information can be found in the review by Damascelli et al. \cite{}.
 After discussing the basic ARPES principles and the measured signal in the equilibrium case in this section, the following section will extend these fundamentals into the time domain.
 
 \section{TR-ARPES: a stroboscopic time domain approach}
@@ -108,7 +118,7 @@ The state at these time scales can be described in an effective temperature mode
 
 
 Additionally one has to consider the effect of a potentially time dependent matrix element.
-At equilibrium the matrix element connects an initial and final state by the light-matter interaction Hamiltonian $H \propto \mathbf{A\cdot\mathbf{p}}$.
+At equilibrium the matrix element connects an initial and final state by the light-matter interaction Hamiltonian $H_\text{int} \propto \mathbf{A\cdot\mathbf{p}}$.
 Here, $\mathbf{A}$ describes the electromagnetic vector potential and $\mathbf{p}$ the electron momentum operator.
 Therefore, in ARPES both the measurement geometric, light polarization and sample geometry are relevant for the signal, which contains orbital information of the initial state of the emitted photoelectron.
 Typically, any time evolution of the matrix element is ignored in trARPES measurements, but it has been shown that such an evolution can occur \cite{} boschini freericks and krish.
