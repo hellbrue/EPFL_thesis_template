@@ -21,15 +21,19 @@ This will first be done by looking at the general equilibrium case, I will then 
 Before focusing on the time domain approach it is necessary to introduce the equilibrium case first.
 As mentioned before ARPES is a photon-in, electron out technique relying on the photoelectric effect.
 Therefore, if an incoming photon has an energy $h\nu$ that is greater than the workfunction of the material $\phi$, an electron may leave the sample with a kinetic energy corresponding to the energy difference.
+Figure \ref{fig:arpes_sketch} (a) shows a sketch of such an ARPES process.
 If electrons are bound stronger than at the Fermi-level, the binding energy has to be considered as well, which leads to energy conservation formula as
 \begin{equation}
 	E_\text{kin} = h\nu - \phi - E_\text{Bin}.
+	\label{eq_e_cons}
 \end{equation}
 The photoelectrons that leave the sample will be collected by spectrometer, such as a hemispherical analyzer and the initial density of states can be observed.
+Figure \ref{fig:arpes_sketch} (b) shows this process and relation between $E_\text{Bin}$ of the electrons within the crystal and $E_\text{kin}$ of the detected photoelectrons.
 In addition, it is possible to relate the angle at which the photoelectrons leave the sample and their respective kinetic energy to the crystal moment, that the electrons possessed inside the crystal due to momentum conservation rules.
 The relation is given by
 \begin{equation}
 	\hbar \mathbf{k}_\parallel = \sqrt{2m_eE_\text{kin}} \sin\theta
+	\label{eq:mom}
 \end{equation}
 and is only valid for the in-plane momentum component.
 The out of plane component $\mathbf{k}_\perp$ is not conserved, due to an additional potential resulting from the broken symmetry at the sample surface.
@@ -41,8 +45,16 @@ The equation for the out of plane component is given by
 Instead the perpendicular momentum component can be obtained by performing photonenergy dependent scans.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{images/trarpes/arpes_sketch}
-	\caption{}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\linewidth]{images/trarpes/arpes_sketch}
+		\caption{}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.4\textwidth}
+		\includegraphics[width=\linewidth]{images/trarpes/dos}
+		\caption{}
+	\end{subfigure}
+	\caption{(a) The figure shows a sketch of trARPES setup. The red pulse excites the sample and the purple one probes the excitation and creates the photoelectrons according to equations \ref{eq_e_cons} \& \ref{eq:mom}. (b) Visualizes the energy relation within the band strucutre of the material (left) as a function of binding energy, to the detected energy in $E_\text{kin}$ (right) according to Eq. \ref{eq_e_cons}. From \cite{} Hufner.}
 	\label{fig:arpes_sketch}
 \end{figure}
 
@@ -91,27 +103,28 @@ The pump pulse is then delayed in respect to the probe pulse with the help of a 
 
 The here described technique uses light pulses with an energy above the materials workfunction as a probe pulse, and a pulse with an energy below the workfunction creates the excitation.
 In principle trARPES measurements using two photon absorption process, where both light pulses have an energy below the workfunction, are also possible, but will not be the topic of this chapter.
-More insight into two photon photoemission (2PPE) trARPES can be found in several dedicated reviews \cite{}.
+More insight into two photon photoemission (2PPE) trARPES can be found in several dedicated reviews \cite{damascelli_multiphoton_1996,bartoli_nonlinear_1997,hofer_time-resolved_1997,cui_transient_2014}.
 
 The description and interpretation of the ARPES signal after pump excitation is not trivial.
 In a first approximation the equilibrium intensity from equation \ref{eq:arpes_signal} can be extended into the time domain
 \begin{equation}
 	I(\mathbf{k}, \omega, \Delta t) = A(\mathbf{k}, \omega, \Delta t)\left|M(\mathbf{k}, \omega, \Delta t)\right|^2f(\mathbf{k}, \omega, \Delta t)
 \end{equation}
-considering the the delay  $\Delta t$ between pump and probe \cite{} freericks kemper 2021.
+considering the the delay  $\Delta t$ between pump and probe \cite{freericks_what_2021}.
 The approximation assumes that the electrons thermalized into a quasi-equilibrium state, which often occurs after a time span of few tens or hundreds of femtosecond, depending on the material and light properties.
-For example it has been shown that the adiabatic band dispersion can survive even at time zero and for high pump fluences \cite{} boschini review + neufeld 2022
+For example it has been shown that the adiabatic band dispersion can survive even at time zero and for high pump fluences \cite{boschini_time-resolved_2024,neufeld_time-_2022}.
 
 Disentangling the various contributions is experimentally even more challenging than in the equilibrium case.
-The Fermi-Dirac function, which at equilibrium solely depends on the energy, suddenly becomes momentum and time dependent $f(\omega) \rightarrow f(\omega, \mathbf{k}, \Delta t)$.
+The Fermi-Dirac function, which at equilibrium solely depends on the energy becomes momentum and time dependent $f(\omega) \rightarrow f(\omega, \mathbf{k}, \Delta t)$.
 This is especially true at short delays $\Delta t \sim 0$, where the direct photoexcitation leads to a discrete excitation of unoccupied states, which is highly anisotropic in momentum space.
 After thermalization processes set in the Fermi-Dirac function starts to populate the entire BZ becoming again more isotropic.
 The state at these time scales can be described in an effective temperature model, in which an effective, time dependent electronic temperature is contained in the Fermi-Dirac equation.
+An example of the time dependent ARPES signal can be seen in Fig. \ref{fig:example_bandstructure}.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\linewidth]{images/trarpes/example_bandstructure}
-	\caption{}
+	\includegraphics[width=\linewidth]{images/trarpes/example_bandstructure}
+	\caption{The figure illustrates the trARPES process with exemplary transient band strucutre evolution. From \cite{boschini_time-resolved_2024}. (Left) shows the sequence from equilibrium, to excitation when the pump pulse arrived at the sample and finally photoemission from the excited state when the probe pulse arrives. (Right) Shows a sequence of band maps for an exemplary Dirac cone (top) and the corresponding difference maps to equilibrium (bottom) for four different time steps. Before $t_0$ the equilibrium band structure can be seen. At $t_0$ a direct transition, as indicated by the red dashed arrow occurs, corresponding to the energy of the pump pulse, at timescales corresponding to the electron-electron scattering time $\tau_{ee}$ the initial distribution begins to thermalize, this population decays at longer timescales.}
 	\label{fig:example_bandstructure}
 \end{figure}
 
@@ -120,16 +133,16 @@ Additionally one has to consider the effect of a potentially time dependent matr
 At equilibrium the matrix element connects an initial and final state by the light-matter interaction Hamiltonian $H_\text{int} \propto \mathbf{A\cdot\mathbf{p}}$.
 Here, $\mathbf{A}$ describes the electromagnetic vector potential and $\mathbf{p}$ the electron momentum operator.
 Therefore, in ARPES both the measurement geometric, light polarization and sample geometry are relevant for the signal, which contains orbital information of the initial state of the emitted photoelectron.
-Typically, any time evolution of the matrix element is ignored in trARPES measurements, but it has been shown that such an evolution can occur \cite{} boschini freericks and krish.
+Typically, any time evolution of the matrix element is ignored in trARPES measurements, but it has been shown that such an evolution can occur \cite{boschini_role_2020,freericks_constant_2016}.
 This shows that polarization dependent studies should be considered for trARPES experiments.
 
 The third contribution to the signal at equilibrium was the spectral function $A(\mathbf{k}, \omega)$.
 In trARPES measurements the spectral function $A(\mathbf{k}, \omega, \Delta t)$ encompasses transient changes of many body interactions, which are contained in the self-energy, or coupling to bosonic modes (e.g. phonons)
 For example the coupling to phonons will result in a oscillatory modulation of the bare band dispersion, which can be seen in chapter \ref{ch_tate2}.
-A detailed description with examples for the complexity of the trARPES signal is given in the review by Boschini et al. \ref{} boschini
+A detailed description with examples for the complexity of the trARPES signal is given in the review by Boschini et al. \cite{boschini_time-resolved_2024}.
 
 This description of the trARPES signal is valid only in the quasi-equilibrium scenario.
-At time delays corresponding to an overlap between pump and probe, and until initial scattering leads to thermalization, an out of equilibrium approach has to be chosen.
+At time delays corresponding to an overlap between pump and probe, and until initial scattering leads to thermalization, an out of equilibrium approach has to be chosen \cite{schuler_theory_2021, freericks_what_2021,neufeld_time-_2022}.
 Modeling these effects is a big theoretical challenge.
 This becomes especially evident when considering effects like Floquet-Bloch states, which do not exist without the presence of a light pulse.
 
