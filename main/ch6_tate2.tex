@@ -3,29 +3,24 @@
 
 Collective phenomena arising from complex many body interactions have been a fascinating research topic for many decades.
 One such example is the collective motion and ordering of electron-hole pairs, the so called charge density wave (CDW), which was first proposed in 1955 by Peierls \cite{peierls_quantum_1996} and has always been closely linked to the concept of superconductivity \cite{frohlich_theory_1997}.
-This concept of CDWs found more traction when the first materials where found to host such exotic phases some decades after the first theoretical description.
-The first experimental observations of CDWs were then found in pioneering works on blue bronzes by Fogle and Perlstein \cite{fogle_semiconductor--metal_1972} and in transition metal trichalocogenides by Monceau \cite{monceau_electric_1976}.
+This concept of CDWs gained more traction when the first materials where found to host such exotic phases some decades after the first theoretical description.
+The first experimental observations of CDWs were found in pioneering works on blue bronzes by Fogle and Perlstein \cite{fogle_semiconductor--metal_1972} and in transition metal trichalocogenides by Monceau \cite{monceau_electric_1976}.
 
 During the following decade many systems were found to exhibit CDW phases, and a high effort was focused on the understanding of CDWs, as is evident by the large amount of publications and reviews within that period \cite{wilson_questions_1978,gruner_dynamics_1988,yoffe_electronic_1990,wilson_charge-density_2001}.
-In particular transition metal chalocogenides gathered attention, which arose from the many exotic properties next to CDWs found in the materials, as well as the fact that these were layered materials.
+In particular transition metal chalocogenides gathered attention.
+The interest is a result of the rich phase diagram of these materials with many exotic phases, as well as the layered structure of the materials.
 It was already shown in 1963 that ultrathin layers of the transition metal dichalcogenide (TMD) \ce{MoS2} could be exfoliated \cite{frindt_physical_1997}, and first monolayers were created in 1986 \cite{joensen_single-layer_1986}.
-At the same time research on another layered material, graphite, resulted in the development of graphene monolayers.
+At the same time, research on another layered material, graphite, resulted in the development of graphene monolayers.
 This ultimately lead to stark research interest in layer engineering of e.g. nanotubes in graphene or \ce{WS2} and \ce{MoS2} \cite{iijima_helical_1991,tenne_polyhedral_1992,feldman_high-rate_1995}.
 
-The problem of these materials lies in their strongly correlated many body nature, resulting in a very high complexity, making it difficult to predict and understand their properties.
-The developments of the previous decades and especially the high interest in graphene-related topics lead to the introduction of graphene as a model system for more complex materials \cite{novoselov_electric_2004, novoselov_two-dimensional_2005, geim_rise_2007}.
-Since then, researchers were extremely successful in finding new physical properties of graphene itself while also extending and applying the knowledge to other materials.
-Apart from the simplicity of these 2D materials, the idea of engineering properties by stacking multiple layers with different stacking orders or at twist angles offered the possibility of a vast playground for discovering and engineering new properties.
-This resulted in the explosion of the field with the discovery of many new phenomena, from the observation of quatum Hall effect \cite{zhang_experimental_2005} to superconductivty in magic angle twisted bilayer graphene \cite{cao_unconventional_2018}.
-
-Ultimately these developments increased the desire for similar materials as an engineering and research platform.
-One of these platforms of 2D materials are transition metal dichalcogenides (TMDs) \cite{butler_progress_2013, chowdhury_progress_2020, liu_van_2016}.
-The development of such multilayer stacks of different TMDs, or the introduction of twist-angles resulted in a renaissance in the field of TMDs, as well as in the research of CDWs.
-These layered TMDs are not only of interest because of the existence of CDWs, but rather a plethora of different exotic phases and phenomena like optoelectronic control, topological phases, superconductivity and the formation of excitons \cite{jiang_interlayer_2021, schmitt_formation_2022, mak_photonics_2016, koppens_photodetectors_2014, manzeli_2d_2017}.
-Especially the coexistence and competition between charge density waves and superconductivity are a focal point in the understanding of high temperature superconductivity.
-
+One characteristic of these materials is their strongly correlated many body nature, which results in a very high complexity, rich phase diagrams, and ultimately makes it difficult to predict and understand their properties.
 Since the 80s, the research on CDWs in TMDs was centered around the \ce{TaX2} based compounds \ce{TaS2} and \ce{TaSe2}.
-Compared to these, the sister compound \ce{TaTe2} has received much less attention from the community, but multiple reports characterizing the compound have come up in recent years, especially due to it's strange behavior when crossing the CDW phase transition.
+Their different phase diagrams have been studied in detail, which entails several different CDW phases, as well as superconducting phase.
+The phase transition between the CDW phases is fairly well understood within a more classical Peierls picture.
+More recently it has been shown that it is possible to trigger phase transitions in \ce{TaS2} via light and electric pulses, as well as the formation of metastable hidden states \cite{vaskivskyi_controlling_2015,maklar_coherent_2023}.
+Being able to strongly change the electronic properties within ultrafast timescales, combined with a long lifetime of these hidden states, opens possibilities for an integration in switches or memory devices.
+
+Compared to these, the sister compound \ce{TaTe2} has received much less attention from the community, but multiple reports characterizing the compound have come up in recent years, especially due to its peculiar behavior when crossing the CDW phase transition, different to transitions in its sister compounds.
 In this chapter of the thesis I will present static and trARPES data on \ce{TaTe2}, with the purpose of investigating the driving mechanism of the CDW formation and the structural phase transition.
 First I will introduce the general concept of CDWs in 1D systems and the problems that arise at higher dimensions and strong couplings and will provide a small review on CDWs in the \ce{TaX2} compounds.
 I will then introduce the band structure of \ce{TaTe2} and its Fermi surface topology, as well as comparing the high and low temperature phases, including the formation of CDW minigaps (first observed by \cite{lin_evidence_2022}).
@@ -39,13 +34,13 @@ Last, I present a metastable electronic state persisting for $>\qty{200}{\pico\s
 
 
 Charge density waves are collective modulations of the electron density, in which electron-hole pairs can form a condensate and behave like a macroscopic quantum state.
-Additionally, CDWs are always accompanied by a periodic distortion of the lattice due to the coupling of electrons and phonons.
-The concept of CDWs and PLDs has first been postulated by Peierls in 1955 \cite{peierls_quantum_1996} for the case of a 1D atomic chain.
-Since then, a lot of effort was spent on understanding the mechanisms of CDWs on a microscopic level, and is now well understood for the 1D case.
-The challenge arises when the dimensionality is increased and strong couplings come at play.
-For those cases the understanding is much lower and is a topic of current research and intense debate.
-In this section I will do short description of the 1D CDW as postulated by Peierls and after introduce the complications that arise from higher dimensionality and strong couplings, with a special focus on TMDs.
-In recent years extensive reviews on the subject of CDW with a focus on TMDs have been published, which were used as a foundation this and the following section \cite{rossnagel_origin_2011, canadell_importance_1992}.
+Additionally, CDWs are accompanied by a periodic distortion of the lattice due to the coupling of electrons and phonons.
+The concept of CDWs and PLDs was first discussed by Peierls in 1955 \cite{peierls_quantum_1996} for the case of a 1D atomic chain.
+Since then, a lot of effort was spent on understanding the mechanisms of CDWs on a microscopic level, which is now well understood for the 1D case.
+The challenge arises when the dimensionality is increased and when a strong coupling has to be considered.
+A unified description of those cases is often lacking and their study is a lively topic.
+In this section I will do a short description of the 1D CDW as postulated by Peierls and introduce the complications that arise from higher dimensionality and strong coupling, with a special focus on TMDs.
+In recent years extensive reviews on the subject of CDW with a focus on TMDs have been published, which were used as a foundation for these sections \cite{rossnagel_origin_2011, canadell_importance_1992}.
 
 \begin{figure}[t]
 	\centering
@@ -69,24 +64,26 @@ Starting from the 1D atomic chain of a metal with a lattice spacing $a$, a cosin
 	\rho(\mathbf{r}) = \rho_0(\mathbf{r})[1+\rho_1 \cos(\mathbf{q}_0\mathbf{r}+\phi)]
 	\label{eq:cdw}
 \end{equation}
-with the unperturbed electron density $\rho_0$, $\rho_1$ the amplitude, $q_0$ the wavevector and $\phi$ the phase of the electron density modulation.
-$\rho_1 \cos(\mathbf{q}_0\mathbf{r}+\phi)$ from above's equation represents the CDW and is a standing wave of wavelength $\lambda_0 = 2\pi/\lvert \mathbf{q}_0\rvert$.
-The modulation of the charges as a function $\mathbf{r}$ results in an effective potential, with each ion feeling the presence of a different part of said potential.
+with the unperturbed electron density $\rho_0$, $\rho_1$ the amplitude, $\mathbf{q}_0$ the wavevector and $\phi$ the phase of the electron density modulation.
+$\rho_1 \cos(\mathbf{q}_0\mathbf{r}+\phi)$ represents a standing wave of charge density with a wavelength of $\lambda_0 = 2\pi/\lvert \mathbf{q}_0\rvert$.
+The modulation of the charges as a function $\mathbf{r}$ results in an effective potential, felt by the underlying ionic atom cores.
 This results in the ions moving away from their respective equilibrium position, in order to accommodate this new modulated potential.
-The result of this movement is a distorted lattice, which is referred to as a periodic lattice distortion (PLD), which is of the form
+The result is a distorted lattice, which is referred to as a periodic lattice distortion (PLD), and is of the form
 \begin{equation}
-	u_n = u_0 \sin(n\lvert \mathbf{q}_0\rvert a+\phi)
+	u_n = u_0 \sin(n\lvert \mathbf{q}_0\rvert a+\phi).
 	\label{eq:pld}
 \end{equation}
-with the integer number $n$ describing the atom position and the amplitude of the distortion $u_0$.
+In this equation, $u_n$ is the atom position, $n$ describes the atom and $u_0$ the amplitude of the distortion.
 Figure \ref{fig:cdw_theory} (c) shows a PLD of a 1D atom chain and the corresponding CDW.
-While the mentioned case assumes an existing electron density modulation, or CDW, which then results in the formation of the PLD, the same equations will arise when starting from an existing PLD as in Eq. \ref{eq:pld}.
+It is important to stress that while in our discussion we assume an existing electron modulation, resulting in a PLD, the converse order of reasoning is also possible. Namely a PLD will result in a corrugate CDW.
 In that case, the existing PLD leads to a new effective potential, which the conduction electrons will try to screen, which will then result in a modulation of the charge density as described by Eq. \ref{eq:cdw}.
-Therefore charge density waves and periodic lattice distortions always occur together \cite{rossnagel_origin_2011, chan_spin_1973, johannes_fermi_2008}.
+Therefore charge density waves and periodic lattice distortions are intertwined \cite{rossnagel_origin_2011, chan_spin_1973, johannes_fermi_2008}.
 
-The transition to a 1D CDW state as described by Peierls relies on the fact that the material is described as a Fermi liquid, with the electron gas only experiencing weak coupling with the ions via phonons.
-In this picture the phonons connect different parts of the Fermi surface with momentum $+k_f$ and $-k_f$ (see Fig. \ref{fig:cdw_theory} (b)), which refers to Fermi surface nesting (FSN).
-The connection of electrons with different Fermi momenta creates an instability at the Fermi surface, which drives a structural phase transition, mediated by the electron-phonon coupling.
+The transition to a 1D CDW state as described by Peierls relies on the fact that the material is described as a Fermi liquid, and the electron gas is only weakly coupled with the ions, for example in a weak electron-phonon coupling limit.
+In a 1D system the Fermi surface consists of parallel sheets situated at momenta $+k_f$ and $-k_f$ (see Fig. \ref{fig:cdw_theory} (b)).
+The connection of electrons with different Fermi momenta creates an instability at the Fermi surface, which leads to a divergence of the electron-hole lindhard response function.
+In the presence of a finite electron-phonon coupling the system becomes unstable, which drives a structural phase transition.
+This coupling of electrons with Fermi velocities of opposite signs via a wavevector of equal amplitude is called Fermi surface nesting (FSN)
 Since the CDW formation and the FSN depend on the Fermi momenta ($k_f$), the CDW necessarily depends on the conduction band filling.
 Additionally, the potential created by the CDW and PLD results in a gap opening at the Fermi level.
 This potential is, for a given phonon mode $\mathbf{q}$ with the corresponding displacement $u_\mathbf{q}$, defined by
@@ -109,7 +106,7 @@ If the energy gain of the band exceeds the energy cost of the  strained lattice,
 \begin{equation}
 	\delta E_{lattice} = \frac{1}{2} M\omega_\mathbf{q}^2 u_\mathbf{q}^2
 \end{equation}
-than the CDW and PLD are self-sustaining and will be the new ground state of the system.
+than the CDW and PLD are the new ground state of the system.
 
 With the above equations in mind, and by including Coulomb and exchange interactions, it is possible to formulate a criterion \cite{chan_spin_1973}.
 \begin{equation}
