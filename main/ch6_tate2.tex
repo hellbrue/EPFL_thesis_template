@@ -32,15 +32,14 @@ Lastly, I will present evidence of a metastable electronic state persisting for 
 \section{Charge Density Waves in strongly correlated matter}
 \label{sec:cdw}
 
+Charge density waves (CDWs) represent a collective modulation of the electron density, where electron-hole pairs can form and condense and behave as a macroscopic quantum state.
+These waves are typically accompanied by a periodic lattice distortion (PLD) due to the coupling between electrons and phonons.
+The concept of CDWs and PLDs was first introduced by Peierls in 1955 in the context of a 1D atomic chain \cite{peierls_quantum_1996}.
+Since then, significant effort has been dedicated to understanding CDWs at a microscopic level, particularly in one-dimensional (1D) systems, where the theory is well established. However, when the dimensionality increases or strong coupling is involved, the descriptions become elusive, and these cases remain an active area of research.
 
-Charge density waves are collective modulations of the electron density, in which electron-hole pairs can form a condensate and behave like a macroscopic quantum state.
-Additionally, CDWs are accompanied by a periodic distortion of the lattice due to the coupling of electrons and phonons.
-The concept of CDWs and PLDs was first discussed by Peierls in 1955 \cite{peierls_quantum_1996} for the case of a 1D atomic chain.
-Since then, a lot of effort was spent on understanding the mechanisms of CDWs on a microscopic level, which is now well understood for the 1D case.
-The challenge arises when the dimensionality is increased and when a strong coupling has to be considered.
-A unified description of those cases is often lacking and their study is a lively topic.
-In this section I will do a short description of the 1D CDW as postulated by Peierls and introduce the complications that arise from higher dimensionality and strong coupling, with a special focus on TMDs.
-In recent years extensive reviews on the subject of CDW with a focus on TMDs have been published, which were used as a foundation for these sections \cite{rossnagel_origin_2011, canadell_importance_1992}.
+In this section, I will briefly review Peierls' description of 1D CDWs and then introduce the challenges that arise when extending the theory to higher dimensions and strong coupling, with a focus on transition metal dichalcogenides (TMDs).
+The foundation for this section is based on recent reviews of CDWs in TMDs \cite{rossnagel_origin_2011, canadell_importance_1992}.
+
 
 \begin{figure}[t]
 	\centering
@@ -64,20 +63,21 @@ Starting from the 1D atomic chain of a metal with a lattice spacing $a$, a cosin
 	\rho(\mathbf{r}) = \rho_0(\mathbf{r})[1+\rho_1 \cos(\mathbf{q}_0\mathbf{r}+\phi)]
 	\label{eq:cdw}
 \end{equation}
-with the unperturbed electron density $\rho_0$, $\rho_1$ the amplitude, $\mathbf{q}_0$ the wavevector and $\phi$ the phase of the electron density modulation.
-$\rho_1 \cos(\mathbf{q}_0\mathbf{r}+\phi)$ represents a standing wave of charge density with a wavelength of $\lambda_0 = 2\pi/\lvert \mathbf{q}_0\rvert$.
-The modulation of the charges as a function $\mathbf{r}$ results in an effective potential, felt by the underlying ionic atom cores.
-This results in the ions moving away from their respective equilibrium position, in order to accommodate this new modulated potential.
+where $\rho_0$ is the unperturbed electron density, $\rho_1$ is the modulation amplitude, $\mathbf{q}_0$ the wavevector and $\phi$ the phase of the electron density modulation.
+The term $\rho_1 \cos(\mathbf{q}_0\mathbf{r}+\phi)$ describes a standing wave of charge density with a wavelength of $\lambda_0 = 2\pi/\lvert \mathbf{q}_0\rvert$.
+This modulation of the charges as a function of $\mathbf{r}$ creates an effective potential, felt by the underlying ionic atom cores, resulting in the ions moving away from their respective equilibrium position, to accommodate this new modulated potential.
 The result is a distorted lattice, which is referred to as a periodic lattice distortion (PLD), and is of the form
 \begin{equation}
 	u_n = u_0 \sin(n\lvert \mathbf{q}_0\rvert a+\phi).
 	\label{eq:pld}
 \end{equation}
 In this equation, $u_n$ is the atom position, $n$ describes the atom and $u_0$ the amplitude of the distortion.
-Figure \ref{fig:cdw_theory} (c) shows a PLD of a 1D atom chain and the corresponding CDW.
-It is important to stress that while in our discussion we assume an existing electron modulation, resulting in a PLD, the converse order of reasoning is also possible. Namely a PLD will result in a corrugate CDW.
-In that case, the existing PLD leads to a new effective potential, which the conduction electrons will try to screen, which will then result in a modulation of the charge density as described by Eq. \ref{eq:cdw}.
-Therefore charge density waves and periodic lattice distortions are intertwined \cite{rossnagel_origin_2011, chan_spin_1973, johannes_fermi_2008}.
+Figure \ref{fig:cdw_theory} (c) illustrates the PLD and the corresponding CDW for a 1D atomic chain.
+
+It is important to stress that while in our discussion we assume an existing electron modulation, resulting in a PLD, the reverse order of reasoning is also possible.
+Namely a PLD will result in a corrugate CDW.
+The pre-existing PLD generates a new effective potential that conduction electrons attempt to screen, leading to the formation of a modulated charge density, as described by Eq. \ref{eq:cdw}.
+Thus, CDWs and PLDs are inherently interconnected and mutually reinforcing phenomena \cite{rossnagel_origin_2011, chan_spin_1973, johannes_fermi_2008}.
 
 The transition to a 1D CDW state as described by Peierls relies on the fact that the material is described as a Fermi liquid, and the electron gas is only weakly coupled with the ions, for example in a weak electron-phonon coupling limit.
 In a 1D system the Fermi surface consists of parallel sheets situated at momenta $+k_f$ and $-k_f$ (see Fig. \ref{fig:cdw_theory} (b)).
@@ -155,36 +155,32 @@ For $\lambda\lesssim1$, which depends on the material properties, the BCS relati
 	2\Delta(0)=3.52k_BT_0.
 \end{equation}
 
-This description contains a full microscopic theory on CDW formation under the assumption of a non-interacting 1D metal.
-Here it is important to mention, that for most materials these assumptions do not hold up.
-The solution for the 1D chain, which predicts the long range order at a finite transition temperature $T_0$ does not hold for higher dimensions and is only relevant for quasi-1D systems.
-It is also worth mentioning that a 1D atomic chain cannot exhibit stable long range order, due to the fact that thermal and quantum fluctuations lead to a dephasing.
-Collective interlayer motion is therefore needed to stabilize the long-range order.
-Additionally, the Peierls instability at $E_F$ only materializes due to the exclusion of electron-electron interactions, expressed by the non-interacting susceptibility $\chi_0$.
-With the interactions included, a material might be stable, even at the lowest temperatures and therefore no CDW will appear.
-Due to these facts, I will further discuss the consequences that higher dimensionality and strong electron-phonon coupling have on the CDW formation.
-Both of which are the case for \ce{TaTe2}.
+This description provides a comprehensive microscopic theory of CDW formation under the assumption of a non-interacting 1D metal.
+However, it is important to note that these assumptions rarely hold for most materials.
+The solution for the 1D chain, which predicts long-range order at a finite transition temperature $T_0$, is generally only applicable to quasi-1D systems.
+In fact, a purely 1D atomic chain cannot maintain stable long-range order due to thermal and quantum fluctuations that lead to dephasing.
+To stabilize the long-range order, collective interlayer motion is required.
+Moreover, the Peierls instability at $E_F$ arises from the exclusion of electron-electron interactions, as represented by the non-interacting susceptibility $\chi_0$.
+Once these interactions are included, a material might remain stable, even at very low temperatures, preventing the formation of a CDW.
+In light of these considerations, I will further discuss the consequences of higher dimensionality and strong electron-phonon coupling on CDW formation, both of which are relevant in the case of \ce{TaTe2}.
 
-To recapitulate, in the 1D case the CDW formation is driven by the instability of the non-interacting electronic susceptibility, which is a result of a coupling of many electronic states by the same wavevector $\mathbf{q}$, most of which are coupled close to $E_F$.
-While in 1D, a metal has a planar Fermi surface where the $\pm k_f$ points can coincide with the edges of the PLD superstrucutre Brillouin zone, given by $\mathbf{q}_0$.
-This is not the case in 2D or 3D, which can bee seen in figure \ref{fig:cdw_theory} (b)).
-Here the Fermi surface is generally not planar and the PLD Brillouin zone edges only partly coincide with the Fermi surface, which results in a partial gap.
-This partial gapping can still occur when the Fermi surface of a 2D material behaves quasi-1D, where parts of the Fermi surface fulfill the nesting condition and can be translated onto each other.
-The result of the less ideal Fermi surface nesting in higher dimensions is that $\chi_0$ does not show a divergence at a specific wavevector $\mathbf{q}$ anymore, instead it rather shows a broader peak.
-Figure \ref{fig:cdw_theory} (a) shows the Lindhard susceptibility from Eq. \ref{eq:susz} for a 1D, 2D and 3D case.
-A broad peak in $\chi_0$ then requires stronger electron-phonon coupling to compensate for the smaller effect of $\chi_0$ in order to form a CDW.
+To summarize, in a 1D system, CDW formation is driven by the instability of the non-interacting electronic susceptibility, resulting from the coupling of many electronic states by the same wavevector $\mathbf{q}$, with most of them located near $E_F$.
+In such systems, the Fermi surface is planar, and the $\pm k_F$ points coincide with the edges of the PLD superstructure Brillouin zone defined by $\mathbf{q}_0$.
+This situation, however, does not hold in 2D or 3D systems, as shown in Figure \ref{fig:cdw_theory} (b).
+In these higher-dimensional cases, the Fermi surface is typically non-planar, and the PLD Brillouin zone edges only partially coincide with the Fermi surface, resulting in a partial gap.
+This partial gapping can still occur in 2D systems that behave quasi-1D, where parts of the Fermi surface fulfill the nesting condition and can be translated onto each other.
+However, the less ideal Fermi surface nesting in higher dimensions leads to a broad peak in $\chi_0$ rather than a sharp divergence at a specific wavevector $\mathbf{q}$.
+Figure \ref{fig:cdw_theory} (a) shows the Lindhard susceptibility from Eq. \ref{eq:susz} for 1D, 2D, and 3D cases.
+In such systems, stronger electron-phonon coupling is required to compensate for the reduced effect of $\chi_0$ in order to form a CDW.
 
-Including stronger electron-phonon coupling, generally makes the deviation from the originally discussed case even bigger.
-A strong electron-phonon coupling generally leads to larger amplitude of the distortion and a larger energy gap.
-Although the gap is larger, its energy gain is not solely concentrated to Fermi momenta $k_F$, but rather distributed across the whole Brillouin zone.
-Hence, the Fermi surface nesting plays a diminished role in the formation of the CDW.
-Another result of the stronger electron-phonon coupling lies in a shorter electron-hole coherence length.
-A short coherence length leads to stronger phase fluctuations of the CDW with respect to the underlying lattice, which has implications for the way order is established in a CDW phase.
-In the strong coupling regime order is established via local chemical bonds \cite{rossnagel_origin_2011, whangbo_analogies_1992, mcmillan_microscopic_1977,haas_chemical_1978,inglesfield_bonding_1980}.
-Since the distortion amplitudes are larger, non-linear terms in the electron-phonon coupling become increasingly important, which results in the formation of atomic pairs with shortened bonds or atom clusters.
-The CDW will then tend to be commensurate with the distorted crystal lattice \cite{rossnagel_origin_2011}.
-As will be further discussed in section \ref{sec:cdw_tate2}, the strong electron-phonon coupling will be an important factor for the description of the CDW phase in \ce{TaTe2}, which also tends to show stronger local bonds.
-
+The inclusion of stronger electron-phonon coupling further complicates the picture.
+In this regime, the amplitude of the distortion and the size of the energy gap increase, but the energy gain is distributed across the entire Brillouin zone rather than being concentrated solely at the Fermi momenta $k_F$.
+As a result, Fermi surface nesting plays a diminished role in CDW formation.
+Stronger coupling also leads to a shorter electron-hole coherence length, which in turn enhances phase fluctuations of the CDW relative to the underlying lattice.
+In the strong coupling regime, CDW order is established through local chemical bonds \cite{rossnagel_origin_2011, whangbo_analogies_1992, mcmillan_microscopic_1977, haas_chemical_1978, inglesfield_bonding_1980}.
+As the distortion amplitudes grow larger, nonlinear terms in the electron-phonon coupling become more significant, leading to the formation of atomic pairs with shortened bonds or clusters of atoms.
+Under such conditions, the CDW tends to be commensurate with the distorted crystal lattice \cite{rossnagel_origin_2011}.
+As I will discuss further in section \ref{sec:cdw_tate2}, strong electron-phonon coupling plays a crucial role in the description of the CDW phase in \ce{TaTe2}, which also exhibits stronger local bonding characteristics.
 
 \section{CDW phases in \ce{Ta}-based TMDs}
 \label{sec:cdw_tate2}
