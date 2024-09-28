@@ -158,6 +158,8 @@ For $\lambda\lesssim1$, which depends on the material properties, the BCS relati
 This description contains a full microscopic theory on CDW formation under the assumption of a non-interacting 1D metal.
 Here it is important to mention, that for most materials these assumptions do not hold up.
 The solution for the 1D chain, which predicts the long range order at a finite transition temperature $T_0$ does not hold for higher dimensions and is only relevant for quasi-1D systems.
+It is also worth mentioning that a 1D atomic chain cannot exhibit stable long range order, due to the fact that thermal and quantum fluctuations lead to a dephasing.
+Collective interlayer motion is therefore needed to stabilize the long-range order.
 Additionally, the Peierls instability at $E_F$ only materializes due to the exclusion of electron-electron interactions, expressed by the non-interacting susceptibility $\chi_0$.
 With the interactions included, a material might be stable, even at the lowest temperatures and therefore no CDW will appear.
 Due to these facts, I will further discuss the consequences that higher dimensionality and strong electron-phonon coupling have on the CDW formation.
@@ -187,8 +189,7 @@ As will be further discussed in section \ref{sec:cdw_tate2}, the strong electron
 \section{CDW phases in \ce{Ta}-based TMDs}
 \label{sec:cdw_tate2}
 
-As the previous section highlighted, higher dimensionality and stonger electron-phonon coupling complicates the situation and a microscopic description is lacking.
-This situation is generally the case for TMDs, which typically show 2D behavior and exhibit stronger electron-phonon coupling.
+As the previous section highlighted, higher dimensionality and stonger electron-phonon coupling complicates the situation and a microscopic description is lacking, which is the case for many TMDs.
 From the \ce{Ta}-based TMDs, \ce{TaS2} and \ce{TaSe2} have experienced extensive research, while \ce{TaTe2} has only started to experience more attention in recent years.
 
 Both \ce{TaS2} and \ce{TaSe2} show an undistorted monoclinic 1T phase at highest temperatures and undergo, multiple phase transitions \cite{pouget_structural_2024,lin_evidence_2022}.
@@ -197,11 +198,11 @@ Similarly \ce{TaSe2} shows normal-state to incommensurate CDW transition only at
 In the commensurate CDW phase of \ce{TaS2}, the \ce{Ta} atoms experience a strong modulation and form a cluster of 13 atoms in the shape of a "Star of David", while in \ce{TaSe2} only 7 atoms cluster together, which form the inner part of the "Star of David".
 
 In contrast to these, \ce{TaTe2}-crystals form in orthorombic (1T) structures, although in bulk crystals the 1T-phase is only a virtual phase and only exists in a distorted 1T' phase up to highest temperatures measured ($>$\qty{500}{\kelvin}) \cite{petkov_exotic_2020}.
-The 1T phase has only been realized in epitaxially grown mono and few-layer systems, which can form due to the absence of or only weakly existing \ce{Te}-\ce{Te} interlayer coupling \cite{hwang_novel_2022, wang_polymorphic_2024}.
-In the real distorted 1T' phase, \ce{TaTe2} forms ribbon like structures and shows an overall (3 x 1) superstructure at the surface.
-The structural distortion is governed by the local bonding, with \ce{Ta} atoms forming in trimers or fluctuating dimers, with each \ce{Ta}-atoms being surrounded by 8 \ce{Te}-atoms.
+The 1T phase has only been realized in epitaxially grown mono and few-layer systems, which can form thanks to a weaker or absent \ce{Te}-\ce{Te} interlayer coupling \cite{hwang_novel_2022, wang_polymorphic_2024}.
+In the real distorted 1T' phase (see Fig. \ref{fig:tate_structure} (a)), \ce{TaTe2} forms ribbon like structures and shows an overall (3 x 1) superstructure at the surface.
+The structural distortion is governed by the local bonding, with \ce{Ta} atoms forming trimers or effective trimer structures consisting of two fluctuating dimers \cite{katayama_observation_2023}, with each \ce{Ta}-atoms being surrounded by 8 \ce{Te}-atoms.
 Additionally, the high temperature phase exhibits a commensurate stripe-like CDW phase.
-At \qty{170}{\kelvin} the material undergoes a structural phase transitions, where two \ce{Ta}-atoms further distort the structure, breaking dimers and instead form "butterfly" shaped heptameres in a (3 x 3) 1T"-phase \cite{feng_charge_2016, katayama_observation_2023}.
+Below \qty{170}{\kelvin} the material undergoes an additional structural phase transitions, where two \ce{Ta}-atoms further distort the structure, breaking dimers and forming "butterfly" shaped heptameres in a (3 x 3) 1T"-phase \cite{feng_charge_2016, katayama_observation_2023} (see Fig. \ref{fig:tate_structure} (b)).
 Here, charge order is modulated and a hexagonal "star of david"-like charge order occurs below the phase transition, similar to \ce{TaSe2}.
 This structural phase transition has been observed both in STM and diffraction measurements \cite{feng_charge_2016, siddiqui_ultrafast_2021, domrose_femtosecond_2024}.
 Apart from the PLD, also the opening of gaps in the band tructure has been observed for all three compounds.
@@ -211,14 +212,17 @@ In \ce{TaSe2} a full gaps is opening at $E_F$, while for both \ce{TaS2} and \ce{
 	\centering
 	\begin{subfigure}[b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{tate2/HT_tate_crystal.pdf}
+		\caption{}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{tate2/LT_tate_crystal.pdf}
+		\caption{}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{tate2/resistivity.png}
+		\caption{}
 	\end{subfigure}
 	\caption{(a) 1T' RT phase of \ce{TaTe2} forming ribbons. (b) 1T" LT phase of \ce{TaTe2}, \ce{Ta} atoms move together forming heptameres. (c) Resistivity of \ce{TaTe2} as a function of temperature with an overall reduction in resistivity while cooling. A phase transition occurs at \qty{170}{\kelvin}, which is accompanied by a further steplike reduction in resistivity. (a) and (b) adapted from \cite{lin_evidence_2022}, (c) from \cite{hu_optical_2022}.}
 	\label{fig:tate_structure}
