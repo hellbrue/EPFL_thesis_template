@@ -534,22 +534,23 @@ Additionally, the residual spectral weight will be discussed in terms of a metas
 \section{Energy and momentum resolved electron-phonon coupling}
 \label{sec:phonon_osc}
 
-The previous section was dedicated to the dynamics both at LT and RT.
-Those dynamics already revealed strong momentum and energy dependent oscillations in the intensity of each trace, which will be the subject of this section.
+In the previous section, we examined the dynamics at both low and room temperatures, revealing strong momentum- and energy-dependent oscillations in the intensity of each trace.
+These oscillations are the focus of this section.
 
-Coherent oscillations in delay traces of a trARPES measurement typically are a sign of interaction with phonons.
-Since ARPES only measures the single particle spectral function, it is not possible to directly observe quasiparticles like phonons.
-Instead the information of phonons is imprinted onto the measured photoelectrons due to the electron-phonon coupling.
-If this coupling becomes sufficiently large it is possible to observe oscillations in time traces of a trARPES experiment.
-Multiple pathways to coherently excite phonons exist, with various Raman scattering processes, as well as infrared absorption and displacive excitation of coherent phonon (DECP) being among them \cite{zeiger_theory_1992, kuznetsov_theory_1994, giret_entropy_2011,juraschek_sum-frequency_2018,lakehal_microscopic_2019,caruso_quantum_2023, emeis_coherent_2024}.
-For semi-metals DECP is typically the main excitation pathway.
-In this process, photons of the pump pulse are absorbed and the created photoexcitation results in a quasi-adiabatic displacement of the potential energy surface.
-The lattice then reacts by oscillating around the minimum of the displaced energy surface in a coherent motion, which slowly dephases over time dampening the phonon \cite{zeiger_theory_1992, kuznetsov_theory_1994, bothschafter_ultrafast_2013, emeis_coherent_2024}.
+Coherent oscillations in delay traces of trARPES measurements are typically indicative of phonon interactions.
+ARPES measures only the single-particle spectral function, so quasiparticles like phonons themselves cannot be directly observed.
+Instead, information about phonons is imprinted on the measured photoelectrons through electron-phonon coupling.
+When this coupling is sufficiently strong, it is possible to observe oscillations in the time traces of a trARPES experiment.
+Several mechanisms can lead to coherent phonon excitation, including various Raman scattering processes, as well as infrared absorption, and displacive excitation of coherent phonons (DECP) \cite{zeiger_theory_1992, kuznetsov_theory_1994, giret_entropy_2011, juraschek_sum-frequency_2018, lakehal_microscopic_2019, caruso_quantum_2023, emeis_coherent_2024}.
+In semi-metals, DECP is usually the dominant excitation pathway.
+In this process, photons from the pump pulse are absorbed, creating a quasi-adiabatic displacement of the potential energy surface.
+The lattice then responds by oscillating coherently around the minimum of the displaced energy surface, a motion that dephases over time as the phonon damps out \cite{zeiger_theory_1992, kuznetsov_theory_1994, bothschafter_ultrafast_2013, emeis_coherent_2024}.
 
-Ditellurides, and especially \ce{TaTe2} seem to carry an exceptionally high electron-phonon coupling.
-Due to this, it is not only possible to observe oscillations in a large, integrated region of the band structure, but rather for each momentum and energy coordinate individually, which enables the possibility of performing band mappings of the electron-phonon coupling in a large energy-momentum region.
-Additionally, by carrying out a Fourier analysis of the delay trace we can extract the frequency of the oscillation and assign it to known vibrational modes.
-To the best of my knowledge, this is the first time such a Fourier analysis of the $E$ and $k$ resolved electron-phonon coupling has been done in ARPES using high harmonic generation as a probe.
+Ditellurides, especially \ce{TaTe2}, exhibit exceptionally high electron-phonon coupling.
+This strong coupling allows for the observation of oscillations not just over large, integrated regions of the band structure, but also at each individual momentum and energy coordinate.
+This characteristic provides an opportunity to perform a band mapping of the electron-phonon coupling over large regions of energy-momentum space.
+By performing a Fourier analysis on the delay traces, the frequency of the oscillations can be extracted and assigned to specific vibrational modes.
+To my knowledge, this is the first time such an energy- and momentum-resolved Fourier analysis of electron-phonon coupling has been performed in ARPES using high harmonic generation as a probe.
 
 \begin{figure}[b!]
 	\centering
@@ -558,34 +559,34 @@ To the best of my knowledge, this is the first time such a Fourier analysis of t
 	\label{fig:TaTe_fit_procedure}
 \end{figure}
 
-For this procedure a small binning of four pixel in both the momentum and energy coordinate is applied to the raw data to slightly increase the signal to noise ration and reduce the amount of pixels for which the calculations have to run, and only slightly sacrificing the fidelity of the bandmaps.
-An analytic function reproducing the fast population or depopulation after pump excitation and subsequent decay of the excitation is fit to each $E(k)$-coordinate.
-The analytic function is defined by
+In this procedure, the raw data is first binned over four pixels in both the momentum and energy coordinates to slightly increase the signal-to-noise ratio and reduce the computational load, with minimal sacrifice to the fidelity of the bandmaps.
+An analytic function, reproducing the fast population or depopulation after pump excitation and the subsequent decay, is fitted to each $E(k)$-coordinate.
+The analytic function is defined as
 \begin{equation}
 	A + \frac{1}{2} \left( B \cdot \exp\left(\frac{t_0-t}{\tau} + \frac{\sigma}{\tau}\right) \right) \cdot \left( 1 + \text{erf}\left(\frac{t-t_0-\frac{2\sigma}{\tau}}{\sigma\sqrt{2}}\right) \right) + C \frac{1}{2} \left( 1 + \text{erf}\left(\frac{t-t_0}{\sigma\sqrt{2}}\right) \right)
 	\label{eq:decay_model}
 \end{equation}
 with time zero $t_0$, decay time $\tau$ and a broadening $\sigma$.
-erf represent the error function as defined by
+The error function $\text{erf}(z)$ is given by
 \begin{equation}
 	\text{erf}(z) = \frac{2}{\sqrt{\pi}} \int_{t=0}^{z} \exp(-t^2)
 \end{equation}
-The exponential decay is then subtracted from the raw data trace, only leaving a residual behind containing the oscillating components.
-A fast Fourier transform function from the scipy Python package \cite{noauthor_rfft_nodate} is then applied to the residual trace, revealing the frequency of the oscillatory components.
-In the specific case here the datasets consist of 60 delay steps.
-The FFT function was defined to consist of 200 points, therefore applying a zero padding of 140 points.
-Applying the FFT function transforms the original 3D data cube from $I(E,k,t)$ to $I(E,k,f)$, with frequency $f$ being the Fourier transformed of the time axis.
+After subtracting this exponential decay from the raw data, the residual trace contains only the oscillatory components.
+A fast Fourier transform (FFT) from the scipy Python package \cite{noauthor_rfft_nodate} is then applied to these residual traces, revealing the frequencies of the oscillatory components.
+In this case, the dataset consists of 60 delay steps, and the FFT function is defined over 200 points, applying a zero-padding of 140 points.
+The FFT transforms the original 3D data cube from $I(E,k,t)$ to $I(E,k,f)$, with frequency $f$ being the Fourier-transformed time axis.
 Fig. \ref{fig:TaTe_fit_procedure} shows the steps from a delay trace to the FFT trace that can be associated with a particular phonon mode.
 
-Performing this analysis for a cut close to $\Gamma$ reveals 3 distinct vibrational modes in the LT phase (see Fig. \ref{fig:TaTe_FFT_betw} (c)) at \qtylist{0.4; 1.45; 2.3}{\tera\hertz}.
-Two modes (\qtylist{1.45; 2.3}{\tera\hertz}) are well-known phonon modes which have been observed with Raman spectroscopy and ultrafast transient reflectivity \cite{luo_subtle_2021, hu_optical_2022}, while the \qty{0.4}{\tera\hertz} on the other hand has not been observed.
-The resulting band maps for these three frequencies are shown in Fig. \ref{fig:TaTe_FFT_betw} (b) with the corresponding band structure \qty{50}{\femto\second} after pump excitation.
-First, it is to note that these bandmaps do not represent the phonon modes directly, but rather the effect that the phonons have on the bandstructure, mediated by the electron-phonon coupling.
-The strong coupling allows the observation of mapping the coupling with a high energy and momentum resolution, letting us explore the band specific coupling.
-Comparing the electron-phonon coupling maps with the bandmap it becomes clear that the coupling maps follow the spectral weight distribution of the band structure.
-Additionally, a unique part of the band structure is visible in each of the coupling maps, showing that individual phonon modes couple to specific bands in the band structure.
-Most strikingly, the features coupling to the \qty{0.4}{\tera\hertz} mode, corresponds to bands that showed the CDW gap closing in the previous section.
-Integrating over the whole energy and momentum space reveals the trace shown in Fig. \ref{fig:TaTe_FFT_betw} (c), which clearly highlights the existence of the three discussed phonon modes.
+Performing this analysis for a cut near $\Gamma$ reveals three distinct vibrational modes in the LT phase (see Fig. \ref{fig:TaTe_FFT_betw} (c)) at \qtylist{0.4; 1.45; 2.3}{\tera\hertz}.
+Two modes (\qtylist{1.45; 2.3}{\tera\hertz}) have been previously observed using Raman spectroscopy and ultrafast transient reflectivity \cite{luo_subtle_2021, hu_optical_2022}, while the \qty{0.4}{\tera\hertz} mode has not been reported before.
+Figure \ref{fig:TaTe_FFT_betw} (b)) shows the corresponding bandmaps at \qty{50}{\femto\second} after pump excitation for these frequencies.
+It is important to note that these maps do not directly represent the phonon modes but rather the effect of the phonons on the band structure mediated by electron-phonon coupling.
+The strong coupling allows for a high-resolution mapping of this coupling across both energy and momentum, revealing band-specific interactions.
+
+The coupling maps closely follow the spectral weight distribution of the band structure.
+Additionally, each phonon mode is seen to couple to specific regions of the band structure.
+Notably, the features associated with the \qty{0.4}{\tera\hertz} mode correspond to the regions where CDW gaps were observed to close in the previous section.
+Integrating over the entire energy and momentum space yields the trace shown in Fig. \ref{fig:TaTe_FFT_betw} (c), highlighting the presence of the three phonon modes.
 
 \begin{figure}[b!]
 	\centering
@@ -607,11 +608,11 @@ Integrating over the whole energy and momentum space reveals the trace shown in 
 \end{figure}
 
 In Fig. \ref{fig:TaTe_FFT_traces_betw} some exemplary time traces are shown in (a) with their corresponding FFT traces in (b).
-These traces help visualizing the difference in the modes and give further insight into their respective nature.
-While the \qtylist{1.45; 2.3}{\tera\hertz} phonon modes oscillate around the exponential decay, it appears as if the \qty{0.4}{\tera\hertz} mode strongly modulates the intensity in the trace, almost resulting in a re-population after the decay has already set in.
-Additionally, oscillations due to the electron-phonon coupling seem to set in right after the excitation with the IR pump pulse, while the closing of the gap was delayed by few hundred \unit{\femto\second}.
-This observation agrees as well with the fact, that the CDW is not disrupted immediately by the light pulse, but through the interaction with the phonons, with the the CDW gap being quenched after \qty{350}{\femto\second}.
-Similar observations can be made for the two other cuts at $\Gamma$ and M$_1$, that have been analyzed before in terms of their dynamics.
+These traces illustrate the differences between the phonon modes and provide further insight into their behavior.
+The \qtylist{1.45; 2.3}{\tera\hertz} phonon modes oscillate around the exponential decay, while the \qty{0.4}{\tera\hertz} mode strongly modulates the intensity, almost causing a re-population after the decay has already set in.
+Furthermore, the oscillations due to electron-phonon coupling start immediately after the IR pump pulse, while the closure of the CDW gap is delayed by several hundred femtoseconds.
+This supports the idea that the CDW is not disrupted immediately by the light pulse, but through the interaction with the phonons, with the CDW gap closing around \qty{350}{\femto\second}.
+Similar results are observed for the other cuts at $\Gamma$ and M$_1$, analyzed previously.
 Both cuts show the three phonon modes listed above and show them couple to different bands in the band structure.
 
 \begin{figure}[t!]
@@ -636,8 +637,8 @@ Both cuts show the three phonon modes listed above and show them couple to diffe
 	\label{fig:TaTe_cosine}
 \end{figure}
 
-Since the \qty{0.4}{\tera\hertz} mode is at the lower and of the Fourier trace, it is important to exclude the possibility of an artifact.
-This can be done by fitting a cosine curve together with the decay model from equation \ref{eq:decay_model} and extracting the frequency of the cosine function.
+Since the \qty{0.4}{\tera\hertz} mode lies at the lower end of the Fourier trace, it is essential to exclude the possibility that it is an artifact.
+To verify this, a cosine curve is fitted along with the decay model from Eq. \ref{eq:decay_model} and the frequency of the cosine function is extracted. 
 This fit function is given by
 \begin{equation}
 	f_\text{decay}(t) + f_\text{step}(t, t_0) * A * \cos(2\pi t+\phi) + C
@@ -647,11 +648,11 @@ The step function is necessary because the oscillation only occur at or after ti
 Repeating this fit procedure for traces that show the \qty{0.4}{\tera\hertz} mode in Fig. \ref{fig:TaTe_FFT_betw}, confirms that the delay traces can be fitted by a cosine function with a frequency of \qty{0.4}{\tera\hertz}.
 An example of this fit procedure can be seen in Fig. \ref{fig:TaTe_cosine}.
 
-One of the questions in \ce{TaTe2} revolves around the nature of the CDW.
-In the previous section I presented our results on the strong structural character of the CDW, which became apparent through the delayed response to light excitation.
-As a second part I want to address the question of an amplitude mode.
-The main characteristic of a possible amplitude mode is that the mode vanishes after crossing from the CDW phase into the HT phase.
-For this reason it is again necessary to look at the RT data and see how the oscillations change in the normal state.
+One of the central questions regarding \ce{TaTe2} is the nature of its CDW.
+The previous section presented evidence of the CDW's strong structural character, revealed through its delayed response to light excitation.
+Now, I want to address the question of a possible amplitude mode.
+A defining feature of an amplitude mode is that it vanishes when crossing from the CDW phase into the HT phase.
+To investigate this, it is again necessary to look at the RT data and see how the oscillations change in the normal state.
 
 \begin{figure}[b!]
 	\centering
@@ -672,27 +673,25 @@ For this reason it is again necessary to look at the RT data and see how the osc
 	\label{fig:TaTe_FFT_betw_rt}
 \end{figure}
 
-The first thing that becomes immediately apparent in RT data is the lack of the \qty{0.4}{\tera\hertz} mode (see Fig. \ref{fig:TaTe_FFT_betw_rt} (c)).
-This absence is a strong indicator that the mode might be an amplitude mode.
-Other indicators are also present in the LT data, such as the \qty{0.4}{\tera\hertz} mode directly coupling to the region of CDW gaps, or the oscillations of the mode having the strongest effect on the observed intensity.
-Apart from the changes to the potential Amplitude mode, additional changes to the two other modes are visible.
-First, both modes experience a slight red shift compared to the LT data and seem to have broadened.
-Second, the bands to which the \qty{1.35}{\tera\hertz} mode couples have changed, while the \qty{2.2}{\tera\hertz} mode stayed the same (see Fig. \ref{fig:TaTe_FFT_betw_rt} (b)).
+In the RT data, the absence of the \qty{0.4}{\tera\hertz} mode (see Fig. \ref{fig:TaTe_FFT_betw_rt} (c)) is immediately noticeable.
+This absence is a strong indicator that this mode may be an amplitude mode.
+Other evidence also supports this, including the fact that the \qty{0.4}{\tera\hertz} mode directly couples to regions where the CDW gaps form and that its oscillations strongly modulate the intensity in the traces.
+In addition to the disappearance of the amplitude mode, there are changes to the other two phonon modes.
+Both modes exhibit a slight redshift and broadening in the RT phase.
+Furthermore, the \qty{1.35}{\tera\hertz} mode now couples to a broader region of the band structure, while the \qty{2.2}{\tera\hertz} mode remains largely unchanged (see Fig. \ref{fig:TaTe_FFT_betw_rt} (b)).
 The \qty{1.35}{\tera\hertz} mode now incorporates a broader region in the band structure at the edge of the band map, as well as the band in the center, which coupled to the \qty{0.4}{\tera\hertz} mode at LT.
 
-With these results in mind it is possible to provide further insight into the structural phase transition and the CDW formation.
-Two phonon modes have been observed at LT, which persist up to RT.
-Both of these modes have been previously observed by transient reflectivity and Raman spectroscopy \cite{hu_optical_2022, luo_subtle_2021}, although the \qty{1.45}{\tera\hertz} mode only appeared in the LT data of \cite{hu_optical_2022}.
-I attribute the absence of this mode in the HT phase to the probe energy used in the transient reflectivity data.
-The \qty{2.3}{\tera\hertz} is basically not effected by the phase transition, apart from a slight red shift which has also been reported by \cite{hu_optical_2022, luo_subtle_2021}.
-More importantly the band resolved electron-phonon coupling is also unchanged, therefore the \qty{2.3}{\tera\hertz} mode likely does not play a major role in the phase transition.
-While the \qty{1.45}{\tera\hertz} also appears in both LT and HT phase, the band specific electron-phonon coupling changes quite significantly, especially in the center of the BZ close to $\Gamma$ and in the location of the minigap formation.
-In these regions the \qty{0.4}{\tera\hertz} mode appears at LT, coupling to the bands that are affected by the CDW gap formation.
-A possible explanation for these observations could be the local orbital character of the bands, and the different Ta d-orbitals which mainly make up the band structure close to $E_F$ \cite{mitsuishi_unveiling_2024}.
-In the structural transition, the \ce{Ta} $d_{xy}$ orbital is most affected, due to the formation of the heptameres, at the same time the \ce{Te} atoms are able to accustom this new distortion of the lattice.
-Going back to the local bonding picture, a change of the bonding length and overlap leads to changes in the effective electron count of the heptameres, when compared to the fluctuating dimer situation.
+These observations provide further insight into the structural phase transition and CDW formation in \ce{TaTe2}.
+Two phonon modes persist in both the LT and HT phases, consistent with previous transient reflectivity and Raman spectroscopy studies \cite{hu_optical_2022, luo_subtle_2021}, although the \qty{1.45}{\tera\hertz} mode only appeared in the LT data of \cite{hu_optical_2022}.
+The \qty{2.3}{\tera\hertz} mode appears largely unaffected by the phase transition, apart from a small redshift, and the band-resolved electron-phonon coupling remains the same, suggesting that this mode does not play a significant role in the transition.
+In contrast, the \qty{1.45}{\tera\hertz} mode shows significant changes in band-specific coupling, particularly near $\Gamma$ and in regions of minigap formation.
+At LT, the \qty{0.4}{\tera\hertz} mode emerges in these regions, coupling to bands affected by CDW gap formation.
+
+A potential explanation for these observations lies in the local orbital character of the bands and the involvement of \ce{Ta} d-orbitals near $E_F$ \cite{mitsuishi_unveiling_2024}.
+During the structural transition, the \ce{Ta} $d_{xy}$ orbital is strongly affected by the formation of heptamers, while the \ce{Te} atoms adjust to the new lattice distortion.
+From a local bonding perspective, changes in bond length and overlap result in modifications to the effective electron count of the heptamers, compared to the fluctuating dimer state.
 Therefore, the change in crystal structure has a profound impact on the band structure as well as the electron-phonon coupling.
-These changes of the structure and with it the electron-phonon coupling result in a situation in which the LT CDW can be established, mediated through a coupling of lattice and charges via the \qty{0.4}{\tera\hertz} phonon mode.
+These structural changes significantly impact both the band structure and electron-phonon coupling, enabling the formation of the LT CDW, mediated through a coupling between lattice and charges via the \qty{0.4}{\tera\hertz} phonon mode.
 
 \section{Metastability}
 \label{sec:meta}
