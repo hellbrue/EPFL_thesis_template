@@ -180,6 +180,19 @@ Stronger coupling also leads to a shorter electron-hole coherence length, which 
 In the strong coupling regime, CDW order is established through local chemical bonds \cite{rossnagel_origin_2011, whangbo_analogies_1992, mcmillan_microscopic_1977, haas_chemical_1978, inglesfield_bonding_1980}.
 As the distortion amplitudes grow larger, nonlinear terms in the electron-phonon coupling become more significant, leading to the formation of atomic pairs with shortened bonds or clusters of atoms.
 Under such conditions, the CDW tends to be commensurate with the distorted crystal lattice \cite{rossnagel_origin_2011}.
+
+Here, I want to briefly explain the concept of commensurability in charge density waves (CDWs).
+A CDW is considered commensurate (C-CDW) if its wavevector is an integer multiple of the underlying lattice periodicity, meaning the charge density and the lattice are perfectly aligned.
+In contrast, an incommensurate CDW (I-CDW) lacks such a phase relationship with the lattice, meaning the charge density modulation does not synchronize with the lattice periodicity.
+There is also a third possibility, known as a nearly-commensurate CDW (NC-CDW), which lies between the fully commensurate and incommensurate cases. Figure \ref{} illustrates examples of both a C-CDW and an I-CDW.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/tate2/commensurate}
+	\caption{}
+	\label{fig:commensurate}
+\end{figure}
+
 As I will discuss further in section \ref{sec:cdw_tate2}, strong electron-phonon coupling plays a crucial role in the description of the CDW phase in \ce{TaTe2}, which also exhibits stronger local bonding characteristics.
 
 \section{CDW phases in \ce{Ta}-based TMDs}
@@ -294,9 +307,9 @@ A series of bandmaps taken parallel to the K$_2$-$\Gamma$-K$_2$ direction from t
 	\label{fig:TaTe_RT_cuts}
 \end{figure}
 
-At RT, the bandmaps reveal a multitude of bands, with several crossing the Fermi level in each cut.
+At RT, the bandmaps reveal a multitude of bands, with several crossing the Fermi level in each cut (see Fig. \ref{fig:TaTe_RT_cuts}).
 These Fermi crossings reveal the two Fermi sheets: the crossing at the edge of the band determines the wavy contours of the outer quasi-1D Fermi surface, while the crossing closer to the center of the band structure corresponds to the inner Fermi sheet.
-Upon cooling through the phase transition, the bands undergo a complex reordering.
+Upon cooling through the phase transition, the bands undergo a complex reordering (see Fig. \ref{fig:TaTe_LT_cuts}).
 The broad bands observed in the RT phase split into multiple individual bands, and additional backfolded bands appear.
 Looking at the FS crossing of the inner sheet, the aforementioned size difference of the Fermi pockets becomes clearer.
 Comparing the cuts of the RT phase to the equivalent LT cuts, it is possible to identify a small shift in the chemical potential $\mu$, which has also been reported by \cite{mitsuishi_unveiling_2024}.
@@ -328,7 +341,7 @@ Figure \ref{fig:TaTe_minigaps} shows a cut near $\Gamma$, with a dashed box high
 A zoomed-in view of this area better illustrates the small gaps near \qty{0.4}{\angstrom^{-1}} at the edge of the band map.
 This band also connects to the wavy contours that meet the FSN condition, suggesting that an interplay between FSN and gap formation may still be relevant.
 
-\begin{figure}[h!]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=0.7\textwidth]{tate2/TaTe2_CDW_minigaps.pdf}
 	\caption{Left: Band map parallel to the K$_2$-$\Gamma$-K$_2$ direction close to the $\Gamma$-point. The dashed rectangle marks the region of which a zoom is provided. Right: Zoom of dashed rectangle region. The band map shows a faint signature of the observed minigaps \cite{lin_evidence_2022}.}
@@ -493,19 +506,20 @@ Those traces show similar relaxation times as the LT ones.
 
 \begin{figure}[b!]
 	\centering
-	\begin{subfigure}[b]{0.24\textwidth}
+	\begin{subfigure}[b]{0.33\textwidth}
 		\includegraphics[width=\textwidth]{tate2/Unocc_dyn_1_fit_betw_rt.pdf}
 		\caption{}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.24\textwidth}
+	\begin{subfigure}[b]{0.33\textwidth}
 		\includegraphics[width=\textwidth]{tate2/Unocc_dyn_2_fit_betw_rt.pdf}
 		\caption{}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.24\textwidth}
+	\\
+	\begin{subfigure}[b]{0.33\textwidth}
 		\includegraphics[width=\textwidth]{tate2/Unocc_dyn_3_fit_betw_rt.pdf}
 		\caption{}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.24\textwidth}
+	\begin{subfigure}[b]{0.33\textwidth}
 		\includegraphics[width=\textwidth]{tate2/Occ_dyn_fit_betw_rt.pdf}
 		\caption{}
 	\end{subfigure}
@@ -552,7 +566,7 @@ This characteristic provides an opportunity to perform a band mapping of the ele
 By performing a Fourier analysis on the delay traces, the frequency of the oscillations can be extracted and assigned to specific vibrational modes.
 To my knowledge, this is the first time such an energy- and momentum-resolved Fourier analysis of electron-phonon coupling has been performed in ARPES using high harmonic generation as a probe.
 
-\begin{figure}[b!]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=\textwidth]{tate2/tate_fit_procedure.pdf}
 	\caption{Left: Band map close to $\Gamma$ oriented along K$_2$-$\Gamma$-K$_2$ direction \qty{50}{\femto\second} after pulse excitation. The other plots show difference maps at different time delays (\qtylist{50;400;3000}{\femto\second}). Rectangles show the regions for which dedicated delay traces are displayed in \ref{fig:TaTe_dyn_betw_RT}. The difference map shows the ultrafast de-/population after pump excitation, followed by a decay and a small diffuse residual spectral weight after \qty{3}{\pico\second}. No changes to the band structure apart from de-/population dynamics can be observed.}
@@ -588,7 +602,7 @@ Additionally, each phonon mode is seen to couple to specific regions of the band
 Notably, the features associated with the \qty{0.4}{\tera\hertz} mode correspond to the regions where CDW gaps were observed to close in the previous section.
 Integrating over the entire energy and momentum space yields the trace shown in Fig. \ref{fig:TaTe_FFT_betw} (c), highlighting the presence of the three phonon modes.
 
-\begin{figure}[b!]
+\begin{figure}[t]
 	\centering
 	\begin{subfigure}[b]{0.24\textwidth}
 		\includegraphics[width=\textwidth]{tate2/tate_FFT_ref_betw.pdf}
@@ -704,7 +718,7 @@ In earlier sections, I discussed the ultrafast electronic dynamics occurring wit
 To explore the metastable state, I will now focus on the potential long-term modifications to the electronic band structure and the different timescales leading to metastability, analyzing longer timescales, up to \qty{200}{\pico\second} after pump excitation.
 To achieve this, we performed pump-probe measurements of both the valence states and the \ce{Te} 4d core states in the LT and HT phase.
 
-\begin{figure}[b!]
+\begin{figure}[th!]
 	\centering
 	\begin{subfigure}[b]{0.25\textwidth}
 		\includegraphics[width=\textwidth]{images/tate2/meta_bandmap_marker}
