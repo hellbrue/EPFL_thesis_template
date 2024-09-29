@@ -2473,31 +2473,29 @@
     <bcf:citekey order="50" intorder="1">hu_optical_2022</bcf:citekey>
     <bcf:citekey order="50" intorder="2">luo_subtle_2021</bcf:citekey>
     <bcf:citekey order="51" intorder="1">hu_optical_2022</bcf:citekey>
-    <bcf:citekey order="52" intorder="1">hu_optical_2022</bcf:citekey>
-    <bcf:citekey order="52" intorder="2">luo_subtle_2021</bcf:citekey>
-    <bcf:citekey order="53" intorder="1">mitsuishi_unveiling_2024</bcf:citekey>
-    <bcf:citekey order="54" intorder="1">siddiqui_ultrafast_2021</bcf:citekey>
-    <bcf:citekey order="54" intorder="2">domrose_femtosecond_2024</bcf:citekey>
-    <bcf:citekey order="55" intorder="1">bao_light-induced_2022</bcf:citekey>
-    <bcf:citekey order="55" intorder="2">schaibley_valleytronics_2016</bcf:citekey>
-    <bcf:citekey order="55" intorder="3">tokura_emergent_2017</bcf:citekey>
-    <bcf:citekey order="55" intorder="4">konstantatos_current_2018</bcf:citekey>
-    <bcf:citekey order="55" intorder="5">liu_semimetals_2020</bcf:citekey>
-    <bcf:citekey order="55" intorder="6">du_engineering_2021</bcf:citekey>
-    <bcf:citekey order="56" intorder="1">katayama_observation_2023</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">feng_charge_2016</bcf:citekey>
-    <bcf:citekey order="58" intorder="1">siddiqui_ultrafast_2021</bcf:citekey>
-    <bcf:citekey order="58" intorder="2">domrose_femtosecond_2024</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">domrose_femtosecond_2024</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">hellmann_time-domain_2012</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">domrose_femtosecond_2024</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">mitsuishi_unveiling_2024</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">siddiqui_ultrafast_2021</bcf:citekey>
+    <bcf:citekey order="53" intorder="2">domrose_femtosecond_2024</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">bao_light-induced_2022</bcf:citekey>
+    <bcf:citekey order="54" intorder="2">schaibley_valleytronics_2016</bcf:citekey>
+    <bcf:citekey order="54" intorder="3">tokura_emergent_2017</bcf:citekey>
+    <bcf:citekey order="54" intorder="4">konstantatos_current_2018</bcf:citekey>
+    <bcf:citekey order="54" intorder="5">liu_semimetals_2020</bcf:citekey>
+    <bcf:citekey order="54" intorder="6">du_engineering_2021</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">katayama_observation_2023</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">feng_charge_2016</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">siddiqui_ultrafast_2021</bcf:citekey>
+    <bcf:citekey order="57" intorder="2">domrose_femtosecond_2024</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">domrose_femtosecond_2024</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">hellmann_time-domain_2012</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">domrose_femtosecond_2024</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">basov_towards_2017</bcf:citekey>
     <bcf:citekey order="62" intorder="1">basov_towards_2017</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">basov_towards_2017</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">hellbruck_high-resolution_2024</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">lin_evidence_2022</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">stojchevska_ultrafast_2014</bcf:citekey>
-    <bcf:citekey order="66" intorder="2">vaskivskyi_controlling_2015</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">vaskivskyi_controlling_2015</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">hellbruck_high-resolution_2024</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">lin_evidence_2022</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">stojchevska_ultrafast_2014</bcf:citekey>
+    <bcf:citekey order="65" intorder="2">vaskivskyi_controlling_2015</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">vaskivskyi_controlling_2015</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
