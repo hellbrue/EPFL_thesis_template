@@ -157,39 +157,35 @@ Additionally, the pulse front tilt introduced by the monochromator presents furt
 	
 \section{Time resolution limit due to pulse front tilt}
 
-In any trARPES measurement the time resolution of the experiment is determined by the cross-correlation of pump and probe pulses.
-Therefore it is important to keep the pulse duration of each pulse as short as possible.
-It has already been mentioned that short pump pulses are relatively easy to achieve by pulse compression via white light generation and subsequent re-compression \cite{nisoli_compression_1997}.
-Additionally the probe pulse in the case of a typical HHG beamline like Harmonium is intrinsically shorter than the initial seed pulse, typically also used as the optical pump.
+In trARPES experiments, the overall time resolution is determined by the cross-correlation of the pump and probe pulses.
+As a result, minimizing the pulse duration of both the pump and probe pulses is crucial to achieving high temporal resolution.
+Short pump pulses can be generated with relative ease through pulse compression techniques, such as white light generation followed by re-compression \cite{nisoli_compression_1997}. For typical HHG beamlines like Harmonium, the probe pulse is inherently shorter than the seed pulse often used for the optical pump.
 In the case of a Gaussian pulse not experiencing any change in phase or frequency the time duration of such pulses can be expressed as
-
 \begin{equation}
 	\Delta\tau = \frac{2 \ln{2}}{\pi c}\frac{\lambda^2}{\Delta\lambda} = \frac{0.44}{c}\frac{\lambda^2}{\Delta\lambda}
 \end{equation}
+where $\lambda$ is the central wavelength, and $\Delta\lambda$ is the spectral width at half-height.
+However, in HHG beamlines, a comb of harmonics is generated rather than a single pulse, requiring the use of a monochromator to select a single harmonic for ARPES experiments. Consequently, the effect of the monochromator on the pulse duration must be considered.
 
-with the central wavelength $\lambda$ and the spectral width at half-height $\Delta\lambda$.
-But in the case of HHG a full comb of harmonics is generated instead of a single pulse, which necessitates the use of a monochromator to select a single harmonic for the ARPES experiment.
-Therefore the influence of a monochromator on the time duration has to be taken into account.
-
-Since HHG beamlines provide a wide spectrum of harmonics, it is desirable to employ monochromators that can take advantage of this fact and whose output can be tuned in a wide frequency range.
-Typically, such monochromators use reflection gratings, which contain a large spectral band when used in grazing incident.
+Monochromators used in HHG systems must accommodate the broad harmonic spectrum and allow for tuning across a wide frequency range.
+Typically, such monochromators employ reflection gratings, which contain broad spectral bands when used at grazing incidence.
 The problem of gratings arises from the fact that they induce a tilt of the pulse wavefront, after a light pulse is diffracted off of them.
 The pulse front tilt is a result of the light rays being diffracted off of different neighboring grooves, which creates a path delay equal to $m\lambda$, with $m$ corresponding to the order of diffraction.
 The total path difference across the full spatial pulse distribution can be summed to $m\lambda N$, with N totaling the number of illuminated grooves.
 Depending on the properties of the chosen harmonic and the employed grating this contribution can be quite substantial, especially when the goal is a time resolution in the femtosecond regime.
-Therefore it is important to compensate or minimize this pulse front tilt, when designing a time preserving monochromator.
+This pulse front tilt can significantly impact time resolution, particularly when aiming for femtosecond-level precision.
+Therefore, minimizing or compensating for this tilt is essential when designing a time-preserving monochromator.
 
-The compensation can be achieved by simply introducing a second grating, which exactly compensates the tilt introduced by the first grating \cite{villoresi_compensation_1999}.
-The downside of this method is the added complexity to the overall monochromator, as well as the reduced transmission.
-A different option is the use of a single grating, for which it can be shown that the total path difference $m\lambda N=\lambda^2/\Delta\lambda$ \cite{samson_j_a_vacuum_1998} and therefore the pulse duration at its half-width equates to
-
+One method for compensating pulse front tilt is to introduce a second grating, which counteracts the tilt introduced by the first grating \cite{villoresi_compensation_1999}.
+While effective, this approach increases the complexity of the monochromator system and reduces the overall transmission.
+An alternative approach involves using a single grating, where the total path difference is given by $m\lambda N=\lambda^2/\Delta\lambda$ \cite{samson_j_a_vacuum_1998} and therefore the pulse duration at its half-width equates to
 \begin{equation}
-	\Delta\tau = \frac{0.5}{c}\frac{\lambda^2}{\Delta\lambda}
+	\Delta\tau = \frac{0.5}{c}\frac{\lambda^2}{\Delta\lambda}.
 \end{equation}
-
-which is only slightly higher than the Fourier-limited case \cite{poletto_time-preserving_2010,nugent-glandorf_laser-based_2002,poletto_time-compensated_2004,poletto_time-delay_2006}.
-A downside of this version however is that the energy resolution is reduced, the shorter the pulse duration of the pulse is before monochromatization.
-Nonetheless this option is used in the Harmonium beamline, with the goal of a high temporal resolution, while only sacrificing some energy resolution.
+This duration is only marginally longer than the Fourier-limited case \cite{poletto_time-preserving_2010,nugent-glandorf_laser-based_2002,poletto_time-compensated_2004,poletto_time-delay_2006}.
+However, one drawback of this approach is that the energy resolution decreases as the initial pulse duration shortens prior to monochromatization.
+In the Harmonium beamline, the single grating approach is used to achieve high temporal resolution while sacrificing some degree of energy resolution.
+This compromise allows for enhanced time-domain precision, which is critical in many trARPES experiments, especially those that focus on capturing ultrafast dynamics.
 
 \section{High repetition rate VUV trARPES}
 \label{sec:high_rep_vuv}
