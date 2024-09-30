@@ -102,9 +102,10 @@ Time preserving monochromators and the effect of pulse front tilt are discussed 
 \section{Vacuum space charge effects}
 \label{sec:space_charge}
 
-One of the main limiting factors for the energy resolution in high resolution or time resolved ARPES experiments are vacuum space charge effects.
-This effect refers to the fact that electrons traveling in vacuum experience a repulsive force between each other due to coulomb interaction.
-If a certain density of electrons is reached, the space charge effect becomes strong enough to significantly change the distribution of the electron cloud, which alters the energy, momentum and time information carried by the individual electrons, resulting in a reduced measurement resolutions and artifacts.
+One of the key limiting factors for energy resolution in high-resolution or time-resolved ARPES experiments is vacuum space charge effects.
+This phenomenon occurs when electrons traveling through a vacuum experience mutual repulsion due to Coulomb interactions.
+When the electron density exceeds a certain threshold, these space charge effects significantly alter the distribution of the electron cloud.
+This results in changes to the energy, momentum, and temporal information carried by the individual electrons, ultimately reducing measurement resolution and introducing artifacts.
 
 \begin{figure}[b!]
 	\centering
@@ -113,23 +114,23 @@ If a certain density of electrons is reached, the space charge effect becomes st
 	\label{fig:spacechargelit}
 \end{figure}
 
-The resulting energy spread due to space charge effects can strongly differ depending on the kinetic energy of the electrons and the time duration of the light pulse generating the electron cloud.
-Many studies have been carried out to quantify the influence of vacuum space charge on the energy resolution for light pulses of different energy and pulse duration, as well as the influence of an additional pump pulse\cite{corder_ultrafast_2018,plotzing_spin-resolved_2016,hellmann_vacuum_2009,graf_vacuum_2010,frietsch_high-order_2013}.
-Generally speaking, electron bunches resulting from one-photon photoemission processes in the range of \qtyrange{5}{100}{\electronvolt} and pulse duration in the sub \unit{\pico\second} regime, a linear dependence of the space charge effects to the electron density can be found.
-This linear dependence refers both to shifts and broadening of the measured photoemission spectra \cite{corder_ultrafast_2018,plotzing_spin-resolved_2016}
-The emitted photoelectron density being $\rho=N/D$, with $N$ the amount of emitted electrons and $D$ the spot size of the light on the sample.
-$N$ can be translated into a measurable current $I_{sample}$ at the sample, with which the broadening and shift in energy can be calculated by
+The degree of energy broadening caused by space charge can vary significantly depending on the kinetic energy of the electrons and the pulse duration of the light that generates the electron cloud.
+Several studies have examined the impact of vacuum space charge on energy resolution for various light pulse energies and durations, as well as the additional effects of a pump pulse \cite{corder_ultrafast_2018,plotzing_spin-resolved_2016,hellmann_vacuum_2009,graf_vacuum_2010,frietsch_high-order_2013}.
+
+In general, for one-photon photoemission processes involving light pulses in the \qtyrange{5}{100}{\electronvolt} range and sub-\unit{\pico\second} pulse durations, space charge effects exhibit a linear dependence on electron density.
+This linear dependence manifests in both energy shifts and broadening of the photoemission spectra \cite{corder_ultrafast_2018,plotzing_spin-resolved_2016}.
+The electron density, denoted by $\rho = N/D$, is determined by the number of emitted electrons $N$, and the spot size of the light on the sample $D$.
+The measurable current, $I_\text{sample}$ at the sample can be used to calculate energy broadening and shifts according to
 \begin{equation}
-	\Delta E_{s,b} = m_{s,b} \frac{I_{sample}}{e f_{rep} D}
+	\Delta E_{s,b} = m_{s,b} \frac{I_\text{sample}}{e f_\text{rep} D}
 	\label{eq:spacecharge}
 \end{equation}
-with $f_{rep}$ the light source repetition rate and $m_{s,b}$ an empirical scaling factor for the energy broadening (b) and shift (s) respectively.
-The scaling factors have been determined as $m_b=$\qty{2.1e-6}{\electronvolt} and $m_s=$\qty{2.1e-6}{\electronvolt} \cite{plotzing_spin-resolved_2016}.
-The space charge effects can also occur due to photoemission from the pump laser pulses.
-Here the effect of a high fluence pump pulse results in the additional creating of photoelectrons due to multiphoton processes \cite{al-obaidi_ultrafast_2015}.
-Further experiments and calculations were performed by Graf et al. \cite{graf_vacuum_2010} in the low energy (\qty{6}{\electronvolt}) and few \unit{\pico\second} regime.
-Similarly to eq. \ref{eq:spacecharge} a linear dependence between the photoelectron density and the energy shift as well as the broadening was observed.
-The energy shift $\Delta_E$ and the energy broadening $\Gamma_E$ can be expressed as
+where $f\text{rep}$ is the repetition rate of the light source, and $m_{s,b}$ are empirical scaling factors for energy broadening (b) and energy shift (s). These scaling factors have been determined as $m_b=$\qty{2.1e-6}{\electronvolt} and $m_s=$\qty{2.1e-6}{\electronvolt} \cite{plotzing_spin-resolved_2016}.
+
+In addition, space charge effects can arise from photoemission caused by the pump laser pulses.
+High-fluence pump pulses can generate additional photoelectrons through multiphoton processes \cite{al-obaidi_ultrafast_2015}.
+Studies by Graf et al. \cite{graf_vacuum_2010} focused on the low-energy (\qty{6}{\electronvolt}) and few-picosecond regime, where they also observed a linear relationship between electron density and both energy shifts and broadening.
+These effects can be described by the following expressions for energy shift and broadening
 
 \noindent\begin{minipage}{.5\linewidth}
 	\begin{equation}
@@ -142,18 +143,17 @@ The energy shift $\Delta_E$ and the energy broadening $\Gamma_E$ can be expresse
 	\end{equation}
 \end{minipage}
 
-Keeping the number of electrons equal for a period of \qty{1}{\second}, it becomes quite clear that the repetition rate has a strong effect on energy spread, which can also be seen from the inverse proportionality in the equation above.
-Dividing the N generated photoelectrons into 1 million bunches (corresponding to a \unit{\mega\hertz} system) greatly reduces the space charge effects when compared to only dividing them into 6000 bunches, as would be the case for a typical HHG system like Harmonium.
-Therefore a transition of trARPES experiments, or ARPES in general, to include high repetition rate light sources is a fundamental step in improving the overall resolution of these systems.
-Figure \ref{fig:spacechargelit}, taken from \cite{corder_ultrafast_2018}, shows the highest possible photocurrent depending on the energy resolution, when evaluating equation \ref{eq:spacecharge} for different repetition rates, at a beam spot size of \qty{1}{\milli\meter}.
+Given a constant number of electrons over a one-second interval, the repetition rate has a significant impact on energy spread, as seen from the inverse proportionality in the equations above.
+For example, dividing $N$ photoelectrons into a million pulses (corresponding to a \unit{\mega\hertz} system) reduces space charge effects significantly compared to dividing them into only 6000 pulses, typical of a system like Harmonium.
+Consequently, incorporating high-repetition-rate light sources in trARPES or ARPES experiments is crucial for improving overall system resolution.
+Figure \ref{fig:spacechargelit} adapted from \cite{corder_ultrafast_2018}, shows the maximum possible photocurrent for different repetition rates, plotted against energy resolution for a beam spot size of \qty{1}{\milli\meter}.
 Different markers are added from multiple light sources referenced in \cite{corder_ultrafast_2018}.
 The figure illustrates very well the strong effect higher repetition rates have on the highest attainable number of photoelectrons for high energy resolutions.
 
-Due to the space charge effects a majority of the EUV photons has to be removed in a trARPES experiment in the Harmonium beamline, which provides a further reason to move to high repetition rate systems.
-Apart from the space charge effect which impacts the energy resolution, further limits regarding the time resolution have to be addressed.
-For example, the time resolution of Harmonium is rather limited by the pump pulse duration, which could be shortened via pulse compression to the few \unit{\femto\second} regime \cite{nisoli_compression_1997}.
-Further limits are imposed by the pulse front tilt introduced by the monochromator.
-The latter will be described in greater detail in the following section.
+In the case of the Harmonium beamline, a large portion of the EUV photons must be filtered out during trARPES experiments to mitigate space charge effects, which is yet another reason for moving toward high-repetition-rate systems.
+Beyond the space charge issue affecting energy resolution, time resolution also faces limitations.
+For example, Harmonium’s time resolution is constrained by the pump pulse duration, which could be improved by compressing the pulse to the few-femtosecond regime \cite{nisoli_compression_1997}.
+Additionally, the pulse front tilt introduced by the monochromator presents further challenges to time resolution, a topic that will be covered in the next section.
 	
 \section{Time resolution limit due to pulse front tilt}
 
