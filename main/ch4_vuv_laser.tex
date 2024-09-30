@@ -37,36 +37,40 @@ The technique and instrumentation have been previously published \cite{hellbruck
 \end{figure}
 
 
-Before delving into the new capabilities, I will give a short overview on the setup that existed before the newest extensions.
-The trARPES at LACUS used a higher hamonics based laser system, paired with a Phoibos 150 2D hemispherical analyzer and a 4-axis manipulator for experiments.
-This beam line is called Harmonium and is based on the higher harmonic generation (HHG) effect \cite{arrell_harmonium_2017}.
-Figure \ref{fig:beamline_cad} shows a top and isometric view of the full beamline with specification of the various light sources.
-A Titanium Sapphire (Ti:Sa) oscillator ("Vitara" by Coherent) is used to generate IR (\qty{1.55}{\electronvolt} or \qty{800}{\nano\meter}) pulses at a repetition rate of \qty{80}{\mega\hertz}.
-These pulses are amplified in one of the two existing amplifier systems (KMLabs Wyvern or Coherent Astrella) to a pulse energy of \qty{2}{\milli\joule} (Wyvern) or \qty{1}{\milli\joule} (Astrella) at a repetition rate of \qty{6}{\kilo\hertz}.
-A high peak power is necessary to drive the highly non-linear process of HHG.
-In such a process, an ultrashort light pulse is used to ionize a noble gas, typically Argon or Neon \cite{rudawski_high-flux_2013}.
-After ionization, the electron is accelerated in the electric field of the IR driving pulse, gaining kinetic energy.
-Some electrons recombine with the ionized parent atom,emitting an extreme ultraviolet (EUV) photon.
-The EUV spectrum generated in such a process consists of multiple harmonics with an energy of an odd multiple of the seed pulse $(2n+1) \hbar\omega$, thereby forming an harmonic comb.
+Before delving into the new capabilities, it’s important to provide an overview of the existing setup.
+The trARPES system at LACUS is based on a high-harmonics-based laser system paired with a Phoibos 150 2D hemispherical analyzer and a 4-axis manipulator for experimental control.
+This beamline, known as Harmonium, operates using high harmonic generation (HHG) \cite{arrell_harmonium_2017}.
+Figure \ref{fig:beamline_cad} shows both top and isometric views of the entire beamline, including the various light sources with their respective specifications.
 
-Mainly three different methods of gas delivery for HHG exist, with the generation process either happening in a gas cell, gas jet or a gas filled fiber \cite{paul_quasi-phase-matched_2003, heckl_high_2009, sudmeyer_femtosecond_2008, roser_131w220fs_2005}.
-In all cases, a comb of harmonics is emitted from the gas with the spectrum of the harmonics depending on phase matching conditions, which can be adjusted to optimize for different energies.
+A Titanium Sapphire (Ti:Sa) oscillator (Coherent "Vitara") generates infrared (IR) pulses at \qty{1.6}{\electronvolt} (\qty{780}{\nano\meter}) with a repetition rate of \qty{80}{\mega\hertz}. These pulses are amplified using one of two available systems, either the KMLabs Wyvern or the Coherent Astrella amplifier, to pulse energies of \qty{2}{\milli\joule} (Wyvern) or \qty{1}{\milli\joule} (Astrella), both operating at a repetition rate of \qty{6}{\kilo\hertz}.
+This high peak power is essential for driving the highly non-linear process of HHG.
+
+In HHG, an ultrashort laser pulse ionizes a noble gas, typically Argon or Neon \cite{rudawski_high-flux_2013}.
+The ionized electron is accelerated by the electric field of the IR driving pulse, gaining kinetic energy.
+Upon a possible recombination with its parent ion, the electron emits an extreme ultraviolet (EUV) photon.
+The EUV spectrum produced by this process consists of multiple harmonics, with energies that are odd multiples of the seed pulse energy $(2n+1) \hbar\omega$, thereby forming a harmonic comb.
+
+There are three main methods for gas delivery in HHG, with the generation process either happening in a gas cells, a gas jets, or a gas-filled fibers \cite{paul_quasi-phase-matched_2003, heckl_high_2009, sudmeyer_femtosecond_2008, roser_131w220fs_2005}.
+In all cases, the emitted harmonic spectrum is governed by phase matching conditions, which can be optimized for different energy ranges.
 Phase matching is achieved by minimizing the phase mismatch between the n-th harmonic and the fundamental
 \begin{equation}
 	\Delta k = k_n - k_1
 \end{equation}
-with the respective wavenumber k.
-The ideal phase matching condition is reached for $\Delta k=0$.
+where $k$ is the respective wavenumber. 
+Optimal phase matching is achieved when $\Delta k=0$.
 For example, in different gases different phase matching conditions can be realized, allowing for better access to different spectral ranges.
 Typically, Argon is used to create energies between \qtylist{20; 40}{\electronvolt} and Neon between \qtylist{40; 110}{\electronvolt} (see Fig. \ref{fig:hhgspectrum}) \cite{rudawski_high-flux_2013}.
-Furthermore gas pressure, laser intensity and target position relative to the focus are all parameters that can be adjusted for the phase matching conditions and optimize the output of the desired harmonic.
-The small cross section of the HHG process, due to the low probability of the electron recombining with the ionized gas atom, as wells as the non-perturbative nature of the process are the reason for the need of high peak fluences at high repetition rates, furthermore for PES studies, high repetition rates are desirable due to space charge effects, as can be seen in section \ref{sec:space_charge}.
+Gas pressure, laser intensity, and target position relative to the focal point can all be adjusted to optimize phase matching and maximize harmonic output.
+The small cross section of the HHG process, due to the low probability of the electron recombining with the ionized gas atom, as wells as the non-perturbative nature of the process are the reason for the need of high peak fluences at high repetition rates.
+Moreover, high repetition rates are desirable for photoemission spectroscopy (PES) studies to mitigate space charge effects, which are discussed further in section \ref{sec:space_charge}.
 
-From the many harmonics emitted simultaneously, one is selected for a trARPES measurement, with the help of a monochromator, which consists of two toroidal mirrors, a grating and slit module
-After the EUV generation, a first toriodal mirrir is used to collimate the beam onto a grating, from which the harmonic comb is dispersed and after refocused by the second toriodal mirror onto an adjustable slit.
-One grating is selected from a set of multiple different gratings each with different amounts of grooves per \unit{cm} (\unit{g\per\cm}), with the different gratings being used for different energy ranges.
-The gratings are illuminated at grazing incidence, and are aligned with their grooves parallel to the propagation direction to reduce the pulse front tilt of the wavefront \cite{poletto_time-preserving_2010}.
-A third The single harmonic probe beam is then focused by a second torroidal mirror onto the sample.
+Once the harmonic comb is generated, a single harmonic is selected for trARPES measurements using a monochromator.
+This monochromator comprises two toroidal mirrors, a grating, and a slit module.
+The first toroidal mirror collimates the beam onto the grating, where the harmonics are dispersed.
+A second toroidal mirror refocuses the desired harmonic onto an adjustable slit.
+The system offers multiple gratings, each with different amounts of grooves per \unit{cm} (\unit{g\per\cm}), with the different gratings being used for different energy ranges.
+The gratings are illuminated at grazing incidence, with grooves aligned parallel to the propagation direction to minimize pulse front tilt of the emitted wavefront \cite{poletto_time-preserving_2010}.
+The selected harmonic is then focused onto the sample by a third toroidal mirror.
 
 \begin{figure}
 	\centering
@@ -82,16 +86,15 @@ A third The single harmonic probe beam is then focused by a second torroidal mir
 	\label{fig:beamline_cad}
 \end{figure}
 
+A portion of the amplified IR beam is split off before the HHG process to serve as the pump beam used to excite the sample.
+After compensating for the probe beam path, a telescope system consisting of two curved mirrors focuses the pump beam onto the sample and adjusts the spot size.
+The pump and probe beams co-propagate with a small angular offset, dictated by geometric constraints.
+Additionally, a $\beta$-bariumborate (BBO) crystal can be introduced into the pump beam path to double the energy from \qty{1.6}{\electronvolt} to \qty{3.2}{\electronvolt}.
 
-Part of the amplified IR beam is split before the HHG process and used to excite the sample.
-After compensating for the beam path of the probe pulse a telescope consisting of two curved mirrors is used to focus the pump beam onto the sample and adjust the spot size at the sample position.
-Pump and probe beam co-propagate with a small angle between each other, due to geometrical constraints.
-A $\beta$-bariumborate (BBO) crystal can be inserted into the pump beam path to double the pump energy from \qty{1.55}{\electronvolt} to \qty{3.1}{\electronvolt}.
-
-The HHG beamline can produce a high flux of up to \qty{2.3e11}{\pps} (at \qty{36}{\electronvolt}) for harmonics between \qtyrange{20}{110}{\electronvolt}.
-An energy resolution of $\approx$\qty{150}{\milli\electronvolt} can be achieved, which is mainly determined by the chosen harmonic and grating combination, as well as vacuum space charge effects, which will be discussed in greater detail in the next section.
-The time resolution amounts to $<\qty{100}{\femto\second}$, as calculated from the FWHM of the temporal cross correlation, measured with the laser assisted photoemission (LAPE) effect \cite{ojeda_harmonium_2015}.
-While the HHG pulses have an intrinsically short pulse duration, only limited by the spread in recombination times within the gas jet, the probe beam experiences a pulse front tilt due to the single grating monochromator.
+The Harmonium beamline can deliver a high photon flux of up to \qty{2.3e11}{\pps} (at \qty{36}{\electronvolt}) for harmonics between \qtyrange{20}{110}{\electronvolt}.
+An energy resolution of approximately \qty{150}{\milli\electronvolt} is achievable, depending on the chosen harmonic and grating, as well as possible space charge effects, which are discussed in more detail in the following section.
+The temporal resolution is less than \qty{100}{\femto\second}, as determined by the full width at half maximum (FWHM) of the temporal cross-correlation, measured using the laser-assisted photoemission (LAPE) effect \cite{ojeda_harmonium_2015}.
+Although HHG pulses are inherently short, limited only by the spread in recombination times within the gas jet, the probe beam suffers from pulse front tilt due to the single grating monochromator.
 The pulse front tilt leads to a increase in pulse duration over the spot size, which together with the pump pulse duration of $\approx$\qty{50}{\femto\second} results in the above time resolution \cite{arrell_harmonium_2017}.
 The high time resolution is due to the monochromator design, using a time preserving single grating type monochromator \cite{poletto_time-preserving_2010}, which compensates the pulse front tilt, typically induced a reflective grating.
 Time preserving monochromators and the effect of pulse front tilt are discussed in a following section.
