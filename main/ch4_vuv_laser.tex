@@ -391,25 +391,24 @@ The paper concludes by putting the performance of the system into context with e
 
 \section{Ongoing Developments}
 
-Since the full implementation and characterization of the VUV laser system further developments on the system have been introduced.
-A main change has been the switch to a new manipulator.
-The old manipulator had four adjustable axes (3 Cartesian coordinates plus rotational axis), with access to a fifth (in plane rotation) with low accuracy by rotating the sample with the help of a wobble stick.
-In this setup only the rotational axis was motorized.
-The new manipulator has access to all six degrees of freedom, with all of them being motorized, allowing for greater control and more complex scans.
+Since the full implementation and characterization of the VUV laser system, several developments have been introduced to further enhance its capabilities.
+One significant upgrade has been the replacement of the old manipulator.
+The previous manipulator offered four adjustable axes, three Cartesian coordinates and one rotational axis—with limited access to a fifth degree of freedom (in-plane rotation), which could only be adjusted with a wobble stick and low precision.
+Only the rotational axis was motorized in that setup.
+The new manipulator, however, provides access to all six degrees of freedom, with each axis fully motorized.
+This allows for greater control and enables more complex scanning procedures.
 
-The main advantages of this manipulator is the access to the in plane rotational degree of freedom, allowing for it's adjustment while having a live view of the band structure.
-Furthermore it solves a problem when taking Fermi surface maps.
-Due to the sample geometry, the center of rotation is often not the point imaged by the electron analyzer.
+One of the main advantages of the new manipulator is the ability to adjust the in-plane rotational degree of freedom while directly observing the band structure in real time.
+Additionally, the new system addresses a recurring issue with Fermi surface mapping.
+Due to sample geometry, the center of rotation often does not coincide with the point imaged by the electron analyzer, causing slight shifts in the illuminated spot during sample rotation.
 This mean that the illuminated spot slightly changes under sample rotation of a Fermi surface scan, resulting in the possibility to image adjacent domains.
 To compensate for this the $x$ and $y$ coordinate have to adjusted when changing from one angle to the next to image the same sample position.
 This process was automated due to the availability of the additional motorized degrees of freedom.
 Instead, with the motorization of the new manipulator more complex movements are possible, where the $x$ and $y$ coordinates can be dynamically adjusted during a Fermi surface scan.
 
-Another big advantage of the new manipulator is a better temperature control.
-With an open cycle cryostate the temperature can be lower down to \qty{4}{\kelvin}.
-Intermediate temperatures can be reached by adjusting the flow rate of the used coolant.
-Additionally a heater unit makes fine adjustments of the temperature possible.
-This would allow for more precise temperature scan, for example when crossing phase transitions or the exploration of softening of modes etc.
+The new manipulator also offers improved temperature control.
+It features an open-cycle cryostat that can cool samples down to \qty{4}{\kelvin}, with intermediate temperatures being achievable by adjusting the coolant flow rate.
+A built-in heater enables fine adjustments, which allows for precise temperature control during scans, such as when crossing phase transitions or exploring mode softening.
 
 \begin{figure}[h]
 	\centering
@@ -425,17 +424,18 @@ This would allow for more precise temperature scan, for example when crossing ph
 	\label{fig:manip_full}
 \end{figure}
 
-A further development concerns the polarization control of the VUV beamline.
-While control over the pump polarization is easily implemented with a IR waveplate, the situation is more difficult for the probe.
-It is in principal possible to rotate the polarization of both IR and green beam before entering the fiber and create harmonics with the corresponding polarization.
-But due to a polarization dependent rejector it is only possible to use the monochromator with p-polarization.
-Using the monochromator at s-polarization does not remove the residual IR and green from the seed, which leads to a degradation of the optics and intense stray light passing through the monochromator.
-Therefore it is necessary to instead rotate the polarization of the VUV light after the monochromator.
-An example for the importance of polarization control can be seen in ARPES measurements on \ce{Bi}2212 at low probe energies (\qty{7}{\electronvolt}), where a strong dependence of the photoelectron yield from the light polarization is found, which stems from a strong polarization dependent matrix element \cite{fanciulli_spin_2018}.
-Similar tests with a probe energy of \qty{10.8}{\electronvolt} have resulted in photoemission spectra with low photoelectron yield and no resolvable band structure, when measured with s-polarized light.
+Another important development is the addition of polarization control for the VUV beamline.
+While controlling the pump polarization can be easily achieved with an IR waveplate, managing the probe polarization is more complex.
+In principle, the polarization of both the IR and green beams can be rotated before they enter the fiber, producing harmonics with the desired polarization.
+However, due to a polarization-dependent rejector, the monochromator can only operate with p-polarized light.
+Using s-polarized light results in residual IR and green light passing through, degrading the optics and causing intense stray light.
+To resolve this, the polarization of the VUV light must be rotated after the monochromator.
+
+Polarization control is essential, as evidenced by ARPES measurements on \ce{Bi}2212 at low probe energies (\qty{7}{\electronvolt}), which showed a strong dependence of the photoelectron yield on light polarization due to polarization-dependent matrix elements \cite{fanciulli_spin_2018}.
+Recent tests using a probe energy of \qty{10.8}{\electronvolt} also revealed a low photoelectron yield and no resolvable band structure with s-polarized light.
 The question naturally arises if a similar polarization dependent effect is at play or if the dipol matrix element results in a low photoelectron yield independent of the polarization.
-The problem in rotating the polarization at these photon energies is the lack of readily available half-wave plates (HWP).
-Due to the low transmission in most materials a HWP has to be specifically made for this use case (manufactured by Kogakugiken Corp.).
+The challenge in rotating the polarization at these photon energies stems from the lack of readily available half-wave plates (HWPs) with sufficient transmission.
+A custom HWP was specifically manufactured for this use case (manufactured by Kogakugiken Corp.).
 The initial implementation and first tests are ongoing and will hopefully provide full control over the polarization at \qty{10.8}{\electronvolt}, and allow the study of the matrix element in \ce{Bi}2212.
 
 \begin{figure}[t]
@@ -457,12 +457,12 @@ The initial implementation and first tests are ongoing and will hopefully provid
 	\label{fig:manip_head}
 \end{figure}
 
-The most recent development concern one of the strengths of the VUV light source, which is the ability to better study low perturbation dynamics.
+Another recent development focuses on leveraging one of the strengths of the VUV light source: its ability to study low-perturbation dynamics.
 As mentioned in section \ref{sec:high_rep_vuv}, the nature of the high repetition rates make it possible to faster acquire the needed statistics.
 This enables the observation of less pronounced features, which is typically the case for features occurring only after a small perturbation to the system.
 Adding this to the fact that high pump fluences are also problematic at high repetition rates due to the thermalization issues described earlier, it seems that the best use case for the light source is the low perturbation regime.
-To further strengthen this ability a new detection scheme is implemented, which measures pumped and unpumped signals successively.
-The differences between these images should, in principle, show the pump induced features more pronounced and reduce fluctuations that just occur over time.
+To enhance this capability, a new detection scheme has been implemented, which alternates between measuring pumped and unpumped signals.
+This approach should make pump-induced features more pronounced by reducing noise and fluctuations.
 
 \begin{figure}
 	\centering
@@ -471,23 +471,23 @@ The differences between these images should, in principle, show the pump induced
 	\label{fig:triggerscheme}
 \end{figure}
 
-This detection scheme is based on a fast acquisition camera, whose frame frequency can be adjusted up to \qty{1.5}{\kilo\hertz}.
-The camera can be directly triggered by the laser trigger signal, or any similar reference signal.
-In order to measure both on and off signals a chopper wheel is used, which is set to a frequency that matches the camera acquisition rate.
-With the VUV laser set to \qty{1}{\mega\hertz}, both camera and chopper are set to \qty{1}{\kilo\hertz}.
-This results in each acquired camera shot, reflecting the data of 1000 probe pulses, with pumped and unpumped shots following one after the other.
-A more detailed sketch of the detection scheme is shown in Fig. \ref{fig:triggerscheme}.
-The VUV laser is set to a repetition rate of \qty{1}{\mega\hertz}, with the trigger reference signal being send to a frequency divider (F-DIV) and Delay Generator.
-The F-DIV can divide the electric input signal for multiple channels individually, while the delay generator is can be used to adjust the timing of the different signals.
-For example, in a typical use case one channel is set to a division by a factor $1000$, resulting in a trigger rate of \qty{1}{\kilo\hertz}, which is send to the camera.
-A second channel is set to a factor $2000$, which results in a \qty{500}{\hertz} trigger, which is sent to a chopper controller.
-The chopper controller then synchronizes the chopper to turn at speed necessary to create pump on and off frames at the correct repetition rate.
+This detection scheme uses a fast acquisition camera, which can operate at frame rates of up to \qty{1.5}{\kilo\hertz}.
+The camera can be triggered directly by the laser or any other suitable reference signal.
+To capture both pumped and unpumped signals, a chopper wheel is employed, rotating at a frequency that matches the camera's acquisition rate.
+With the VUV laser set to \qty{1}{\mega\hertz}, both the camera and chopper are synchronized to \qty{1}{\kilo\hertz}.
+This means that each camera frame collects data from 1000 probe pulses, alternating between pumped and unpumped shots following one after the other.
+
+A more detailed schematic of the detection system is shown in Fig. \ref{fig:triggerscheme}.
+The VUV laser operates at \qty{1}{\mega\hertz}, and its trigger signal is sent to a frequency divider (F-DIV) and a delay generator.
+The F-DIV can split the input signal into multiple channels, each with different division factors, while the delay generator allows for precise timing adjustments.
+For instance, in a typical setup, one channel may divide the signal by $1000$, resulting in a \qty{1}{\kilo\hertz} trigger for the camera. Another channel could be set to divide the signal by $2000$, generating a \qty{500}{\hertz} trigger for the chopper controller.
+
+The chopper controller then synchronizes the wheel's rotation to create alternating "pump on" and "pump off" frames at the correct frequency.
 A reference signal can be send from the chopper controller to the camera as a second trigger (AOL).
 Additionally, an oscilloscope can be connected to visualize all three signals simultaneously.
 The chopper controller reference can be attached to the oscilloscope instead of the camera (AOL), the chopped pump pulse is detected by a photodiode and its signal can be shown simultaneously on the oscilloscope.
 On top of that, the camera has a reference out channel too, which can be shown on the oscilloscope to compare the delay between all signals.
 These electric delays can be adjusted by the F-DIV/delay generator to make sure that the camera is triggered in sync with the chopper and that the chopper functions at a repetition rate corresponding to the laser repetition rate.
-
 
 A typical acquisition scheme of a trARPES experiment looks the following:
 \begin{itemize}[topsep=-0.5em]
@@ -499,21 +499,23 @@ A typical acquisition scheme of a trARPES experiment looks the following:
 	\item [$\bullet$] after finishing delay list, start at first delay and repeat loop
 \end{itemize}
 The main challenge with the implementation of this detection scheme is accounting for all accumulated delays and detector dead times.
-The delays can be investigated with the help of an oscilloscope and adjusted by a delay generator.
-A major challenge in setting the delays correct was also accounting for the decay time of the phosphor screen at the end of the hemispherical analyzer.
-It's decay time is in the \unit{\milli\second} range, therefore the start of each acquisition has to be carefully adjusted to avoid spillover signals from pump on to pump off frames.
-Systematic testing of several electric delays has been done by only using the pump beam and observing the multiphoton photoemission signal, which should lead to the observation of a photoemission signal when the chopper lets the pump beam pass and an empty frame when not.
-With this method an optimal acquisition window was found, and by additionally setting correct threshold setting of the camera any spillover can be avoided, while simultaneously avoiding a big reduction in signal.
+These delays were investigated using an oscilloscope and adjusted with a delay generator.
+A significant issue arose from the decay time of the phosphor screen at the end of the hemispherical analyzer, which is in the millisecond range.
+This required careful alignment of the acquisition start time to avoid signal spillover from "pump on" to "pump off" frames.
+Systematic testing of several electrical delays was performed by using only the pump beam and monitoring the multiphoton photoemission signal.
+The goal was to observe a signal when the pump beam was allowed to pass by the chopper and an empty frame when it was blocked.
+Using this method, an optimal acquisition window was determined, and by fine-tuning the camera's threshold settings, spillover was successfully avoided without a significant reduction in the overall signal strength.
 
-Initial tests with this new detection scheme have been carried out with the Harmonium beamline on reference samples that have been shown to provide strong out of equilibrium signals like \ce{WSe2} \cite{puppin_excited-state_2022}.
-While it could be shown that the the detection scheme has been correctly implemented, an improvement in signal quality has not been observed, which can be due to multiple reasons.
-The correct implemented was shown by observing the excitonic state above $E_F$ only in the pump on frames.
-But no signal improvement was observed when plotting the on/off frames compared to the only on frames.
-A first reason for this can be, that the measurement was taken far out of equilibrium, where comparatively high signal is expected, but at the same time where pump induced artifacts might hinder the observation of nuanced features.
-Second, no big changes to the band structure have been observed below the Fermi level, which is the region where signal improvements would be expected, while the region above Fermi containing the excitonic state has intrinsically no background and therefore shouldn't show improvements when plotting any on/off images.
-The clear disadvantage is that the on/off detection scheme naturally reduces the statistics taken in the same time frame by a factor of 2.
-Therefore improvements can only be expected if the noise levels of the traditional pump probe scheme are to high and prevent the observation of pump induced effects.
-Further tests have to be carried out with samples that show changes in the low perturbation regime and in the occupied region of the band structure, to test the on/off scheme in a more appropriate use case.
+Initial tests of this detection scheme were conducted on the Harmonium beamline using reference samples, such as \ce{WSe2}, which are known to produce strong out-of-equilibrium signals \cite{puppin_excited-state_2022}.
+While the scheme was successfully implemented, no noticeable improvement in signal quality was observed.
+This could be due to several factors.
+First, the measurements were taken far from equilibrium, where comparatively high signal intensity is expected, but pump-induced artifacts may obscure more subtle features.
+Second, no significant changes to the band structure were detected below the Fermi level, where improvements from the on/off detection scheme would be most apparent.
+The region above the Fermi level, which contains the excitonic state, inherently lacks background noise and, therefore, would not show much improvement from the on/off imaging technique.
+
+One clear downside of the on/off detection scheme is that it effectively halves the statistical data collected in the same timeframe compared to traditional methods.
+This means improvements will only be noticeable if the noise levels in the traditional pump-probe scheme are too high to observe pump-induced effects.
+Further testing is necessary with samples that display changes in the low perturbation regime and within the occupied region of the band structure to assess whether the on/off detection scheme provides better results in these scenarios.
 
 \begin{figure}
 	\centering
