@@ -190,33 +190,32 @@ This compromise allows for enhanced time-domain precision, which is critical in 
 \section{High repetition rate VUV trARPES}
 \label{sec:high_rep_vuv}
 
-Recent advancements in HHG and their extension into the multi-\unit{\mega\hertz} regime \cite{mills_xuv_2012,hadrich_high_2014,pronin_high-power_2015,saraceno_toward_2015,hadrich_single-pass_2016,carstens_high-harmonic_2016,zhao_efficient_2018} lead to their adaptation in trARPES systems.
-Since then new HHG based trARPES systems have emerged at high repetition rates of up to \qty{88}{\mega\hertz} \cite{corder_ultrafast_2018,mills_cavity-enhanced_2019}.
-Such systems are based on cavity enhanced seed pulses utilizing resonators, with which it is possible to operate at higher repetition rates, despite the lower peak power and still maintain a high photon flux at high energies.
-The clear upside of higher repetition rate HHG systems is strongly increasing the statistics collected within the same measurement time, as well as reducing space charge effects, as previously stated.
-On the other hand two downsides emerge with this approach.
-One is the higher technical difficulty to continuously operate the system compared to a simple gas jet or fiber based HHG system.
-But while technical challenges can be addressed, a fundamental challenge emerges when including the high repetition rate pump pulses into the picture.
+Recent advances in HHG technology, particularly the extension into the multi-megahertz regime \cite{mills_xuv_2012,hadrich_high_2014,pronin_high-power_2015,saraceno_toward_2015,hadrich_single-pass_2016,carstens_high-harmonic_2016,zhao_efficient_2018}, have paved the way for their adaptation in time-resolved ARPES (trARPES) systems.
+With these developments, trARPES systems have emerged that operate at repetition rates as high as \qty{88}{\mega\hertz} \cite{corder_ultrafast_2018,mills_cavity-enhanced_2019}.
+These systems use cavity-enhanced seed pulses in resonators to achieve higher repetition rates while maintaining a high photon flux at high energies.
 
-Here, the relevant quantity for out of equilibrium phenomena is the energy density in \unit{\milli\joule\per\centi\meter^2}.
-Keeping this parameter constant, it is obvious that the average power increases by 5 orders of magnitude when moving from \qty{1}{\kilo\hertz} to \qty{100}{\mega\hertz} (assuming all other beam parameters remain the same), at which point thermalization becomes the limiting factor.
-Strongly increasing the average power is necessarily accompanied with a higher thermal load on the sample, and heat dissipation from pulse to pulse becomes a problem, leading to a temperature build up and accelerated sample degradation.
-Thermalization puts a hard limitation on the use case of these high repetition trARPES setups.
-Either by limiting the amount of samples that can be measured at high average powers, or by the necessity to reduce the peak power per pulse to a degree at which the out of equilibrium effect may not be observable anymore.
-Depending on the use case, an optimal compromise lays in the reduction of the repetition rate, but still operate at high enough rates, so that a high amount of statistics can still be acquired.
-The new addition to trARPES setup at LACUS was planned to operate at repetition rates between \qtyrange{0.5}{2}{\mega\hertz}, allowing for high statistics, reasonably high pump fluences to explore the high perturbation regime and reduced space charge effects.
+The primary benefit of high repetition rate HHG systems is the significant increase in statistical data collection over the same measurement period, along with a reduction in space charge effects, as discussed earlier.
+However, two main challenges arise with this approach.
+The first is the increased technical complexity in continuously operating these systems compared to simpler gas jet or fiber-based HHG setups.
+While technical challenges can be resolved, the second and more fundamental issue concerns the high repetition rate of the pump pulses.
 
-Another challenge in trARPES in particular lies in the accessible spectral range for the employed probes.
-As previously mentioned, HHG can easily access the spectral range between \qtyrange{15}{110}{\electronvolt} \cite{chini_coherent_2014,weissenbilder_how_2022}.
-Whereas the range below \qty{7}{\electronvolt} can be accessed by frequency conversion via sum frequency generation in nonlinear crystals like BBO and KBBF, even at high repetition rates.
-This leaves a gap in the spectral range between \qtyrange{7}{15}{\electronvolt}.
-A way to access that range so far in trARPES has been performing third harmonic generation (THG) in a crystal converting IR pulse with an energy around \qty{1.2}{\electronvolt} to UV pulses of \qty{3.6}{\electronvolt}.
-These are then again frequency tripled in a Xenon filled gas cell, creating the 9th harmonic, with an energy of usually around \qty{11}{\electronvolt}.
-This leaves the problem of only offering small tunability depending on the IR input pulse energy, and a resulting gap within the \qtyrange{7}{20}{\electronvolt} range.
+The key factor for studying out-of-equilibrium phenomena is the energy density, measured in \unit{\milli\joule\per\centi\meter^2}.
+If this parameter is held constant, increasing the repetition rate from \qty{1}{\kilo\hertz} to \qty{100}{\mega\hertz} raises the average power by five orders of magnitude.
+At these levels, thermalization becomes a critical limiting factor.
+The higher average power places a greater thermal load on the sample, leading to heat accumulation, temperature rise, and accelerated sample degradation.
+This thermalization effect creates a hard limitation on high repetition rate trARPES setups, restricting the number of samples that can be measured at elevated powers or requiring a reduction in peak power that may prevent the observation of out-of-equilibrium effects.
+Finding an optimal compromise between repetition rate and manageable thermal load is key.
+Operating at intermediate rates from \qtyrange{0.5}{2}{\mega\hertz} provides a balance, allowing for high statistical accuracy, sufficient pump fluences for studying strong perturbations, and reduced space charge effects.
+This approach has been adopted in the new trARPES setup at LACUS.
+
+Another challenge in trARPES is extending the spectral range of the probe pulses.
+HHG systems can easily access photon energies between \qtyrange{15}{110}{\electronvolt} \cite{chini_coherent_2014,weissenbilder_how_2022}, while lower energies (below \qty{7}{\electronvolt}) can be reached through frequency conversion in nonlinear crystals such as BBO and KBBF (Potassium Beryllium Fluoroborate).
+However, there remains a spectral gap between \qtyrange{7}{15}{\electronvolt}.
+To address this, third harmonic generation (THG) in crystals is typically used, creating UV pulses around \qty{3.6}{\electronvolt}, which are then tripled again in a xenon-filled gas cell to generate harmonics around \qty{11}{\electronvolt}.
+This method, though effective, offers limited tunability.
 But information from ARPES, like any other spectroscopic technique, heavily depends on the employed probe energy due to the dipole matrix element, making it very desirable to tune the probe energy.
-Additionally, the tunability of photon energy allows for selection of different momentum regions. 
-The new VUV light source can address this problem and close this gap significantly, by allowing for tunability in the range from \qtyrange{7}{10.8}{\electronvolt} with a \qty{1.2}{\electronvolt} spacing.
-This is possible by using a highly cascaded harmonic generation process (HCHG) instead of a double THG process \cite{couch_ultrafast_2020}.
+Additionally, the tunability of photon energy allows for selection of different momentum regions.
+The new VUV light source overcomes this limitation, providing tunability in the \qtyrange{7}{10.8}{\electronvolt} range with \qty{1.2}{\electronvolt} increments by using a highly cascaded harmonic generation (HCHG) process instead of double THG process \cite{couch_ultrafast_2020}.
 
 \begin{table}[t]
 	\centering
@@ -231,9 +230,9 @@ This is possible by using a highly cascaded harmonic generation process (HCHG) i
 	\label{tab:laser_param}
 \end{table}
 
-The HCHG process requires two driving pulses, one pulse being the second harmonic of the other.
-In our case a fundamental light pulse with a wavelength of \qty{1030}{\nano\meter} is used, which is a standard output wavelength of an \ce{Yb}-doped fiber-based oscillators.
-The oscillator ("YLMO" by Menlo Systems) provides pulses at a repetition rate of \qty{50}{\mega\hertz}, $<$\qty{80}{\femto\second} pulse duration and with a pulse energy of $>$\qty{40}{\nano\joule}.
+In the HCHG process, two driving pulses are required, the fundamental and its second harmonic.
+For this setup, the fundamental pulse has a wavelength of \qty{1030}{\nano\meter}, typical for \ce{Yb}-doped fiber-based oscillators.
+The oscillator ("YLMO" by Menlo Systems) operates at a repetition rate of \qty{50}{\mega\hertz}, producing $<$\qty{80}{\femto\second} pulses with a pulse energy exceeding \qty{40}{\nano\joule}.
 In order to drive the HCHG process higher pulse energies are necessary, which are reached in two subsequent amplification steps.
 The oscillator output is monitored within the laser software and a typical average power of \qtyrange{220}{260}{\milli\watt} can be observed.
 After the pulses leave the fiber oscillator they pass through a first stretcher, increasing the pulse duration, allowing for better amplification via chirped pulse amplification (CPA) \cite{strickland_compression_1985,maine_generation_1988,strickland_chirped_2021}.
@@ -254,24 +253,25 @@ Table \ref{tab:laser_param} contains an overview of the laser parameters, at var
 	\label{fig:vuvlaser}
 \end{figure}
 
+In a typical experiment, approximately \qty{5}{\micro\joule} of pulse energy is used for the highly cascaded harmonic generation (HCHG) process, with the remaining energy reserved for optical pumping.
+The \qty{5}{\micro\joule} pulse is split into two beams.
+One beam passes through a BBO crystal, which generates the second harmonic at \qty{515}{\nano\meter}.
+The second harmonic beam is then directed over a delay stage, after which it is recombined with the fundamental beam so that both pulses co-propagate into the hollow-core photonic crystal fiber (HCPCF).
+The delay stage ensures that the fundamental and second harmonic pulses are synchronized when they enter the fiber, which is crucial for generating the third harmonic and initiating the HCHG process.
+A waveplate and polarizing prism pair is used to fine-tune the power balance between the two beams.
+Typically, the highest VUV output is achieved when the power of the fundamental and second harmonic beams is equal as they enter the fiber.
+Additionally, a waveplate in the green (second harmonic) beam path ensures that both beams are co-linearly polarized before entering the fiber.
 
-Approximately \qty{5}{\micro\joule} are used in the HCHG process in a typical experiment, with the rest being available for optical pumping.
-The \qty{5}{\micro\joule} are split into two beams, with one arm containing a BBO crystal,that creates the second harmonic at \qty{515}{\nano\meter}.
-The second harmonic beam is passing over a delay stage before the two arms are overlapped again and co-propagate to the fiber.
-This delay stage ensures that fundamental and second harmonic pulses arrive in the fiber at the same time, which is necessary to create the third harmonic and start the HCHG process.
-A waveplate - polarizing prism pair is used to adjust the relative power between the two arms.
-Typically the highest VUV output is achieved by having an equal amount of average power for the fundamental and second harmonic before entering the fiber.
-Additionally a waveplate in the green arm ensures that both beams a co-linearly polarized before entering the fiber.
-While the cascaded process has also been demonstrated with capillary waveguides with large diameters ($>$\qty{100}{\micro\meter}) \cite{misoguti_generation_2001}, those setups were based on Ti:Sa oscillators, working with much shorter pulse durations and higher pulse energies \cite{misoguti_generation_2001,durfee_phase_2002,misoguti_nonlinear_2005}.
-The light source here uses negative-curvature hollow-core photonic crystal fibers (HCPCF) of smaller diameters (\qty{50}{\micro\meter}), which enables the use of the fiber laser with longer pulse durations \cite{couch_ultrafast_2020}.
-HCPCF are fibers with a complex structure, using photonic crystals to strongly localize the light within the photonic band gap of the material. \cite{kolyadin_negative_2015, wei_negative_2017}
-To further confine the light, the fiber is structured in a way, that core boundary shows a negative curvature, hence the term negative-curvature HCPCF \cite{wei_negative_2017}.
+Earlier experiments demonstrating the cascaded harmonic generation process utilized capillary waveguides with large diameters (greater than \qty{100}{\micro\meter}) \cite{misoguti_generation_2001}, but those setups relied on Ti:Sa oscillators, which produce much shorter pulse durations and higher pulse energies \cite{misoguti_generation_2001,durfee_phase_2002,misoguti_nonlinear_2005}.
+In contrast, the light source in this setup employs negative-curvature hollow-core photonic crystal fibers (HCPCF) with a smaller diameter (\qty{50}{\micro\meter}), allowing the use of fiber lasers with longer pulse durations \cite{couch_ultrafast_2020}.
+These HCPCF fibers have a complex structure based on photonic crystals, which confine the light within the photonic band gap of the material \cite{kolyadin_negative_2015, wei_negative_2017}.
+The negative curvature of the core boundary further enhances light confinement, hence the term "negative-curvature HCPCF" \cite{wei_negative_2017}.
 Figure \ref{fig:hchgsketch} (a) (taken from \cite{couch_ultrafast_2020}) shows a sketch of the generation process together with a view of the structured face of the HCPCF.
 
 The HCPCF is filled with xenon gas at a pressure of $\approx$\qty{100}{\kilo\pascal} (measured from vacuum) in which the third harmonic is created in a four-wave-mixing process, combining two photons of the second harmonic and creating one photon of the fundamental and third harmonic.
 Once the third harmonic is generated it can combine with the fundamental or second harmonic in additional four-wave mixing processes, successively creating the higher harmonics up to the 15th order (see Fig. \ref{fig:hchgsketch} (b)).
-For the generation of the fourth harmonic onward multiple options of combining photons arise to create the respective harmonics.
-For example the 7th harmonic $\omega_7$ can be created by either:
+From the fourth harmonic onward, multiple pathways can generate each harmonic.
+For example, the 7th harmonic $\omega_7$ can be generated through any of the following processes:
 \begin{equation}
 \begin{aligned}
 	\omega_7 &= \omega_6 + \omega_2 - \omega_1 \\
@@ -282,8 +282,8 @@ For example the 7th harmonic $\omega_7$ can be created by either:
 \end{equation}
 With further examples being listed in the report by Couch et al. \cite{couch_ultrafast_2020}.
 
-For a harmonic to be created a phase matching conditions has to be first fulfilled in each case.
-As an example the phase mismatch for a four-wave-mixing process for the third harmonic can be calculated for the case of a gas filled hollow core fiber by
+For harmonic generation to occur, phase matching conditions must first be satisfied for each harmonic.
+As an example, the phase mismatch for the four-wave mixing process that generates the third harmonic in a gas-filled hollow-core fiber can be described by the equation
 \begin{equation}
 	\Delta k = k_1 + k_3 - 2k_2 = 2\pi N \left( \frac{\delta_3}{\lambda_3} + \frac{\delta_1}{\lambda_1} - \frac{2\delta_2}{\lambda_2}\right) - \frac{u}{4\pi a^2} (\lambda_3 + \lambda_1 -2\lambda_2)
 	\label{eq:phasematching_vuv}
@@ -294,11 +294,12 @@ The refractive index of noble gases is close to 1 and can be described by the si
 	n-1\simeq\frac{Ne^2}{8\pi^2\epsilon_0mc^2}\sum_{i}^{}\frac{f_i}{\lambda_i^{-2}-\lambda^{-2}}
 \end{equation}
 Equation \ref{eq:phasematching_vuv} can be generalized for any harmonic, depending on the creation pathway mentioned in equation \ref{eq:vuv_pathway}, with $\lambda_n$ representing the wavelength of the nth harmonic, $k_n$ the corresponding wavevector, N the number density of the gas (in this case xenon), $\delta_n$ the wavelength dependent gas-dispersion \cite{bideau-mehu_measurement_1981}, u a mode dependent parameter \cite{couch_ultrafast_2020,durfee_iii_guided-wave_1999}) and a the waveguide diameter (here \qty{50}{\micro\meter}). 
-The phase mismatch can be minimized for each harmonic by a slightly varied xenon gas pressure.
-The creation of the third harmonic requiring the highest pressure, with a slightly lower needed pressure for each subsequent higher harmonic.
-In order to fulfill the condition for all harmonics simultaneously, a pressure of typically \qtyrange{100}{125}{\kilo\pascal} is applied to one side of the fiber, with a resulting pressure gradient existing over the length of the fiber.
-To confirm the $\chi^3$ dependent nature of the HCHG process Couch et al. performed numerical simulations using nonlinear Schrödinger equations within the PyNLO package, calculating the output flux of the harmonics \cite{couch_ultrafast_2020,hult_fourth-order_2007,ycas_g_pynlopynlo_2024}.
-The simulations matched roughly the measured output, which is consistent with a $\chi^3$ dependent nonlinear process.
+
+Phase mismatch can be minimized for each harmonic by slightly adjusting the xenon gas pressure.
+The third harmonic requires the highest pressure, with progressively lower pressures needed for each subsequent higher harmonic.
+To meet the phase matching conditions for all harmonics, a typical xenon pressure of \qtyrange{100}{125}{\kilo\pascal} is applied to one end of the fiber, creating a pressure gradient along its length.
+Couch et al. \cite{couch_ultrafast_2020} confirmed the $\chi^3$ dependence of the HCHG process by performing numerical simulations using nonlinear Schrödinger equations within the PyNLO package.
+The simulations, which modeled the harmonic flux output, were in good agreement with experimental measurements, further supporting the process's $\chi^3$ nonlinear behavior \cite{hult_fourth-order_2007,ycas_g_pynlopynlo_2024}.
 
 \begin{figure}
 	\centering
@@ -307,22 +308,23 @@ The simulations matched roughly the measured output, which is consistent with a 
 	\label{fig:hchgsketch}
 \end{figure}
 
-
 Couch et al. \cite{couch_ultrafast_2020} have also reported that high resolution spectra of the higher harmonics have a higher bandwidth full-width at half-maximum (FWHM) than the driving pulse (\qty{40}{\milli\electronvolt} instead of \qty{8}{\milli\electronvolt}), indicating that the HCHG process creates shorter pulse duration than the one of the driving pulse, similar to HHG \cite{gagnon_soft_2007}.
-In our paper \cite{hellbruck_high-resolution_2024} we found that the time resolution measured in the ARPES experiment is quite longer than the one of the driving pulse, but found that the resolution and with it the VUV pulse duration is limited by the pulse front tilt of the monochromator grating, suggesting that the pulse duration is indeed shorter than the one of the driving pulse.
-Measurements with a time compensated monochromator could help identifying the time duration of the pulse, at the output of the fiber.
+In our study \cite{hellbruck_high-resolution_2024}, we found that the time resolution in ARPES experiments was longer than the driving pulse duration.
+However, we also discovered that this resolution, and consequently the VUV pulse duration, was constrained by the pulse front tilt introduced by the monochromator grating.
+This indicates that the actual pulse duration might indeed be shorter than the driving pulse.
+Further measurements using a time-compensated monochromator could help determine the exact pulse duration at the fiber output.
 
-Lastly, a big upside of this laser system lies in its reliability and ease of use.
-The VUV laser uses a fiber based oscillator and two fiber based amplifiers, this does not only make the source more compact, but also significantly increase its stability.
-For example it is not necessary to realign the oscillator at all, and the amplifier only needs small adjustments every few months.
-This greatly reduces the time spent re-aligning the system, which can be used to focus on other parts of the experiment.
-Furthermore, the implementation of the fibers in cartridges without adjustability also makes the VUV generation process quite stable.
-The photon flux can be re-optimized with only a few touch-ups after a days of continuous usage.
+Finally, a key advantage of this laser system is its reliability and ease of operation.
+The VUV laser employs a fiber-based oscillator and two fiber-based amplifiers, making the setup not only more compact but also significantly more stable.
+For example, the oscillator requires no realignment, and the amplifier only needs minor adjustments every few months.
+This greatly reduces the time spent on maintenance, allowing more focus on the experiment itself.
+Additionally, the integration of fibers in fixed cartridges, without the need for manual adjustments, makes the VUV generation process quite stable.
+The photon flux can be re-optimized with minimal adjustments, even after several days of continuous operation.
 
-Therefore the new light source enables trARPES measurements in an energy range previously not accessible with the HHG beamline.
-It provides higher energy resolution than Harmonium while compromising some time resolution, complementing the characteristics of the HHG beamline.
-The higher repetition rates allow for faster acquisition for the same amount of statistics, while still allowing for high pump fluence measurements.
-But the light source is most suitable to explore the low perturbation regime due to the high repetition rates, something that was previously very challenging with Harmonium.
+This new light source opens up possibilities for trARPES measurements in energy ranges that were previously inaccessible with the HHG beamline.
+It offers higher energy resolution than the Harmonium system, albeit with some compromise in time resolution, making it a valuable complement to the existing HHG beamline.
+The higher repetition rates enable faster data acquisition without sacrificing statistical accuracy, while still allowing for high pump fluence measurements.
+However, the system is particularly well-suited for exploring the low-perturbation regime, an area that posed significant challenges with the Harmonium setup.
 
 \section{Paper and Supplementary}
 
