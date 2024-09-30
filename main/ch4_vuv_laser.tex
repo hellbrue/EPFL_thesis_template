@@ -328,57 +328,57 @@ However, the system is particularly well-suited for exploring the low-perturbati
 
 \section{Paper and Supplementary}
 
-While the previous sections introduced the capabilities of each instrument this chapter will focus on the implementation of the new light source within the previously existing lab space and the full characterization of the light source.
-A paper on the fully implemented trARPES setup, functioning with both light sources, containing a full characterization of the VUV light source has already been published.
-This section will therefore contain the paper to address the characterization and expand on the specifics of the implementation.
-Furthermore the section will contain supplementary information to the paper.
+The previous sections introduced the capabilities of each instrument, while this chapter will focus on integrating the new light source into the existing lab setup and fully characterizing its performance.
+A paper detailing the complete trARPES setup, incorporating both light sources and featuring a comprehensive characterization of the VUV light source, has already been published.
+This section will refer to that paper for the characterization details and will expand on specific aspects of the implementation.
+Additionally, supplementary information relevant to the paper will be provided.
 
-trARPES is a versatile technique, which is also highly dependent on the light source used due to the matrix element.
-The previous section already delves into the various different options for light sources and the desired parameters for trARPES.
-There I already argued about why the VUV laser source was chosen and its complementary properties compared to the Harmonium beamline.
-Both light sources combined span a big range of desired options for trARPES, but in order to truly exploit this characteristic it is necessary to operate them interchangeably. 
-The interoperability of the two beamlines was one of the challenges, when planning and constructing the new setup.
-With the priorities being the ability to switch between the two beamlines within a minute, while avoiding downtime and additional time for realignments, as well as ensuring no modifications to the existing Harmonium beamline.
-In order to fulfill these goals, a new vacuum chamber was inserted into the HHG beamline, with the purpose hosting insertable optics that direct the VUV pump and probe beams to the sample.
-These optics consist of a flat IR mirror for the pump beam, and two \ce{Al} mirrors with \ce{MgF2} coating for focusing and redirecting the probe beam.
-All three optics are mounted on individual, motorized stages, that can bring the optics in position for operation of the VUV beamline or retract them in order to use Harmonium.
-This allows switching between the two light sources within a minute, without breaking vacuum or additional realignment beyond the usual use case.
+trARPES is a versatile technique that is heavily dependent on the light source used, due to the influence of the matrix element on the measurements.
+The earlier discussion outlined the various light source options and the key parameters required for trARPES.
+In that context, I explained why the VUV laser was chosen and how it complements the existing Harmonium beamline.
+Together, these light sources offer a wide range of options for trARPES.
+To maximize the potential of this combination, it is crucial to ensure seamless interoperability between the two beamlines.
 
-Another challenge is posed by the xenon gas, which leads to a pressure of \qty{1e-4}{\milli\bar} in the monochromator.
-It is important to reduce this pressure in the vacuum parts closer to the ARPES chamber in order to operate in the low \qty{1e-10}{\milli\bar} range and ensure low sample degradation.
-For this purpose multiple differential pumping stages have been introduced, including a turbo pump between the recombination chamber and the laser, a turbo pump on the recombination chamber itself and two ion pumps, one of which is a ion and non-evaporative getter (NEG) pump-combination, directly attached to the beamline tupe connecting the recombination chamber with the ARPES chamber.
-Additionally a gate valve can be inserted in front of the recombination chamber to completely separate the two vacuum systems.
-The gate valve is equipped with \ce{MgF2} window which can transmit the VUV light, which allows for measurements at lower base pressures, due to the ability of completely separating the high pressure laser system from the rest.
-Operation with a closed valve will lead to a reduction of the intensity of about 50\%, and is therefore rarely used.
+One of the primary challenges during the planning and construction of the new setup was making sure that switching between the two beamlines could be done quickly, ideally within a minute, without introducing extended downtime or requiring significant realignment.
+Additionally, the modifications needed to avoid impacting the Harmonium beamline.
+To achieve these goals, a new vacuum chamber was installed in the HHG beamline.
+This chamber houses motorized optics that can be inserted to direct the VUV pump and probe beams to the sample.
+The optics include a flat IR mirror for the pump beam and two \ce{Al} mirrors with \ce{MgF2} coating for focusing and redirecting the probe beam.
+Each optic is mounted on an individual motorized stage, allowing for rapid switching between beamlines without breaking the vacuum or requiring further adjustments beyond routine alignment.
 
-The last integral part of the VUV trARPES setup is the pump beamline which contains various parts.
-First, a motorized attenuator with thin film plates (TFP) is situated directly after a the exit port of residual infrared beam.
-With it the fluenced used for creating the out of equilibrium excitation can be directly controlled by the measurement software, allowing for direct fluence dependent measurements.
+Another challenge arose from the xenon gas used in the VUV generation, which leads to a pressure of approximately \qty{1e-4}{\milli\bar} in the monochromator.
+Reducing this pressure to the low \qty{1e-10}{\milli\bar} range in the ARPES chamber is essential for preventing sample degradation.
+To address this, multiple differential pumping stages were introduced, including turbo pumps on both the recombination chamber and the beamline connecting to the laser, as well as an ion pump and a combination of ion/NEG pump directly attached to the beamline tube.
+A gate valve equipped with a \ce{MgF2} window allows for complete separation of the two vacuum systems, enabling measurements at lower base pressures.
+However, using this valve results in a 50\% reduction in intensity and is therefore used sparingly.
+
+The VUV trARPES setup also includes a pump beamline with several key components.
+A motorized attenuator with thin film plates (TFP), positioned after the exit port of the residual IR beam, allows for precise control over the fluence used for creating the out-of-equilibrium excitation.
+This setup enables fluence-dependent measurements to be automated via the measurement software.
 The attenuator is used in a way that the beam reflected by the two TFPs is used for the pumping, ensuring the shortest possible pulse duration, while the transmitted beam is dumped on a beamblock.
-After passing the attenuator, a pair of two 2-inch mirrors is used to compensate for the longer probe beam path.
+Following the attenuator, two 2-inch mirrors compensate for the longer probe beam path.
 The two 2-inch optics were chosen to allow for multiple bounces on each mirror, keeping the compensation as compact as possible.
-A pickup mirror picks the infrared beam up from the beam compensation and directs it to a motorized delay stage, after which a focusing telescope is passed.
-It consists of two convex lenses, that create a focal spot size of \qty{390}{\micro\meter} x \qty{360}{\micro\meter} on the sample.
-The second lens is positioned on a \unit{\micro\meter} stage for fine adjustment of the spot size.
-A BBO crystal can be inserted  close to the focal point of the first lens, enabling pumping of the sample with \qty{515}{\nano\meter} light.
-If the second harmonic is used for pumping the following IR optics have to be switched for green light optimized optics and ensure that any residual IR light is removed from the green second harmonic pump beam.
+The beam is then directed to a motorized delay stage, followed by a focusing telescope consisting of two convex lenses that focus the beam to a spot size of \qty{390}{\micro\meter} x \qty{360}{\micro\meter} on the sample.
+Fine adjustments to the spot size can be made using a \unit{\micro\meter} stage on which the second lens is placed.
+A BBO crystal can be inserted near the focal point to enable second harmonic pumping at \qty{515}{\nano\meter}.
+When using the second harmonic for pumping, IR-optimized optics are replaced with green-light-optimized optics, and any residual IR light is removed from the pump beam.
 The pump laser beam enters the recombination vacuum chamber through a window port, parallel to the probe beam, after which it can be directed to the sample with an insertable mirror.
 Fine adjustment of the pump beam position is done with the help of a piezo-mirror mount before entering the recombination chamber.
 
-Within the VUV probe arm a diagnostic chamber is situated, containing a photodiode which is used to measure the photon flux of the selected VUV beam after leaving the monochromator.
-In addition this diagnostic chamber can be used to measure the full VUV spectrum which is generated in the HCPCF, by step wise rotation of the monochromator's grating and measuring the flux at each step.
-Figure \ref{fig:vuv_spectrum} shows the output of the VUV fiber, covering the four harmonics that are able to pass the monochromator with high intensity.
-Further information on the harmonics, the spectral shape and relative intensities for all monochromator exit slit combinations can be found in the already published paper, contained in this chapter.
+Within the VUV probe arm, a diagnostic chamber contains a photodiode for measuring the photon flux of the selected VUV beam after it passes through the monochromator.
+This chamber can also be used to measure the full VUV spectrum generated by the HCPCF by rotating the monochromator’s grating in steps and recording the flux at each position.
+Figure \ref{fig:vuv_spectrum} shows the output of the VUV fiber, capturing the four harmonics that pass through the monochromator with high intensity.
+More detailed information on the harmonics, spectral shape, and relative intensities can be found in the published paper referenced in this chapter.
 
-The paper attempts a comparison two other complementary light sources as well as fixed wavelength VUV sources.
-A more detailed explanation of the light source is then followed, with a full description of the monochromator used and the working principle of a normal incident monochromator with is advantages and disadvantages.
-Additionally, a short description of the integration into the trARPES setup can be found.
+The paper also compares the VUV light source to two complementary sources and fixed-wavelength VUV systems.
+It provides a detailed description of the monochromator and its working principles, including the advantages and disadvantages of a normal-incidence monochromator.
+The integration of the VUV source into the trARPES setup is also discussed briefly.
 After the description of the light source and its integration two sections about the achieved energy and time resolution fully characterize the trARPES setup with the VUV light source.
 For the energy resolutions measurements on polychristalline gold have been performed for all combinations of the four harmonics (\qtylist{7.2;8.4;9.6;10.8}{\electronvolt}) and monochromator exit slits (\qtylist{500;100;32}{\micro\meter}), to determine the total energy resolution.
 The same measurements have been performed on a Helium lamp to extract the linewidths of the harmonics in each case.
 Additional measurements on \ce{Bi2Se3} and \ce{Au(111)} have been performed to demonstrate the energy and momentum resolution by resolving the Rashba split in gold and Dirac-cone in \ce{Bi2Se3}.
 Two measurements on \ce{Bi2Se3} and \ce{TaTe2} have been performed to analyze the time resolution of the light source at \qty{10.8}{\electronvolt} at two monochromator exit slits (\qtylist{500;100}{\micro\meter}).
-At the end of the paper a conclusion is made, putting the achieved performance of the system in context with literature and offer possible further ways to improve the system.
+The paper concludes by putting the performance of the system into context with existing literature and offers suggestions for further improvement.
 
 \begin{figure}[h!]
 	\centering
