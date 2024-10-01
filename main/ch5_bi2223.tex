@@ -1,11 +1,97 @@
 \chapter{Preliminary study on the cuprate \ce{Bi}2223}
 
-In the previous chapter, I discussed the significance of superconductors, providing a general overview of the topic along with an introduction to the system and its basic theoretical aspects.
-The focus was on experimental studies of the two-layered cuprate superconductor \ce{Bi}2212, a widely studied material in Angle-Resolved Photoemission Spectroscopy (ARPES).
-While \ce{Bi}2212 is a significant compound, it does not exhibit the highest critical temperature ($T_c$) among cuprates, nor even within the \ce{Bi}-based family.
-The three-layered compound \ce{Bi2Sr2Ca2Cu3O10} (\ce{Bi}2223) shows a higher $T_c$ of approximately \qty{108}{\kelvin}.
+In previous chapter, I provided an overview of the significance of superconductors, discussing the general theoretical framework and discussing the experimental investigation of photo-induced effects on the two-layered cuprate \ce{Bi2Sr2CaCu2O8} (\ce{Bi}2212).
+This material has been extensively studied, especially using Angle-Resolved Photoemission Spectroscopy (ARPES).
+However, despite its importance, \ce{Bi}2212 does not exhibit the highest critical temperature $T_c$ among cuprates, nor within the bismuth-based family.
+The three-layered counterpart, \ce{Bi2Sr2Ca2Cu3O10} (\ce{Bi}2223), surpasses \ce{Bi}2212 with a critical temperature of approximately \qty{108}{\kelvin}.
 
-The dependence of $T_c$ on the number of \ce{CuO} layers is crucial for understanding the mechanism behind high-$T_c$ superconductivity.
-In the bismuth-based cuprate family \ce{Bi2Sr2Can−1CunO2n+4}, $T_c$ increases from \qty{33}{\kelvin} for $n=1$, to \qty{92}{\kelvin} for $n=2$, and reaches \qty{108}{\kelvin} for $n=3$.
-However, when the number of \ce{CuO} layers exceeds $n=3$, $T_c$ decreases.
-Among various cuprate families, the tri-layered compounds exhibit the highest $T_c$, including \ce{Bi2Sr2Ca2Cu3O10} ($T_c=\qty{108}{\kelvin}$), \ce{TlBa2Ca2Cu3O9} ($T_c\qty{125}{\kelvin}$), and \ce{HgBa2Ca2Cu3O8} ($T_c=\qty{133}{\kelvin}$).
+The dependence of $T_c$ on the number of \ce{CuO2} layers is a crucial factor in unraveling the origin of high-$T_c$ superconductivity \cite{feng_electronic_2002, scott_layer_1994, chakravarty_explanation_2004,iyo_tc_2007,chu_hole-doped_2015,luo_electronic_2023}.
+In the bismuth-based cuprate family \ce{Bi2Sr2Ca_{n-1}Cu_nO_{2n+4}}, $T_c$ increases systematically from \qty{33}{\kelvin} for $n=1$, to \qty{92}{\kelvin} for $n=2$, peaking at \qty{108}{\kelvin} for $n=3$.
+Interestingly, this trend reverses beyond $n=3$, where further increases in the number of \ce{CuO2} layers result in a decrease in $T_c$.
+This behavior is mirrored across several cuprate families, where tri-layered compounds such as \ce{Bi}2223, \ce{TlBa2Ca2Cu3O9} (with $T_c$ of \qty{125}{\kelvin}), and \ce{HgBa2Ca2Cu3O8} (with $T_c$ of \qty{133}{\kelvin}) demonstrate the highest critical temperatures.
+Figure \ref{fig:tcdep} (a) shows the dependence of the critical temperature on the amount of \ce{CuO2} layers, for three different cuprate families.
+In addition to their elevated $T_c$, these tri-layered compounds exhibit an intriguing phase diagram, deviating from the characteristic dome-shaped superconducting phase observed in other cuprates \cite{fujii_doping_2002,piriou_effect_2008}.
+Instead, they display a relatively constant $T_c$ in the overdoped regime, suggesting an unusual doping dependence that demands further investigation (see Fig. \ref{fig:tcdep} (b)).
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{images/bi2223/tc_dep}
+	\caption{(a) The figure shows the dependence of the maximum critical temperature on the amount of \ce{CuO2} layers for three different cuprate families. In each case the tri-layer compound exhibits the highest $T_c$. (b) Shows the doping dependence of the critical temperature, with the doping being normalized to the optimally doped case. \ce{Bi}2212 and \ce{Bi}2223 are compared with each other, showing the different behavior of $T_c$ in the overdoped range for three-layer cuprates. From \cite{luo_electronic_2023}}
+	\label{fig:tcdep}
+\end{figure}
+
+
+The mechanisms driving both the layer dependence of $T_c$ and the unique behavior at higher doping levels remain elusive.
+Understanding why tri-layered cuprates possess the highest $T_c$, and what differentiates them from their single- and bi-layer counterparts, could provide valuable insights into the underlying physics of high-$T_c$ superconductivity.
+Among the tri-layered cuprates, \ce{Bi}2223 stands out as the only compound studied using ARPES \cite{feng_electronic_2002,muller_fermi_2002,sato_low_2002,matsui_bcs-like_2003,ideta_angle-resolved_2010, ideta_enhanced_2010, ideta_energy_2012,kunisada_observation_2017,ideta_hybridization_2021,luo_electronic_2023}, albeit significantly less frequently than \ce{Bi}2212.
+One of the primary challenges has been the scarcity of high-quality \ce{Bi}2223 samples, though recent advancements have made these samples more readily available, with commercial sources now supplying them.
+
+In bi-layer cuprates, ARPES measurements have revealed the splitting of Fermi arcs into bonding and anti-bonding bands, arising from the interlayer interactions between the two \ce{CuO2} planes.
+By analogy, one would expect a similar splitting into three bands in \ce{Bi}2223 due to the interactions between the three \ce{CuO2} layers.
+However, until recently, ARPES measurements on \ce{Bi}2223 had only revealed two Fermi sheets.
+A tri-layer band splitting was observed for the first time in overdoped (OD) \ce{Bi}2223 \cite{luo_electronic_2023}, pointing to the existence of weak interlayer couplings and a charge imbalance between the inner and outer \ce{CuO2} layers as potential explanations for the absent third band.
+
+In this chapter, I will provide a summary of the current understanding of \ce{Bi}2223, with a focus on recent experimental observations of overdoped samples.
+This will be followed by a preliminary analysis of the data obtained from our measurements on optimally doped (OP) \ce{Bi}2223 at the SLS-ULTRA endstation at the PSI synchrotron, which offers new insights into the electronic structure of this promising high-$T_c$ superconductor.
+
+\section{Previous Publications}
+
+As introduced earlier, three-layer band splitting in the cuprate \ce{Bi}2223 has so far only been observed in its overdoped (OD) state \cite{luo_electronic_2023}.
+Recent ARPES measurements have provided the first clear evidence of this splitting, capturing the electronic structure in a limited window around one Fermi arc.
+The data revealed two bands similar to the bi-layer splitting seen in \ce{Bi}2212, as well as a third, well-separated band (see Fig. \ref{fig:arpes_sketch} (a)).
+Energy distribution curves (EDCs) symmetrized around $E_F$ allowed for the extraction of superconducting gaps, with a gap amplitudes of approximately \qtylist{17;29;62}{\milli\electronvolt}, for the three bands respectively.
+Notably, the gap evolution demonstrated a subtle deviation from the typical d-wave symmetry (see Fig. \ref{fig:arpes_sketch} (b)).
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.59\textwidth}
+		\includegraphics[width=\linewidth]{images/bi2223/fermi_surface}
+		\caption{}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.4\textwidth}
+		\includegraphics[width=\linewidth]{images/bi2223/gap_size}
+		\caption{}
+	\end{subfigure}
+	\caption{(a) Shows the Fermi surface of \ce{Bi}2223, showing the splitting in three separate Fermi surface sheets. (b) Shows the gap amplitude for the three different bands. The gap amplitude is extracted from the symmetrized EDC curves. A slight deviation from the d-wave gyp symmetry can be observed. From \cite{luo_electronic_2023}.}
+	\label{fig:arpes_sketch}
+\end{figure}
+
+To complement the experimental results, the measured band structure was modeled using a tight-binding approach, not dissimilar to the methodology employed in previous chapters \cite{luo_subtle_2021}.
+In the case of the three-layer \ce{Bi}2223, contributions from the electronic states in both the inner and outer \ce{CuO2} planes were taken into account.
+In addition to intralayer hopping parameters, interlayer hopping and pairing terms were incorporated into the model.
+Due to the presence of three layers, two distinct types of interlayer interactions are relevant: those between the inner and outer planes ($t_{io}$) and those between the two outer planes ($t_{oo}$).
+
+In previous studies, the interlayer coupling between the two outer planes was often approximated as negligible, based on the assumption that the distance between them is too large for significant interaction \cite{kunisada_observation_2017,ideta_hybridization_2021}.
+This rationale was consistent with the absence of the third band in earlier measurements.
+However, the observation of this band in the recent study \cite{luo_electronic_2023} necessitated the inclusion of hopping and pairing between the outer layers in the model.
+The analysis revealed an unusual behavior of the interlayer hopping parameters.
+Firstly, the hopping between the inner and outer planes exhibits a dome-shaped dependence, with a peak near the nodal region and suppression at the antinodes.
+Secondly, contrary to expectations based on the unit cell geometry, the hopping between the two outer planes was found to be stronger than that between the inner and outer planes.
+Several possible explanations for these findings were proposed.
+One suggestion is that intercell hopping, particularly in the antinodal region, is responsible for the suppression of ($t_{io}$).
+Additionally, it was hypothesized that increased hole doping in the outer planes could enhance the hopping between these layers, implying that both the distance and the doping levels govern the interlayer coupling in \ce{CuO2} planes.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{images/bi2223/parameter}
+	\caption{Schematic of the three \ce{CuO2} layers, highlighting the different microscopic parameters. The intralayer hopping parameters $t$, $t'$ \& $t''$. As well as the interlayer hopping parameter between the inner and outer plane $t_{io}$ and between the two outer planes $t_{oo}$, as well as the corresponding pairings $\Delta_{io}$ \& $\Delta_{oo}$. From \cite{luo_electronic_2023}.}
+	\label{fig:parameter}
+\end{figure}
+
+
+Two principal theories have been proposed to explain the higher $T_c$ observed in tri-layer cuprates.
+One hypothesis attributes the enhanced $T_c$ to interlayer hopping, suggesting that these interactions play a direct role in increasing the critical temperature \cite{chakravarty_explanation_2004,nishiguchi_superconductivity_2013}.
+The second, which is favored by the recent report on the OD \ce{Bi}2223, is a composite model that differentiates the roles of the inner and outer planes \cite{kivelson_making_2002,berg_route_2008,okamoto_enhanced_2008}.
+In this model, the inner plane is thought to be underdoped, characterized by a large superconducting gap and strong pairing strength, while the outer planes are overdoped, contributing to phase stiffness, which is beneficial for maintaining a high $T_c$ \cite{emery_importance_1995} 33.
+This separation of responsibilities allows the material to independently optimize pairing strength and phase coherence, thereby maximizing $T_c$.
+Such optimization is not possible in single- or bi-layer cuprates, where both parameters must be balanced within the same planes.
+However, the question remains as to why this mechanism fails for cuprates with more than three \ce{CuO2} layers, where this separation would be also possible.
+
+Interestingly, the recent study suggests that three-layer splitting is absent in optimally doped (OP) \ce{Bi}2223, likely due to the lack of interlayer hopping between the outer planes \cite{luo_electronic_2023}.
+The data indicate that higher doping levels are necessary for the appearance of $t_{oo}$ and thereby splitting to occur, implying that additional doped holes are primarily located in the outer layers.
+This finding suggests that the strong interlayer hopping $t_{oo}$ is responsible for maintaining a high $T_c$ in the overdoped regime, though it does not explain why the tri-layer system exhibits a higher $T_c$ compared to \ce{Bi}2212 in the first place.
+
+In the following section, I will present our data on optimally doped \ce{Bi}2223, comparing it to the existing data on overdoped samples, and explore potential insights into the mechanisms driving the superconductivity in this system.
+
+\section{preliminary analysis on optimally doped \ce{Bi}2223}

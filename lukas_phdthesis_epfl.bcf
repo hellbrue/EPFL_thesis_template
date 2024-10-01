@@ -2376,6 +2376,43 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">tail/bib_thesis_lukas.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1" intorder="1">feng_electronic_2002</bcf:citekey>
+    <bcf:citekey order="1" intorder="2">scott_layer_1994</bcf:citekey>
+    <bcf:citekey order="1" intorder="3">chakravarty_explanation_2004</bcf:citekey>
+    <bcf:citekey order="1" intorder="4">iyo_tc_2007</bcf:citekey>
+    <bcf:citekey order="1" intorder="5">chu_hole-doped_2015</bcf:citekey>
+    <bcf:citekey order="1" intorder="6">luo_electronic_2023</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">fujii_doping_2002</bcf:citekey>
+    <bcf:citekey order="2" intorder="2">piriou_effect_2008</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">luo_electronic_2023</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">luo_electronic_2023</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">feng_electronic_2002</bcf:citekey>
+    <bcf:citekey order="5" intorder="2">muller_fermi_2002</bcf:citekey>
+    <bcf:citekey order="5" intorder="3">sato_low_2002</bcf:citekey>
+    <bcf:citekey order="5" intorder="4">matsui_bcs-like_2003</bcf:citekey>
+    <bcf:citekey order="5" intorder="5">ideta_angle-resolved_2010</bcf:citekey>
+    <bcf:citekey order="5" intorder="6">ideta_enhanced_2010</bcf:citekey>
+    <bcf:citekey order="5" intorder="7">ideta_energy_2012</bcf:citekey>
+    <bcf:citekey order="5" intorder="8">kunisada_observation_2017</bcf:citekey>
+    <bcf:citekey order="5" intorder="9">ideta_hybridization_2021</bcf:citekey>
+    <bcf:citekey order="5" intorder="10">luo_electronic_2023</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">luo_electronic_2023</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">luo_electronic_2023</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">luo_electronic_2023</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">luo_electronic_2023</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">luo_subtle_2021</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">kunisada_observation_2017</bcf:citekey>
+    <bcf:citekey order="11" intorder="2">ideta_hybridization_2021</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">luo_electronic_2023</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">luo_electronic_2023</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">luo_electronic_2023</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">chakravarty_explanation_2004</bcf:citekey>
+    <bcf:citekey order="15" intorder="2">nishiguchi_superconductivity_2013</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">kivelson_making_2002</bcf:citekey>
+    <bcf:citekey order="16" intorder="2">berg_route_2008</bcf:citekey>
+    <bcf:citekey order="16" intorder="3">okamoto_enhanced_2008</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">emery_importance_1995</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">luo_electronic_2023</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
