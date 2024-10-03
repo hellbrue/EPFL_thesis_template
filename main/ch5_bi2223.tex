@@ -96,21 +96,23 @@ In the following section, I will present our data on optimally doped \ce{Bi}2223
 
 \section{preliminary analysis on optimally doped \ce{Bi}2223}
 
-The data presented in this section was collected as part of two short beamtimes at the PSI synchrotron.
-The measured samples were provided in a collaboration with Enrico Giannini at the University of Geneva, and they were confirmed to be optimally doped \ce{Bi}2223 samples by measuring the magnetic susceptibility as a function of temperature in a vibrating sample magnetometer (VSM) in the crystal growth facility at EPFL.
-In total four samples were explored during the beamtime, together with a \ce{Bi}2212 sample for comparison in equal conditions.
-For the original proposal it was planned to perform a full Fermi surface characterization, both at room temperature (RT) and at \qty{12}{\kelvin}, with a focus on exploring the possible tri-layer splitting.
-Additionally, we proposed to perform temperature sweeps across the transition temperature, well into the pseudogap phase and observe any possible changes in self energy, scattering rate or effective mass.
-But at the time of the beamtime the temperature control was not working, therefore only scans at room temperature and a base temperature of \qty{12}{\kelvin} were performed.
-Only a rudimentary analysis of the collected data is presented, as the project is only in the beginning stages.
+The experimental data presented in this section were collected during two beamtimes at the PSI synchrotron.
+The \ce{Bi}2223 samples used in the study were provided through a collaboration with Enrico Giannini at the University of Geneva, and their optimal doping level was confirmed by measuring the magnetic susceptibility as a function of temperature using a vibrating sample magnetometer (VSM) at the crystal growth facility at EPFL.
+In total, four optimally doped \ce{Bi}2223 samples were studied, alongside a \ce{Bi}2212 sample for comparison under identical experimental conditions.
 
-During the beamtime it was possible to successfully map the First Brillouin zone of the material.
-Figure \ref{fig:bi2223_fs} (a) shows the obtained Fermi surface at a temperature of \qty{12}{\kelvin}.
-At a first glance the band structure appears to be extremely similar to that of \ce{Bi}2212, but small changes can be observed.
-First of all no clear splitting of the Fermi arc can be observed similar to the bi-layer splitting in \ce{Bi}2212, but the Fermi arcs do broaden as they approach the anti-node, which could potentially be a consequent of a tiny splitting (see Fig. \ref{fig:bi2223_fs} (b)).
-A further difference can be spotted in the zoomed in map displayed in figure \ref{fig:bi2223_fs} (c).
-There on the inside of the Fermi arc, a second faint arc like feature can be observed.
-This spectral feature shows a strong similarity to the band marked in red in figure \ref{fig:arpes_sketch} (a), from the OD \ce{Bi}2223 data in \cite{luo_electronic_2023}.
+The initial proposal for the experiment involved a Fermi surface characterization of \ce{Bi}2223 at both room temperature (RT) and the base temperature of the endstation of \qty{12}{\kelvin}, with a particular focus on exploring the possible tri-layer splitting in the electronic structure.
+Additionally, we proposed temperature sweeps across the superconducting transition, extending into the pseudogap phase, to observe changes in key observables such as self-energy, scattering rate, and effective mass.
+Unfortunately, due to issues with temperature control during the beamtime, only measurements at RT and the base temperature of \qty{12}{\kelvin} were performed.
+This report provides a preliminary analysis of the collected data, as the project is still in its early stages.
+
+We successfully mapped the band structure within the first Brillouin zone of the \ce{Bi}2223 samples.
+The Fermi surface at \qty{12}{\kelvin}, shown in Fig. \ref{fig:bi2223_fs} (a), exhibits a band structure that closely resembles that of \ce{Bi}2212, although subtle differences are apparent.
+It was first expected to observe a clear tri-layer splitting, somewhat resembling the \ce{Bi}2212 bonding/anti-bonding splitting.
+Instead the observed arcs of \ce{Bi}2223 exhibit a broadening near the anti-node, which may suggest the presence of a small splitting that remains unresolved in these measurements (see Fig. \ref{fig:bi2223_fs} (b)).
+
+A closer examination of the Fermi surface, presented in Fig. \ref{fig:bi2223_fs} (c), reveals an additional faint arc-like feature, neighboring the primary Fermi arc.
+This feature is reminiscent of the band identified in overdoped \ce{Bi}2223 data, as reported by Luo et al. \cite{luo_electronic_2023}, which is marked in red in Fig.  \ref{fig:arpes_sketch} (a).
+This observation hints at the presence of the expected tri-layer band splitting with two near degenerate bands, although further analysis is required to confirm its exact nature.
 
 \begin{figure}[t!]
 	\centering
@@ -131,13 +133,11 @@ This spectral feature shows a strong similarity to the band marked in red in fig
 	\label{fig:bi2223_fs}
 \end{figure}
 
-Before commenting further on the tri-layer splitting, I will present the analysis of the gap in the main Fermi arc.
-For that figure \ref{fig:edc_comparison} (a) shows an energy distribution curve (EDC) taken from the antinodal region of the arc and compares it with an EDC from the node.
-To evaluate the gap correctly, a reference measurement was performed on a polycrystalline Gold sample, placed on the same sample mount as the \ce{Bi}2223 sample.
-The comparison shows that a small gap exists at the antinode, but not at the node, as is expected from the d-wave symmetry of the gap amplitude.
-The same comparison is done for a measurement on \ce{Bi}2212, which can be seen in figure \ref{fig:edc_comparison} (b).
-As in the previous case, EDC of the Gold reference sample and the EDC taken at the node coincide with each other, showing the absence of a gap in that region.
-Looking at the EDC at the anti-node a clear gap can be observed, and the gap size appears to have a larger amplitude than in the case of \ce{Bi}2223.
+Next, I want to focus on discussing the superconducting gap along the primary Fermi arc.
+Fig. \ref{fig:edc_comparison} (a) compares the energy distribution curves (EDCs) from the anti-nodal and nodal regions of the arc.
+A reference measurement was conducted on a polycrystalline gold sample placed on the same mount as \ce{Bi}2223 to accurately determine the Fermi level and hence the gap size.
+The comparison reveals the presence of a small gap at the anti-node but none at the node, consistent with the expected d-wave symmetry of the superconducting gap in cuprates.
+For comparison, a similar analysis was performed on the \ce{Bi}2212 sample (Fig. \ref{fig:edc_comparison} (b)), which shows a more pronounced gap at the anti-node, with a larger amplitude than in \ce{Bi}2223.
 
 \begin{figure}
 	\centering
@@ -154,20 +154,15 @@ Looking at the EDC at the anti-node a clear gap can be observed, and the gap siz
 	\label{fig:edc_comparison}
 \end{figure}
 
+Further analysis of the gap was conducted by plotting the EDCs along the Fermi arc and symmetrizing them around the Fermi level $E_F$.
+Figure \ref{fig:gap_bilayer} (a) shows this analysis for \ce{Bi}2223 at \qty{12}{\kelvin}.
+The anisotropy of the gap is clearly visible, with a gap size of approximately \qty{15}{\milli\electronvolt} near the anti-node.
+At RT, the gap is fully closed, as expected.
+A similar anisotropic behavior is observed for \ce{Bi}2212, although the gap amplitude in \ce{Bi}2212 is significantly larger, reaching around \qty{30}{\milli\electronvolt} at the anti-node (see Fig. \ref{fig:gap_bilayer} (b)).
 
-The amplitude of the gap and the symmetry can be further explored by plotting the EDCs along one Fermi arc and mirror them at the Fermi level $E_F$.
-Figure \ref{fig:gap_bilayer} (a) shows this analysis for \ce{Bi}2223.
-The EDCs were taken along one Fermi arc, and their exact position is highlighted with red crosses in the Fermi surface of Fig. \ref{fig:bi2223_fs} (a).
-The left panel, corresponding to the scan taken at \qty{12}{\kelvin}, clearly shows the anisotropy of the gap amplitude, as is expected from the d-wave anisotropy.
-A gap of approximately \qty{15}{\milli\electronvolt} can be extracted from the position of the quasiparticle peak.
-In the right panel the EDCs for the same momentum points are shown for RT with the gap being fully closed.
-Comparing this with the EDCs along a Fermi arc of \ce{Bi}2212 shows a similar anisotropic behavior (see Fig. \ref{fig:gap_bilayer} (b)), but also a larger gap amplitude of approximately \qty{30}{\milli\electronvolt} near the anti-node, similar to the observations already seen in Fig. \ref{fig:edc_comparison}.
-
-A further observation can be made regarding the structure of the EDCs in figure \ref{fig:edc_comparison}.
-In the case of \ce{Bi}2212, a strong difference between node and anti-node can observed at higher energies, beyond the quasiparticle peak (see Fig. \ref{fig:edc_comparison} (b)).
-Here, at the anti-node, the onset of the so called peak-dip-hump structure is visible \cite{kordyuk_origin_2002}.
-This peak-dip-hump structure is absent in the anti-nodal EDC of \ce{Bi}2223 (see Fig. \ref{fig:edc_comparison} (a)).
-Additionally, the difference between the node and anti-node, apart from the superconducting gap, seem to be only marginal.
+Another noteworthy difference between \ce{Bi}2223 and \ce{Bi}2212 is the absence of the characteristic peak-dip-hump structure in the \ce{Bi}2223 EDCs.
+In \ce{Bi}2212, this feature is clearly visible at higher energies beyond the quasiparticle peak, particularly at the anti-node (see Fig. \ref{fig:edc_comparison} (b)), consistent with previous reports \cite{kordyuk_origin_2002}.
+However, this structure is absent in the corresponding EDCs for \ce{Bi}2223 (see Fig. \ref{fig:edc_comparison} (a)), suggesting significant differences in the incoherent part of the electronic structure of these two materials.
 
 \begin{figure}
 	\centering
@@ -183,23 +178,19 @@ Additionally, the difference between the node and anti-node, apart from the supe
 	\label{fig:gap_bilayer}
 \end{figure}
 
-Coming back to the faint spectral feature seen in Fig. \ref{fig:bi2223_fs} (c), representing the additional band due to the tri-layer structure.
-The feature can be visualized better when looking at the band cutting the additional arc like feature.
-The results can be seen in figure \ref{fig:trilayer_splitting} for two different cuts.
-A faint split band can be observed in Fig. \ref{fig:trilayer_splitting} (a), which appears to have similar as the more intense main band.
-Closer to the anti-node the difference in dispersion is bigger, resulting in a bigger kink for the additional band (see Fig. \ref{fig:trilayer_splitting} (b)).
+After examining the gap amplitude, I will focus on the faint spectral feature seen in Fig. \ref{fig:bi2223_fs} (c), which is likely associated with the additional band from the tri-layer structure.
+Fig. \ref{fig:trilayer_splitting} shows bandmaps along different cuts through the Brillouin zone.
+A faint split band is visible in Fig. \ref{fig:trilayer_splitting} (a), with greater separation near the antinode (see Fig. \ref{fig:trilayer_splitting} (b)), suggesting a stronger kink in this region.
 
-A difference between the two bandmaps lies in the polarization of the probe pulse.
-While the probe of (a) is linearly polarized, in (b) a circular polarized probe was used.
-Therefore it seems like the intensity of this band is dependent on the light polarization of the probe, and matrix element effects play a role.
-Furthermore figure \ref{fig:trilayer_splitting} shows that the additional band has a bigger gap amplitude than the main Fermi arc, similar to the observations made in OD \ce{Bi}2223 \cite{luo_electronic_2023}.
-The amplitude of the gap can be analyzed in greater detail, similar to the discussion for the main arc.
-Several points are selected from close to the node to increasingly close to the anti-node.
-
-The result of this can be seen in figure \ref{fig:trilayer_splitting}.
-Similar to the main arc, an anisotropy of the gap amplitude is observed.
-Closer to the anti-node a gap size of more than \qty{30}{\milli\electronvolt} is present, indicating a larger gap than in \ce{Bi}2212.
-At room temperature has closed as expected (see Fig. \ref{fig:trilayer_splitting} right panel).
+Interestingly, the intensity of this split band appears to depend on the polarization of the probe light.
+In Fig. \ref{fig:trilayer_splitting} (a), linearly polarized light was used, while in Fig. \ref{fig:trilayer_splitting}
+} (b) circularly polarized light was employed, leading to a stronger intensity of the additional band.
+This suggests that matrix element effects play a role in the visibility of the tri-layer splitting, and further polarization-dependent studies are needed to fully understand this behavior.
+The gap amplitude was analyzed in further detail, following a similar approach to that used for the main arc.
+Data points were selected from regions near the node and moving progressively closer to the anti-node.
+As shown in figure \ref{fig:trilayer_splitting} (c), the gap exhibits noticeable anisotropy, much like the main arc.
+Near the anti-node, the gap amplitude exceeds \qty{30}{\milli\electronvolt}, indicating a larger gap compared to \ce{Bi}2212.
+As expected, the gap is fully closed at room temperature (see right panel of Fig. \ref{fig:trilayer_splitting} (c).
 
 \begin{figure}
 	\centering
@@ -219,11 +210,13 @@ At room temperature has closed as expected (see Fig. \ref{fig:trilayer_splitting
 	\label{fig:trilayer_splitting}
 \end{figure}
 
-The last feature I want to address can be seen in a zoom on a Fermi arc, along which the umklappbands of the superstructure overlap at the node position (see Fig. \ref{fig:fs_hybrid}).
-In this specific configuration where the sample was aligned along the node and horizontally polarized light was used, a strong suppression of spectral weight at the node can be observed.
-Similar observation could be made with sample alignment along the anti-node and linear polarized light, always resulting in a strong suppression of the spectral weight.
-Most likely matrix element effects are the result of this suppression, but the reason why the node suddenly shows this polarization dependence is unclear.
-Hybridization between the several bands crossing each other at this point could be a reason, but further investigation is necessary to understand is origin.
+One further feature to note is the suppression of spectral weight observed in the nodal region under certain polarization conditions.
+Fig. \ref{fig:fs_hybrid} shows a zoom-in on the Fermi arc where the umklapp bands of the superstructure overlap at the node.
+In this configuration, when the sample is aligned with the node and horizontally polarized light is used, a strong suppression of spectral weight is observed.
+This suppression is also seen when the sample is aligned with the antinode under linearly polarized light, either vertical or horizontal, indicating that matrix element effects are responsible.
+The exact origin of this polarization dependence at the node remains unclear, though it could be related to hybridization between bands crossing at this point.
+Further investigation is required to understand the underlying mechanism.
+In the next section, I will provide a comparative analysis with existing data on overdoped \ce{Bi}2223, contextualizing the findings.
 
 \begin{figure}[h!]
 	\centering
@@ -234,36 +227,30 @@ Hybridization between the several bands crossing each other at this point could 
 
 \section{Conclusion}
 
-To summarize the preliminary results from this chapter.
-The band structure of OP \ce{Bi}2223 was successfully mapped and was shown to exhibit strong similarities compared to the bi-layer compound.
-In the Fermi surface the main differences stem from a smaller anti-bonding splitting of the Fermi arc.
-This splitting was more pronounced in the OD case, and it was discussed that a higher doping is necessary to see the splitting.
-Even in the OD case only a faint splitting was observed, which is rather observed as a broadening of the band near the anti-node.
-Similarly, a slight broadening can be observed here at the anti-node (see Fig. \ref{fig:bi2223_fs} (b)).
-A more detailed analysis, especially with a focus on the anti-node is necessary to further discuss this feature.
+In summary, the preliminary results presented in this chapter offer valuable insights into the electronic structure of optimally doped (OP) \ce{Bi}2223.
+The band structure was successfully mapped, revealing strong similarities to the bi-layer \ce{Bi}2212 compound.
+The primary differences in the Fermi surface arise from the smaller anti-bonding/bonding splitting of the Fermi arc in \ce{Bi}2223, which was more pronounced in overdoped (OD) samples \cite{luo_electronic_2023}.
+In OP \ce{Bi}2223, this splitting manifests as a slight broadening near the anti-node, similar to what was observed in the OD case, although more detailed analysis is required to fully understand this feature.
 
-The second difference to FS of \ce{Bi}2212 is the existence of a third band, whose origin is most likely the inner \ce{CuO2} layer of the unit cell (Fig. \ref{fig:bi2223_fs} (c)).
-It shows a similar arc shaped dispersion as the main band and its spectral weight might be strongly matrix element dependent (Fig. \ref{fig:trilayer_splitting} (a)\&(b)).
-The band shows a similar dispersion to the main abnd close to the node, with the kink becoming stronger closer to the anti-node.
+Another significant difference is the presence of a third band/Fermi sheet, likely originating from the inner \ce{CuO2} layer of the unit cell.
+This band displays a similar arc-shaped dispersion as the main band and its intensity appears to be dependent on matrix element effects, with its spectral weight showing variation under different experimental conditions.
+The dispersion of this third band resembles that of the main band near the node, but with an increasingly pronounced kink closer to the anti-node.
 
-A typical d-wave symmetry was found for both the main main and the side Fermi arc, with an ungapped nodal position and the gap opening progressively towards the anti-node.
+A typical d-wave symmetry was observed for both the main and side Fermi arcs, with the gap closing at the nodal point and opening progressively towards the anti-node.
+Preliminary analysis suggests that the gap amplitude of the main arc, which closely resembles that of \ce{Bi}2212, is smaller than in the bi-layer compound.
+In contrast, the additional arc, attributed to the inner \ce{CuO2} layer, exhibits a larger gap than both the main arc in \ce{Bi}2223 and the arc in \ce{Bi}2212.
+This observation aligns with the composite model, where the inner layer is believed to contribute to pairing strength, thus showing a larger gap, while the outer layers govern phase stiffness.
 A more careful and quantitative analysis on the gap size along the Fermi arc has to be made, to observe any potential deviations from the d-wave symmetry as observed in the OD compound \cite{luo_electronic_2023}.
-But from the preliminary analysis it can be shown that the gap of the main arc, which is the one similar to the bi-layer compound, has a smaller gap amplitude than in \ce{Bi}2212.
-Instead the additional arc from the inner layer shows a larger gap than both the main arc in \ce{Bi}2223 and the arc in \ce{Bi}2212.
-This fact is supported by the composite picture, where the inner layer show a larger pairing strength and therefore a larger gap, and the outer layers are responsible for the phase stiffness.
 
-Furthermore it was possible to make out differences between the bi- and tri-layer regarding the energies beyond the quasiparticle peak.
-Here, the absence of the typical peak-dip-hump structure in the tri-layer stands out, but the implications are not yet obvious and a more detailed analysis is needed.
+Moreover, the absence of the typical peak-dip-hump structure in the quasiparticle spectrum of \ce{Bi}2223, compared to \ce{Bi}2212, highlights another key distinction between the bi- and tri-layer systems, though further analysis is needed to clarify the implications of this difference.
 
-Lastly, a polarization dependent loss of spectral weight at the node was observed, at the point where the umklappbands overlap.
-The reason for this is currently unknown, it is possible to speculate that hybridization between the several bands play a role, which alter the character of the band, but further investigation is needed to interpret the result.
+Additionally, a polarization-dependent loss of spectral weight at the node was observed, possibly linked to band hybridization where the umklapp bands overlap.
+The precise mechanism behind this effect remains unclear and requires further investigation.
 
-In total, this preliminary analysis showed several interesting observations that might help in characterizing the OP \ce{Bi}2223.
-A more detailed analysis on the presented data is necessary and warranted, especially with the comparison to the results on the OD compound in mind.
-The discussed data only represents a fraction of the datasets taken at the beamtime.
-Four different \ce{Bi}2223 samples were measured in total, with different combinations of sample alignment and probe polarizations as well as photon energy dependencies.
-Here a complete study of the available datasets, with all the different configurations is necessary to further understand the material.
+Overall, this preliminary analysis reveals several intriguing observations that can contribute to the understanding of OP \ce{Bi}2223, when properly evaluated and interpreted.
+A more detailed analysis of the collected data, particularly in comparison to OD \ce{Bi}2223, is needed.
+The presented data represents only a portion of the measurements obtained during the beamtime, which includes multiple samples, different alignments, probe polarizations, and photon energy dependencies.
+A comprehensive study of the complete datasets is necessary to properly characterize the material.
 
-In addition, depending on the outcome of the analysis further studies could be envisioned.
-With the access to commercial suppliers it is possible to perform more measurements, although the quality of those samples is yet to be determined.
-Possible measurements that could be performed within the LACUS facility could focus on temperature dependent scan across the superconducting phase transition or the first time-resolved measurements.
+Moving forward, further studies are encouraged, particularly with the availability of commercially sourced samples, though the quality of these samples remains to be evaluated.
+Future experiments, potentially within the LACUS facility, could include temperature-dependent scans across the superconducting transition and the pseudogap phase, or the first time-resolved measurements on \ce{Bi}2223.
