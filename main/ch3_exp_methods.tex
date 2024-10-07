@@ -1,12 +1,12 @@
 \chapter{Time \& angle resolved photoemission spectroscopy}
 
-The development and understanding of quantum materials play a huge role in the advancement of modern technologies.
+The development and understanding of quantum materials plays a huge role in the advancement of next generation technologies.
 In many of these materials, interactions and correlations of electrons have a huge impact on the general material properties such as the formation of exotic phases.
 Understanding what the impact of the electrons on these phases is and how the interactions can lead to the emergent phenomena is crucial.
 
 Angle resolved photoemission spectroscopy stands out here as a unique technique, capable of measuring the single particle spectral function and by extension mapping out the band structure in the full 3D Brillouin zone (BZ).
 The technique relies on the photoelectric effect, first observed by Hertz in 1887 \cite{hertz_ueber_1887} and later described by Einstein in 1905 \cite{einstein_uber_1905} and is fundamentally a photon-in electron-out technique.
-In recent years ARPES has matured as a technique, as can be seen in the extensive reviews on the topic, especially in the context of complex matter \cite{damascelli_angle-resolved_2003,damascelli_angle-resolved_2003,lu_angle-resolved_2012,gedik_photoemission_2017,lv_angle-resolved_2019,zhang_angle-resolved_2022}, and was adapted to several different sub-techniques addressing certain needs, such as spin-ARPES, $\mu$- or $n$-ARPES, or tr-ARPES.
+In recent years ARPES has matured as a technique, as can be seen in the extensive reviews on the topic, especially in the context of complex matter \cite{damascelli_angle-resolved_2003,damascelli_angle-resolved_2003,lu_angle-resolved_2012,gedik_photoemission_2017,lv_angle-resolved_2019,zhang_angle-resolved_2022}, and was adapted to several different sub-techniques addressing certain needs, such as spin-ARPES, $\mu$- or $n$-ARPES (ARPES with \unit{\micro\meter} or \unit{\nano\meter} probe size), or tr-ARPES.
 
 Focusing on time- and angle- resolved PES (trARPES), rapid development led to a sound understanding of this technique over the last decades, which is summarized in some of the recent reviews dedicated to trARPES \cite{smallwood_ultrafast_2016,huang_high-resolution_2022,boschini_time-resolved_2024}.
 Due to the techniques ability of measuring the transient changes to the electronic band structure, as well as interactions with other electrons or bosons (e.g. phonons) it is a powerful tool to observe out of equilibrium dynamics.
@@ -18,31 +18,29 @@ This will first be done by looking at the general equilibrium case, I will then 
 
 \section{General description}
 
-Before focusing on the time domain approach it is necessary to introduce the equilibrium case first.
-As mentioned before ARPES is a photon-in, electron out technique relying on the photoelectric effect.
-Therefore, if an incoming photon has an energy $h\nu$ that is greater than the workfunction of the material $\phi$, an electron may leave the sample with a kinetic energy corresponding to the energy difference.
-Figure \ref{fig:arpes_sketch} (a) shows a sketch of such an ARPES process.
-If electrons are bound stronger than at the Fermi-level, the binding energy has to be considered as well, which leads to energy conservation formula as
+ARPES is a photon-in electron out technique relying on the photoelectric effect.
+Figure \ref{fig:arpes_sketch} (a) shows an illustration of a typical ARPES experiment.
+Consequently, if an incoming photon has an energy $h\nu$ that is greater than the workfunction of the material $\phi$, an electron may leave the sample with a kinetic energy corresponding to the energy difference between its binding energy $E_\text{B}$, $\phi$ and $h\nu$, which leads to energy conservation formula as
 \begin{equation}
-	E_\text{kin} = h\nu - \phi - E_\text{Bin}.
+	E_\text{kin} = h\nu - \phi - E_\text{B}.
 	\label{eq_e_cons}
 \end{equation}
-The photoelectrons that leave the sample will be collected by spectrometer, such as a hemispherical analyzer and the initial density of states can be observed.
-Figure \ref{fig:arpes_sketch} (b) shows this process and relation between $E_\text{Bin}$ of the electrons within the crystal and $E_\text{kin}$ of the detected photoelectrons.
-In addition, it is possible to relate the angle at which the photoelectrons leave the sample and their respective kinetic energy to the crystal moment, that the electrons possessed inside the crystal due to momentum conservation rules.
+The photoelectrons that leave the sample are collected by spectrometer, such as a hemispherical analyzer and the joint density of states (JDOS) can be observed.
+Figure \ref{fig:arpes_sketch} (b) shows this process and relation between $E_\text{B}$ of the electrons within the crystal and $E_\text{kin}$ of the detected photoelectrons.
+In addition, it is possible to relate the angle at which the photoelectrons leave the sample and their respective kinetic energy to the crystal momentum, that the electrons possessed inside the crystal due to momentum conservation rules.
 The relation is given by
 \begin{equation}
 	\hbar \mathbf{k}_\parallel = \sqrt{2m_eE_\text{kin}} \sin\theta
 	\label{eq:mom}
 \end{equation}
-and is only valid for the in-plane momentum component.
-The out of plane component $\mathbf{k}_\perp$ is not conserved, due to an additional potential resulting from the broken symmetry at the sample surface.
-In fact $\mathbf{k}_\perp$ depends on the inner potential $V_0$, that is typically unknown before a measurement.
-The equation for the out of plane component is given by
+and is only valid for the in-plane momentum component due to translation symmetry.
+The out of plane component $\mathbf{k}_\perp$ is not conserved, due to an additional potential resulting from the broken periodicity at the sample surface.
+In the approximation of a free-electron final state, $\mathbf{k}_\perp$ depends on the inner potential $V_0$, that is typically unknown before a measurement.
+The equation for the out of plane component is then given by
 \begin{equation}
 	\hbar \mathbf{k}_\perp = \sqrt{2m_e\left(E_\text{kin}\cos^2\theta+V_0\right)}
 \end{equation}
-Instead the perpendicular momentum component can be obtained by performing photonenergy dependent scans.
+If the free-electron model for the final state is not valid for a given material, the perpendicular momentum component can still be obtained by performing photonenergy dependent scans and knowledge of the final state dispersion \cite{strocov_intrinsic_2003}.
 \begin{figure}
 	\centering
 	\begin{subfigure}[b]{0.49\textwidth}
@@ -66,44 +64,44 @@ The intensity is then given by
 	\label{eq:arpes_signal}
 \end{equation}
 The dipole matrix element corresponds to the probability of a transition between an initial and corresponding final state.
-It not only contains the probability for a direct transition between an initial and finial state $\Phi_i$ and $\Phi_f$, but also information that is sensitive to the sample geometry, light polarization and ARPES setup due to the light-matter interaction Hamiltonian,
-with the matrix element being given by
+It not only contains the probability for a direct transition between an initial and final state $\Phi_i$ and $\Phi_f$, but also information that is sensitive to the sample geometry, light polarization and ARPES setup due to the light-matter interaction Hamiltonian,
+with the matrix element being
 \begin{equation}
 	M = \braket{\Phi_f\left|H_\text{int}\right|\Phi_i} =\braket{\Phi_f\left| \mathbf{A} \cdot \mathbf{p} \right|\Phi_i}
 \end{equation}
-with the vector potential $\mathbf{A}$ and the electron momentum operator $\mathbf{p}$.
-This way depending on the parity of the initial state and vector potential, the intensity of bands can be fully suppressed depending on the probe light polarization \cite{gierz_illuminating_2011, cao_mapping_2013,zhu_layer-by-layer_2013,schuler_polarization-modulated_2022}.
+with the electromagnetic vector potential $\mathbf{A}$ and the electron momentum operator $\mathbf{p}$.
+Due to the matrix element depending on the parity of the initial state and vector potential, the photoemission signal strongly depends on the measurement geometry, probe light polarization and the orbital character of the bands.
+This can result in some cases to a full suppression or an enhancement of certain bands \cite{gierz_illuminating_2011, cao_mapping_2013,zhu_layer-by-layer_2013,schuler_polarization-modulated_2022}.
 
-Additionally $A(\mathbf{k}, \omega)=-(1/\pi)\text{Im}G(\mathbf{k}, \omega)$ is the single-particle spectral function, containing both information on the bare band dispersion of the single-particle $\epsilon_\mathbf{k}$ and its self energy $\Sigma(\mathbf{k}, \omega)$, representing the many body correlation effects influencing the single-particle \cite{mahan_many-particle_2000}.
-The Green's function captures the inherent nature of the photoemission process leaving the system in an excited state and not strictly speaking at equilibrium.
-It specifically treats the fact that an electron is removed from the system and the probability of how the system will evolve after the removal.
-It is due to that fact that correlations and interactions are already embedded into the information of the measured photoelectron.
+$A(\mathbf{k}, \omega)=-(1/\pi)\text{Im}G(\mathbf{k}, \omega)$ is the single-particle spectral function, containing both information on the bare band dispersion of the single-particle $\epsilon_\mathbf{k}$ and its self energy $\Sigma(\mathbf{k}, \omega)$, representing the many body correlation effects influencing the single-particle \cite{mahan_many-particle_2000}.
+The Green's function captures the inherent nature of the photoemission, measuring the single-particle excitation of a many-body system.
+Specifically, this function describes how an $N$ electron system responds to a single electron removal and highlights how correlations and interactions are imprinted on the measured photoemission spectrum.
 
 The complete spectral function is described by
 \begin{equation}
 	A(\mathbf{k}, \omega)= -\frac{1}{\pi} \frac{\Sigma''(\mathbf{k}, \omega)}{\left[ \omega - \epsilon_\mathbf{k} - \Sigma'(\mathbf{k}, \omega) \right]^2 + \left[ \Sigma''(\mathbf{k}, \omega) \right]^2}
 \end{equation}
 with $\Sigma'(\mathbf{k}, \omega)$ and $\Sigma''(\mathbf{k}, \omega)$ being the real and imaginary part of the self-energy respectively.
-In general, the real part of the self-energy leads to shift of the bare band dispersion $\tilde{\epsilon}_k \rightarrow \epsilon_k + \Sigma'(\mathbf{k}, \omega)$, whereas the imaginary part results in a broadening, compared to a case where no interactions are present.
+In general, the real part of the self-energy leads to shift of the bare band dispersion $\tilde{\epsilon}_k \rightarrow \epsilon_k + \Sigma'(\mathbf{k}, \omega)$, whereas the imaginary part results in an energy broadening, compared to a case where no interactions are present.
 The lifetime of the excited state, resulting from the removal of a single electron can be calculated from the imaginary part of the self-energy $\tau=\hbar/\left[2\Sigma''(\mathbf{k}, \omega)\right]$.
 A typical way of analyzing ARPES data with the purpose of extracting information on the self-energy is extracting energy distribution curves (EDC) for certain momenta, as well as looking at the momentum distribution curves (MDC) for certain energies.
 Analyzing the position of and width of the corresponding spectral features provides insight into the self-energy \cite{norman_extraction_1999, freericks_what_2021,kurleto_about_2021}.
 Also, intimate knowledge of the bare-band dispersion is beneficial for the interpretation of the ARPES signal.
 
-A more deteiles description of the equilibrium ARPES information can be found in the review by Damascelli et al. \cite{damascelli_angle-resolved_2003}.
+A more detailed description of the equilibrium ARPES information can be found in the review by Damascelli et al and Sobota et al \cite{damascelli_angle-resolved_2003,sobota_angle-resolved_2021}.
 After discussing the basic ARPES principles and the measured signal in the equilibrium case in this section, the following section will extend these fundamentals into the time domain.
 
 \section{TR-ARPES: a stroboscopic time domain approach}
 
 In order to extend ARPES into the time domain a stroboscopic pump-probe approach is used.
-Here, a first pulse, called pump pulse, creates the excitation in a system, and a second probe pulse measures the excited state.
+A first pulse, called pump pulse, creates an excitation in a system, and a second probe pulse measures the excited state.
 A delay is introduced between pump and probe, and by varying that delay the transient evolution of the system can be observed.
-In this case the probe pulse is fixed in time and used as an internal clock.
-The pump pulse is then delayed in respect to the probe pulse with the help of a translation stage.
+In this case the pump pulse functions as an internal clock, relative to which the dynamics are observed.
+Either pump or probe pulse can be delayed in respect to the other with the help of a translation stage.
 
-The here described technique uses light pulses with an energy above the materials workfunction as a probe pulse, and a pulse with an energy below the workfunction creates the excitation.
-In principle trARPES measurements using two photon absorption process, where both light pulses have an energy below the workfunction, are also possible, but will not be the topic of this chapter.
-More insight into two photon photoemission (2PPE) trARPES can be found in several dedicated reviews \cite{damascelli_multiphoton_1996,bartoli_nonlinear_1997,hofer_time-resolved_1997,cui_transient_2014}.
+Historically, first trARPES experiments were performed using two photon photoemission (2PPE), with the energy of the two individual pulses being below the workfunction, and only the combined energy is enough to create photoelectrons.
+In the context of this thesis, extreme ultraviolet (EUV) probe pulses, capable of measuring the while Brillouin zone will be used for the photoemission process, with an infrared pump pulse creating the excitation.
+More insight into two photon photoemission (2PPE) trARPES can be found in several dedicated reviews \cite{damascelli_multiphoton_1996,bartoli_nonlinear_1997,hofer_time-resolved_1997,bovensiepen_elementary_2012,cui_transient_2014}.
 
 The description and interpretation of the ARPES signal after pump excitation is not trivial.
 In a first approximation the equilibrium intensity from equation \ref{eq:arpes_signal} can be extended into the time domain
@@ -111,15 +109,15 @@ In a first approximation the equilibrium intensity from equation \ref{eq:arpes_s
 	I(\mathbf{k}, \omega, \Delta t) = A(\mathbf{k}, \omega, \Delta t)\left|M(\mathbf{k}, \omega, \Delta t)\right|^2f(\mathbf{k}, \omega, \Delta t)
 \end{equation}
 considering the the delay  $\Delta t$ between pump and probe \cite{freericks_what_2021}.
-The approximation assumes that the electrons thermalized into a quasi-equilibrium state, which often occurs after a time span of few tens or hundreds of femtosecond, depending on the material and light properties.
+The approximation assumes that the electrons thermalized into a quasi-equilibrium state, with a well defined electronic temperature, which often occurs after a time span of few tens or hundreds of femtosecond, depending on the material and light properties.
 For example it has been shown that the adiabatic band dispersion can survive even at time zero and for high pump fluences \cite{boschini_time-resolved_2024,neufeld_time-_2022}.
 
 Disentangling the various contributions is experimentally even more challenging than in the equilibrium case.
-The Fermi-Dirac function, which at equilibrium solely depends on the energy becomes momentum and time dependent $f(\omega) \rightarrow f(\omega, \mathbf{k}, \Delta t)$.
+The electron distribution, represented at equilibrium by a momentum independent Fermi-Dirac function, becomes both momentum and time dependent $f(\omega) \rightarrow f(\omega, \mathbf{k}, \Delta t)$.
 This is especially true at short delays $\Delta t \sim 0$, where the direct photoexcitation leads to a discrete excitation of unoccupied states, which is highly anisotropic in momentum space.
-After thermalization processes set in the Fermi-Dirac function starts to populate the entire BZ becoming again more isotropic.
+After thermalization processes set in to bring the system to a Fermi-Dirac distribution, the entire BZ starts to be populated, becoming more isotropic again.
 The state at these time scales can be described in an effective temperature model, in which an effective, time dependent electronic temperature is contained in the Fermi-Dirac equation.
-An example of the time dependent ARPES signal can be seen in Fig. \ref{fig:example_bandstructure}.
+An example of such electron population dynamics and the corresponding time dependent ARPES signal is sketched in Fig. \ref{fig:example_bandstructure}.
 
 \begin{figure}
 	\centering
@@ -129,14 +127,12 @@ An example of the time dependent ARPES signal can be seen in Fig. \ref{fig:examp
 \end{figure}
 
 
-Additionally one has to consider the effect of a potentially time dependent matrix element.
-At equilibrium the matrix element connects an initial and final state by the light-matter interaction Hamiltonian $H_\text{int} \propto \mathbf{A\cdot\mathbf{p}}$.
-Here, $\mathbf{A}$ describes the electromagnetic vector potential and $\mathbf{p}$ the electron momentum operator.
+Additionally, one has to consider the effect of a potentially time dependent matrix element.
 Therefore, in ARPES both the measurement geometric, light polarization and sample geometry are relevant for the signal, which contains orbital information of the initial state of the emitted photoelectron.
-Typically, any time evolution of the matrix element is ignored in trARPES measurements, but it has been shown that such an evolution can occur \cite{boschini_role_2020,freericks_constant_2016}.
+Recent experiments have indeed reported that a modification of the matrix element can occur \cite{boschini_role_2020,freericks_constant_2016}.
 This shows that polarization dependent studies should be considered for trARPES experiments.
 
-The third contribution to the signal at equilibrium was the spectral function $A(\mathbf{k}, \omega)$.
+The third contribution to the signal at equilibrium is the spectral function $A(\mathbf{k}, \omega)$.
 In trARPES measurements the spectral function $A(\mathbf{k}, \omega, \Delta t)$ encompasses transient changes of many body interactions, which are contained in the self-energy, or coupling to bosonic modes (e.g. phonons)
 For example the coupling to phonons will result in a oscillatory modulation of the bare band dispersion, which can be seen in chapter \ref{ch_tate2}.
 A detailed description with examples for the complexity of the trARPES signal is given in the review by Boschini et al. \cite{boschini_time-resolved_2024}.
@@ -147,5 +143,5 @@ Modeling these effects is a big theoretical challenge.
 This becomes especially evident when considering effects like Floquet-Bloch states, which do not exist without the presence of a light pulse.
 
 In general trARPES is a powerful technique, capable of observing many transient effects such as band structure changes, renormalizations due to changes in many-body effects, couplings with phonons.
-It can not only provide insight into the electronic properties at equilibrium but also observe pure light-induced phenomena.
+It can not only provide insight into the electronic properties at equilibrium but also observe purely light-induced phenomena, including Floquet states, which will not be discussed in detail in this thesis.
 The chapters \ref{ch:bi2212} and \ref{ch:tate2} will discuss two studies on \ce{Bi}2212 and \ce{TaTe2} that demonstrate the importance of trARPES for out of equilibrium studies.
