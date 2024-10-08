@@ -61,7 +61,7 @@ Figure \ref{fig:bscco_structure} depicts the crystal structures of the single-, 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{images/bi2212/BSCCO_structure}
-	\caption{Crystal structure of single-, bi-, and tri-layer \ce{Bi}-based cuprates \ce{Bi2Sr2Ca_{n-1}Cu_nO_{4+2n}} (\ce{Bi2201}, \ce{Bi2212}, and \ce{Bi2223}). Adapted from Ref. \cite{nazargulov_english_2009}.}
+	\caption{Crystal structure of single-, bi-, and tri-layer \ce{Bi}-based cuprates \ce{Bi2Sr2Ca_{n-1}Cu_nO_{4+2n}} (\ce{Bi}2201, \ce{Bi}2212, and \ce{Bi}2223). Adapted from Ref. \cite{nazargulov_english_2009}.}
 	\label{fig:bscco_structure}
 \end{figure}
 
@@ -69,16 +69,9 @@ The \ce{CuO2} planes consist of \ce{Cu^{2+}} and \ce{O^-} ions, resulting in a $
 Due to crystal field splitting places this hole is located in the $3d_{x^2-y^2}$ orbital, which is the highest-energy orbital.
 The single-hole occupancy can be described using a Mott-Hubbard Hamiltonian at half-filling, representing the basic electronic structure of the system.
 Due to the large on-site Coulomb repulsion $U$, which is approximately \qty{8}{\electronvolt}, the $d$-band splits into an upper and lower Hubbard band (UHB and LHB).
-Under typical conditions, this would make \ce{Bi2212} a Mott-Hubbard insulator.
+Under typical conditions, this would make \ce{Bi}2212 a Mott-Hubbard insulator.
 However, in the present case the charge transfer gap between the \ce{O} $2p$ and the \ce{Cu} $3d$ orbital is smaller, hence the classification as a Charge-Transfer insulator \cite{zaanen_band_1985,zegrodnik_superconductivity_2019}.
 Figure \ref{fig:cuo_dos} shows a schematic of the \ce{CuO2} plaquette and the corresponding density of states (DOS) for doped and undoped cases.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\linewidth]{images/bi2212/fs_bi2212}
-	\caption{Fermi surface of \ce{Bi}2212. The center of the Brillouin zone (BZ) is marked with $\Gamma$, and a corner of the BZ is marked as ($\pi$,$\pi$), representative for all four corners. The nodal (gapless) region and the anti-nodal (gapped) region are also indicated.}
-	\label{fig:fsbi2212}
-\end{figure}
 
 In cuprates, the valence states, composed primarily of \ce{Cu} $d$-bands and \ce{O} $p$-bands, are largely responsible for their electronic properties.
 Additionally, the physics of the cuprates is highly dependent on the amount of charges, which can be adjusted by adding holes or electrons to the system in a chemical doping process.
@@ -93,12 +86,25 @@ In both cuprate and pnictide superconductors, Lifshitz transitions have been obs
 In \ce{Bi}2212, this transition is linked to the presence of a flat band or extended saddle point near ($\pi$,$0$), which shifts towards the Fermi level with increasing doping and crosses it at around 0.22 holes \cite{campuzano_photoemission_2004, gofron_observation_1994}.
 The Lifshitz transition in cuprates is often accompanied by the disappearance of the pseudogap state \cite{matt_electron_2015, benhabib_collapse_2015} and the onset of the strange metal phase, suggesting the proximity of a quantum critical point \cite{michon_thermodynamic_2019, chen_incoherent_2019, cooper_anomalous_2009, badoux_change_2016, putzke_reduced_2021}.
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{images/bi2212/fs_bi2212}
+	\caption{Fermi surface of \ce{Bi}2212. The center of the Brillouin zone (BZ) is marked with $\Gamma$, and a corner of the BZ is marked as ($\pi$,$\pi$), representative for all four corners. The nodal (gapless) region and the anti-nodal (gapped) region are also indicated.}
+	\label{fig:fsbi2212}
+\end{figure}
+
 Two distinctive areas can be identified in the Fermi surface.
 The region around the ($\pi$,$0$) points is called the anti-node and corresponds to the region in which a superconducting gap opens below the superconducting transition temperature $T_c$.
 The second region corresponds instead to the area at the center of the arcs (approximately at ($\frac{\pi}{2}$,$\frac{\pi}{2}$)) and is called the nodal-area.
 As its name suggests, no gap opens up in this region of the Fermi surface, even when entering the superconducting phase.
 
-\begin{figure}[t]
+The electronic properties of cuprates are heavily influenced by the hole-doping level, leading to a rich phase diagram with multiple exotic phases. Figure \ref{fig:phase_diag} (a) presents a schematic of the hole-doped cuprate phase diagram.
+In the undoped state, the material behaves as a Mott insulator due to strong electron correlations, characterized by long-range antiferromagnetic order below a Néel temperature of around \qtyrange{300}{400}{\kelvin}.
+Increasing hole doping leads to the emergence of superconductivity between 0.05 and 0.25 holes per unit cell.
+The superconducting phase exhibits a dome-like shape in the phase diagram, peaking at an optimal doping, where \ce{Bi}2212 achieves a maximum critical temperature $T_c$ of approximately \qty{90}{\kelvin} at a doping level of 0.16.
+Doping levels below and above this point are referred to as underdoped (UD) and overdoped (OD), respectively.
+
+\begin{figure}[bh]
 	\centering
 	\begin{subfigure}[b]{0.49\textwidth}
 		\includegraphics[width=\textwidth]{bi2212/cuo}
@@ -111,12 +117,6 @@ As its name suggests, no gap opens up in this region of the Fermi surface, even 
 	\caption{(a) Sketch of the \ce{CuO} plane, illustrating the \ce{Cu} $3d_{x^2-y^2}$ and \ce{O} $2p_{x,y}$ orbitals. (b) Sketch of the density of states (DOS) near the Fermi level ($E_F$) for the doped (top) and undoped (bottom) cases.}
 	\label{fig:cuo_dos}
 \end{figure}
-
-The electronic properties of cuprates are heavily influenced by the hole-doping level, leading to a rich phase diagram with multiple exotic phases. Figure \ref{fig:phase_diag} (a) presents a schematic of the hole-doped cuprate phase diagram.
-In the undoped state, the material behaves as a Mott insulator due to strong electron correlations, characterized by long-range antiferromagnetic order below a Néel temperature of around \qtyrange{300}{400}{\kelvin}.
-Increasing hole doping leads to the emergence of superconductivity between 0.05 and 0.25 holes per unit cell.
-The superconducting phase exhibits a dome-like shape in the phase diagram, peaking at an optimal doping, where \ce{Bi2212} achieves a maximum critical temperature $T_c$ of approximately \qty{90}{\kelvin} at a doping level of 0.16.
-Doping levels below and above this point are referred to as underdoped (UD) and overdoped (OD), respectively.
 
 The superconducting (SC) phase in cuprates features a momentum-dependent $d$-wave gap symmetry, which has been observed using various experimental techniques, including SQUID, ARPES, STM, and neutron scattering \cite{wollman_experimental_1993, tsuei_pairing_1994, tsuei_pairing_1996, shen_anomalously_1993, ding_angle-resolved_1996, chen_unconventional_2022, renner_vacuum_1995, pan_microscopic_2001, gu_directly_2019, devereaux_electronic_1994, sacuto_nodes_1997, fong_neutron_1999}.
 The amplitude of this gap is described by the equation
@@ -133,6 +133,20 @@ The maximum doping, as a function of temperature, for which the pseudogap phase 
 A complete understanding of the pseudogap phase remains elusive, but evidence points to its connection with short-range antiferromagnetic correlations \cite{zhang_effective_1988, rice_theory_1973}.
 The interplay and coexistence of the PG and SC phase is still a puzzling observation and the mechanism behind one of the big questions in cuprate superconductors.
 
+\begin{figure}[bh]
+	\centering
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/phase_diag}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{bi2212/fs_dwave}
+		\caption{}
+	\end{subfigure}
+	\caption{(a) Sketch of the phase diagram of hole-doped cuprates. Adapted from Ref. \cite{keimer_quantum_2015}. (b) Sketch of the Fermi surface of \ce{Bi}2212, with the red line representing the momentum-dependent gap magnitude, corresponding to the d-wave symmetry. Adapted from Ref. \cite{zhang_photoinduced_2017}.}
+	\label{fig:phase_diag}
+\end{figure}
+
 Further increasing the doping level beyond $p^*$ leads to the formation of the "strange metal" phase.
 Also the microscopic mechanisms responsible for the strange metal phase are largely unknown.
 In this phase, the resistivity shows a linear temperature dependence, extending to temperatures as high as a few hundred kelvin in cuprates \cite{martin_normal-state_1990, daou_linear_2009, cooper_anomalous_2009}.
@@ -143,20 +157,6 @@ It typically emerges near a quantum critical point \cite{cooper_anomalous_2009,v
 \end{equation}
 where $\hbar$ is the Planck constant and $k_B$ the Boltzmann constant \cite{ataei_electrons_2022,bruin_similarity_2013}.
 A further increase in doping, into the heavily overdoped regime, leads to the appearance of a Fermi-liquid phase \cite{barisic_evidence_2019}, in which the linear temperature dependence of the strange metal changes to the quadratic dependence of the resistivity $\rho\sim T^2$ \cite{nakamae_electronic_2003,hussey_coherent_2003,plate_fermi_2005}.
-
-\begin{figure}[t]
-	\centering
-	\begin{subfigure}[b]{0.49\textwidth}
-		\includegraphics[width=\textwidth]{bi2212/phase_diag}
-		\caption{}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{bi2212/fs_dwave}
-		\caption{}
-	\end{subfigure}
-	\caption{(a) Sketch of the phase diagram of hole-doped cuprates. Adapted from Ref. \cite{keimer_quantum_2015}. (b) Sketch of the Fermi surface of \ce{Bi2212}, with the red line representing the momentum-dependent gap magnitude, corresponding to the d-wave symmetry. Adapted from Ref. \cite{zhang_photoinduced_2017}.}
-	\label{fig:phase_diag}
-\end{figure}
 
 Another notable phase in \ce{Bi}2212 and other cuprates is the charge density wave (CDW) phase.
 The physics of charge density waves (CDWs) is explored in greater detail in the chapter focused on the CDW compound \ce{TaTe2}, found in Section \ref{sec:cdw},
@@ -225,7 +225,7 @@ Following this, the crucible was rapidly cooled (about \qty{10}{\degreeCelsius/\
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/bi2212/sample_res.pdf}
-	\caption{Electrical resistance of the \ce{Bi2212} sample used in the experiment. The superconducting transition temperatures are $T_{c,\text{onset}} = \qty{92.3}{\kelvin}$, $T_{c,\text{50\%}} = \qty{90.1}{\kelvin}$, and $T_{c,\text{zero}} = \qty{85.7}{\kelvin}$.}
+	\caption{Electrical resistance of the \ce{Bi}2212 sample used in the experiment. The superconducting transition temperatures are $T_{c,\text{onset}} = \qty{92.3}{\kelvin}$, $T_{c,\text{50\%}} = \qty{90.1}{\kelvin}$, and $T_{c,\text{zero}} = \qty{85.7}{\kelvin}$.}
 	\label{fig:sample_res}
 \end{figure}
 
@@ -261,7 +261,7 @@ As a result, the quasiparticle peak is seen at the Fermi level, along with its c
 		\includegraphics[width=\textwidth]{bi2212/fs_cut}
 		\caption{}
 	\end{subfigure}
-	\caption{(a) Fermi surface of \ce{Bi2212}, with the black dashed line indicating the cut where the bandmap in (b) is taken. (b) Bandmap between the node and anti-node, showing a parabolic feature terminating at the quasiparticle peaks at $E_F$, along with the high-energy \ce{Cu} d-bands and the waterfall feature connecting them.}
+	\caption{(a) Fermi surface of \ce{Bi}2212, with the black dashed line indicating the cut where the bandmap in (b) is taken. (b) Bandmap between the node and anti-node, showing a parabolic feature terminating at the quasiparticle peaks at $E_F$, along with the high-energy \ce{Cu} d-bands and the waterfall feature connecting them.}
 	\label{fig:fs_cut}
 \end{figure}
 
@@ -333,7 +333,7 @@ In this section, I explore whether a similar anisotropic behavior is evident in 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.5\textwidth]{images/bi2212/fermi_map_ang_dep}
-	\caption{Fermi surface of \ce{Bi2212} as shown in Fig. \ref{fig:fs_cut}. The black dashed lines indicate the series of cuts along which fluence dependence was recorded.}
+	\caption{Fermi surface of \ce{Bi}2212 as shown in Fig. \ref{fig:fs_cut}. The black dashed lines indicate the series of cuts along which fluence dependence was recorded.}
 	\label{fig:fermimap_angdep}
 \end{figure}
 
@@ -537,7 +537,7 @@ The model parameters were compared to literature values for the unpumped state, 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.6\linewidth]{images/bi2212/Cu_plackett}
-	\caption{Schematic of the \ce{CuO} plaquette, which plays a central role in the electronic properties of \ce{Bi2212}. The key microscopic charge properties responsible for changes in the Fermi surface (FS) are also indicated, including the Coulomb potential $U$, the charge transfer energy (CT), and the nearest and next-nearest neighbor hopping parameters $t$ and $t'$.}
+	\caption{Schematic of the \ce{CuO} plaquette, which plays a central role in the electronic properties of \ce{Bi}2212. The key microscopic charge properties responsible for changes in the Fermi surface (FS) are also indicated, including the Coulomb potential $U$, the charge transfer energy (CT), and the nearest and next-nearest neighbor hopping parameters $t$ and $t'$.}
 	\label{fig:cuplackett}
 \end{figure}
 
@@ -558,7 +558,7 @@ For higher fluences, $t'$ and $t''$ were kept constant, justified by results sho
 The chemical potential $\mu$ was adjusted according to the relative shift extracted in the previous section, while the nearest neighbor hopping $t$ remained the only free parameter, with its value from the lower fluence case used as the initial guess.
 This iterative process was used to reconstruct the FS for the full fluence evolution.
 
-\begin{figure}[b!]
+\begin{figure}[t]
 	\centering
 	\begin{subfigure}[t!]{0.33\textwidth}
 		\includegraphics[width=\textwidth]{bi2212/single_fluence_tb}
@@ -568,7 +568,7 @@ This iterative process was used to reconstruct the FS for the full fluence evolu
 		\includegraphics[width=\textwidth]{bi2212/fs_tb_full}
 		\caption{}
 	\end{subfigure}
-	\caption{(a) Tight binding Fermi surface (FS) for a fluence of \qty{0.09}{\milli\joule/\centi\meter\squared}, shown alongside optimally doped \ce{Bi2212} literature data from Ref. \cite{kondo_hole-concentration_2004}. (b) Tight binding FS for all measured fluences. The full FS is recreated using the material's four-fold symmetry, with the measured data points marked accordingly.}
+	\caption{(a) Tight binding Fermi surface (FS) for a fluence of \qty{0.09}{\milli\joule/\centi\meter\squared}, shown alongside optimally doped \ce{Bi}2212 literature data from Ref. \cite{kondo_hole-concentration_2004}. (b) Tight binding FS for all measured fluences. The full FS is recreated using the material's four-fold symmetry, with the measured data points marked accordingly.}
 	\label{fig:fs_tb}
 \end{figure}
 
@@ -612,7 +612,7 @@ However, surprisingly, no change in the quasiparticle peak was detected during t
 This implies that not only does the system fail to return to equilibrium within the observed delay window, but it also does not return to equilibrium between successive probe pulses.
 Therefore, a lower limit for the effect duration can be placed by the inverse repetition rate of the laser, which corresponds to $\tau=\frac{1}{\qty{6}{\kilo\hertz}}=\qty{166.66}{\mu\second}$.
 
-\begin{figure}
+\begin{figure}[bh!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{images/bi2212/pulse_scheme}
 	\caption{Sketch of the pulse scheme. A fixed delay position of \qty{-2}{\pico\second} was used for the fluence-dependent scans, resulting in an overall time span of \qty{166.66}{\micro\second} to \qty{-2}{\pico\second} between the sample excitation and the probe.}
