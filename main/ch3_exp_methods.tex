@@ -26,7 +26,7 @@ When an incoming photon with energy $h\nu$ exceeds the material's work function 
 This relationship is captured by the energy conservation equation
 \begin{equation}
 	E_\text{kin} = h\nu - \phi - E_\text{B}.
-	\label{eq_e_cons}
+	\label{eq:e_cons}
 \end{equation}
 The photoelectrons emitted from the sample are collected by a spectrometer, such as a hemispherical analyzer, allowing the joint density of states (JDOS) to be observed.
 Figure \ref{fig:arpes_sketch} (b) illustrates the relationship between the binding energy $E_\text{B}$ of electrons within the crystal and the kinetic energy $E_\text{kin}$ of the detected photoelectrons.
@@ -35,7 +35,7 @@ In addition to energy, the angle at which the photoelectrons are emitted and the
 For the in-plane momentum component, this relation is given by
 \begin{equation}
 	\hbar \mathbf{k}\parallel = \sqrt{2m_eE\text{kin}} \sin\theta,
-	\label{eq}
+	\label{eq:mom}
 \end{equation}
 where $\theta$ is the emission angle.
 However, the out-of-plane momentum component $\mathbf{k}\perp$ is not conserved due to the broken periodicity at the surface of the material.
@@ -57,7 +57,7 @@ If the free-electron approximation does not hold, the perpendicular momentum com
 		\includegraphics[width=\linewidth]{images/trarpes/dos}
 		\caption{}
 	\end{subfigure}
-	\caption{(a) The figure shows a sketch of trARPES setup. The red pulse excites the sample and the purple one probes the excitation and creates the photoelectrons according to equations \ref{eq_e_cons} \& \ref{eq:mom}. (b) Visualizes the energy relation within the band strucutre of the material (left) as a function of binding energy, to the detected energy in $E_\text{kin}$ (right) according to Eq. \ref{eq_e_cons}. From \cite{hufner_photoelectron_1995}.}
+	\caption{(a) Sketch of the trARPES setup. The red pulse excites the sample, while the purple pulse probes the excitation and generates photoelectrons according to Eqs. \ref{eq:e_cons} and \ref{eq:mom}. (b) Visualization of the energy relation within the material’s band structure (left), as a function of binding energy, to the detected kinetic energy $E_\text{kin}$ (right) according to Eq. \ref{eq:e_cons}. Adapted from Ref. \cite{hufner_photoelectron_1995}.}
 	\label{fig:arpes_sketch}
 \end{figure}
 
@@ -67,7 +67,7 @@ The sudden approximation assumes that the photoemission process occurs rapidly, 
 The intensity is then given by
 \begin{equation}
 	I(\mathbf{k}, \omega) = A(\mathbf{k}, \omega)\left|M(\mathbf{k}, \omega)\right|^2f(\omega),
-	\label{eq}
+	\label{eq:spectral}
 \end{equation}
 where the matrix element $M(\mathbf{k}, \omega)$ represents the probability of the transition between an initial and final state
 It not only contains the probability for a direct transition between an initial and final state $\Phi_i$ and $\Phi_f$, but also information that is sensitive to the sample geometry, light polarization and ARPES setup due to the light-matter interaction Hamiltonian $H_\text{int}$.
@@ -128,7 +128,7 @@ Figure \ref{fig:example_bandstructure} sketches an example of such electron popu
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{images/trarpes/example_bandstructure}
-	\caption{The figure illustrates the trARPES process with exemplary transient band strucutre evolution. From \cite{boschini_time-resolved_2024}. (Left) shows the sequence from equilibrium, to excitation when the pump pulse arrived at the sample and finally photoemission from the excited state when the probe pulse arrives. (Right) Shows a sequence of band maps for an exemplary Dirac cone (top) and the corresponding difference maps to equilibrium (bottom) for four different time steps. Before $t_0$ the equilibrium band structure can be seen. At $t_0$ a direct transition, as indicated by the red dashed arrow occurs, corresponding to the energy of the pump pulse, at timescales corresponding to the electron-electron scattering time $\tau_{ee}$ the initial distribution begins to thermalize, this population decays at longer timescales.}
+	\caption{Illustration of the trARPES process with exemplary transient band strucutre evolution. Adapted from Ref. \cite{boschini_time-resolved_2024}. (Left) shows the sequence from equilibrium, to excitation when the pump pulse arrived at the sample and finally photoemission from the excited state when the probe pulse arrives. (Right) Shows a sequence of band maps for an exemplary Dirac cone (top) and the corresponding difference maps to equilibrium (bottom) for four different time steps. Before $t_0$ the equilibrium band structure can be seen. At $t_0$ a direct transition, as indicated by the red dashed arrow occurs, corresponding to the energy of the pump pulse, at timescales corresponding to the electron-electron scattering time $\tau_{ee}$ the initial distribution begins to thermalize, this population decays at longer timescales.}
 	\label{fig:example_bandstructure}
 \end{figure}
 
