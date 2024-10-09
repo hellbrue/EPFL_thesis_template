@@ -550,7 +550,7 @@ Additionally, the residual spectral weight will be discussed in terms of a metas
 In the previous section, we examined the dynamics at both low and room temperatures, revealing strong momentum- and energy-dependent oscillations in the intensity of each trace.
 These oscillations are the focus of this section.
 
-Coherent oscillations in delay traces of trARPES measurements are typically indicative of phonon interactions.
+Coherent oscillations in delay traces of trARPES measurements are typically indicative of collective modes (either structural or electronic), which are very often phonons.
 ARPES measures only the single-particle spectral function, so quasiparticles like phonons themselves cannot be directly observed.
 Instead, information about phonons is imprinted on the measured photoelectrons through electron-phonon coupling.
 When this coupling is sufficiently strong, it is possible to observe oscillations in the time traces of a trARPES experiment.
@@ -654,12 +654,14 @@ Since the \qty{0.4}{\tera\hertz} mode lies at the lower end of the Fourier trace
 To verify this, a cosine curve is fitted along with the decay model from Eq. \ref{eq:decay_model} and the frequency of the cosine function is extracted. 
 This fit function is given by
 \begin{equation}
-	f_\text{decay}(t) + f_\text{step}(t, t_0) * A * \cos(2\pi t+\phi) + C
+	f_\text{fit}(t) = f_\text{decay}(t) + f_\text{step}(t, t_0) \cdot A \cdot \cos(2\pi t+\phi) + C
 \end{equation}
 with $f_\text{decay}$ being the decay model of equation \ref{eq:decay_model}, an offset phase $\phi$ and a step function $f_\text{step}$.
 The step function is necessary because the oscillation only occur at or after time zero $t_0$.
 Repeating this fit procedure for traces that show the \qty{0.4}{\tera\hertz} mode in Fig. \ref{fig:TaTe_FFT_betw}, confirms that the delay traces can be fitted by a cosine function with a frequency of \qty{0.4}{\tera\hertz}.
 An example of this fit procedure can be seen in Fig. \ref{fig:TaTe_cosine}.
+Additionally, the procedure was performed for each individual pixel, similar to Fig. \ref{fig:TaTe_FFT_betw}.
+The resulting bandmaps look nearly identical, confirming the validity of the FFT results.
 
 One of the central questions regarding \ce{TaTe2} is the nature of its CDW.
 The previous section presented evidence of the CDW's strong structural character, revealed through its delayed response to light excitation.
