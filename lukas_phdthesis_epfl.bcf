@@ -2376,6 +2376,46 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">tail/bib_thesis_lukas.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1" intorder="1">hertz_ueber_1887</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">einstein_uber_1905</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">damascelli_angle-resolved_2003</bcf:citekey>
+    <bcf:citekey order="3" intorder="2">damascelli_angle-resolved_2003</bcf:citekey>
+    <bcf:citekey order="3" intorder="3">lu_angle-resolved_2012</bcf:citekey>
+    <bcf:citekey order="3" intorder="4">gedik_photoemission_2017</bcf:citekey>
+    <bcf:citekey order="3" intorder="5">lv_angle-resolved_2019</bcf:citekey>
+    <bcf:citekey order="3" intorder="6">zhang_angle-resolved_2022</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">smallwood_ultrafast_2016</bcf:citekey>
+    <bcf:citekey order="4" intorder="2">huang_high-resolution_2022</bcf:citekey>
+    <bcf:citekey order="4" intorder="3">boschini_time-resolved_2024</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">strocov_intrinsic_2003</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">hufner_photoelectron_1995</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">hufner_photoelectron_1995</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">gierz_illuminating_2011</bcf:citekey>
+    <bcf:citekey order="8" intorder="2">cao_mapping_2013</bcf:citekey>
+    <bcf:citekey order="8" intorder="3">zhu_layer-by-layer_2013</bcf:citekey>
+    <bcf:citekey order="8" intorder="4">schuler_polarization-modulated_2022</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">mahan_many-particle_2000</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">norman_extraction_1999</bcf:citekey>
+    <bcf:citekey order="10" intorder="2">freericks_what_2021</bcf:citekey>
+    <bcf:citekey order="10" intorder="3">kurleto_about_2021</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">damascelli_angle-resolved_2003</bcf:citekey>
+    <bcf:citekey order="11" intorder="2">sobota_angle-resolved_2021</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">damascelli_multiphoton_1996</bcf:citekey>
+    <bcf:citekey order="12" intorder="2">bartoli_nonlinear_1997</bcf:citekey>
+    <bcf:citekey order="12" intorder="3">hofer_time-resolved_1997</bcf:citekey>
+    <bcf:citekey order="12" intorder="4">bovensiepen_elementary_2012</bcf:citekey>
+    <bcf:citekey order="12" intorder="5">cui_transient_2014</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">freericks_what_2021</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">boschini_time-resolved_2024</bcf:citekey>
+    <bcf:citekey order="14" intorder="2">neufeld_time-_2022</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">boschini_time-resolved_2024</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">boschini_time-resolved_2024</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">boschini_role_2020</bcf:citekey>
+    <bcf:citekey order="17" intorder="2">freericks_constant_2016</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">boschini_time-resolved_2024</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">schuler_theory_2021</bcf:citekey>
+    <bcf:citekey order="19" intorder="2">freericks_what_2021</bcf:citekey>
+    <bcf:citekey order="19" intorder="3">neufeld_time-_2022</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
