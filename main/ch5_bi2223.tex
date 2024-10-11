@@ -15,7 +15,7 @@ Instead, they display a relatively constant $T_c$ in the overdoped regime, sugge
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\linewidth]{images/bi2223/tc_dep}
+	\includegraphics[width=0.8\linewidth]{images/bi2223_pp/tc_dep}
 	\caption{(a) Dependence of the maximum critical temperature ($T_c$) on the number of \ce{CuO2} layers for three different cuprate families. In each case, the tri-layer compound exhibits the highest $T_c$. (b) Doping dependence of the critical temperature, with doping normalized to the optimally doped state. \ce{Bi}2212 and \ce{Bi}2223 are compared, highlighting the different behavior of $T_c$ in the overdoped regime for the tri-layer cuprates. Adapted from \cite{luo_electronic_2023}.}
 	\label{fig:tcdep}
 \end{figure}
@@ -37,23 +37,31 @@ This will be followed by an analysis of the data obtained from our measurements 
 
 As introduced earlier, three-layer band splitting in the cuprate \ce{Bi}2223 has so far only been observed in its overdoped (OD) state \cite{luo_electronic_2023}.
 Recent ARPES measurements have provided the first clear evidence of this splitting, capturing the electronic structure in a limited window around one Fermi arc.
-The data revealed two bands similar to the bi-layer splitting seen in \ce{Bi}2212, as well as a third, well-separated band (see Fig. \ref{fig:arpes_sketch} (a)).
+The data revealed two bands similar to the bi-layer splitting seen in \ce{Bi}2212, as well as a third, well-separated band (see Fig. \ref{fig:bi2223_fs_lit} (a)).
 Energy distribution curves (EDCs) symmetrized around $E_F$ allowed for the extraction of superconducting gaps, with a gap amplitudes of approximately \qtylist{17;29;62}{\milli\electronvolt}, for the three bands respectively.
-Notably, the gap evolution demonstrated a subtle deviation from the typical d-wave symmetry (see Fig. \ref{fig:arpes_sketch} (b)).
+Notably, the gap evolution demonstrated a subtle deviation from the typical d-wave symmetry (see Fig. \ref{fig:bi2223_fs_lit} (b)).
 
+%\begin{figure}[t]
+%	\centering
+%	\begin{subfigure}[b]{0.4\textwidth}
+%		\includegraphics[width=\linewidth]{images/bi2223/fermi_surface}
+%		\caption{}
+%	\end{subfigure}
+%	\begin{subfigure}[b]{0.3\textwidth}
+%		\includegraphics[width=\linewidth]{images/bi2223/gap_size}
+%		\caption{}
+%	\end{subfigure}
+%	\caption{(a) The Fermi surface of \ce{Bi}2223, displaying the splitting into three separate Fermi surface sheets. (b) The gap amplitude for the three different bands. The gap amplitude is extracted from the symmetrized EDC curves, with a slight deviation from typical d-wave symmetry observed. Adapted from \cite{luo_electronic_2023}.}
+%	\label{fig:arpes_sketch}
+%\end{figure}
 \begin{figure}[t]
 	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\includegraphics[width=\linewidth]{images/bi2223/fermi_surface}
-		\caption{}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.3\textwidth}
-		\includegraphics[width=\linewidth]{images/bi2223/gap_size}
-		\caption{}
-	\end{subfigure}
+	\includegraphics[width=\linewidth]{images/bi2223_pp/bi2223_fs_lit}
 	\caption{(a) The Fermi surface of \ce{Bi}2223, displaying the splitting into three separate Fermi surface sheets. (b) The gap amplitude for the three different bands. The gap amplitude is extracted from the symmetrized EDC curves, with a slight deviation from typical d-wave symmetry observed. Adapted from \cite{luo_electronic_2023}.}
-	\label{fig:arpes_sketch}
+	\label{fig:bi2223_fs_lit}
 \end{figure}
+
+
 
 To complement the experimental results, the measured band structure was modeled using a tight-binding approach, not dissimilar to the methodology employed in previous chapters \cite{luo_subtle_2021}.
 In the case of the three-layer \ce{Bi}2223, contributions from the electronic states in both the inner and outer \ce{CuO2} planes were taken into account.
@@ -108,42 +116,56 @@ The Fermi surface at \qty{12}{\kelvin}, shown in Fig. \ref{fig:bi2223_fs} (a), e
 It was first expected to observe a clear tri-layer splitting, somewhat resembling the \ce{Bi}2212 bonding/anti-bonding splitting.
 Instead the observed arcs of \ce{Bi}2223 exhibit a broadening near the anti-node, which may suggest the presence of a small splitting that remains unresolved in these measurements (see Fig. \ref{fig:bi2223_fs} (b)).
 
+%\begin{figure}[t!]
+%	\centering
+%	\begin{subfigure}[b]{0.6\textwidth}
+%		\includegraphics[width=\linewidth]{images/bi2223/Bi2223_FS_wMarkers}
+%		\caption{}
+%	\end{subfigure}
+%	\\
+%	\begin{subfigure}[b]{0.6\textwidth}
+%		\includegraphics[width=\linewidth]{images/bi2223/Bi2223_FS_bilayer}
+%		\caption{}
+%	\end{subfigure}
+%	\begin{subfigure}[b]{0.3\textwidth}
+%		\includegraphics[width=\linewidth]{images/bi2223/Bi2223_FS_trilayer}
+%		\caption{}
+%	\end{subfigure}
+%	\caption{(a) The Fermi surface of \ce{Bi}2223, with red crosses marking the positions where EDCs were taken for Fig. \ref{fig:gap_bilayer}. (b) A zoomed view of the lower right Fermi arc in (a), highlighting the broadened region near the anti-node. (c) A zoomed view with adjusted contrast to better observe the additional Fermi sheet from the inner \ce{CuO2} layer, indicated by arrows in both (b) and (c).}
+%	\label{fig:bi2223_fs}
+%\end{figure}
 \begin{figure}[t!]
 	\centering
-	\begin{subfigure}[b]{0.6\textwidth}
-		\includegraphics[width=\linewidth]{images/bi2223/Bi2223_FS_wMarkers}
-		\caption{}
-	\end{subfigure}
-	\\
-	\begin{subfigure}[b]{0.6\textwidth}
-		\includegraphics[width=\linewidth]{images/bi2223/Bi2223_FS_bilayer}
-		\caption{}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.3\textwidth}
-		\includegraphics[width=\linewidth]{images/bi2223/Bi2223_FS_trilayer}
-		\caption{}
-	\end{subfigure}
+	\includegraphics[width=\linewidth]{images/bi2223_pp/bi2223_fs}
 	\caption{(a) The Fermi surface of \ce{Bi}2223, with red crosses marking the positions where EDCs were taken for Fig. \ref{fig:gap_bilayer}. (b) A zoomed view of the lower right Fermi arc in (a), highlighting the broadened region near the anti-node. (c) A zoomed view with adjusted contrast to better observe the additional Fermi sheet from the inner \ce{CuO2} layer, indicated by arrows in both (b) and (c)}
 	\label{fig:bi2223_fs}
 \end{figure}
 
+
 A closer examination of the Fermi surface, presented in Fig. \ref{fig:bi2223_fs} (c), reveals an additional faint arc-like feature, neighboring the primary Fermi arc.
-This feature is reminiscent of the band identified in overdoped \ce{Bi}2223 data ($\gamma$ sheet, solid red line, see Fig. \ref{fig:arpes_sketch} (a)), as reported by Luo et al. \cite{luo_electronic_2023}.
+This feature is reminiscent of the band identified in overdoped \ce{Bi}2223 data ($\gamma$ sheet, solid red line, see Fig. \ref{fig:bi2223_fs_lit} (a)), as reported by Luo et al. \cite{luo_electronic_2023}.
 This observation hints at the presence of the expected tri-layer band splitting with two near degenerate bands, although further analysis is required to confirm its exact nature.
 
+%\begin{figure}[t]
+%	\centering
+%	\begin{subfigure}[b]{0.49\textwidth}
+%		\includegraphics[width=\linewidth]{images/bi2223/Bi2223_EDCs}
+%		\caption{}
+%	\end{subfigure}
+%	\begin{subfigure}[b]{0.49\textwidth}
+%		\includegraphics[width=\linewidth]{images/bi2223/Bi2212_EDC}
+%		\caption{}
+%	\end{subfigure}
+%	\caption{(a) Comparison of three different EDCs: one taken near the anti-node, one near the node of the primary arc of \ce{Bi}2223, and one from a polycrystalline gold reference sample. The Fermi level of the gold and the node coincide, indicating the absence of a gap, while a small gap is observed near the anti-node. (b) Similar plot as in (a), but with EDCs taken from the anti-node and node of \ce{Bi}2212, where a larger gap is observed at the anti-node.}
+%	\label{fig:edc_comparison}
+%\end{figure}
 \begin{figure}[t]
 	\centering
-	\begin{subfigure}[b]{0.49\textwidth}
-		\includegraphics[width=\linewidth]{images/bi2223/Bi2223_EDCs}
-		\caption{}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.49\textwidth}
-		\includegraphics[width=\linewidth]{images/bi2223/Bi2212_EDC}
-		\caption{}
-	\end{subfigure}
+	\includegraphics[width=\linewidth]{images/bi2223_pp/edc_comparison}
 	\caption{(a) Comparison of three different EDCs: one taken near the anti-node, one near the node of the primary arc of \ce{Bi}2223, and one from a polycrystalline gold reference sample. The Fermi level of the gold and the node coincide, indicating the absence of a gap, while a small gap is observed near the anti-node. (b) Similar plot as in (a), but with EDCs taken from the anti-node and node of \ce{Bi}2212, where a larger gap is observed at the anti-node.}
 	\label{fig:edc_comparison}
 \end{figure}
+
 
 Next, I want to focus on discussing the superconducting gap along the primary Fermi arc.
 Fig. \ref{fig:edc_comparison} (a) compares the energy distribution curves (EDCs) from the anti-nodal and nodal regions of the arc.
@@ -164,28 +186,14 @@ However, this structure is absent in the corresponding EDCs for \ce{Bi}2223 (see
 
 \begin{figure}
 	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\includegraphics[width=\linewidth]{images/bi2223/Bi2223_gap_small}
-		\caption{}
+	\begin{subfigure}[b]{\linewidth}
+		\includegraphics[width=\linewidth]{images/bi2223_pp/gap_bilayer}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.2\textwidth}
-		\includegraphics[width=\linewidth]{images/bi2223/Bi2212_gap}
-		\caption{}
-	\end{subfigure}
-	\caption{(a) Evolution of EDCs across the primary Fermi arc, with the positions of the EDCs corresponding to the markers in Fig. \ref{fig:bi2223_fs} (a). The left panel shows the EDCs at \qty{12}{\kelvin}. From the anti-node at (\qty{-0.55}{\per\angstrom}, \qty{0.18}{\per\angstrom}) across the arc to the opposite anti-node near (\qty{-0.2}{\per\angstrom}, \qty{0.48}{\per\angstrom}), a superconducting gap is observed, which continuously closes towards the node and reopens afterward. The right panel shows the same EDCs at room temperature (RT), where the gap has disappeared. (b) The same EDCs along the Fermi arc of \ce{Bi}2212, where, in general, a larger gap is observed compared to the primary arc of \ce{Bi}2223.}
+	\caption{(a) Evolution of EDCs across the primary Fermi arc of \ce{Bi}2223, with the positions of the EDCs corresponding to the markers in Fig. \ref{fig:bi2223_fs} (a). The left panel shows the EDCs at \qty{12}{\kelvin}. From the anti-node at (\qty{-0.55}{\per\angstrom}, \qty{0.18}{\per\angstrom}) across the arc to the opposite anti-node near (\qty{-0.2}{\per\angstrom}, \qty{0.48}{\per\angstrom}), a superconducting gap is observed, which continuously closes towards the node and reopens afterward. The right panel shows the same EDCs at room temperature (RT), where the gap has disappeared. (b) The same EDCs along the Fermi arc of \ce{Bi}2212, where, in general, a larger gap is observed compared to the primary arc of \ce{Bi}2223.}
 	\label{fig:gap_bilayer}
 	\centering
-	\begin{subfigure}[b]{0.27\textwidth}
-		\includegraphics[width=\linewidth]{images/bi2223/Bi2223_EDM_splitting}
-		\caption{}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.3\textwidth}
-		\includegraphics[width=\linewidth]{images/bi2223/Bi2223_EDM_splitting2}
-		\caption{}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.39\textwidth}
-		\includegraphics[width=\linewidth]{images/bi2223/Bi2223_gap_large}
-		\caption{}
+	\begin{subfigure}[b]{\linewidth}
+		\includegraphics[width=\linewidth]{images/bi2223_pp/trilayer_splitting}
 	\end{subfigure}
 	\caption{(a) Bandmap of a cut near the node, showing the band connected to the quasiparticle peak of the primary arc. A faint additional split band, corresponding to the Fermi sheet of the inner \ce{CuO2} layer, is visible. (b) Similar bandmap taken closer to the anti-node, where a stronger kink in the additional band, compared to the primary sheet, is apparent. The intensity difference between (a) and (b) may result from matrix element effects, as different light polarizations were used: linear in (a) and circular in (b). (c) Symmetrized EDCs along the additional Fermi sheet seen in Fig. \ref{fig:bi2223_fs} (c), progressing from near the node to the anti-node. The left panel shows scans taken at \qty{12}{\kelvin}, where the gap widens towards the anti-node and has a larger amplitude than for the primary arc in \ce{Bi}2223 and \ce{Bi}2212. The right panel shows the same EDCs at room temperature, where the gap has closed.}
 	\label{fig:trilayer_splitting}
@@ -215,7 +223,7 @@ In the next section, I will provide a comparative analysis with existing data on
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.5\linewidth]{images/bi2223/FS_hybrid_zoom}
+	\includegraphics[width=\linewidth]{images/bi2223_pp/FS_hybrid_zoom}
 	\caption{The figure shows a region of the Fermi surface around the node, where multiple umklapp bands overlap with the main arc. A significant reduction in spectral weight is observed, which varies depending on the polarization of the incoming probe.}
 	\label{fig:fs_hybrid}
 \end{figure}
