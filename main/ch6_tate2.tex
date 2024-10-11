@@ -41,22 +41,29 @@ In this section, I will briefly review Peierls' description of 1D CDWs and then 
 The foundation for this section is based on recent reviews of CDWs in TMDs \cite{rossnagel_origin_2011, canadell_importance_1992}.
 
 
+%\begin{figure}[t]
+%	\centering
+%	\begin{subfigure}[b]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{tate2/lindhard.png}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[b]{0.5\textwidth}
+%		\includegraphics[width=\textwidth]{tate2/nesting_sketch.pdf}
+%	\end{subfigure}
+%	\\
+%	\begin{subfigure}[b]{0.9\textwidth}
+%		\includegraphics[width=\textwidth]{tate2/pld_cdw_sketch_mod.pdf}
+%	\end{subfigure}
+%	\caption{(a) The non-interacting electron-hole (Lindhard) susceptibility for 1D, 2D, and 3D systems. (b) A comparison of the Fermi surface nesting conditions for 1D and 3D Fermi surfaces. (c) A 1D atomic chain with lattice spacing $a$, showing the normal state atomic positions (empty circles) alongside the periodically distorted lattice (orange circles) with a distortion amplitude $u$. The corresponding charge density wave, with a periodicity of $2k_F$, is depicted on top.}
+%	\label{fig:cdw_theory}
+%\end{figure}
 \begin{figure}[t]
 	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{tate2/lindhard.png}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth]{tate2/nesting_sketch.pdf}
-	\end{subfigure}
-	\\
-	\begin{subfigure}[b]{0.9\textwidth}
-		\includegraphics[width=\textwidth]{tate2/pld_cdw_sketch_mod.pdf}
-	\end{subfigure}
+	\includegraphics[width=\linewidth]{images/tate2_pp/cdw_theory}
 	\caption{(a) The non-interacting electron-hole (Lindhard) susceptibility for 1D, 2D, and 3D systems. (b) A comparison of the Fermi surface nesting conditions for 1D and 3D Fermi surfaces. (c) A 1D atomic chain with lattice spacing $a$, showing the normal state atomic positions (empty circles) alongside the periodically distorted lattice (orange circles) with a distortion amplitude $u$. The corresponding charge density wave, with a periodicity of $2k_F$, is depicted on top.}
 	\label{fig:cdw_theory}
 \end{figure}
+
 
 Starting from the 1D atomic chain of a metal with a lattice spacing $a$, a cosinusoidally modulated electron density can be described by
 \begin{equation}
@@ -184,13 +191,13 @@ Under such conditions, the CDW tends to be commensurate with the distorted cryst
 Here, I want to briefly explain the concept of commensurability in charge density waves (CDWs).
 A CDW is considered commensurate (C-CDW) if its wavevector is an integer multiple of the underlying lattice periodicity, meaning the charge density and the lattice are perfectly aligned.
 In contrast, an incommensurate CDW (I-CDW) lacks such a phase relationship with the lattice, meaning the charge density modulation does not synchronize with the lattice periodicity.
-There is also a third possibility, known as a nearly-commensurate CDW (NC-CDW), which lies between the fully commensurate and incommensurate cases. Figure \ref{} illustrates examples of both a C-CDW and an I-CDW.
+There is also a third possibility, known as a nearly-commensurate CDW (NC-CDW), which lies between the fully commensurate and incommensurate cases. Figure \ref{fig:commensurate} illustrates examples of both a C-CDW and an I-CDW.
 
-\begin{figure}
+\begin{figure}[t]
 	\centering
-	\includegraphics[width=0.7\linewidth]{images/tate2/commensurate}
+	\includegraphics[width=\linewidth]{images/tate2_pp/commensurate}
 	\caption{Two 1D atomic chains showing a commensurate charge density wave (top) and an incommensurate charge density wave (bottom).}
-	\label{fig:commensurate.pdf}
+	\label{fig:commensurate}
 \end{figure}
 
 As I will discuss further in section \ref{sec:cdw_tate2}, strong electron-phonon coupling plays a crucial role in the description of the CDW phase in \ce{TaTe2}, which also exhibits stronger local bonding characteristics.
@@ -205,6 +212,15 @@ Both \ce{TaS2} and \ce{TaSe2} exhibit an undistorted monoclinic 1T phase at high
 \ce{TaS2} transitions from a normal state to an incommensurate CDW at around \qty{543}{\kelvin}, then to a nearly commensurate CDW phase at \qty{352}{\kelvin}, and finally to a commensurate CDW phase at \qty{183}{\kelvin}.
 Similarly, \ce{TaSe2} shows a normal-state to incommensurate CDW transition at \qty{122}{\kelvin}, followed by a second transition to a commensurate CDW phase at \qty{90}{\kelvin}.
 In the commensurate CDW phase of \ce{TaS2}, the \ce{Ta} atoms exhibit strong modulation, forming clusters of 13 atoms arranged in a "Star of David" pattern, while in \ce{TaSe2}, only 7 atoms cluster together to form the inner part of the "Star of David."
+Figure \ref{fig:tas2_cdw} shows the "Star of David" PLD formation in (a) together with the resulting diffraction pattern in (b),
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{images/tate2_pp/tas2_cdw}
+	\caption{(a) Schematic of the "Star of David" formation in \ce{TaS2}. Adapted from \cite{maklar_coherent_2023}. (b) Diffraction pattern of \ce{TaS2} within in the CDW phase. Adapted from \cite{han_exploration_2015}. (c) STM scan within the \ce{TaTe2} CDW phase. Circles highlight the inner part of the "Star of David", wich make up the CDW formation. Adapted from \cite{feng_charge_2016}.}
+	\label{fig:tas2_cdw}
+\end{figure}
+
 
 In contrast, \ce{TaTe2} crystals form orthorhombic (1T) structures, although in bulk crystals, the 1T phase is only a virtual phase and exists solely as a distorted 1T' phase up to the highest measured temperatures (above \qty{500}{\kelvin}) \cite{petkov_exotic_2020}.
 The 1T phase has been realized in epitaxially grown mono- and few-layer systems, due to the weaker or absent \ce{Te}-\ce{Te} interlayer coupling \cite{hwang_novel_2022, wang_polymorphic_2024}.
@@ -212,7 +228,7 @@ In the distorted 1T' phase (see Fig. \ref{fig:tate_structure} (a)), \ce{TaTe2} f
 The structural distortion is governed by local bonding, where \ce{Ta} atoms form trimers or effective trimer structures consisting of two fluctuating dimers \cite{katayama_observation_2023}, with each \ce{Ta} atom surrounded by 8 \ce{Te} atoms.
 Additionally, the high-temperature phase exhibits a commensurate stripe-like CDW phase.
 Below \qty{170}{\kelvin}, the material undergoes another structural phase transition, where two \ce{Ta} atoms further distort the structure, breaking dimers and forming "butterfly"-shaped heptamers in the (3 x 3) 1T" phase \cite{feng_charge_2016, katayama_observation_2023} (see Fig. \ref{fig:tate_structure} (b)).
-Here, the high-temperature charge order is modulated, and a pattern corresponding to the inner 7 atoms of the "Star of David" emerges below the transition, similar to \ce{TaSe2}.
+Here, the high-temperature charge order is modulated, and a pattern corresponding to the inner 7 atoms of the "Star of David" emerges below the transition (see Fig. \ref{fig:tas2_cdw} (c)), similar to \ce{TaSe2}.
 This structural phase transition has been observed in both STM and diffraction measurements \cite{feng_charge_2016, siddiqui_ultrafast_2021, domrose_femtosecond_2024}.
 
 In addition to the PLD, gap openings in the band structure have been observed in all three compounds.
@@ -220,25 +236,32 @@ In \ce{TaSe2}, a full gap opens at $E_F$, while in \ce{TaS2}, a gap forms below 
 The gap formation in \ce{TaTe2} is more similar to \ce{TaS2}, with the CDW gap not being connected to the Fermi surface but instead observed at higher binding energies.
 However, unlike \ce{TaS2}, multiple Fermi crossings are still observed in \ce{TaTe2} \cite{lin_evidence_2022, mitsuishi_unveiling_2024}.
 
-\begin{figure}
+%\begin{figure}
+%	\centering
+%	\begin{subfigure}[b]{0.3\textwidth}
+%		\includegraphics[width=\textwidth]{tate2/HT_tate_crystal.pdf}
+%		\caption{}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[b]{0.3\textwidth}
+%		\includegraphics[width=\textwidth]{tate2/LT_tate_crystal.pdf}
+%		\caption{}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[b]{0.3\textwidth}
+%		\includegraphics[width=\textwidth]{tate2/resistivity.png}
+%		\caption{}
+%	\end{subfigure}
+%	\caption{(a) 1T' RT phase of \ce{TaTe2} forming ribbons. (b) 1T" LT phase of \ce{TaTe2}, with \ce{Ta} atoms moving together to form heptameres. (c) Resistivity of \ce{TaTe2} as a function of temperature, showing an overall reduction in resistivity upon cooling. A phase transition occurs at \qty{170}{\kelvin}, which is accompanied by a further step-like reduction in resistivity. (a) and (b) adapted from \cite{lin_evidence_2022}, (c) from \cite{hu_optical_2022}.}
+%	\label{fig:tate_structure}
+%\end{figure}
+\begin{figure}[t]
 	\centering
-	\begin{subfigure}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{tate2/HT_tate_crystal.pdf}
-		\caption{}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{tate2/LT_tate_crystal.pdf}
-		\caption{}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{tate2/resistivity.png}
-		\caption{}
-	\end{subfigure}
+	\includegraphics[width=\linewidth]{images/tate2_pp/tate_structure}
 	\caption{(a) 1T' RT phase of \ce{TaTe2} forming ribbons. (b) 1T" LT phase of \ce{TaTe2}, with \ce{Ta} atoms moving together to form heptameres. (c) Resistivity of \ce{TaTe2} as a function of temperature, showing an overall reduction in resistivity upon cooling. A phase transition occurs at \qty{170}{\kelvin}, which is accompanied by a further step-like reduction in resistivity. (a) and (b) adapted from \cite{lin_evidence_2022}, (c) from \cite{hu_optical_2022}.}
 	\label{fig:tate_structure}
 \end{figure}
+
 
 As previously mentioned, \ce{TaS2} and \ce{TaSe2} are considered prototypical CDW compounds \cite{bozin_crystallization_2023, shen_precursor_2023}, exhibiting a Peierls-like instability, characterized by a PLD, the opening of an electronic gap, and a Kohn anomaly.
 Although \ce{TaTe2} shares these characteristics, its phase transition is even more elusive.
@@ -267,30 +290,37 @@ The Fermi surface of \ce{TaTe2} displays a more pronounced quasi-1D character co
 This quasi-1D nature is observed as two-fold symmetric wavy contours around \qty{0.5}{\angstrom^{-1}} along the $\Gamma$-M$_1$ direction, forming an outer Fermi surface.
 Within these wavy contours lies a second, inner Fermi surface that forms multiple pockets (see Fig. \ref{fig:TaTe_FS} (b)).
 
+%\begin{figure}[t!]
+%	\centering
+%	\begin{subfigure}[b]{0.49\textwidth}
+%		\includegraphics[width=\textwidth]{tate2/TaTe2_BZ_sketch_full.pdf}
+%		\caption{}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[b]{0.49\textwidth}
+%		\includegraphics[width=\textwidth]{tate2/TaTe2_contours.png}
+%		\caption{}
+%	\end{subfigure}
+%	\\
+%	\begin{subfigure}[b]{0.49\textwidth}
+%		\includegraphics[width=\textwidth]{tate2/TaTe2_FS_RT.pdf}
+%		\caption{}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[b]{0.49\textwidth}
+%		\includegraphics[width=\textwidth]{tate2/TaTe2_FS_LT.pdf}
+%		\caption{}
+%	\end{subfigure}
+%	\caption{(a) The measured Fermi surface of the LT phase, overlapped with the 1st BZ of the virtual monoclinic (1 x 1) 1T phase (black), extended BZs of the distorted HT (3 × 1) 1T' phase (orange), and extended BZs of the further distorted LT (3 × 3) 1T'' phase (red). (b) The LT Fermi surface with the contours of the inner and outer Fermi surface sheets where nesting conditions can be fulfilled. (c) The RT Fermi surface overlapped with the HT and LT Brillouin zones, with the relevant high-symmetry points marked. (d) Same Fermi surface as (c), but measured in the LT phase at \qty{77}{\kelvin}. Dashed black line mark the cuts for Fig. \ref{fig:TaTe_RT_cuts} \& \ref{fig:TaTe_LT_cuts}.}
+%	\label{fig:TaTe_FS}
+%\end{figure}
 \begin{figure}[t!]
 	\centering
-	\begin{subfigure}[b]{0.49\textwidth}
-		\includegraphics[width=\textwidth]{tate2/TaTe2_BZ_sketch_full.pdf}
-		\caption{}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.49\textwidth}
-		\includegraphics[width=\textwidth]{tate2/TaTe2_contours.png}
-		\caption{}
-	\end{subfigure}
-	\\
-	\begin{subfigure}[b]{0.49\textwidth}
-		\includegraphics[width=\textwidth]{tate2/TaTe2_FS_RT.pdf}
-		\caption{}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.49\textwidth}
-		\includegraphics[width=\textwidth]{tate2/TaTe2_FS_LT.pdf}
-		\caption{}
-	\end{subfigure}
+	\includegraphics[width=\linewidth]{images/tate2_pp/TaTe_FS}
 	\caption{(a) The measured Fermi surface of the LT phase, overlapped with the 1st BZ of the virtual monoclinic (1 x 1) 1T phase (black), extended BZs of the distorted HT (3 × 1) 1T' phase (orange), and extended BZs of the further distorted LT (3 × 3) 1T'' phase (red). (b) The LT Fermi surface with the contours of the inner and outer Fermi surface sheets where nesting conditions can be fulfilled. (c) The RT Fermi surface overlapped with the HT and LT Brillouin zones, with the relevant high-symmetry points marked. (d) Same Fermi surface as (c), but measured in the LT phase at \qty{77}{\kelvin}. Dashed black line mark the cuts for Fig. \ref{fig:TaTe_RT_cuts} \& \ref{fig:TaTe_LT_cuts}.}
 	\label{fig:TaTe_FS}
 \end{figure}
+
 
 When comparing the RT and LT Fermi surfaces, only minor differences are observed.
 The overall topology, with the wavy outer contours and the inner Fermi surface sheet with multiple pockets, remains largely conserved.
@@ -302,8 +332,8 @@ A series of bandmaps taken parallel to the K$_2$-$\Gamma$-K$_2$ direction from t
 
 \begin{figure}[t!]
 	\centering
-	\includegraphics[width=0.9\textwidth]{tate2/TaTe2_RT_cuts.pdf}
-	\caption{Series of cuts parallel to K$_1$-$\Gamma$-K$_1$, spanning from $\Gamma$ to the BZ border. The locations of the cuts relative to the BZ are indicated in the FS of Fig. \ref{fig:TaTe_FS}. All cuts were taken at RT using the Helium $\alpha1$ line of a Helium lamp.}
+	\includegraphics[width=\linewidth]{tate2_pp/TaTe2_RT_cuts.pdf}
+	\caption{Series of cuts parallel to K$_2$-$\Gamma$-K$_2$, spanning from $\Gamma$ to the BZ border. The locations of the cuts relative to the BZ are indicated in the FS of Fig. \ref{fig:TaTe_FS}. All cuts were taken at RT using the Helium $\alpha1$ line of a Helium lamp.}
 	\label{fig:TaTe_RT_cuts}
 \end{figure}
 
@@ -317,7 +347,7 @@ Another distinguishing feature between the RT and LT phases is the flattening of
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.9\textwidth]{tate2/TaTe2_LT_cuts.pdf}
+	\includegraphics[width=\linewidth]{tate2_pp/TaTe2_LT_cuts.pdf}
 	\caption{Series of cuts parallel to K$_2$-$\Gamma$-K$_2$, spanning from $\Gamma$ to the BZ border. These cuts correspond to the LT band maps equivalent to the RT data shown in Fig. \ref{fig:TaTe_FS}. All cuts were taken at LT (approximately \qty{77}{\kelvin}), using the Helium $\alpha_1$ line of a Helium lamp.}
 	\label{fig:TaTe_LT_cuts}
 \end{figure}
@@ -343,7 +373,7 @@ This band also connects to the wavy contours that meet the FSN condition, sugges
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.7\textwidth]{tate2/TaTe2_CDW_minigaps.pdf}
+	\includegraphics[width=\linewidth]{tate2_pp/TaTe2_CDW_minigaps}
 	\caption{Left: Band map along the K$_2$-$\Gamma$-K$_2$ direction near the $\Gamma$-point. The dashed rectangle highlights the region for which a zoomed view is provided. Right: Zoomed view of the region marked by the dashed rectangle. The band map reveals a faint signature of the observed minigaps \cite{lin_evidence_2022}.}
 	\label{fig:TaTe_minigaps}
 \end{figure}
@@ -372,7 +402,7 @@ At \qty{4}{\pico\second}, most of the excited population has decayed, although s
 
 \begin{figure}[t!]
 	\centering
-	\includegraphics[width=\textwidth]{tate2/bandmap_dyn_markers_betw.png}
+	\includegraphics[width=\linewidth]{images/tate2_pp/TaTe_bandmap_dyn_betw}
 	\caption{Left: Band map near the $\Gamma$ point along the K$_2$-$\Gamma$-K$_2$ direction at a time delay of \qty{50}{\femto\second} following pump excitation. The other plots show difference maps at various time delays (\qtylist{50;500;4000}{\femto\second}). Rectangles highlight regions for which dedicated delay traces are displayed in Fig. \ref{fig:TaTe_dyn_betw}. The difference maps illustrate characteristic features at each time step: at \qty{50}{\femto\second}, rapid de-/population occurs due to the pump excitation; by \qty{500}{\femto\second}, a population below $E_F$ appears, indicating closure of the CDW gap; by \qty{4}{\pico\second}, changes in the band structure and persistent population above $E_F$ are observed. Measurements were performed at \qty{77}{\kelvin}.}
 	\label{fig:TaTe_bandmap_dyn_betw}
 \end{figure}
@@ -389,40 +419,47 @@ If this charge order is broken a gap closure is expected to be observed and, in 
 This behavior is observed in Fig. \ref{fig:TaTe_dyn_betw} (e), which coincides with the region of CDW gaps reported by \cite{lin_evidence_2022}.
 Fitting a single exponential decay model to this trace yields a time zero of $t_0=\qty{388}{\femto\second}$, indicating a delay of about \qty{320}{\femto\second} compared to all other traces in Fig. \ref{fig:TaTe_dyn_betw}
 
+%\begin{figure}[t]
+%	\centering
+%	\begin{subfigure}[b]{0.33\textwidth}
+%		\includegraphics[width=\textwidth]{tate2/Unocc_dyn_1_fit_betw.pdf}
+%		\caption{}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[b]{0.33\textwidth}
+%		\includegraphics[width=\textwidth]{tate2/Unocc_dyn_2_fit_betw.pdf}
+%		\caption{}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[b]{0.33\textwidth}
+%		\includegraphics[width=\textwidth]{tate2/Unocc_dyn_3_fit_betw.pdf}
+%		\caption{}
+%	\end{subfigure}
+%	\\
+%	\begin{subfigure}[b]{0.33\textwidth}
+%		\includegraphics[width=\textwidth]{tate2/Occ_dyn_fit_betw.pdf}
+%		\caption{}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[b]{0.33\textwidth}
+%		\includegraphics[width=\textwidth]{tate2/CDW_quench_fit_betw.pdf}
+%		\caption{}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[b]{0.33\textwidth}
+%		\includegraphics[width=\textwidth]{tate2/Meta_dyn_fit_betw.pdf}
+%		\caption{}
+%	\end{subfigure}
+%	\caption{Delay traces of the regions marked in Fig. \ref{fig:TaTe_bandmap_dyn_betw} with corresponding fit functions using a single exponential decay model and the resulting time constants $t_0$ and $\tau$. (a)-(c) Dynamics of unoccupied regions (black markers in Fig. \ref{fig:TaTe_bandmap_dyn_betw}) show rapid population within the pump pulse, followed by increasing relaxation times closer to $E_F$. (d)-(e) Dynamics of occupied regions (white markers in Fig. \ref{fig:TaTe_bandmap_dyn_betw}): (d) exhibits fast depopulation during pump excitation, while (e) shows a delayed response relative to $t_0$ and an increase in spectral weight. (f) Dynamics of the region slightly above $E_F$ (green marker in Fig. \ref{fig:TaTe_bandmap_dyn_betw}) reveal an instantaneous population within the pump pulse, with occupation persisting beyond \qty{4}{\pico\second}.}
+%	\label{fig:TaTe_dyn_betw}
+%\end{figure}
 \begin{figure}[t]
 	\centering
-	\begin{subfigure}[b]{0.33\textwidth}
-		\includegraphics[width=\textwidth]{tate2/Unocc_dyn_1_fit_betw.pdf}
-		\caption{}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.33\textwidth}
-		\includegraphics[width=\textwidth]{tate2/Unocc_dyn_2_fit_betw.pdf}
-		\caption{}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.33\textwidth}
-		\includegraphics[width=\textwidth]{tate2/Unocc_dyn_3_fit_betw.pdf}
-		\caption{}
-	\end{subfigure}
-	\\
-	\begin{subfigure}[b]{0.33\textwidth}
-		\includegraphics[width=\textwidth]{tate2/Occ_dyn_fit_betw.pdf}
-		\caption{}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.33\textwidth}
-		\includegraphics[width=\textwidth]{tate2/CDW_quench_fit_betw.pdf}
-		\caption{}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.33\textwidth}
-		\includegraphics[width=\textwidth]{tate2/Meta_dyn_fit_betw.pdf}
-		\caption{}
-	\end{subfigure}
+	\includegraphics[width=\linewidth]{images/tate2_pp/TaTe_dyn_betw}
 	\caption{Delay traces of the regions marked in Fig. \ref{fig:TaTe_bandmap_dyn_betw} with corresponding fit functions using a single exponential decay model and the resulting time constants $t_0$ and $\tau$. (a)-(c) Dynamics of unoccupied regions (black markers in Fig. \ref{fig:TaTe_bandmap_dyn_betw}) show rapid population within the pump pulse, followed by increasing relaxation times closer to $E_F$. (d)-(e) Dynamics of occupied regions (white markers in Fig. \ref{fig:TaTe_bandmap_dyn_betw}): (d) exhibits fast depopulation during pump excitation, while (e) shows a delayed response relative to $t_0$ and an increase in spectral weight. (f) Dynamics of the region slightly above $E_F$ (green marker in Fig. \ref{fig:TaTe_bandmap_dyn_betw}) reveal an instantaneous population within the pump pulse, with occupation persisting beyond \qty{4}{\pico\second}.}
 	\label{fig:TaTe_dyn_betw}
 \end{figure}
+
 
 This delayed response becomes particularly evident when the CDW quench dynamics are overlaid with the fast de-/population dynamics see Fig. \ref{fig:TaTe_CDW_comp}).
 Many ultrafast studies have looked at the dynamics of the CDW and while the timescales typically differ, depending on the mechanism, a common observation is that the quench of the charge order starts together with the arrival of the pump pulse \cite{perfetti_time_2006, rohwer_collapse_2011, rettig_coherent_2014, shi_ultrafast_2019, maklar_nonequilibrium_2021, maklar_coherent_2022, huber_mapping_2022, huber_revealing_2022, maklar_coherent_2023, huber_ultrafast_2024}.
