@@ -23,10 +23,20 @@
      giveninits=true,
      sortlocale=en_US,
      url=false, 
-     doi=true,
+     doi=false,
      eprint=false,
+     labeldate=year,
+     maxbibnames=99,
      isbn=false
  ]{biblatex}
+ \newbibmacro{string+doi}[1]{%
+ 	\iffieldundef{doi}{\iffieldundef{url}{#1}{\href{\thefield{url}}{#1}}}{\href{http://dx.doi.org/\thefield{doi}}{#1}}}	
+ \DeclareFieldFormat*{title}{\usebibmacro{string+doi}{\mkbibemph{#1}}}
+ \AtEveryBibitem{%
+ 	\clearfield{note}%
+ 	\clearfield{day}%
+ 	\clearfield{month}%
+ }
 \addbibresource{tail/bib_thesis_lukas_manuel.bib}
 % % OR Bibliography management for Bibtex 
 % Load natbib before babel
