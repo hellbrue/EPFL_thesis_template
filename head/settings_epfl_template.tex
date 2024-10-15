@@ -31,7 +31,7 @@
  ]{biblatex}
  \newbibmacro{string+doi}[1]{%
  	\iffieldundef{doi}{\iffieldundef{url}{#1}{\href{\thefield{url}}{#1}}}{\href{http://dx.doi.org/\thefield{doi}}{#1}}}	
- \DeclareFieldFormat*{title}{\usebibmacro{string+doi}{\mkbibemph{#1}}}
+ \DeclareFieldFormat*{title}{\usebibmacro{string+doi}{\mkbibquote{#1}}}
  \AtEveryBibitem{%
  	\clearfield{note}%
  	\clearfield{day}%
