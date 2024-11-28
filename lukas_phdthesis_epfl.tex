@@ -19,27 +19,27 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt} %(needs to be before titlepage and frontmatter to keep the table of contents lists short)
 \frontmatter
-\input{head/titlepage.tex}
-\include{head/dedication}
+%\input{head/titlepage.tex}
+%\include{head/dedication}
 \setcounter{page}{0}
 %\include{head/acknowledgements}
 %\include{head/preface}
-\include{head/abstracts}
+%\include{head/abstracts}
 
 \cleardoublepage
 \pdfbookmark{\contentsname}{toc}
 \tableofcontents
 
 % Following content is OPTIONAL (List of figures + tables)
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{List of Figures} % adds an entry to the table of contents
-\listoffigures
-
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{List of Tables} % adds an entry to the table of contents
-\listoftables
+%\cleardoublepage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{List of Figures} % adds an entry to the table of contents
+%\listoffigures
+%
+%\cleardoublepage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{List of Tables} % adds an entry to the table of contents
+%\listoftables
 % your list of symbols here, if needed.
 
 
@@ -52,15 +52,15 @@
 %%%%% MAIN: The chapters of the thesis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
-\include{main/ch1_introduction}
+%\include{main/ch1_introduction}
 \cleardoublepage
 
-\include{main/ch3_exp_methods}
+%\include{main/ch3_exp_methods}
 \include{main/ch4_cuprates}
-\include{main/ch5_bi2223}
-\include{main/ch6_tate2}
-\include{main/ch7_vuv_laser}
-\include{main/ch8_conclusion}
+%\include{main/ch5_bi2223}
+%\include{main/ch6_tate2}
+%\include{main/ch7_vuv_laser}
+%\include{main/ch8_conclusion}
 
 % use to end the last part if the thesis is composed of parts
 \addtocontents{toc}{\vspace{\normalbaselineskip}}
@@ -76,6 +76,6 @@
 % Add your glossary here
 % Add your index here
 % Photographic credits (list of pictures&images that have been used with names of the person holding the copyright for them)
-\include{tail/cv}
+%\include{tail/cv}
 
 \end{document}

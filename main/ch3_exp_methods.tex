@@ -28,21 +28,21 @@ This relationship is captured by the energy conservation equation
 	E_\text{kin} = h\nu - \phi - E_\text{B}.
 	\label{eq:e_cons}
 \end{equation}
-The photoelectrons emitted from the sample are collected by a spectrometer, such as a hemispherical analyzer, allowing the joint density of states (JDOS) to be observed.
+The photoelectrons emitted from the sample are collected by a spectrometer, such as a hemispherical analyzer, allowing the observation of transitions between initial and final states, within a given region of the Brillouin zone.
 Figure \ref{fig:arpes_sketch} (b) illustrates the relationship between the binding energy $E_\text{B}$ of electrons within the crystal and the kinetic energy $E_\text{kin}$ of the detected photoelectrons.
 
 In addition to energy, the angle at which the photoelectrons are emitted and their kinetic energy can be used to determine the crystal momentum of the electrons inside the material, based on momentum conservation rules.
 For the in-plane momentum component, this relation is given by
 \begin{equation}
-	\hbar \mathbf{k}\parallel = \sqrt{2m_eE\text{kin}} \sin\theta,
+	\hbar \mathbf{k}_\parallel = \sqrt{2m_eE_\text{kin}} \sin\theta,
 	\label{eq:mom}
 \end{equation}
 where $\theta$ is the emission angle.
-However, the out-of-plane momentum component $\mathbf{k}\perp$ is not conserved due to the broken periodicity at the surface of the material.
-Using the free-electron final state approximation, $\mathbf{k}\perp$ depends on the inner potential $V_0$, which is typically unknown prior to the measurement.
-The expression for $\mathbf{k}\perp$ is
+However, the out-of-plane momentum component $\mathbf{k}_\perp$ is not conserved due to the broken periodicity at the surface of the material.
+Using the free-electron final state approximation, $\mathbf{k}_\perp$ depends on the inner potential $V_0$, which is typically unknown prior to the measurement.
+The expression for $\mathbf{k}_\perp$ is
 \begin{equation}
-	\hbar \mathbf{k}\perp = \sqrt{2m_e\left(E_\text{kin}\cos^2\theta+V_0\right)}.
+	\hbar \mathbf{k}_\perp = \sqrt{2m_e\left(E_\text{kin}\cos^2\theta+V_0\right)}.
 \end{equation}
 If the free-electron approximation does not hold, the perpendicular momentum component can still be determined by performing photon energy-dependent scans and knowledge of the final state dispersion \cite{strocov_intrinsic_2003}.
 
@@ -63,14 +63,14 @@ If the free-electron approximation does not hold, the perpendicular momentum com
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{images/trarpes_pp/arpes_sketch}
-	\caption{(a) Sketch of the trARPES setup. The red pulse excites the sample, while the purple pulse probes the excitation and generates photoelectrons according to Eqs. \ref{eq:e_cons} and \ref{eq:mom}. (b) Visualization of the energy relation within the material’s band structure (left), as a function of binding energy, to the detected kinetic energy $E_\text{kin}$ (right) according to Eq. \ref{eq:e_cons}. Adapted from Ref. \cite{hufner_photoelectron_1995}.}
+	\caption{(a) Sketch of an ARPES setup. A purple pulse probes the band structure and generates photoelectrons according to Eqs. \ref{eq:e_cons} and \ref{eq:mom}. (b) Visualization of the energy relation within the material’s band structure (left), as a function of binding energy, to the detected kinetic energy $E_\text{kin}$ (right) according to Eq. \ref{eq:e_cons}. Adapted from Ref. \cite{hufner_photoelectron_1995}.}
 	\label{fig:arpes_sketch}
 \end{figure}
 
-In equilibrium ARPES measurements, under the sudden approximation and for single-band systems, the measured intensity can be expressed using Fermi's golden rule.
+In equilibrium ARPES measurements, under the sudden approximation, the measured intensity can be expressed using Fermi's golden rule.
 This takes into account the matrix element $M(\mathbf{k}, \omega)$, the Fermi-Dirac distribution $f(\mathbf{k}, \omega)$, and the spectral function $A(\mathbf{k}, \omega)$.
 The sudden approximation assumes that the photoemission process occurs rapidly, without further interaction between the photoelectron and the remaining system after photon absorption.
-The intensity is then given by
+In a single-band system, excluding interference effects from the presence of multiple bands, the intensity is then given by
 \begin{equation}
 	I(\mathbf{k}, \omega) = A(\mathbf{k}, \omega)\left|M(\mathbf{k}, \omega)\right|^2f(\omega),
 	\label{eq:spectral}
@@ -86,8 +86,7 @@ Since the matrix element depends on the parity of the initial state and the vect
 This can lead to a full suppression or enhancement of certain bands in specific experimental configurations \cite{gierz_illuminating_2011, cao_mapping_2013,zhu_layer-by-layer_2013,schuler_polarization-modulated_2022}.
 
 The spectral function $A(\mathbf{k}, \omega) = -(1/\pi)\text{Im}G(\mathbf{k}, \omega)$ contains information about both the bare band dispersion $\epsilon_\mathbf{k}$ and the self-energy $\Sigma(\mathbf{k}, \omega)$, which accounts for many-body effects influencing the single-particle \cite{mahan_many-particle_2000}.
-The Green's function captures the inherent nature of the photoemission, measuring the single-particle excitation of a many-body system.
-Specifically, this function describes how an $N$ electron system responds to a single electron removal and highlights how correlations and interactions are imprinted on the measured photoemission spectrum.
+The Green's function captures the inherent nature of the photoemission process by describing how a $N$ electron system responds to a single electron removal and highlights how correlations and interactions are imprinted on the measured photoemission spectrum.
 
 The full spectral function is described by
 \begin{equation} A(\mathbf{k}, \omega) = -\frac{1}{\pi} \frac{\Sigma''(\mathbf{k}, \omega)}{\left[ \omega - \epsilon_\mathbf{k} - \Sigma'(\mathbf{k}, \omega) \right]^2 + \left[ \Sigma''(\mathbf{k}, \omega) \right]^2},

@@ -288,9 +288,10 @@ As a result, the quasiparticle peak is seen at the Fermi level, along with its c
 \end{figure}
 
 
-Accurate determination of the $k_F$ points is essential for the discussion in this chapter.
-Therefore, careful alignment of the Fermi surface with the analyzer slit was achieved by manually rotating the sample using a wobble stick, with a typical error margin of $\pm$\qty{5}{\degree}.
-The Fermi arcs were fitted using Lorentzian peaks to correct for any angular misalignment or tilt due to sample termination not being perfectly parallel to the manipulator surface.
+Careful determination of the $k_F$ points is essential for the discussion in this chapter.
+In typical state-of-the-art setups, the Fermi surface can be aligned along the high symmetry directions with high precision by employing a manipulator with a motorized in plane axis.
+For the measurements discussed in this chapter, such motorization was absent and the Fermi surface was instead carefully aligned by manually rotating the sample, using a wobble stick with a typical error margin of $\pm$\qty{5}{\degree}.
+The small offset was then compensated by fitting Lorentzian peaks to the Fermi arcs and digitally aligning the data along the high symmetry points.
 
 \begin{figure}[th!]
 	\centering
@@ -309,7 +310,7 @@ This colormap shows that the $k_F$ points for positive and negative $k_\parallel
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=1\textwidth]{images/bi2212/MDC_fits}
+	\includegraphics[width=1\textwidth]{images/bi2212_pp/MDC_fits}
 	\caption{Collection of momentum distribution curves (MDCs) corresponding to the bandmaps in Fig. \ref{fig:edm_collection}. The MDCs result from integration at $E_F$ within a $\pm$\qty{100}{\milli\electronvolt} window. Double or triple Lorentzians were used to fit the peak positions, with the two outer Lorentzians corresponding to the quasiparticle peaks and the third corresponding to the umklapp band crossing the spectrum (see Fig. \ref{fig:fs_cut} (a)). The MDCs are shown for fluences between \qtyrange{0}{3.33}{\milli\joule/\centi\meter\squared}, with individual plots labeled accordingly. The distance between the quasiparticle peaks, $\Delta k_\parallel$, is indicated in the respective MDCs.}
 	\label{fig:mdc_fits}
 \end{figure}
@@ -340,7 +341,7 @@ The linear trend is evident not only in the peak distance but also in the indivi
 %	\caption{((a) Intensity distribution at $E_F$ for a fluence range from \qtyrange{0}{1.74}{\milli\joule/\centi\meter\squared}, visualizing the closing of the parabola observed in Fig. \ref{fig:edm_collection}. (b) The distance between the two quasiparticle peaks, as determined by the MDC fits from Fig. \ref{fig:mdc_fits}, with errors calculated from the standard deviation of the fitted central momentum. (c) Peak positions for positive and negative momenta, showing a linear but asymmetric change for each peak, which is also visible in the fluence map in (a).}
 %	\label{fig:fluence_map}
 %\end{figure}
-\begin{figure}[th]
+\begin{figure}[th!]
 	\centering
 	\includegraphics[width=\linewidth]{images/bi2212_pp/fluence_map}
 	\caption{(a) Intensity distribution at $E_F$ for a fluence range from \qtyrange{0}{1.74}{\milli\joule/\centi\meter\squared}, visualizing the closing of the parabola observed in Fig. \ref{fig:edm_collection}. (b) The distance between the two quasiparticle peaks, as determined by the MDC fits from Fig. \ref{fig:mdc_fits}, with errors calculated from the standard deviation of the fitted central momentum. (c) Peak positions for positive and negative momenta, showing a linear but asymmetric change for each peak, which is also visible in the fluence map in (a).}
@@ -548,7 +549,7 @@ This method assumes a parabolic feature, but in reality, there is asymmetric spe
 Additionally, the asymmetric closing of the parabola due to the slight planar misalignment (see Sec. \ref{sec:larger_effect}) makes this problem worse
 
 Thus, using the leading edge of the \ce{Cu} d-bands provides a more reliable alternative, benefiting from a higher signal-to-noise ratio.
-The momentum range is divided into \qty{10}{\per\angstrom} bins to improve signal quality, and the center position of the leading edge is extracted using a broadened step function across the entire momentum range.
+The momentum range is divided into \qty{0.1}{\per\angstrom} bins to improve signal quality, and the center position of the leading edge is extracted using a broadened step function across the entire momentum range.
 The extracted position, shown in Fig. \ref{fig:mu_center} (b), displays a curved distribution that is relatively flat under the incoherent waterfall feature.
 For this reason, the leading edge of the \ce{Cu} d-band center is used to quantify the shift as a function of pump fluence.
 Similar analysis is performed for the parabola and the d-band edges to confirm that the shift is consistent across the band structure.
@@ -607,7 +608,7 @@ The model parameters were compared to literature values for the unpumped state, 
 The tight binding model generally includes a series of cosine terms, with their amplitude depending on the hopping parameters.
 In the model used here, terms up to the 3rd order are used
 \begin{equation}
-	E = \frac{\mu}{t} + \frac{1}{2} \left(\cos(k_xa)+\cos(k_ya)\right) + \frac{t'}{t} \cos(k_xa)\cos(k_ya) + \frac{t''}{2t} \left(\cos(2k_xa)+\cos(2k_ya)\right)
+	\frac{E}{t} = \frac{\mu}{t} + \frac{1}{2} \left(\cos(k_xa)+\cos(k_ya)\right) + \frac{t'}{t} \cos(k_xa)\cos(k_ya) + \frac{t''}{2t} \left(\cos(2k_xa)+\cos(2k_ya)\right)
 \end{equation}
 with the nearest neighbor hopping parameter $t$, the next nearest neighbor hopping parameter $t'$ and the second next nearest neighbor hopping parameter $t''$, the chemical potential $\mu$ and the lattice parameter $a=\qty{3.83}{\angstrom}$, reflecting the \ce{Cu}-\ce{Cu} distance.
 Higher order terms, especially terms accounting for the splitting of bonding and anti-bonding bands were ignored, as it is not possible to individually resolve the two branches with the Harmonium beamline.
@@ -668,8 +669,9 @@ Thus, irradiation with femtosecond infrared light induces changes in the FS that
 \end{figure}
 
 In addition to visualizing the FS evolution, the fit provides an estimate of the change in the nearest neighbor hopping parameter.
-Plotting the relative change in $\mu$ alongside the relative change in $t$ reveals that the change in $t$ is larger than the shift in $\mu$.
-Since $t$ strongly influences the Coulomb potential $U$ at the \ce{Cu} site, this also affects screening.
+Plotting the relative change in $\mu$ alongside the relative change in $t$ reveals that the energetic change in $t$ is larger than the shift in $\mu$, within the tight-binding Hamiltonian.
+The hopping of holes between neighboring sites, denoted by $t$, is intrinsically linked to the Coulomb repulsion, $U$, which inhibits double occupancy.
+The ratio $U/t$ characterizes the bandwidth of the undoped insulating compound, reflecting the interplay between these two parameters.
 The difference between the changes in $\mu$ and $t$ is shown in Fig. \ref{fig:mu_t}.
 
 Having discussed the quasiparticle shifts and the reconstruction of the FS, the next section will focus on the time duration of the observed effects.
@@ -732,7 +734,8 @@ The FS evolution across different fluences revealed that light-induced effects m
 Further analysis of spectral features revealed a rigid band shift caused by changes in the chemical potential.
 It was possible to quantify this shift and with the information it was possible to fit the hopping parameter in the recreation of the FS.
 These shifts in chemical potential and hopping parameter correspond to two distinct physical mechanisms.
-The change in chemical potential is attributed to photodoping, where light illumination removes charges, leading to a reduction in chemical potential.
+The change in chemical potential is attributed to photodoping, where light illumination moves charges within the compound, effectively creating areas with higher hole- or electron doping.
+Typically, electrons move away from the illuminated region, while holes are left behind, leading to a reduction in chemical potential.
 On the other hand, the shift in the hopping parameter, along with the Coulomb potential, is a result of screening due to the presence of long-lived photodoped carriers.
 Comparison of these contributions showed that the change in the hopping parameter represents the largest energy change within the tight binding Hamiltonian.
 

@@ -105,10 +105,10 @@ The energy change due to the gap opening caused by the potential $v_\mathbf{q}$ 
 \end{equation}
 with the non-interacting electronic susceptibility
 \begin{equation}
-	\chi_0(\mathbf{q}) = \frac{1}{L} \sum_{k}^{} \frac{f_{\mathbf{k}+\mathbf{q}}-f_\mathbf{k}}{\epsilon_\mathbf{k}-\epsilon_{\mathbf{k}+\mathbf{q}}}>0
+	\chi_0(\mathbf{q}) = \frac{1}{L} \sum_{k}^{} \frac{f_{\mathbf{k}+\mathbf{q}}-f_\mathbf{k}}{\epsilon_\mathbf{k}-\epsilon_{\mathbf{k}+\mathbf{q}}}>0 ,
 	\label{eq:susz}
 \end{equation}
-$\chi_0$ represents therefore the net energy gain of the gapped band, and is dependent on the length of the atomic chain $L$ and the Fermi function $f(\epsilon_k)$ of the two nested states.
+which is therefore a direct measure of the energy gain of the band induced by the PLD, and is dependent on the length of the atomic chain $L$ and the Fermi function $f(\epsilon_k)$ of the two nested states.
 If the energy gain of the band exceeds the energy cost of the  strained lattice, which is given by
 \begin{equation}
 	\delta E_\text{lattice} = \frac{1}{2} M\omega_\mathbf{q}^2 u_\mathbf{q}^2
@@ -280,11 +280,15 @@ The charge transfer from \ce{Te} to \ce{Ta} allows for the formation of local mu
 
 In the following sections, I will focus on the electronic band structure of \ce{TaTe2} and further explore the formation of its CDW phase at low temperatures, supported by trARPES data.
 The local bonding picture discussed in this section will be crucial for interpreting the low-temperature phase, as well as for understanding the formation of a photo-induced metastable state.
+Throughout this chapter I will distinguish between the high-temperature (HT) and low-temperature (LT) phase, which are characterized in respect to the structural phase transition, which occurs around \qty{170}{\kelvin}.
 
 \section{Bandstructure and Fermiology}
 
-The electronic structure of \ce{TaTe2} is primarily governed by local molecular bonding between \ce{Ta}-\ce{Ta} dimers, with ARPES measurements revealing a complex set of bands in the room-temperature (RT) phase.
+The electronic structure of \ce{TaTe2} is primarily governed by local molecular bonding between \ce{Ta}-\ce{Ta} dimers, with ARPES measurements revealing a complex set of bands in the HT phase.
 The valence states that control the electronic properties of this compound consist of a mixture of \ce{Ta} 5d and \ce{Te} 5p orbitals \cite{mitsuishi_unveiling_2024}.
+All ARPES measurements presented throughout this chapter, which are associated with the HT phase have been measured at room-temperature. ($\approx$\qty{300}{\kelvin}).
+Instead all ARPES data associated with the LT phase was measured at a temperature of $\approx$\qty{77}{\kelvin}.
+The data within this section was measured with the help of a Helium lamp, using a photon energy of \qty{21.2}{\electronvolt}.
 
 The Fermi surface of \ce{TaTe2} displays a more pronounced quasi-1D character compared to other 2D materials, even when compared to its isostructural counterparts \ce{TaSe2} and \ce{TaS2} \cite{lin_evidence_2022}.
 This quasi-1D nature is observed as two-fold symmetric wavy contours around \qty{0.5}{\angstrom^{-1}} along the $\Gamma$-M$_1$ direction, forming an outer Fermi surface.
@@ -317,12 +321,12 @@ Within these wavy contours lies a second, inner Fermi surface that forms multipl
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=\linewidth]{images/tate2_pp/TaTe_FS}
-	\caption{(a) The measured Fermi surface of the LT phase, overlapped with the 1st BZ of the virtual monoclinic (1 x 1) 1T phase (black), extended BZs of the distorted HT (3 × 1) 1T' phase (orange), and extended BZs of the further distorted LT (3 × 3) 1T'' phase (red). (b) The LT Fermi surface with the contours of the inner and outer Fermi surface sheets where nesting conditions can be fulfilled. (c) The RT Fermi surface overlapped with the HT and LT Brillouin zones, with the relevant high-symmetry points marked. (d) Same Fermi surface as (c), but measured in the LT phase at \qty{77}{\kelvin}. Dashed black line mark the cuts for Fig. \ref{fig:TaTe_RT_cuts} \& \ref{fig:TaTe_LT_cuts}.}
+	\caption{(a) The measured Fermi surface of the LT phase, overlapped with the 1st BZ of the virtual monoclinic (1 x 1) 1T phase (black), extended BZs of the distorted HT (3 × 1) 1T' phase (orange), and extended BZs of the further distorted LT (3 × 3) 1T'' phase (red). (b) The LT Fermi surface with the contours of the inner and outer Fermi surface sheets where nesting conditions can be fulfilled. Two arrows are drawn to represent the size differenze of the FSN and PLD vector. (c) The RT Fermi surface overlapped with the HT and LT Brillouin zones, with the relevant high-symmetry points marked. (d) Same Fermi surface as (c), but measured in the LT phase at \qty{77}{\kelvin}. Dashed black line mark the cuts for Fig. \ref{fig:TaTe_RT_cuts} \& \ref{fig:TaTe_LT_cuts}.}
 	\label{fig:TaTe_FS}
 \end{figure}
 
 
-When comparing the RT and LT Fermi surfaces, only minor differences are observed.
+When comparing the HT and LT Fermi surfaces, only minor differences are observed.
 The overall topology, with the wavy outer contours and the inner Fermi surface sheet with multiple pockets, remains largely conserved.
 A notable distinction is the slight variation in the size of the pockets within the inner sheet, as well as more pronounced features in the second Brillouin zone (BZ) of the LT Fermi surface.
 The pocket size difference results from a small shift in the chemical potential upon cooling through the phase transition, a change that has also been observed by N. Mitsuishi et al. \cite{mitsuishi_unveiling_2024}.
@@ -340,10 +344,10 @@ A series of bandmaps taken parallel to the K$_2$-$\Gamma$-K$_2$ direction from t
 At RT, the bandmaps reveal a multitude of bands, with several crossing the Fermi level in each cut (see Fig. \ref{fig:TaTe_RT_cuts}).
 These Fermi crossings reveal the two Fermi sheets: the crossing at the edge of the band determines the wavy contours of the outer quasi-1D Fermi surface, while the crossing closer to the center of the band structure corresponds to the inner Fermi sheet.
 Upon cooling through the phase transition, the bands undergo a complex reordering (see Fig. \ref{fig:TaTe_LT_cuts}).
-The broad bands observed in the RT phase split into multiple individual bands, and additional backfolded bands appear.
+The broad bands observed in the HT phase split into multiple individual bands, and additional backfolded bands appear.
 Looking at the FS crossing of the inner sheet, the aforementioned size difference of the Fermi pockets becomes clearer.
-Comparing the cuts of the RT phase to the equivalent LT cuts, it is possible to identify a small shift in the chemical potential $\mu$, which has also been reported by \cite{mitsuishi_unveiling_2024}.
-Another distinguishing feature between the RT and LT phases is the flattening of bands near $E_F$, at energies above \qty{-0.6}{\electronvolt}.
+Comparing the cuts of the HT phase to the equivalent LT cuts, it is possible to identify a small shift in the chemical potential $\mu$, which has also been reported by \cite{mitsuishi_unveiling_2024}.
+Another distinguishing feature between the HT and LT phases is the flattening of bands near $E_F$, at energies above \qty{-0.6}{\electronvolt}.
 
 \begin{figure}[h]
 	\centering
@@ -385,7 +389,8 @@ Investigating the evolution of the electronic band structure following pump exci
 This is particularly beneficial for complex materials where multiple many-body effects may interact, influencing each other.
 While static techniques capture the overall equilibrium state, time-resolved techniques help establish a hierarchy between the various phenomena, allowing for discrimination between different contributions.
 In this context, performing pump-probe experiments at both room temperature and low temperature enables the exploration of differences between the two structural phases.
-Throughout this chapter, the excitation is generated by an ultrashort laser pulse of \qty{1.6}{\electronvolt}.
+Throughout this chapter, the excitation is generated by an ultrashort laser pulse of \qty{1.6}{\electronvolt}, which is probed by an extreme UV pulse with an energy of $\approx$\qty{40}{\electronvolt}.
+The used pump fluence. if not indicated otherwise, was set between \qtylist{2.5;5}{\milli\joule/\centi\meter\squared}.
 I will begin by analyzing measurements in the low temperature phase at \qty{77}{\kelvin}, followed by a comparison to RT data to highlight the changes induced by the phase transition.
 
 The LT cuts presented in this section are measured along the K$_2$-$\Gamma$-K$_2$ direction at three points in the LT FBZ ($\Gamma$, M$_1$ and near $\Gamma$).
@@ -397,7 +402,7 @@ Similarly, a fast population of unoccupied states is observed.
 The close alignment of the contours with the unexcited band structure suggests that the signal corresponds to a change in population rather than a shift in the bands.
 This is followed by an initial decay of the excitation, however, by \qty{500}{\femto\second}, a sudden increase in spectral weight is seen in the occupied states.
 This trend change can be explained by a quench of the charge order, which will be discussed in more detail later in this section.
-Notably, the region of intensity increase corresponds to where CDW minigaps form.
+Notably, the region of intensity increase connects to the same band, for which the CDW minigap formation occurs at lower binding energies.
 At \qty{4}{\pico\second}, most of the excited population has decayed, although some residual population remains, and the band structure is significantly altered compared to the equilibrium state.
 
 \begin{figure}[t!]
@@ -415,8 +420,8 @@ Similarly, the depopulation of the occupied states in Fig. \ref{fig:TaTe_dyn_bet
 
 Unexpectedly, the dynamics in the region below $E_F$ (see Fig. \ref{fig:TaTe_dyn_betw} (e)) show an increase in population, rather than the typical reduction expected after pump excitation.
 This unusual behavior is due to the small gaps formed by the CDW, which result in a loss of density of states (DOS) at equilibrium compared to the normal state.
-If this charge order is broken a gap closure is expected to be observed and, in a first approximation excluding other band modification, a re-establishment of the RT DOS.
-This behavior is observed in Fig. \ref{fig:TaTe_dyn_betw} (e), which coincides with the region of CDW gaps reported by \cite{lin_evidence_2022}.
+If this charge order is broken a gap closure is expected to be observed and, in a first approximation excluding other band modification, a re-establishment of the HT DOS.
+This behavior is observed in Fig. \ref{fig:TaTe_dyn_betw} (e), which is the same band for which CDW gaps have been reported at lower binding energies by \cite{lin_evidence_2022}.
 Fitting a single exponential decay model to this trace yields a time zero of $t_0=\qty{388}{\femto\second}$, indicating a delay of about \qty{320}{\femto\second} compared to all other traces in Fig. \ref{fig:TaTe_dyn_betw}
 
 %\begin{figure}[t]
@@ -537,10 +542,10 @@ Figure \ref{fig:TaTe_bandmap_dyn_bzb} shows the excited band map at M$_1$ at $t_
 The same instantaneous de-/population of the occupied/unoccupied bands and a by several hundred \unit{\femto\second} delayed CDW gap quench are visible (see Fig. \ref{fig:TaTe_bandmap_dyn_bzb} (c)-(d)).
 The only notable difference is the absence of residual spectral weight at M$_1$, likely due to the lower pump fluence used in these measurements.
 
-Comparing the LT and RT phases reveals significant differences in the band structure dynamics for an equivalent cut close to $\Gamma$ (see Fig. \ref{fig:TaTe_bandmap_dyn_betw_rt}.
+Comparing the LT and HT phases reveals significant differences in the band structure dynamics for an equivalent cut close to $\Gamma$ (see Fig. \ref{fig:TaTe_bandmap_dyn_betw_rt}.
 First a direct population of the occupied states can be observed within the pump pulse duration.
 But, unlike the LT case, the population seems to be disproportionately located in the region just above $E_F$, whereas the unoccupied states at higher energies appear to be less populated.
-While the LT phase was additionally characterized by strong changes to the band structure after the first few hundred \unit{\femto\second}, no changes occur in the RT phase.
+While the LT phase was additionally characterized by strong changes to the band structure after the first few hundred \unit{\femto\second}, no changes occur in the HT phase.
 Instead, the population of the unoccupied bands, as well as the depopulation of the occupied parts simply decays.
 After \qty{3}{\pico\second} some spectral weight still remains close to $E_F$, but no discrete spectral feature can be observed.
 The full time dynamic for selected regions, which are marked by squares in Fig. \ref{fig:TaTe_bandmap_dyn_betw_rt}, can be seen in Fig. \ref{fig:TaTe_dyn_betw_rt}.
@@ -555,7 +560,7 @@ Those traces show similar relaxation times as the LT ones.
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=\linewidth]{images/tate2_pp/TaTe_bandmap_dyn_betw_rt}
-	\caption{Left: Band map near $\Gamma$ oriented along the K$_2$-$\Gamma$-K$_2$ direction at \qty{50}{\femto\second} after pulse excitation. The other plots show difference maps at selected time delays (\qtylist{50;400;3000}{\femto\second}). The rectangles indicate the regions for which dedicated delay traces are displayed in Fig. \ref{fig:TaTe_dyn_betw_rt}. The difference map shows ultrafast de-/population following pump excitation, followed by decay and a small diffuse residual spectral weight after \qty{3}{\pico\second}. No changes to the band structure are observed, aside from de-/population dynamics.}
+	\caption{Dynamics of the HT phase, measured at RT. Left: Band map near $\Gamma$ oriented along the K$_2$-$\Gamma$-K$_2$ direction at \qty{50}{\femto\second} after pulse excitation. The other plots show difference maps at selected time delays (\qtylist{50;400;3000}{\femto\second}). The rectangles indicate the regions for which dedicated delay traces are displayed in Fig. \ref{fig:TaTe_dyn_betw_rt}. The difference map shows ultrafast de-/population following pump excitation, followed by decay and a small diffuse residual spectral weight after \qty{3}{\pico\second}. No changes to the band structure are observed, aside from de-/population dynamics.}
 	\label{fig:TaTe_bandmap_dyn_betw_rt}
 \end{figure}
 
@@ -766,7 +771,7 @@ In the RT data, the absence of the \qty{0.4}{\tera\hertz} mode (see Fig. \ref{fi
 This absence is a strong indicator that this mode may be an amplitude mode.
 Other evidence also supports this, including the fact that the \qty{0.4}{\tera\hertz} mode directly couples to regions where the CDW gaps form and that its oscillations strongly modulate the intensity in the traces.
 In addition to the disappearance of the amplitude mode, there are changes to the other two phonon modes.
-Both modes exhibit a slight redshift and broadening in the RT phase.
+Both modes exhibit a slight redshift and broadening in the HT phase.
 Furthermore, the \qty{1.35}{\tera\hertz} mode now couples to a broader region of the band structure, while the \qty{2.2}{\tera\hertz} mode remains largely unchanged (see Fig. \ref{fig:TaTe_FFT_betw_rt} (b)).
 The \qty{1.35}{\tera\hertz} mode now incorporates a broader region in the band structure at the edge of the band map, as well as the band in the center, which coupled to the \qty{0.4}{\tera\hertz} mode at LT.
 
@@ -912,7 +917,7 @@ This process is accompanied by a complex band reordering, which stabilizes into 
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=\linewidth]{images/tate2_pp/tate_core}
-	\caption{(a) Bandmap showing the two \ce{Te} 4d levels. (b) Peak position of the upper 4d state from (a) as a function of time after pump excitation for both RT and LT. Only the LT peak position exhibits a persistent shift to lower $E_B$.}
+	\caption{(a) Bandmap showing the two \ce{Te} 4d levels. (b) Peak position of the upper 4d state from (a) as a function of time after pump excitation for both RT (red circles) and LT (blue circles). Only the LT peak position exhibits a persistent shift to lower $E_B$. (c) Peak position of the lower 4d state from (a), shows a similar behavior as the upper state, with the same discrepancy between RT data (red circles) and LT data (blue circles).}
 	\label{fig:tate_core}
 \end{figure}
 
@@ -922,8 +927,8 @@ For this, a \qty{90}{\electronvolt} probe pulse was used to track the \ce{Te} 4d
 A bandmap of these states is shown in Fig. \ref{fig:tate_core} (a).
 The peak of both core levels is extracted from a double Gaussian fit as a function of time, both for RT and at \qty{77}{\kelvin}, in order to explore their evolution after pump excitation.
 Fig. \ref{fig:tate_core} (b) (upper level) and (c) (lower level) show the peak position for up to \qty{50}{\pico\second} after pump excitation.
-A sharp increase in binding energy can be seen for both the RT and the LT phase, corresponding to a shift of around \qty{40}{\milli\electronvolt}.
-After this sudden shift a relaxation occurs within few \unit{\pico\second} before the band return to the equilibrium position after around \qty{5}{\pico\second} in the RT phase.
+A sharp increase in binding energy can be seen for both the HT and the LT phase, corresponding to a shift of around \qty{40}{\milli\electronvolt}.
+After this sudden shift a relaxation occurs within few \unit{\pico\second} before the band return to the equilibrium position after around \qty{5}{\pico\second} in the HT phase.
 While in the LT phase a similar relaxation timescale can be observed, the core level does not relax back to the equilibrium energy position, but rather overshoots to a binding energy \qty{30}{\milli\electronvolt} below its equilibrium.
 The overshoot is followed by a second relaxation, before the band settles at a binding energy $E_B=\qty{15}{\milli\electronvolt}$ below the original position, not relaxing back in the following \qty{45}{\pico\second}.
 
@@ -1007,7 +1012,7 @@ Here, the out of equilibrium studies presented in this chapter contribute to a g
 
 First, a quench of the CDW gaps was observed, and it could be shown that the quench does not start immediately with the laser excitation and instead shows a delayed response by several hundred \unit{\femto\second}.
 It has been suggested \cite{hellmann_time-domain_2012}, that the melting timescales can give a indication of the dominant contribution to the CDW formation.
-Mott type CDW melt due to the disruption of electron hopping which happens on the intrinsic hopping timescales right after pulse excitation, while excitonic CDW are disrupted due to the build-up of screening by conduction electrons which occurs within the first \qty{100}{\femto\second} and lastly Peierls type CDWs which are suppressed within a half cycle of the amplitude mode oscillation.
+Mott type CDW melt due to the disruption of electron hopping which happens on the intrinsic hopping timescales right after pulse excitation, while excitonic CDW are disrupted due to the build-up of screening by conduction electrons which occurs within the first \qty{100}{\femto\second} and lastly Peierls type CDWs which are suppressed within a quarter cycle of the amplitude mode oscillation.
 Typically, the melting of the CDW phase appears to be continuous and starting right after pump excitation, instead here the delayed onset of the melting seems to change the situation.
 The materials charge order is very resilient against the intense femtosecond light illumination, and the delayed response points toward the lattice vibrations as the dominant contribution for the melting of the charge order. 
 
@@ -1032,9 +1037,6 @@ In both ultrafast diffraction studies a thermalization into the out of equilibri
 In the measurements presented here we observe that the CDW gaps already reappear after \qty{2}{\pico\second}.
 During this reformation the band structure starts to reorder as well and has reached the quasi-stable out of equilibrium state $\approx$\qty{5}{\pico\second} after excitation as seen from both valence and core states.
 
-The presence of metastable states with different electronic properties open up possibilities for creating devices.
-It would be
-
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{tate2/free_energy.png}
@@ -1043,7 +1045,7 @@ It would be
 \end{figure}
 
 The occurring dynamics paint a more complete picture of what is happening in the material.
-Fluctuating \ce{Ta} dimers at RT and the strong molecular character of the bonding, not only lead to an equilibrium ground state that enables a coexistence and competition between (3 x 3) and (3 x 1) symmetries, but also seem to enable a free energy landscape with local minima that can be accesses with relative ease and be populated for long times (see Fig. \ref{fig:free_energy}).
+Fluctuating \ce{Ta} dimers at HT and the strong molecular character of the bonding, not only lead to an equilibrium ground state that enables a coexistence and competition between (3 x 3) and (3 x 1) symmetries, but also seem to enable a free energy landscape with local minima that can be accesses with relative ease and be populated for long times (see Fig. \ref{fig:free_energy}).
 A disturbed structure and a perturbed charge order at low temperature lead to the occupation of this local minimum with the emergence of the metastable state.
 This metastable state is characterized by a electronic band structure different from the equilibrium, with an increased chemical potential and shifted core levels.
 It is possible that charge order as well as the crystal structure have formed differently than at equilibrium, but future studies need to address this in more depth.
