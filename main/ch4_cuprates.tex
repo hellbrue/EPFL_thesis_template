@@ -723,6 +723,33 @@ This places an upper limit on the effect duration, which is on the order of tens
 This result contrasts with observations reported by Rameau et al. \cite{rameau_photoinduced_2014}, where the effect duration was found to be on the order of \qty{1}{\pico\second}, with slight variations depending on the pump fluence.
 Such a discrepancy hints towards a sample depended influence on the observed effect.
 
+Similar long-lasting effects have been observed on metal surfaces \cite{bovensiepen_dynamic_2009, gierster_ultrafast_2021, aeschlimann_time-resolved_2025}.
+In these systems, photoexcitation leads to a transfer of electrons, which can then localize, e.g., at pre-existing defect states.
+The trapped electrons exhibit exceptionally long lifetimes due to the limited number of decay pathways and restricted relaxation processes.
+If the lifetime exceeds the inverse repetition rate of the light source creating the excitation, a buildup of carrier population occurs at the defect states.
+This buildup accumulates over multiple pulses, eventually saturating and forming an out-of-equilibrium steady state referred to as a photo-stationary state.
+
+\begin{figure}[b!]
+	\centering
+	\includegraphics[width=\linewidth]{images/bi2212_pp/ultrafast_dynamics}
+	\caption{(a) Bandmap near the node at $t_0$ using a pump fluence of $\approx$\qty{1}{\milli\joule/\centi\meter\squared}. (b) Difference maps of the same measurement as (a), for a delay of \qty{0}{\femto\second} and \qty{1500}{\femto\second}. The difference maps show a depopulation of the occupied states and a hot carrier distribution above $E_F$ at $t_0$, which relaxes within \qty{1.5}{\pico\second}. (c) Ultrafast hot carrier dynamics, representing the region marked with a black square in (a). The excitation is generated within the pulse duration and decays with a rate of \qty{160}{\femto\second}, as extracted from a single exponential decay fit.}
+	\label{fig:ultrafast_dyn}
+\end{figure}
+
+It is likely that a similar mechanism occurs in the photoexcitation of \ce{Bi}2212, a system known to host numerous defects.
+Here, photoexcitation likely induces a charge transfer, with electrons subsequently trapped at charged defects such as oxygen vacancies.
+The long lifetimes of these trapped electrons facilitate the formation of a photo-stationary state, which permits the observation of the "altered" out-of-equilibrium band structure but not its creation or relaxation.
+If this scenario is correct, ultrafast excitation and the relaxation of hot carriers should still be observable.
+However, instead of complete relaxation to equilibrium, the dynamics would occur on top of the steady state, indicating that the photo-stationary out-of-equilibrium state itself is being excited and subsequently relaxes back to the same out-of-equilibrium configuration.
+
+Indeed, ultrafast time dynamics were observed in the experiments.
+Figure \ref{fig:ultrafast_dyn} shows an ultrafast excitation of hot carriers within the pulse duration, followed by a decay with a characteristic timescale of approximately \qty{160}{\femto\second}, consistent with published decay times in similar fluence regimes \cite{dakovski_quasiparticle_2015}.
+After a few picoseconds, the excitation relaxes back to the baseline observed prior to excitation.
+Notably, no change in the band structure is detected when comparing data before and after $t_0$.
+Only comparisons with unpumped data, measured hundreds of seconds later, reveal a return to equilibrium.
+
+In recent years, several potential mechanisms of infrared light excitation in cuprates have been proposed and will be discussed in the conclusion below.
+
 \section{Conclusion and Outlook}
 
 The primary observation in this study is the shift in the quasiparticle peaks when the \ce{Bi}2212 sample is illuminated with intense femtosecond infrared light.
@@ -739,7 +766,7 @@ Typically, electrons move away from the illuminated region, while holes are left
 On the other hand, the shift in the hopping parameter, along with the Coulomb potential, is a result of screening due to the presence of long-lived photodoped carriers.
 Comparison of these contributions showed that the change in the hopping parameter represents the largest energy change within the tight binding Hamiltonian.
 
-Additionally, it was shown that the effect persists for more than \qty{166.66}{\micro\second}, indicating the formation of a metastable state that returns to equilibrium after stopping the optical excitation.
+Additionally, it was shown that the effect persists for more than \qty{166.66}{\micro\second}, indicating the formation of a metastable, photo-stationary state that returns to equilibrium after stopping the optical excitation.
 Comparing the time duration to a similar observation by Rameau et al. \cite{rameau_photoinduced_2014} shows that the time duration is rather sample dependent, as there measurements showed a decay of the quasiparticle shift within a picosecond.
 Which shows that while the magnitude and duration of the effect are sample dependent, the nature of the effect, with the ability to manipulate the microscopic electronic properties is rather fundamental.
 
@@ -757,7 +784,7 @@ One avenue could be additional trARPES measurements using lower repetition rates
 Another option could be changing the pump energy to a value below the charge transfer gap, which might influence the photoinduced effect differently.
 Beyond trARPES, other techniques like time resolved transport measurements or ultrafast electron diffraction, which might be sensitive to any light induced oxygen reordering, could help in further understand the microscopic mechanisms at play.
 
-\begin{figure}[b!]
+\begin{figure}[t!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{images/bi2212/phase_manip.pdf}
 	\caption{Generic phase diagram of hole-doped cuprates (adapted from Ref. \cite{keimer_quantum_2015}). The red arrow indicates a potential light-induced insulator-to-superconductor transition, proposed as a thought experiment based on the presented light-induced effects.}

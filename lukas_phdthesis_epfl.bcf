@@ -2475,17 +2475,21 @@
     <bcf:citekey order="56" intorder="4">kondo_hole-concentration_2004</bcf:citekey>
     <bcf:citekey order="57" intorder="1">kaminski_change_2006</bcf:citekey>
     <bcf:citekey order="58" intorder="1">rameau_photoinduced_2014</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">rameau_photoinduced_2014</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">baykusheva_ultrafast_2022</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">gilabert_photodoping_2000</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">el_hage_disentangling_2024</bcf:citekey>
-    <bcf:citekey order="62" intorder="2">kudinov_persistent_1993</bcf:citekey>
-    <bcf:citekey order="62" intorder="3">kudinov_mechanisms_1994</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">el_hage_disentangling_2024</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">puntel_out--equilibrium_2024</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">keimer_quantum_2015</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">keimer_quantum_2015</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">rameau_photoinduced_2014</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">bovensiepen_dynamic_2009</bcf:citekey>
+    <bcf:citekey order="59" intorder="2">gierster_ultrafast_2021</bcf:citekey>
+    <bcf:citekey order="59" intorder="3">aeschlimann_time-resolved_2025</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">dakovski_quasiparticle_2015</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">rameau_photoinduced_2014</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">baykusheva_ultrafast_2022</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">gilabert_photodoping_2000</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">el_hage_disentangling_2024</bcf:citekey>
+    <bcf:citekey order="64" intorder="2">kudinov_persistent_1993</bcf:citekey>
+    <bcf:citekey order="64" intorder="3">kudinov_mechanisms_1994</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">el_hage_disentangling_2024</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">puntel_out--equilibrium_2024</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">keimer_quantum_2015</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">keimer_quantum_2015</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">rameau_photoinduced_2014</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
