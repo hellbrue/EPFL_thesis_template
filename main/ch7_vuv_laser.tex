@@ -1,3 +1,5 @@
+\definecolor{epfl_canard}{RGB}{0, 116, 128}
+\renewcommand{\chaptercolor}{epfl_canard}
 \chapter{High resolution trARPES in the VUV regime}
 \label{ch:vuv}
 
@@ -18,7 +20,7 @@ From the early days of maintenance-intensive dye lasers, to the introduction of 
 Equally important are advances in detection schemes, vacuum systems, and sample quality, all of which contribute to the overall performance of these experimental setups.
 The challenge lies in integrating these advancements into cohesive tools that improve the capabilities of ultrafast spectroscopic techniques.
 
-In this chapter, I will introduce a technical development in time-resolved angle-resolved photoemission spectroscopy (trARPES), focusing on the expansion of the technique into the vacuum ultraviolet (VUV) regime at high repetition rates and high energy resolution, while still allowing for the exploration of the time domain with reasonably high detail.
+In this chapter, I will introduce a technical development in time- and angle-resolved photoemission spectroscopy (trARPES), focusing on the expansion of the technique into the vacuum ultraviolet (VUV) regime at high repetition rates and high energy resolution, while still allowing for the exploration of the time domain with reasonably high detail.
 The technique and instrumentation have been previously published \cite{hellbruck_high-resolution_2024}, but here I will expand on the rationale behind this particular trARPES setup, discussing its advantages, limitations, and its role within the LACUS facility, as well as ongoing improvements.
 
 \section{The Harmonium beamline}
@@ -36,13 +38,20 @@ The technique and instrumentation have been previously published \cite{hellbruck
 %	\caption{(a) Spectrum of the Harmonium beamline operating in the \qtyrange{28}{48}{\electronvolt} range, with higher harmonics generated in Argon. (b) Spectrum of Harmonium with higher harmonics generated in Neon. Both spectra are adapted from \cite{ojeda_harmonium_2015}.}
 %	\label{fig:hhgspectrum}
 %\end{figure}
-\begin{figure}
-	\centering
-	\includegraphics[width=\linewidth]{images/vuv/hhg_spectrum}
-	\caption{(a) Spectrum of the Harmonium beamline operating in the \qtyrange{28}{48}{\electronvolt} range, with higher harmonics generated in Argon. (b) Spectrum of Harmonium with higher harmonics generated in Neon. Both spectra are adapted from \cite{ojeda_harmonium_2015}.}
-	\label{fig:hhgspectrum}
-\end{figure}
 
+\begin{figure}[b!]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{images/vuv/laser_systems_top}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{images/vuv/beamline_iso}
+		\caption{}
+	\end{subfigure}
+	\caption{(a) Top view and (b) isometric view of the trARPES setup, featuring both the Harmonium and the VUV light sources.}
+	\label{fig:beamline_cad}
+\end{figure}
 
 Before delving into the new capabilities, it’s important to provide an overview of the existing setup.
 The trARPES system at LACUS is based on a high-harmonics-based laser system paired with a Phoibos 150 2D hemispherical analyzer and a 4-axis manipulator for experimental control.
@@ -71,6 +80,13 @@ Gas pressure, laser intensity, and target position relative to the focal point c
 The small cross section of the HHG process, due to the low probability of the electron recombining with the ionized gas atom, as wells as the non-perturbative nature of the process are the reason for the need of high peak fluences at high repetition rates.
 Moreover, high repetition rates are desirable for photoemission spectroscopy (PES) studies to mitigate space charge effects, which are discussed further in section \ref{sec:space_charge}.
 
+\begin{figure}[b!]
+	\centering
+	\includegraphics[width=\linewidth]{images/vuv/hhg_spectrum}
+	\caption{(a) Spectrum of the Harmonium beamline operating in the \qtyrange{28}{48}{\electronvolt} range, with higher harmonics generated in Argon. (b) Spectrum of Harmonium with higher harmonics generated in Neon. Both spectra are adapted from \cite{ojeda_harmonium_2015}.}
+	\label{fig:hhgspectrum}
+\end{figure}
+
 Once the harmonic comb is generated, a single harmonic is selected for trARPES measurements using a monochromator.
 This monochromator comprises two toroidal mirrors, a grating, and a slit module.
 The first toroidal mirror collimates the beam onto the grating, where the harmonics are dispersed.
@@ -78,20 +94,6 @@ A second toroidal mirror refocuses the desired harmonic onto an adjustable slit.
 The system offers multiple gratings, each with different amounts of grooves per \unit{cm} (\unit{g\per\cm}), with the different gratings being used for different energy ranges.
 The gratings are illuminated at grazing incidence, with grooves aligned parallel to the propagation direction to minimize pulse front tilt of the emitted wavefront \cite{poletto_time-preserving_2010}.
 The selected harmonic is then focused onto the sample by a third toroidal mirror.
-
-\begin{figure}
-	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{images/vuv/laser_systems_top}
-		\caption{}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{images/vuv/beamline_iso}
-		\caption{}
-	\end{subfigure}
-	\caption{(a) Top view and (b) isometric view of the trARPES setup, featuring both the Harmonium and the VUV light sources.}
-	\label{fig:beamline_cad}
-\end{figure}
 
 A portion of the amplified IR beam is split off before the HHG process to serve as the pump beam used to excite the sample.
 After compensating for the probe beam path, a telescope system consisting of two curved mirrors focuses the pump beam onto the sample and adjusts the spot size.
@@ -104,7 +106,7 @@ The temporal resolution is less than \qty{100}{\femto\second}, as determined by 
 Although HHG pulses are inherently short, limited only by the spread in recombination times within the gas jet, the probe beam suffers from pulse front tilt due to the single grating monochromator.
 The pulse front tilt leads to a increase in pulse duration over the spot size, which together with the pump pulse duration of $\approx$\qty{50}{\femto\second} results in the above time resolution \cite{arrell_harmonium_2017}.
 The high time resolution is due to the monochromator design, using a time preserving single grating type monochromator \cite{poletto_time-preserving_2010}, which compensates the pulse front tilt, typically induced a reflective grating.
-Time preserving monochromators and the effect of pulse front tilt are discussed in a following section.
+Time preserving monochromators and the effect of pulse front tilt are discussed in a following section (see Sec. \ref{sec:pulse_tilt}).
 
 \section{Vacuum space charge effects}
 \label{sec:space_charge}
@@ -132,7 +134,7 @@ The measurable current, $I_\text{sample}$ at the sample can be used to calculate
 	\Delta E_{s,b} = m_{s,b} \frac{I_\text{sample}}{e f_\text{rep} D}
 	\label{eq:spacecharge}
 \end{equation}
-where $f\text{rep}$ is the repetition rate of the light source, and $m_{s,b}$ are empirical scaling factors for energy broadening (b) and energy shift (s). These scaling factors have been determined as $m_b=$\qty{2.1e-6}{\electronvolt} and $m_s=$\qty{2.1e-6}{\electronvolt} \cite{plotzing_spin-resolved_2016}.
+where $f_\text{rep}$ is the repetition rate of the light source, and $m_{s,b}$ are empirical scaling factors for energy broadening (b) and energy shift (s). These scaling factors have been determined as $m_b=$\qty{2.1e-6}{\electronvolt} and $m_s=$\qty{2.1e-6}{\electronvolt} \cite{plotzing_spin-resolved_2016}.
 
 In addition, space charge effects can arise from photoemission caused by the pump laser pulses.
 High-fluence pump pulses can generate additional photoelectrons through multiphoton processes \cite{al-obaidi_ultrafast_2015}.
@@ -152,7 +154,7 @@ These effects can be described by the following expressions for energy shift and
 
 Given a constant number of electrons over a one-second interval, the repetition rate has a significant impact on energy spread, as seen from the inverse proportionality in the equations above.
 For example, dividing $N$ photoelectrons into a million pulses (corresponding to a \unit{\mega\hertz} system) reduces space charge effects significantly compared to dividing them into only 6000 pulses, typical of a system like Harmonium.
-Consequently, incorporating high-repetition-rate light sources in trARPES or ARPES experiments is crucial for improving overall system resolution.
+Consequently, incorporating high repetition-rate light sources in trARPES or ARPES experiments is crucial for improving the overall system resolution.
 Figure \ref{fig:spacechargelit} adapted from \cite{corder_ultrafast_2018}, shows the maximum possible photocurrent for different repetition rates, plotted against energy resolution for a beam spot size of \qty{1}{\milli\meter}.
 Different markers are added from multiple light sources referenced in \cite{corder_ultrafast_2018}.
 The figure illustrates very well the strong effect higher repetition rates have on the highest attainable number of photoelectrons for high energy resolutions.
@@ -163,11 +165,12 @@ For example, Harmonium’s time resolution is constrained by the pump pulse dura
 Additionally, the pulse front tilt introduced by the monochromator presents further challenges to time resolution, a topic that will be covered in the next section.
 	
 \section{Time resolution limit due to pulse front tilt}
+\label{sec:pulse_tilt}
 
 In trARPES experiments, the overall time resolution is determined by the cross-correlation of the pump and probe pulses.
 As a result, minimizing the pulse duration of both the pump and probe pulses is crucial to achieving high temporal resolution.
-Short pump pulses can be generated with relative ease through pulse compression techniques, such as white light generation followed by re-compression \cite{nisoli_compression_1997}. For typical HHG beamlines like Harmonium, the probe pulse is inherently shorter than the seed pulse often used for the optical pump.
-In the case of a Gaussian pulse not experiencing any change in phase or frequency the time duration of such pulses can be expressed as
+Short pump pulses can be generated with relative ease through pulse compression techniques, such as white light generation followed by re-compression \cite{nisoli_compression_1997}. For typical HHG beamlines like Harmonium, the probe pulse is inherently shorter than the seed pulse, often also used as the optical pump.
+In the case of a Gaussian pulse not experiencing any change in phase or frequency, the time duration of such pulses can be expressed as
 \begin{equation}
 	\Delta\tau = \frac{2 \ln{2}}{\pi c}\frac{\lambda^2}{\Delta\lambda} = \frac{0.44}{c}\frac{\lambda^2}{\Delta\lambda}
 \end{equation}
@@ -249,7 +252,7 @@ The pulses are the pre-amplified by the fiber based booster amplifier from \unit
 A second stretcher is used to further increase the pulse duration of the IR pulses with the help of a transmission grating.
 Typically an average power of \qtyrange{950}{1050}{\milli\watt} can be measured, corresponding to a pulse energy of \qtyrange{0.95}{1.05}{\micro\joule}.
 A fiber based rod-amplifier ("AeroGain" by NKT Photonics) then increases the pulse energies from few \unit{\micro\joule} to $>$\qty{10}{\micro\joule}.
-The amplification is done by coupling the pre-amplified pulses as a seed into a single-mode gain fiber, which is pumped by a counter-propagating continuous-wave (CW) diode at \qty{976}{\nano\meter} with current of \qty{8.17}{\ampere}.
+The amplification is done by coupling the pre-amplified pulses as a seed into a single-mode gain fiber, which is pumped by a counter-propagating continuous-wave (CW) diode at \qty{976}{\nano\meter} with a current of \qty{8.17}{\ampere}.
 The amplified pulses are then re-compressed by a pair of gratings to \qty{200}{\femto\second} at up to \qty{12}{\micro\joule}.
 Table \ref{tab:laser_param} contains an overview of the laser parameters, at various stages of amplification.
 
@@ -420,16 +423,12 @@ This allows for greater control and enables more complex scanning procedures.
 One of the main advantages of the new manipulator is the ability to adjust the in-plane rotational degree of freedom while directly observing the band structure in real time.
 Additionally, the new system addresses a recurring issue with Fermi surface mapping.
 Due to sample geometry, the center of rotation often does not coincide with the point imaged by the electron analyzer, causing slight shifts in the illuminated spot during sample rotation.
-This mean that the illuminated spot slightly changes under sample rotation of a Fermi surface scan, resulting in the possibility to image adjacent domains.
-To compensate for this the $x$ and $y$ coordinate have to adjusted when changing from one angle to the next to image the same sample position.
+This means that the illuminated spot slightly changes under sample rotation of a Fermi surface scan, resulting in the possibility to image adjacent domains.
+To compensate for this the $x$ and $y$ coordinate have to be adjusted when changing from one angle to the next to image the same sample position.
 This process was automated due to the availability of the additional motorized degrees of freedom.
-Instead, with the motorization of the new manipulator more complex movements are possible, where the $x$ and $y$ coordinates can be dynamically adjusted during a Fermi surface scan.
+With the motorization of the new manipulator even more complex movements are possible, where the $x$ and $y$ coordinates can be dynamically adjusted during a Fermi surface scan.
 
-The new manipulator also offers improved temperature control.
-It features an open-cycle cryostat that can cool the cold-finger, onto which the samples are mounted, down to \qty{4}{\kelvin}, with intermediate temperatures being achievable by adjusting the coolant flow rate.
-A built-in heater enables fine adjustments, which allows for precise temperature control during scans, such as when crossing phase transitions or exploring mode softening.
-
-\begin{figure}[h]
+\begin{figure}[b!]
 	\centering
 	\begin{subfigure}[b]{0.46\textwidth}
 		\includegraphics[width=\textwidth]{images/vuv/manip_old}
@@ -441,6 +440,18 @@ A built-in heater enables fine adjustments, which allows for precise temperature
 	\end{subfigure}
 	\caption{Pictures of the (a) old and (b) new manipulator.}
 	\label{fig:manip_full}
+\end{figure}
+
+The new manipulator also offers improved temperature control.
+It features an open-cycle cryostat that can cool the cold-finger, onto which the samples are mounted, down to \qty{4}{\kelvin}, with intermediate temperatures being achievable by adjusting the coolant flow rate.
+A built-in heater enables fine adjustments, which allows for precise temperature control during scans, such as when crossing phase transitions or exploring mode softening.
+
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=\linewidth]{images/vuv/manip_head}
+	\caption{Pictures of the (a) old and (b) new manipulator heads. (c) Shows a sketch of the 6 available motorized axes from the point of a sample plate reference system.}
+	%	\label{fig:manip_head}
+	\label{fig:manip_head}
 \end{figure}
 
 Another important development is the addition of polarization control for the VUV beamline.
@@ -475,13 +486,6 @@ The initial implementation and first tests are ongoing and will hopefully provid
 %	\caption{Pictures of the (a) old and (b) new manipulator heads. (c) Shows a sketch of the 6 available motorized axes from the point of a sample plate reference system.}
 %	\label{fig:manip_head}
 %\end{figure}
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=\linewidth]{images/vuv/manip_head}
-	\caption{Pictures of the (a) old and (b) new manipulator heads. (c) Shows a sketch of the 6 available motorized axes from the point of a sample plate reference system.}
-	%	\label{fig:manip_head}
-	\label{fig:manip_head}
-\end{figure}
 
 Another recent development focuses on leveraging one of the strengths of the VUV light source: its ability to study low-perturbation dynamics.
 As mentioned in section \ref{sec:high_rep_vuv}, the nature of the high repetition rates make it possible to faster acquire the needed statistics.
@@ -490,18 +494,18 @@ Adding this to the fact that high pump fluences are also problematic at high rep
 To enhance this capability, a new detection scheme has been implemented, which alternates between measuring pumped and unpumped signals.
 This approach should make pump-induced features more pronounced by reducing noise and fluctuations.
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.65\linewidth]{images/vuv/chopper_electric_scheme}
-	\caption{Sketch of the on/off detection scheme. The diagram illustrates the electrical connections necessary to synchronize the camera with the laser and chopper wheel. As an example, typical repetition rates for an experiment were chosen. The VUV laser provides light pulses at a repetition rate of \qty{1}{\mega\hertz}. The frequency divider (F-DIV) and delay generator divide the reference signal to a \qty{1}{\kilo\hertz} signal, in accordance with the possible trigger rate of the camera, and a second trigger signal at half the repetition rate for the chopper wheel, creating the pump on/off images. A photodiode measures the chopped beam and displays its repetition rate on an oscilloscope alongside the chopper controller reference signal and the camera reference signal for comparison.}
-	\label{fig:triggerscheme}
-\end{figure}
-
 This detection scheme uses a fast acquisition camera, which can operate at frame rates of up to \qty{1.5}{\kilo\hertz}.
 The camera can be triggered directly by the laser or any other suitable reference signal.
 To capture both pumped and unpumped signals, a chopper wheel is employed, rotating at a frequency that matches the camera's acquisition rate.
 With the VUV laser set to \qty{1}{\mega\hertz}, both the camera and chopper are synchronized to \qty{1}{\kilo\hertz}.
 This means that each camera frame collects data from 1000 probe pulses, alternating between pumped and unpumped shots following one after the other.
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.65\linewidth]{images/vuv/chopper_electric_scheme}
+	\caption{Sketch of the on/off detection scheme. The diagram illustrates the electrical connections necessary to synchronize the camera with the laser and chopper wheel. As an example, typical repetition rates for an experiment were chosen. The VUV laser provides light pulses at a repetition rate of \qty{1}{\mega\hertz}. The frequency divider (F-DIV) and delay generator divide the reference signal to a \qty{1}{\kilo\hertz} signal, in accordance with the possible trigger rate of the camera, and a second trigger signal at half the repetition rate for the chopper wheel, creating the pump on/off images. A photodiode measures the chopped beam and displays its repetition rate on an oscilloscope alongside the chopper controller reference signal and the camera reference signal for comparison.}
+	\label{fig:triggerscheme}
+\end{figure}
 
 A more detailed schematic of the detection system is shown in Fig. \ref{fig:triggerscheme}.
 The VUV laser operates at \qty{1}{\mega\hertz}, and its trigger signal is sent to a frequency divider (F-DIV) and a delay generator.
@@ -511,7 +515,7 @@ For instance, in a typical setup, one channel may divide the signal by $1000$, r
 The chopper controller then synchronizes the wheel's rotation to create alternating "pump on" and "pump off" frames at the correct frequency.
 A reference signal can be send from the chopper controller to the camera as a second trigger (AOL).
 Additionally, an oscilloscope can be connected to visualize all three signals simultaneously.
-The chopper controller reference can be attached to the oscilloscope instead of the camera (AOL), the chopped pump pulse is detected by a photodiode and its signal can be shown simultaneously on the oscilloscope.
+The chopper controller reference can be attached to the oscilloscope instead of the camera, the chopped pump pulse is detected by a photodiode and its signal can be shown simultaneously on the oscilloscope.
 On top of that, the camera has a reference out channel too, which can be shown on the oscilloscope to compare the delay between all signals.
 These electric delays can be adjusted by the F-DIV/delay generator to make sure that the camera is triggered in sync with the chopper and that the chopper functions at a repetition rate corresponding to the laser repetition rate.
 

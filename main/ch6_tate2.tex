@@ -1,9 +1,11 @@
+\definecolor{epfl_leman}{RGB}{0, 167, 159}
+\renewcommand{\chaptercolor}{epfl_leman}
 \chapter{Metastability and phononic CDW quench in \ce{TaTe2}}
 \label{ch:tate2}
 
 Collective phenomena arising from complex many-body interactions have been a focal point in condensed matter physics for several decades.
 A prominent example is the charge density wave (CDW), a collective ordering of electron-hole pairs, first introduced by Peierls in 1955 \cite{peierls_quantum_1996}.
-Since its inception, the concept of CDWs has been intricately linked to superconductivity \cite{frohlich_theory_1997}.
+Since its inception, the concept of CDWs has been intricately linked to superconductivity \cite{frohlich_theory_1997}, with the two phases often occurring in the same material.
 The relevance of CDWs gained momentum when experimental evidence began to emerge in the first materials hosting such exotic phases, decades after the original theoretical proposal.
 Early experimental observations came from pioneering studies on blue bronzes by Fogle and Perlstein \cite{fogle_semiconductor--metal_1972} and transition metal trichalcogenides by Monceau \cite{monceau_electric_1976}.
 
@@ -12,21 +14,21 @@ Among these, transition metal chalcogenides garnered particular attention due to
 The layered nature of these materials was recognized early on in transition metal dichalcogenide (TMD), with exfoliation of \ce{MoS2} demonstrated in 1963 \cite{frindt_physical_1997}, and monolayer samples achieved by 1986 \cite{joensen_single-layer_1986}.
 Concurrently, research on graphite led to the creation of graphene monolayers, sparking a surge of interest in layer engineering across materials like graphene, \ce{WS2}, and \ce{MoS2} \cite{iijima_helical_1991,tenne_polyhedral_1992,feldman_high-rate_1995}
 
-The complexity of these materials stems from their strongly correlated many-body nature, leading to intricate phase diagrams and making it difficult to predict and understand their properties.
+The complexity of these materials stems from their strongly correlated many-body nature, leading to intricate phase diagrams, making it difficult to predict and understand their properties.
 Since the 1980s, CDW research in TMDs has largely focused on the \ce{TaX2}-based compounds \ce{TaS2} and \ce{TaSe2}, with their diverse phase diagrams, which include multiple CDW phases as well as superconducting states.
 These phase transitions are fairly well understood within the classical Peierls framework.
 Recent studies have demonstrated that phase transitions in \ce{TaS2} can be triggered by light or electrical pulses, resulting in metastable hidden states \cite{vaskivskyi_controlling_2015,maklar_coherent_2023}.
 The ability to modify electronic properties on ultrafast timescales, combined with the stability of these hidden states, has opened avenues for potential applications in switches and memory devices.
 
 Despite the significant attention on \ce{TaS2} and \ce{TaSe2}, the sister compound \ce{TaTe2} has remained relatively underexplored.
-However, recent studies have begun to investigate this material, particularly due to its unusual behavior during the CDW phase transition, which differs from its sister-compounds.
+However, recent studies have begun to investigate this material, particularly due to its unusual behavior regarding its conductivity during the CDW phase transition, which differs from its sister-compounds.
 
 In this chapter, I will present both static and time-resolved ARPES (trARPES) data on \ce{TaTe2}, with the goal of exploring the driving mechanisms behind CDW formation and the associated structural phase transition.
 First, I will introduce the general concept of CDWs in 1D systems and the challenges that arise in higher dimensions and with strong coupling.
 I will then review CDW behavior in \ce{TaX2} compounds.
 Following that, I will examine the band structure and Fermi surface topology of \ce{TaTe2}, comparing the material's high- and low-temperature phases, and discuss the formation of CDW-induced minigaps, first observed by Lin et al. \cite{lin_evidence_2022}.
 Next, I will describe the ultrafast charge dynamics occurring on a few-picosecond timescale, including the delayed melting of the CDW.
-This femtosecond-scale light excitation is accompanied by strong, band-specific oscillations, which will be analyzed in terms of their frequency, energy, and momentum-resolved coupling between phonons and electrons.
+This femtosecond-scale light excitation is accompanied by strong, band-specific oscillations, which will be analyzed in terms of their frequency, as well as their energy-, and momentum-resolved coupling between phonons and electrons.
 Lastly, I will present evidence of a metastable electronic state persisting for more than \qty{200}{\pico\second} and discuss its relevance to the structural phase transition at equilibrium.
 
 \section{Charge Density Waves in strongly correlated matter}
@@ -90,7 +92,7 @@ The transition to a 1D CDW state as described by Peierls relies on the fact that
 In a 1D system the Fermi surface consists of parallel sheets situated at momenta $+k_f$ and $-k_f$ (see Fig. \ref{fig:cdw_theory} (b)).
 The connection of electrons with different Fermi momenta creates an instability at the Fermi surface, which leads to a divergence of the electron-hole lindhard response function.
 In the presence of a finite electron-phonon coupling the system becomes unstable, which drives a structural phase transition.
-This coupling of electrons with Fermi velocities of opposite signs via a wavevector of equal amplitude is called Fermi surface nesting (FSN)
+This coupling of electrons with Fermi velocities of opposite signs via a wavevector of equal amplitude is called Fermi surface nesting (FSN).
 Since the CDW formation and the FSN depend on the Fermi momenta ($k_f$), the CDW necessarily depends on the conduction band filling.
 Additionally, the potential created by the CDW and PLD results in a gap opening at the Fermi level.
 This potential is, for a given phonon mode $\mathbf{q}$ with the corresponding displacement $u_\mathbf{q}$, defined by
@@ -98,7 +100,7 @@ This potential is, for a given phonon mode $\mathbf{q}$ with the corresponding d
 	v_\mathbf{q} = g_\mathbf{q} u_\mathbf{q} \sqrt{\frac{2M\omega_\mathbf{q}}{\hbar}}
 \end{equation}
 with the electron-phonon coupling $g_\mathbf{q}$ and the mass of the ion $M$.
-Opening a gap at $E_F$ clearly lowers the energy of the occupied states while simultaneously increasing the energy of the unoccupied part of the band structure.
+Opening a gap at $E_F$ lowers the energy of the occupied states while simultaneously increasing the energy of the unoccupied part of the band structure.
 The energy change due to the gap opening caused by the potential $v_\mathbf{q}$ amounts to
 \begin{equation}
 	\delta E_\text{band} = -\lvert v_\mathbf{q}\rvert^2 \chi_0(\mathbf{q})
@@ -155,7 +157,7 @@ From the equation \ref{eq:kohn} expressing the Kohn anomaly and by minimizing th
 \begin{equation}
 	\Delta(0)=4E_F\exp(-\frac{1}{\lambda}),
 \end{equation}
-with the electron-phonon coupling constant $\lambda=\frac{2g_{\mathbf{q}_0}^2DOS(E_F)}{\hbar\omega_{\mathbf{q}_0}}$ \cite{rice_theory_1973}.
+with the electron-phonon coupling constant $\lambda=\frac{2g_{\mathbf{q}_0}^2\text{DOS}(E_F)}{\hbar\omega_{\mathbf{q}_0}}$ \cite{rice_theory_1973}.
 From the above equation it is possible to calculate the relation between the energy gap at zero temperature and the transition temperature, which is known as the Bardeen-Cooper-Schrieffer (BCS) relation.
 For $\lambda\lesssim1$, which depends on the material properties, the BCS relation can be expressed as
 \begin{equation}
@@ -188,7 +190,7 @@ In the strong coupling regime, CDW order is established through local chemical b
 As the distortion amplitudes grow larger, nonlinear terms in the electron-phonon coupling become more significant, leading to the formation of atomic pairs with shortened bonds or clusters of atoms.
 Under such conditions, the CDW tends to be commensurate with the distorted crystal lattice \cite{rossnagel_origin_2011}.
 
-Here, I want to briefly explain the concept of commensurability in charge density waves (CDWs).
+Here, I want to briefly explain the concept of commensurability in CDWs.
 A CDW is considered commensurate (C-CDW) if its wavevector is an integer multiple of the underlying lattice periodicity, meaning the charge density and the lattice are perfectly aligned.
 In contrast, an incommensurate CDW (I-CDW) lacks such a phase relationship with the lattice, meaning the charge density modulation does not synchronize with the lattice periodicity.
 There is also a third possibility, known as a nearly-commensurate CDW (NC-CDW), which lies between the fully commensurate and incommensurate cases. Figure \ref{fig:commensurate} illustrates examples of both a C-CDW and an I-CDW.
@@ -214,7 +216,7 @@ Similarly, \ce{TaSe2} shows a normal-state to incommensurate CDW transition at \
 In the commensurate CDW phase of \ce{TaS2}, the \ce{Ta} atoms exhibit strong modulation, forming clusters of 13 atoms arranged in a "Star of David" pattern, while in \ce{TaSe2}, only 7 atoms cluster together to form the inner part of the "Star of David."
 Figure \ref{fig:tas2_cdw} shows the "Star of David" PLD formation in (a) together with the resulting diffraction pattern in (b),
 
-\begin{figure}
+\begin{figure}[b!]
 	\centering
 	\includegraphics[width=\linewidth]{images/tate2_pp/tas2_cdw}
 	\caption{(a) Schematic of the "Star of David" formation in \ce{TaS2}. Adapted from \cite{maklar_coherent_2023}. (b) Diffraction pattern of \ce{TaS2} within in the CDW phase. Adapted from \cite{han_exploration_2015}. (c) STM scan within the \ce{TaTe2} CDW phase. Circles highlight the inner part of the "Star of David", wich make up the CDW formation. Adapted from \cite{feng_charge_2016}.}
@@ -227,7 +229,7 @@ The 1T phase has been realized in epitaxially grown mono- and few-layer systems,
 In the distorted 1T' phase (see Fig. \ref{fig:tate_structure} (a)), \ce{TaTe2} forms ribbon-like structures and displays a (3 x 1) superstructure at the surface.
 The structural distortion is governed by local bonding, where \ce{Ta} atoms form trimers or effective trimer structures consisting of two fluctuating dimers \cite{katayama_observation_2023}, with each \ce{Ta} atom surrounded by 8 \ce{Te} atoms.
 Additionally, the high-temperature phase exhibits a commensurate stripe-like CDW phase.
-Below \qty{170}{\kelvin}, the material undergoes another structural phase transition, where two \ce{Ta} atoms further distort the structure, breaking dimers and forming "butterfly"-shaped heptamers in the (3 x 3) 1T" phase \cite{feng_charge_2016, katayama_observation_2023} (see Fig. \ref{fig:tate_structure} (b)).
+Below \qty{170}{\kelvin}, the material undergoes a structural phase transition, where two \ce{Ta} atoms further distort the structure, breaking dimers and forming "butterfly"-shaped heptamers in the (3 x 3) 1T" phase \cite{feng_charge_2016, katayama_observation_2023} (see Fig. \ref{fig:tate_structure} (b)).
 Here, the high-temperature charge order is modulated, and a pattern corresponding to the inner 7 atoms of the "Star of David" emerges below the transition (see Fig. \ref{fig:tas2_cdw} (c)), similar to \ce{TaSe2}.
 This structural phase transition has been observed in both STM and diffraction measurements \cite{feng_charge_2016, siddiqui_ultrafast_2021, domrose_femtosecond_2024}.
 
@@ -477,7 +479,7 @@ The corresponding dynamics, overlapped with the dynamics of the direct de-/popul
 In the trace an inital dip at $t_0$ can be seen, originating from the depopulation dynamics of the occupied band.
 But after \qty{300}{\femto\second}, this depopulation is drowned out by the closing of the CDW gap.
 It is quite remarkable that in adjacent energy-momentum coordinates vastly different dynamics can be observed.
-A relaxation time of $\tau_{CDW}=\qty{500}{\femto\second}$ can be extracted by fitting a single exponential decay model, corresponding to the time duration to reestablish the charge order.
+A relaxation time of $\tau_\text{CDW}=\qty{500}{\femto\second}$ can be extracted by fitting a single exponential decay model, corresponding to the time duration to reestablish the charge order.
 
 %\begin{figure}[t!]
 %	\centering
@@ -499,7 +501,7 @@ A relaxation time of $\tau_{CDW}=\qty{500}{\femto\second}$ can be extracted by f
 	\label{fig:TaTe_CDW_comp}
 \end{figure}
 
-The residual spectral weight visible in the difference map at \qty{4}{\pico\second} (see Fig. \ref{fig:TaTe_bandmap_dyn_betw}) further supports the idea of a long lived state.
+The residual spectral weight visible in the difference map at \qty{4}{\pico\second} (see Fig. \ref{fig:TaTe_bandmap_dyn_betw}) supports the idea of a long lived state.
 The corresponding delay trace (green square in Fig. \ref{fig:TaTe_dyn_betw} (f)) shows a fast population within the pump pulse duration, followed by an initial decay.
 However, the population does not return to its initial state.
 Instead, a sharp feature appears above $E_F$ in the bandmap of figure \ref{fig:TaTe_bandmap_dyn_betw}.
@@ -542,12 +544,12 @@ Figure \ref{fig:TaTe_bandmap_dyn_bzb} shows the excited band map at M$_1$ at $t_
 The same instantaneous de-/population of the occupied/unoccupied bands and a by several hundred \unit{\femto\second} delayed CDW gap quench are visible (see Fig. \ref{fig:TaTe_bandmap_dyn_bzb} (c)-(d)).
 The only notable difference is the absence of residual spectral weight at M$_1$, likely due to the lower pump fluence used in these measurements.
 
-Comparing the LT and HT phases reveals significant differences in the band structure dynamics for an equivalent cut close to $\Gamma$ (see Fig. \ref{fig:TaTe_bandmap_dyn_betw_rt}.
+Comparing the LT and HT phases reveals significant differences in the band structure dynamics for an equivalent cut close to $\Gamma$ (see Fig. \ref{fig:TaTe_bandmap_dyn_betw_rt}).
 First a direct population of the occupied states can be observed within the pump pulse duration.
 But, unlike the LT case, the population seems to be disproportionately located in the region just above $E_F$, whereas the unoccupied states at higher energies appear to be less populated.
 While the LT phase was additionally characterized by strong changes to the band structure after the first few hundred \unit{\femto\second}, no changes occur in the HT phase.
 Instead, the population of the unoccupied bands, as well as the depopulation of the occupied parts simply decays.
-After \qty{3}{\pico\second} some spectral weight still remains close to $E_F$, but no discrete spectral feature can be observed.
+After \qty{3}{\pico\second} some spectral weight still remains close to $E_F$, but no discrete spectral features can be observed.
 The full time dynamic for selected regions, which are marked by squares in Fig. \ref{fig:TaTe_bandmap_dyn_betw_rt}, can be seen in Fig. \ref{fig:TaTe_dyn_betw_rt}.
 Those traces show similar relaxation times as the LT ones.
 
@@ -586,7 +588,7 @@ Those traces show similar relaxation times as the LT ones.
 %	\caption{Delay traces of the regions marked in Fig. \ref{fig:TaTe_bandmap_dyn_betw_rt} with the corresponding fit function of a single exponential decay model and the resulting time constants $t_0$ and $\tau$. (a)-(c) Dynamics of unoccupied regions (black markers in Fig. \ref{fig:TaTe_bandmap_dyn_betw_rt}) show rapid population within the pump pulse, followed by increasing relaxation time closer to $E_F$. (d) Dynamics of unoccupied regions (white markers in Fig. \ref{fig:TaTe_bandmap_dyn_betw_rt}) shows fast depopulation within pump excitation and small residual spectral weight after \qty{3}{\pico\second}.}
 %	\label{fig:TaTe_dyn_betw_rt}
 %\end{figure}
-\begin{figure}[b!]
+\begin{figure}[t!]
 	\centering
 	\includegraphics[width=\linewidth]{images/tate2_pp/TaTe_dyn_betw_rt}
 	\caption{Delay traces of the regions marked in Fig. \ref{fig:TaTe_bandmap_dyn_betw_rt} with the corresponding fit function of a single exponential decay model and the resulting time constants $t_0$ and $\tau$. (a)-(c) Dynamics of unoccupied regions (black markers in Fig. \ref{fig:TaTe_bandmap_dyn_betw_rt}) show rapid population within the pump pulse, followed by increasing relaxation time closer to $E_F$. (d) Dynamics of unoccupied regions (white markers in Fig. \ref{fig:TaTe_bandmap_dyn_betw_rt}) shows fast depopulation within pump excitation and small residual spectral weight after \qty{3}{\pico\second}.}
@@ -617,7 +619,7 @@ Additionally, the residual spectral weight will be discussed in terms of a metas
 In the previous section, we examined the dynamics at both low and room temperatures, revealing strong momentum- and energy-dependent oscillations in the intensity of each trace.
 These oscillations are the focus of this section.
 
-Coherent oscillations in delay traces of trARPES measurements are typically indicative of collective modes (either structural or electronic), which are very often phonons.
+Coherent oscillations in delay traces of trARPES measurements are typically indicative of collective modes (either structural or electronic), which are very often associated with phonons.
 ARPES measures only the single-particle spectral function, so quasiparticles like phonons themselves cannot be directly observed.
 Instead, information about phonons is imprinted on the measured photoelectrons through electron-phonon coupling.
 When this coupling is sufficiently strong, it is possible to observe oscillations in the time traces of a trARPES experiment.
@@ -630,9 +632,9 @@ Ditellurides, especially \ce{TaTe2}, exhibit exceptionally high electron-phonon 
 This strong coupling allows for the observation of oscillations not just over large, integrated regions of the band structure, but also at each individual momentum and energy coordinate.
 This characteristic provides an opportunity to perform a band mapping of the electron-phonon coupling over large regions of energy-momentum space.
 By performing a Fourier analysis on the delay traces, the frequency of the oscillations can be extracted and assigned to specific vibrational modes.
-To my knowledge, this is the first time such an energy- and momentum-resolved Fourier analysis of electron-phonon coupling has been performed in ARPES using high harmonic generation as a probe.
+To my knowledge, this is the first time such an energy- and momentum-resolved Fourier analysis of electron-phonon coupling has been performed in ARPES using high harmonic generation as a probe, with such high energy and momentum resolution.
 
-\begin{figure}[t]
+\begin{figure}[bh!]
 	\centering
 	\includegraphics[width=\textwidth]{tate2_pp/tate_fit_procedure}
 	\caption{Figure illustrating the procedure to extract the frequency component of each pixel. Left: Raw data time trace with a fitted single exponential decay model. Center: Residual intensity after subtracting the decay model fit from the raw data. Right: Fourier transformed frequency trace of the residual data from the center graph.}
@@ -656,6 +658,13 @@ A fast Fourier transform (FFT) from the scipy Python package \cite{noauthor_rfft
 In this case, the dataset consists of 60 delay steps, and the FFT function is defined over 200 points, applying a zero-padding of 140 points.
 The FFT transforms the original 3D data cube from $I(E,k,t)$ to $I(E,k,f)$, with frequency $f$ being the Fourier-transformed time axis.
 Fig. \ref{fig:TaTe_fit_procedure} shows the steps from a delay trace to the FFT trace that can be associated with a particular phonon mode.
+
+\begin{figure}[b!]
+	\centering
+	\includegraphics[width=\linewidth]{images/tate2_pp/TaTe_FFT_betw}
+	\caption{(a) Band map near $\Gamma$ oriented along the K$_2$-$\Gamma$-K$_2$ direction at \qty{50}{\femto\second} after pulse excitation. (b) Frequency band maps resulting from the Fourier analysis procedure, showing the bandmaps of the three phonon modes at \qtylist{0.4;1.45;2.3}{\tera\hertz}. (c) Frequency spectrum integrated over the full measured energy and momentum space.}
+	\label{fig:TaTe_FFT_betw}
+\end{figure}
 
 Performing this analysis for a cut near $\Gamma$ reveals three distinct vibrational modes in the LT phase (see Fig. \ref{fig:TaTe_FFT_betw} (c)) at \qtylist{0.4; 1.45; 2.3}{\tera\hertz}.
 Two modes (\qtylist{1.45; 2.3}{\tera\hertz}) have been previously observed using Raman spectroscopy and ultrafast transient reflectivity \cite{luo_subtle_2021, hu_optical_2022}, while the \qty{0.4}{\tera\hertz} mode has not been reported before.
@@ -681,17 +690,18 @@ The strong coupling allows for a high-resolution mapping of this coupling across
 %	\caption{(a) Band map near $\Gamma$ oriented along the K$_2$-$\Gamma$-K$_2$ direction at \qty{50}{\femto\second} after pulse excitation. (b) Frequency band maps resulting from the Fourier analysis procedure, showing the bandmaps of the three phonon modes at \qtylist{0.4;1.45;2.3}{\tera\hertz}. (c) Frequency spectrum integrated over the full measured energy and momentum space.}
 %	\label{fig:TaTe_FFT_betw}
 %\end{figure}
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=\linewidth]{images/tate2_pp/TaTe_FFT_betw}
-	\caption{(a) Band map near $\Gamma$ oriented along the K$_2$-$\Gamma$-K$_2$ direction at \qty{50}{\femto\second} after pulse excitation. (b) Frequency band maps resulting from the Fourier analysis procedure, showing the bandmaps of the three phonon modes at \qtylist{0.4;1.45;2.3}{\tera\hertz}. (c) Frequency spectrum integrated over the full measured energy and momentum space.}
-	\label{fig:TaTe_FFT_betw}
-\end{figure}
 
 The coupling maps closely follow the spectral weight distribution of the band structure.
 Additionally, each phonon mode is seen to couple to specific regions of the band structure.
 Notably, the features associated with the \qty{0.4}{\tera\hertz} mode correspond to the regions where CDW gaps were observed to close in the previous section.
 Integrating over the entire energy and momentum space yields the trace shown in Fig. \ref{fig:TaTe_FFT_betw} (c), highlighting the presence of the three phonon modes.
+
+\begin{figure}[b!]
+	\centering
+	\includegraphics[width=\linewidth]{images/tate2_pp/TaTe_FFT_traces_betw}
+	\caption{(a) Selected delay traces showing regions where one phonon mode dominates or all three phonon modes are present. (b) Corresponding Fourier-transformed frequency trace.}
+	\label{fig:TaTe_FFT_traces_betw}
+\end{figure}
 
 In Fig. \ref{fig:TaTe_FFT_traces_betw} some exemplary time traces are shown in (a) with their corresponding FFT traces in (b).
 These traces illustrate the differences between the phonon modes and provide further insight into their behavior.
@@ -715,12 +725,6 @@ Both cuts show the three phonon modes listed above and show them couple to diffe
 %	\caption{(a) Selected delay traces showing regions where one phonon mode dominates or all three phonon modes are present. (b) Corresponding Fourier-transformed frequency trace.}
 %	\label{fig:TaTe_FFT_traces_betw}
 %\end{figure}
-\begin{figure}[t!]
-	\centering
-	\includegraphics[width=\linewidth]{images/tate2_pp/TaTe_FFT_traces_betw}
-	\caption{(a) Selected delay traces showing regions where one phonon mode dominates or all three phonon modes are present. (b) Corresponding Fourier-transformed frequency trace.}
-	\label{fig:TaTe_FFT_traces_betw}
-\end{figure}
 
 Since the \qty{0.4}{\tera\hertz} mode lies at the lower end of the Fourier trace, it is essential to exclude the possibility that it is an artifact.
 To verify this, a cosine curve is fitted along with the decay model from Eq. \ref{eq:decay_model} and the frequency of the cosine function is extracted. 
@@ -729,13 +733,13 @@ This fit function is given by
 	f_\text{fit}(t) = f_\text{decay}(t) + f_\text{step}(t, t_0) \cdot A \cdot \cos(2\pi t+\phi) + C
 \end{equation}
 with $f_\text{decay}$ being the decay model of equation \ref{eq:decay_model}, an offset phase $\phi$ and a step function $f_\text{step}$.
-The step function is necessary because the oscillation only occur at or after time zero $t_0$.
+The step function is necessary because the oscillations only occur at or after time zero $t_0$.
 Repeating this fit procedure for traces that show the \qty{0.4}{\tera\hertz} mode in Fig. \ref{fig:TaTe_FFT_betw}, confirms that the delay traces can be fitted by a cosine function with a frequency of \qty{0.4}{\tera\hertz}.
 An example of this fit procedure can be seen in Fig. \ref{fig:TaTe_cosine}.
 Additionally, the procedure was performed for each individual pixel, similar to Fig. \ref{fig:TaTe_FFT_betw}.
 The resulting bandmaps look nearly identical, confirming the validity of the FFT results.
 
-\begin{figure}[t]
+\begin{figure}[bh!]
 	\centering
 	\includegraphics[width=\textwidth]{tate2_pp/TaTe_cosine}
 	\caption{The figure shows an example of the cosine fitting procedure used to validate the Fourier transform routine. Left: Raw data time trace with the corresponding single exponential decay fit. Center: Residual data after subtracting the decay model from the raw data, along with a cosine fit. Right: Raw time trace with the combined single exponential decay and cosine model, fitted directly to the data.}
@@ -875,7 +879,7 @@ This reordering stabilizes after \qty{5}{\pico\second}, but remains distinctly d
 
 Analyzing the time traces of selected band-structure features provides more detailed insights into the time evolution.
 Selected traces are shown in Fig. \ref{fig:metastableedge}, with the corresponding regions of (c)-(f) marked by squares in Fig. \ref{fig:tateltmetasteps}.
-Fig. \ref{fig:tateltmetasteps} (a) \& (b) correspond to the full range of momentum and for an energy $E_{kin}=E_F-E$ from \qtyrange{0}{0.15}{\electronvolt} or \qtyrange{0.15}{1.5}{\electronvolt} respectively (marked by the black dotted lines in Fig \ref{fig:tateltmetasteps} (a)).
+Fig. \ref{fig:tateltmetasteps} (a) \& (b) correspond to the full range of momentum and for an energy $E_\text{kin}=E_F-E$ from \qtyrange{0}{0.15}{\electronvolt} or \qtyrange{0.15}{1.5}{\electronvolt} respectively (marked by the black dotted lines in Fig \ref{fig:tateltmetasteps} (a)).
 Traces (a) \& (b) illustrate well the changes observed in the difference maps.
 Above \qty{150}{\milli\electronvolt} a instantaneous population is observed, which has fully decayed after \qty{2}{\pico\second}, with no trace of any metastability.
 Only in region between $E_F$ and \qty{150}{\milli\electronvolt} can a persistent occupation be observed.
@@ -887,7 +891,7 @@ An initial population decays but is followed by an intensity increase at \qty{1}
 After reaching the maximum a small decay is observed until \qty{5}{\pico\second} at which the bands have settled into their persistent structure.
 Similar dynamics are observed in trace (e), where an initial depopulation reverses, showing a population rise between \qtyrange{1}{2}{\pico\second}, which stabilizes after \qty{5}{\pico\second}.
 Finally, trace (f), which covers the CDW minigap region.
-Again, it is possible to see the immediate decay after pulse excitation, followed a stark overshoot in intensity due to the closing of the CDW gap at \qty{500}{\femto\second} (first dashed line in inset).
+Again, it is possible to see the immediate decay after pulse excitation, followed by a stark overshoot in intensity due to the closing of the CDW gap at \qty{500}{\femto\second} (first dashed line in inset).
 The overshoot decays and reaches close to the intensity value before $t_0$, after which the intensity rises again and settles at a slightly elevated level after \qty{10}{\pico\second}.
 
 These valence-state dynamics confirm the discussion around the ultrafast dynamics from section \ref{sec:tate_dynamics}.
@@ -955,8 +959,8 @@ A way of analyzing the fluence dependence is by plotting the difference map of \
 This assumption was confirmed to be correct by measuring static reference maps at equilibrium and ensuring that the maps have not changed.
 Fig. \ref{fig:tate_fluence} shows three difference maps taken at different fluences.
 A distinct difference is visible in the region marked by a black square.
-While the left difference map, representing a low fluence, shows to bands dispersing to the left side without bending, the two other maps show these bands bending to the edge in the marked area.
-This bend structure looks more like the metastable bandmaps plotted in \ref{fig:tateltmetasteps}, whereas the bandmap on the left rather looks the equilibrium band structure, albeit with an elevated population compared to equilibrium.
+While the left difference map, representing a low fluence, shows two bands dispersing to the left side without bending, the two other maps show these bands bending to the edge in the marked area.
+This bend structure looks more like the metastable bandmaps plotted in \ref{fig:tateltmetasteps}, whereas the bandmap on the left rather resembles the equilibrium band structure, albeit with an elevated population compared to equilibrium.
 
 
 %\begin{figure}[t!]
@@ -998,7 +1002,7 @@ Additionally they observe that the process scales highly non-linearly with fluen
 
 After analyzing the various electronic signatures, their dynamics and couplings in detail it is important to look at the fundamental physics at play.
 While each of these items have been separated into individual sections, it is important to remember that they can't be discussed as isolated entities.
-Instead the case of \ce{TaTe2} stresses why it is necessary to look at the features and their dynamics as one entity.
+Instead the case of \ce{TaTe2} stresses why it is necessary to look at the features and their dynamics as one.
 
 In general, many properties related to the electronic structure from previous studies could be confirmed in this chapter.
 First and foremost, a HT and LT phase transition is observed, which results in a complex rearrangement and back folding of bands.
@@ -1018,7 +1022,7 @@ The materials charge order is very resilient against the intense femtosecond lig
 
 These lattice vibrations are likely launched in a DECP process and mediated by the strong electron-phonon coupling.
 It appears from the delayed response, as if the amplitude mode is not immediately excited, but rather through secondary processes.
-Additionally, it is important to think about the phononic contribution as setting in at the earliest time intervals after excitation and not only setting after few hundreds of \unit{\femto\second}, which can be observed by the fast onset of oscillations.
+Additionally, it is important to think about the phononic contribution as setting in at the earliest time intervals after excitation and not only after few hundreds of \unit{\femto\second}, which can be observed by the fast onset of oscillations.
 The example of \ce{TaTe2} also demonstrates well the power of trARPES for materials with sufficiently large electron-phonon coupling.
 Not only is it possible to map phonon vibrations to specific bands with high energy and momentum resolution via Fourier analysis, it is also possible find oscillations down to \qty{0.4}{\tera\hertz}, a frequency range that is hard to access even with techniques dedicated to the observation of phonons.
 Due to this it is possible to make a strong case for a first observation of the \qty{0.4}{\tera\hertz} mode, which demonstrates the behavior of a potential amplitude mode.
@@ -1039,7 +1043,7 @@ During this reformation the band structure starts to reorder as well and has rea
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.5\textwidth]{tate2/free_energy.png}
+	\includegraphics[width=0.3\textwidth]{tate2/free_energy.png}
 	\caption{Sketch of the free energy landscape showing two minima. A femtosecond light pulse switches the system from the equilibrium ground state to a local, metastable minimum. Adapted from \cite{basov_towards_2017}.}
 	\label{fig:free_energy}
 \end{figure}
@@ -1054,7 +1058,7 @@ This work can confirm a lifetime of above \qty{200}{\pico\second} with sufficien
 
 It would be interesting to conduct further experiments regarding the CDW quench and the metastable state with trARPES.
 Measurements that provide high energy and time resolution (an example of such a setup is presented in the next chapter \cite{hellbruck_high-resolution_2024}) would be able to directly observe the closing of the CDW gaps as a function of time.
-Additionally, these measurements could be performed in a range of different temperatures, from far below, to above the temperature, which would help gather more details on the possible \qty{0.4}{\tera\hertz} amplitude mode.
+Additionally, these measurements could be performed in a range of different temperatures, from far below, to above the transition temperature, which would help gather more details on the possible \qty{0.4}{\tera\hertz} amplitude mode.
 It has also been shown \cite{lin_evidence_2022} that size of the gap increased at lower temperatures, a temperature dependent study could look at any potential effects on the melting and reformation.
 Similarly, studies on other TMDs have shown a strong dependence of the temperature on the life time of metastable states \cite{stojchevska_ultrafast_2014, vaskivskyi_controlling_2015}, which further motivates time and temperature resolved studies.
 Apart from trARPES, other techniques like 2D \unit{\tera\hertz} spectroscopy could help investigate the low frequency range, further studying the \qty{0.4}{\tera\hertz} mode.

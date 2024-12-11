@@ -1,3 +1,5 @@
+\definecolor{custom_copper}{RGB}{184, 115, 51}
+\renewcommand{\chaptercolor}{custom_copper}
 \chapter{Photoinduced Lifshitz transition in \ce{Bi2Sr2CaCu2O8}}
 \label{ch:bi2212}
 
@@ -46,8 +48,8 @@ Recent groundbreaking experiments have provided the first signs of light-induced
 
 This chapter will provide an overview of high-$T_c$ superconductors, with a focus on cuprates.
 I will present the characterization of the samples used in this study, followed by an introduction to the main findings, a light-induced shift of quasiparticle peaks in \ce{Bi}2212, which creates a metastable state lasting on millisecond timescales.
-This observation will be expanded to include angle-dependent observation near both the node and anti-node.
-I will then discuss the distinction between photodoping and screening effects and reconstruct the Fermi surface for various fluence levels using a tight-binding approach
+This observation will be expanded to include angle-dependent observations near both the node and anti-node.
+I will then discuss the distinction between photodoping and screening effects and reconstruct the Fermi surface for various fluence levels using a tight-binding approach.
 Lastly I will discuss the time duration of the observed effect and close with a conclusion and outlook for the topic.
 
 \section{General aspects of \ce{Bi2Sr2CaCu2O8}}
@@ -55,7 +57,7 @@ Lastly I will discuss the time duration of the observed effect and close with a 
 
 \ce{Bi2Sr2CaCu2O8} (commonly referred to as \ce{Bi}2212) belongs to the family of \ce{Bi}-based cuprates.
 Like all cuprates, its electronic properties are predominantly governed by the presence of \ce{CuO2} planes.
-Cuprates form in perovskite crystal structures, and they are typically identified by the number of \ce{CuO2} planes in each unit cell.
+Cuprates form in perovskite crystal structures, and are typically identified by the number of \ce{CuO2} planes in each unit cell.
 Figure \ref{fig:bscco_structure} depicts the crystal structures of the single-, bi-, and trilayer \ce{Bi}-based cuprates.
 
 \begin{figure}
@@ -65,8 +67,8 @@ Figure \ref{fig:bscco_structure} depicts the crystal structures of the single-, 
 	\label{fig:bscco_structure}
 \end{figure}
 
-The \ce{CuO2} planes consist of \ce{Cu^{2+}} and \ce{O^-} ions, resulting in a $3d^9$ electronic configuration for the transition metal, with one hole per site.
-Due to crystal field splitting places this hole is located in the $3d_{x^2-y^2}$ orbital, which is the highest-energy orbital.
+The \ce{CuO2} planes consist of \ce{Cu^{2+}} and \ce{O^-} ions, resulting in a $3d^9$ electronic configuration for the transition metal, with one hole per \ce{Cu} site.
+Due to a crystal field splitting this additional hole is located in the $3d_{x^2-y^2}$ orbital, which is the highest-energy orbital.
 The single-hole occupancy can be described using a Mott-Hubbard Hamiltonian at half-filling, representing the basic electronic structure of the system.
 Due to the large on-site Coulomb repulsion $U$, which is approximately \qty{8}{\electronvolt}, the $d$-band splits into an upper and lower Hubbard band (UHB and LHB).
 Under typical conditions, this would make \ce{Bi}2212 a Mott-Hubbard insulator.
@@ -174,7 +176,7 @@ where $\hbar$ is the Planck constant and $k_B$ the Boltzmann constant \cite{atae
 A further increase in doping, into the heavily overdoped regime, leads to the appearance of a Fermi-liquid phase \cite{barisic_evidence_2019}, in which the linear temperature dependence of the strange metal changes to the quadratic dependence of the resistivity $\rho\sim T^2$ \cite{nakamae_electronic_2003,hussey_coherent_2003,plate_fermi_2005}.
 
 Another notable phase in \ce{Bi}2212 and other cuprates is the charge density wave (CDW) phase.
-The physics of charge density waves (CDWs) is explored in greater detail in the chapter focused on the CDW compound \ce{TaTe2}, found in Section \ref{sec:cdw},
+The physics of charge density waves (CDWs) is explored in greater detail in the chapter focused on the CDW compound \ce{TaTe2}, found in Section \ref{sec:cdw}.
 This phase overlaps with the pseudogap and superconducting phases and is a topic of active research, especially regarding its competition with superconductivity \cite{arpaia_charge_2021}.
 Recent ultrafast studies have revealed differing recovery times for CDW and superconducting features, showing a potential way of studying mutual effects between the two phases \cite{wandel_enhanced_2022}.
 
@@ -183,7 +185,7 @@ One key question is whether light-induced changes can transiently drive the syst
 This study could serve as a platform to determine whether exotic phases can still be transiently observed or, if not, to identify what additional factors might be necessary.
 
 For this it is important to have a look at the fundamental physics that describe the \ce{CuO2} planes.
-The three-band Hubbard model (sometimes called Emery model) can describe the contributions from multiple orbitals as well as their interaction\cite{avella_emery_2013,emery_theory_1987,ogata_tj_2008}.
+The three-band Hubbard model (sometimes called Emery model) can describe the contributions from multiple orbitals as well as their interactions \cite{avella_emery_2013,emery_theory_1987,ogata_tj_2008}.
 The tight-binding Hamiltonian of the system can be written as
 \begin{equation}
 \begin{split}
@@ -193,7 +195,7 @@ The tight-binding Hamiltonian of the system can be written as
 \end{split}
 \end{equation}
 where $\epsilon_d$ and $\epsilon_p$ are the respective energies of copper and oxygen orbitals, $n_d$ and $n_p$ are the corresponding occupation numbers, and $t_{pd}$ and $t_{pp}$ are the hopping parameters for copper-oxygen and oxygen-oxygen orbitals.
-The last three term describe the on-site Coulomb interaction of the copper and oxygen orbitals with their respective potential $U_d$, $U_p$, as well as the contribution from copper-oxygen Coulomb interaction $V_{pd}$.
+The last three terms describe the on-site Coulomb interaction of the copper and oxygen orbitals with their respective potential $U_d$, $U_p$, as well as the contribution from copper-oxygen Coulomb interaction $V_{pd}$.
 
 This model can be simplified to a single-band Hamiltonian that describes interactions between copper sites via superexchange, mediated by oxygen orbitals \cite{anderson_new_1959, zhang_effective_1988, emery_mechanism_1988}.
 The superexchange $J$ is given by
@@ -224,7 +226,7 @@ Apart from the nearest neighbor hopping $t$, higher orders can be included as we
 
 The t-J model emphasizes the significance of hopping parameters in determining the electronic properties of \ce{CuO2} planes.
 ARPES measurements allow for the estimation of these parameters by fitting the Fermi surface \cite{norman_phenomenological_1995}.
-In this chapter, I will discuss how intense femtosecond infrared pulses can modify the Fermi surface and alter these microscopic parameters.
+In this chapter, I will discuss how intense femtosecond infrared pulses can modify the Fermi surface and alter the microscopic parameters.
 
 \section{Sample characterization}
 
@@ -232,7 +234,7 @@ In this study, we assessed \ce{Bi}2212 single crystals grown at the EPFL crystal
 The sample preparation involved synthesizing crystals from a powder mixture containing \ce{Bi2O3}, \ce{SrCO3}, \ce{CaCO3}, and \ce{CuO}.
 After thorough manual mixing, the powder charge, typically weighing between \qtyrange{200}{300}{\gram}, was placed in a high-purity alumina crucible. The crucible was then inserted into a furnace and heated to \qty{1020}{\degreeCelsius} over approximately 4 hours.
 
-Once the powders fully melted, which took around 6 hours, the temperature was held steady until a completely homogeneous and slightly viscous fluid was confirmed via visual inspection.
+Once the powder is fully melted, which took around 6 hours, the temperature was held steady until a completely homogeneous and slightly viscous fluid was confirmed via visual inspection.
 To ensure further homogeneity, the mixture was stirred using an alumina rod.
 The cooling process commenced by reducing the temperature from \qty{1020}{\degreeCelsius} to \qty{840}{\degreeCelsius} at a controlled rate of \qty{1.6}{\degreeCelsius/\hour}, taking just over four days.
 Following this, the crucible was rapidly cooled (about \qty{10}{\degreeCelsius/\hour}) from \qty{840}{\degreeCelsius} to room temperature. Once cooled, the crucible was opened, revealing mica-like flakes with glossy crystal faces. Using this method, crystals as large as \qty{1}{\centi\meter} were successfully grown.
@@ -302,7 +304,7 @@ The small offset was then compensated by fitting Lorentzian peaks to the Fermi a
 
 A momentum cut at \qty{-0.423}{\angstrom^{-1}} was selected for studying the out-of-equilibrium response in the high pump-fluence regime.
 To this end, the pump fluence was varied from \qtyrange{0}{3.33}{\milli\joule/\centi\meter\squared}, and changes in the band structure were recorded.
-A pump-probe delay of \qty{166}{\micro\second} was used, an unusually long timescale that will be discussed further in section \ref{sec:meta}.
+A pump-probe delay of \qty{166}{\micro\second} was used, an unusually long timescale that will be discussed further in section \ref{sec:bi2212_meta}.
 The resulting bandmaps are shown in Fig. \ref{fig:edm_collection}.
 Clear changes to the parabolic feature, as well as to the $k_F$ points and the \ce{Cu} d-bands, can be observed.
 The parabola narrows continuously, and the changes in Fermi momenta become especially noticeable when the MDC is plotted as a function of fluence (see Fig. \ref{fig:fluence_map}).
@@ -319,7 +321,7 @@ In addition to visualizing the changes in the bandmaps, it is important to quant
 MDCs were plotted over a $\pm$\qty{100}{\milli\electronvolt} range around $E_F$ (see Fig. \ref{fig:mdc_fits}).
 Two peaks, corresponding to the positive and negative $k_F$ points, are visible in each MDC.
 A triple Lorentzian fit was applied, with two peaks representing the $k_F$ points and a third accounting for the umklapp band crossing the anti-nodal region (see Fig. \ref{fig:fs_cut} (a)).
-This band arises from a lattice superstructure caused by a slight distortion of the unit cell along one high-symmetry direction, which also generates replicas in momentum space.
+This band arises from a lattice superstructure caused by a slight distortion of the unit cell along one high-symmetry direction, which also leads to replicas in momentum space.
 
 Repeating this fitting process for each fluence level revealed a linear relationship between the distance of the $k_F$ points and the pump fluence, as shown in Fig. \ref{fig:fluence_map} (b).
 The linear trend is evident not only in the peak distance but also in the individual peak positions (see Fig. \ref{fig:fluence_map} (b) and (c)). Figure \ref{fig:fluence_map} (c) also highlights the asymmetric change in the positions of the positive and negative peaks, as previously discussed.
@@ -350,7 +352,7 @@ The linear trend is evident not only in the peak distance but also in the indivi
 
 Similar shifts in $k_F$ have been observed previously in bandmaps taken at the nodal position \cite{rameau_photoinduced_2014}.
 In those measurements, the Fermi momentum shift was significantly smaller for similar pump fluences, indicating a possible momentum dependence of the effect.
-This dependence is also seen when varying the hole-doping content, with stronger changes in the anti-nodal region due to alterations in the anti-bonding band, while the nodal region remains relatively stable \cite{drozdov_phase_2018}.
+Such a dependence is also seen when varying the hole-doping content, with stronger changes in the anti-nodal region due to alterations in the anti-bonding band, while the nodal region remains relatively stable \cite{drozdov_phase_2018}.
 This comparison motivates an extension of the studies to a larger momentum space.
 
 \section{Nodal vs anti-nodal behavior}
@@ -360,24 +362,31 @@ This comparison motivates an extension of the studies to a larger momentum space
 Additionally, the chemical doping-dependent evolution of the Fermi surface highlights this anisotropy, with significant changes observed near the anti-node while the nodal region remains relatively unchanged.
 In this section, I explore whether a similar anisotropic behavior is evident in the light-induced effects presented in the previous section (Sec. \ref{sec:larger_effect}).
 
-\begin{figure}[bh]
+\begin{figure}[t!]
 	\centering
 	\includegraphics[width=\linewidth]{images/bi2212_pp/fermi_map_ang_dep}
-	\caption{Fermi surface of \ce{Bi}2212 as shown in Fig. \ref{fig:fs_cut}. The black dashed lines indicate the series of cuts along which fluence dependence was recorded.}
+	\caption{Fermi surface of \ce{Bi}2212 as shown in Fig. \ref{fig:fs_cut}. The black dashed lines indicate the series of cuts along which fluence dependencies were recorded.}
 	\label{fig:fermimap_angdep}
 \end{figure}
 
 In this context, a series of cuts between the nodal and anti-nodal regions were analyzed.
-These cuts were taken at parallel momentum $k_p$ values of \qtylist{0.41;0.452;0.494;0.535}{\per\angstrom}.
-Figure  \ref{fig:fermimap_angdep} shows the same Fermi surface as in Fig. \ref{fig:fs_cut} (a), with black dashed lines marking the $k_p$ positions of the selected cuts.
+These cuts were taken at parallel momentum $k_\parallel$ values of \qtylist{0.41;0.452;0.494;0.535}{\per\angstrom}.
+Figure  \ref{fig:fermimap_angdep} shows the same Fermi surface as in Fig. \ref{fig:fs_cut} (a), with black dashed lines marking the $k_\parallel$ positions of the selected cuts.
 For each cut, the fluence dependence was measured similarly to section \ref{sec:larger_effect}, with fluences ranging from \qtyrange{0.09}{1.15}{\milli\joule/\centi\meter\squared}.
 The resulting bandmaps from this fluence and momentum-dependent study are shown in figure \ref{fig:effect_angle}.
+
+\begin{figure}[p]
+	\centering
+	\includegraphics[width=\linewidth]{images/bi2212_pp/effect_angle}
+	\caption{Series of bandmaps for four different cuts corresponding to (a) \qty{0.41}{\per\angstrom}, (b) \qty{0.452}{\per\angstrom}, (c) \qty{0.494}{\per\angstrom}, and (d) \qty{0.535}{\per\angstrom}, as indicated in Fig. \ref{fig:fermimap_angdep}. For each cut, a series of fluences ranging from \qtyrange{0.09}{1.15}{\milli\joule/\centi\meter\squared} is presented.}
+	\label{fig:effect_angle}
+\end{figure}
 
 As with the previous measurements, a closing of the parabolic feature can be observed at higher momentum cuts, whereas little to no change is visible at \qty{0.41}{\per\angstrom}.
 Additionally, a slight shift of the leading edge is evident across all four cuts.
 The same analysis as in the previous section was performed for each momentum cut, using MDCs taken at $E_F$ over a $\pm$\qty{100}{\milli\electronvolt} range.
 Triple Lorentzians were fitted to the resulting MDCs to extract the peak positions, quantifying the shift of the quasiparticle peak and the closing of the parabola.
-As fluence increases, the distance between the peaks decreases for each cut, with the degree of this decrease varying substantially depending on the proximity to the anti-node.
+As fluence increases, the distance between the peaks decreases for each cut, with the amount of this decrease varying substantially depending on the proximity to the anti-node.
 
 \begin{figure}[th!]
 	\centering
@@ -411,12 +420,6 @@ As fluence increases, the distance between the peaks decreases for each cut, wit
 %	\label{fig:effect_angle}
 %\end{figure}
 
-\begin{figure}[p]
-	\centering
-	\includegraphics[width=\linewidth]{images/bi2212_pp/effect_angle}
-	\caption{Series of bandmaps for four different cuts corresponding to (a) \qty{0.41}{\per\angstrom}, (b) \qty{0.452}{\per\angstrom}, (c) \qty{0.494}{\per\angstrom}, and (d) \qty{0.535}{\per\angstrom}, as indicated in Fig. \ref{fig:fermimap_angdep}. For each cut, a series of fluences ranging from \qtyrange{0.09}{1.15}{\milli\joule/\centi\meter\squared} is presented.}
-	\label{fig:effect_angle}
-\end{figure}
 
 
 At a parallel momentum of \qty{0.535}{\per\angstrom}, the change is most pronounced, showing a $20\%$ reduction in the peak distance.
@@ -462,7 +465,7 @@ The evolution of the quasiparticle peaks at different momenta represents a key f
 It is important to note that additional scans were performed at higher momenta, closer to the anti-node, to increase the number of data points.
 However, it was not possible to obtain reliable MDCs for these scans.
 This difficulty arose due to the broad distribution of spectral intensity associated with the incoherent quasiparticle peaks that form the Fermi arcs, due to the presence of the pseudo gap \cite{norman_destruction_1998}.
-This broadening, combined with the relatively low energy resolution of the Harmonium beamline, made it impossible to resolve the distinct peaks and the extraction of reliable momentum coordinates.
+This broadening, combined with the relatively low energy resolution of the Harmonium beamline, made it impossible to resolve the distinct peaks and to extract reliable momentum coordinates.
 
 In a following section, I will present a full reconstruction of the Fermi surface based on these four momentum cuts to provide a more detailed description of the material’s evolution under intense femtosecond light illumination.
 Before doing so, however, an additional quantity can be extracted from the bandmaps, which will greatly help in understanding the Fermi surface evolution.
@@ -483,13 +486,13 @@ In the band structure such a charge imbalance would result in a rearrangement of
 On the other hand, a potential energy shift of the band structure could have two primary causes.
 The first is space charge effects, which occur when a dense cloud of photoelectrons is emitted simultaneously, causing broadening and a shift in the detected photoelectron energy due to Coulomb repulsion.
 A more detailed discussion of space charge effects is provided in Section \ref{sec:space_charge}.
-To ensure that the observed energy shift is not due to space charge effects, the Fermi level is checked for any movement, as space charge would also affect its position.
+To ensure that the observed energy shift is not due to space charge effects, the Fermi level is analyzed for any possible movement, as space charge would also affect its position.
 This is done by integrating over a momentum range where no band is present, in this case from \qtyrange{0.4}{0.5}{\per\angstrom}, and fitting the resulting energy distribution curve (EDC) using a Fermi-Dirac equation broadened by a Gaussian function, given by
 \begin{equation}
 	I = \left[ C + \frac{1}{e^{(E-E_F)/k_BT}+1} \right] * g(E,\Delta E)
 \end{equation}
 where $C$ is a constant background, $E_F$ is the Fermi level, and $k_B$ is the Boltzmann constant.
-The symbol $*$ denotes the convolution operation, and $g(E, \Delta E)$ represents a Gaussian function with $\Delta E$ being the energy resolution.
+The symbol $*$ denotes the convolution operation, and $g(E, \Delta E)$ represents a Gaussian function with $\Delta E$ being the system's energy resolution.
 An example of an EDC fit can be seen in Fig. \ref{fig:fermi_fit_bi2212} (a).
 Fig. \ref{fig:fermi_fit_bi2212} (b) shows the extracted Fermi level for a fluence-dependent measurement series, demonstrating that the Fermi level remains stable within the energy resolution of \qty{150}{\milli\electronvolt}.
 Only for the highest fluence of \qty{1.15}{\milli\joule/\centi\meter\squared} can a broadening and small energy shift be observed.
@@ -507,7 +510,7 @@ Only for the highest fluence of \qty{1.15}{\milli\joule/\centi\meter\squared} ca
 %	\caption{(a) Energy distribution curve (EDC) for a fluence of \qty{0.09}{\milli\joule/\centi\meter\squared}, with the corresponding fit used to determine the Fermi level. (b) Colormap showing the EDCs for all recorded fluences. Red markers indicate the center of the Fermi level as determined from the respective fits.}
 %	\label{fig:fermi_fit_bi2212}
 %\end{figure}
-\begin{figure}[t]
+\begin{figure}[bh!]
 	\centering
 	\includegraphics[width=\linewidth]{images/bi2212_pp/fermi_fit_bi2212}
 	\caption{(a) Energy distribution curve (EDC) for a fluence of \qty{0.09}{\milli\joule/\centi\meter\squared}, with the corresponding fit used to determine the Fermi level. (b) Colormap showing the EDCs for all recorded fluences. Red markers indicate the center of the Fermi level as determined from the respective fits.}
@@ -546,7 +549,7 @@ In each case, a broadened step function is fitted to the feature to determine th
 Fig. \ref{fig:mu_center} illustrates how these positions are determined, with (a) showing the fit of the bottom of the parabola, and (b) showing the fitted leading edge of the \ce{Cu} d-band.
 In the first case, the bottom of the parabola is determined by taking the center of the two quasiparticle peaks, while the step function fit extracts the leading edge position.
 This method assumes a parabolic feature, but in reality, there is asymmetric spectral weight distribution, which complicates the analysis.
-Additionally, the asymmetric closing of the parabola due to the slight planar misalignment (see Sec. \ref{sec:larger_effect}) makes this problem worse
+Additionally, the asymmetric closing of the parabola due to the slight planar misalignment (see Sec. \ref{sec:larger_effect}) makes this problem worse.
 
 Thus, using the leading edge of the \ce{Cu} d-bands provides a more reliable alternative, benefiting from a higher signal-to-noise ratio.
 The momentum range is divided into \qty{0.1}{\per\angstrom} bins to improve signal quality, and the center position of the leading edge is extracted using a broadened step function across the entire momentum range.
@@ -580,12 +583,12 @@ Similar analysis is performed for the parabola and the d-band edges to confirm t
 
 The analysis of the leading edge shift as a function of fluence shows a linear shift, with an amplitude of approximately \qty{40}{\milli\electronvolt} at the maximum fluence of \qty{1.15}{\milli\joule/\centi\meter\squared} (Fig. \ref{fig:mu_shift}).
 Fig. \ref{fig:mu_shift} (a) also shows that both the center and edges of the \ce{Cu} d-band shift by the same amount.
-The parabolic feature behaves similarly, except at the highest fluence, where the feature becomes less clear and the fit procedure fails.
+The parabolic feature behaves similarly, except at the highest fluence, where the feature becomes more diffuse and the fit procedure fails.
 The fitting error for the parabolic feature is also significantly larger than for the \ce{Cu} d-band.
 
 Overall, the analysis shows a clear upward shift of the band structure, which is linear with fluence and consistent across the bandmap.
 A linear regression of the data points yields a chemical potential shift of \qty{33}{\frac{\milli\electronvolt}{\milli\joule/\centi\meter\squared}}.
-This combined with the fact that the Fermi level does not show a linear upwards shift (see Fig. \ref{fig:mu_shift} (c))) means that the chemical potential $\mu$ changes and scales linearly with the fluence.
+This combined with the fact that the Fermi level does not show a linear upwards shift (see Fig. \ref{fig:mu_shift} (c)) means that the chemical potential $\mu$ changes and scales linearly with the fluence.
 Therefore, we attribute the observed shift to photodoping, which plays a significant role in the out-of-equilibrium properties of cuprates.
 
 The next step is to determine whether photodoping is the dominant cause of the observed quasiparticle shift or if screening effects must also be considered.
@@ -597,8 +600,9 @@ This section focuses on the role of screening in the observed quasiparticle shif
 To address this, I will use the results from the photodoping analysis and attempt to recreate the Fermi surface (FS) using a tight binding approach, which is a standard, but phenomenological method for plotting the FS of \ce{Bi}2212.
 Despite its simplicity, the tight binding approach successfully reproduces the FS across a wide doping range \cite{markiewicz_one-band_2005}.
 The model parameters were compared to literature values for the unpumped state, with minor adjustments made to account for the out-of-equilibrium FS at different fluences.
+Figure \ref{fig:cuplackett} shows the main building blocks of the \ce{CuO2} plaquette and the fundamental parameters influencing the electronic properties and govern the Fermi surface evolution.
 
-\begin{figure}
+\begin{figure}[b!]
 	\centering
 	\includegraphics[width=0.6\linewidth]{images/bi2212_pp/Cu_plackett}
 	\caption{Schematic of the \ce{CuO2} plaquette, which plays a central role in the electronic properties of \ce{Bi}2212. The key microscopic charge properties responsible for changes in the Fermi surface (FS) are also indicated, including the Coulomb potential $U$, the charge transfer energy (CT), and the nearest and next-nearest neighbor hopping parameters $t$ and $t'$.}
@@ -606,7 +610,7 @@ The model parameters were compared to literature values for the unpumped state, 
 \end{figure}
 
 The tight binding model generally includes a series of cosine terms, with their amplitude depending on the hopping parameters.
-In the model used here, terms up to the 3rd order are used
+In the model used here, terms up to the 3rd order are considered
 \begin{equation}
 	\frac{E}{t} = \frac{\mu}{t} + \frac{1}{2} \left(\cos(k_xa)+\cos(k_ya)\right) + \frac{t'}{t} \cos(k_xa)\cos(k_ya) + \frac{t''}{2t} \left(\cos(2k_xa)+\cos(2k_ya)\right)
 \end{equation}
@@ -635,7 +639,7 @@ This iterative process was used to reconstruct the FS for the full fluence evolu
 %	\caption{(a) Tight binding Fermi surface (FS) for a fluence of \qty{0.09}{\milli\joule/\centi\meter\squared}, shown alongside optimally doped \ce{Bi}2212 literature data from Ref. \cite{kondo_hole-concentration_2004}. (b) Tight binding FS for all measured fluences. The full FS is recreated using the material's four-fold symmetry, with the measured data points marked accordingly.}
 %	\label{fig:fs_tb}
 %\end{figure}
-\begin{figure}
+\begin{figure}[t!]
 	\centering
 	\includegraphics[width=\linewidth]{images/bi2212_pp/fs_tb}
 	\caption{(a) Tight binding Fermi surface (FS) for a fluence of \qty{0.09}{\milli\joule/\centi\meter\squared}, shown alongside optimally doped \ce{Bi}2212 literature data from Ref. \cite{kondo_hole-concentration_2004}. (b) Tight binding FS for all measured fluences. The full FS is recreated using the material's four-fold symmetry, with the measured data points marked accordingly.}
@@ -655,12 +659,6 @@ At a fluence of \qty{0.88}{\milli\joule/\centi\meter\squared}, the tight binding
 This transformation is referred to as a Lifshitz transition, a well-known phenomenon in various hole-doped cuprates, including \ce{Bi}2212, \ce{Bi}2201, LSCO, and \ce{Nd}-LSCO \cite{kaminski_change_2006,matt_electron_2015,ding_disappearance_2019,kondo_hole-concentration_2004}.
 Under equilibrium conditions, the Lifshitz transition occurs as hole doping increases, with the transition happening at $p=0.22$ in \ce{Bi}2212 \cite{kaminski_change_2006}.
 
-It is important to note that the exact shape of the reconstructed FS depends on the fixed parameters used in the fit.
-Although substantial effort was made to optimize the values of $t'$ and $t''$, different parameter sets can fit the data points similarly well, especially in the anti-nodal region.
-Therefore, the reconstructed FS as a function of fluence should be viewed as a qualitative rather than a definitive representation of the pump-induced changes.
-Regardless, the nodal region remains largely fixed, and while the magnitude of change at the anti-node may vary with the fit parameters, the bands consistently move towards the ($\pi$,$0$) position, eventually resulting in a Lifshitz transition.
-Thus, irradiation with femtosecond infrared light induces changes in the FS that mimic the behavior observed with increased hole doping.
-
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{images/bi2212_pp/mu_t}
@@ -668,6 +666,30 @@ Thus, irradiation with femtosecond infrared light induces changes in the FS that
 	\label{fig:mu_t}
 \end{figure}
 
+It is important to note that the exact shape of the reconstructed FS depends on the fixed parameters used in the fit.
+Although substantial effort was made to optimize the values of $t'$ and $t''$, different parameter sets can fit the data points similarly well, especially in the anti-nodal region.
+Therefore, the reconstructed FS as a function of fluence should be viewed as a qualitative rather than a definitive representation of the pump-induced changes.
+Regardless, the nodal region remains largely fixed, and while the magnitude of change at the anti-node may vary with the fit parameters, the bands consistently move towards the ($\pi$,$0$) position, eventually resulting in a Lifshitz transition.
+Thus, irradiation with femtosecond infrared light induces changes in the FS that mimic the behavior observed with increased hole doping.
+
+\begin{table}[b!]
+	\centering
+	%	{\setlength\doublerulesep{0.6pt}
+		\begin{tabular}{ccccc}
+			\toprule[1pt]\midrule[0.3pt]
+			Fluence (mJ/cm\(^2\)) & \(\mu \, (\text{meV})\) & \(t \, (\text{meV})\) & \(t' \, (\text{meV})\) & \(t'' \, (\text{meV})\) \\ 
+			\midrule
+			0.09 & 120 & -367 & 149 & 0 \\ 
+			0.35 & 129 & -398 & 149 & 0 \\ 
+			0.62 & 138 & -426 & 149 & 0 \\ 
+			0.88 & 148 & -456 & 149 & 0 \\ 
+			1.15 & 157 & -485 & 149 & 0 \\ 
+			\midrule[0.3pt]\bottomrule[1pt]
+		\end{tabular}
+		\caption{Tight-Binding parameters resulting from the fit in Fig. \ref{fig:fs_tb} (b).}
+		\label{tab:tb}
+	\end{table}
+	
 In addition to visualizing the FS evolution, the fit provides an estimate of the change in the nearest neighbor hopping parameter.
 Plotting the relative change in $\mu$ alongside the relative change in $t$ reveals that the energetic change in $t$ is larger than the shift in $\mu$, within the tight-binding Hamiltonian.
 The hopping of holes between neighboring sites, denoted by $t$, is intrinsically linked to the Coulomb repulsion, $U$, which inhibits double occupancy.
@@ -676,27 +698,8 @@ The difference between the changes in $\mu$ and $t$ is shown in Fig. \ref{fig:mu
 
 Having discussed the quasiparticle shifts and the reconstruction of the FS, the next section will focus on the time duration of the observed effects.
 
-\begin{table}[h!]
-	\centering
-%	{\setlength\doublerulesep{0.6pt}
-	\begin{tabular}{ccccc}
-		\toprule[1pt]\midrule[0.3pt]
-		Fluence (mJ/cm\(^2\)) & \(\mu \, (\text{meV})\) & \(t \, (\text{meV})\) & \(t' \, (\text{meV})\) & \(t'' \, (\text{meV})\) \\ 
-		\midrule
-		0.09 & 120 & -367 & 149 & 0 \\ 
-		0.35 & 129 & -398 & 149 & 0 \\ 
-		0.62 & 138 & -426 & 149 & 0 \\ 
-		0.88 & 148 & -456 & 149 & 0 \\ 
-		1.15 & 157 & -485 & 149 & 0 \\ 
-		\midrule[0.3pt]\bottomrule[1pt]
-	\end{tabular}
-	\caption{Tight-Binding parameters resulting from the fit in Fig. \ref{fig:fs_tb} (b).}
-	\label{tab:tb}
-\end{table}
-
-
 \section{Effect duration and metastability}
-\label{sec:meta}
+\label{sec:bi2212_meta}
 
 In many cases, trARPES measurements are conducted on the timescale of a few picoseconds to study the ultrafast dynamics following femtosecond pulse excitation.
 Similarly, the early experiments in this study focused on observing ultrafast excitation and the subsequent decay within a picosecond window.
@@ -706,8 +709,8 @@ Therefore, a lower limit for the effect duration can be placed by the inverse re
 
 \begin{figure}[bh!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{images/bi2212_pp/pulse_scheme}
-	\caption{Sketch of the pulse scheme. A fixed delay position of \qty{-2}{\pico\second} was used for the fluence-dependent scans, resulting in an overall time span of \qty{166.66}{\micro\second} to \qty{-2}{\pico\second} between the sample excitation and the probe.}
+	\includegraphics[width=\linewidth]{images/bi2212_pp/pulse_scheme}
+	\caption{Sketch of the pulse scheme. A fixed delay position of \qty{-1}{\pico\second} was used for the fluence-dependent scans, resulting in an overall time span of $\qty{166.66}{\micro\second}-\qty{1}{\pico\second}$ between the sample excitation and the probe.}
 	\label{fig:pulsescheme}
 \end{figure}
 
@@ -723,18 +726,18 @@ This places an upper limit on the effect duration, which is on the order of tens
 This result contrasts with observations reported by Rameau et al. \cite{rameau_photoinduced_2014}, where the effect duration was found to be on the order of \qty{1}{\pico\second}, with slight variations depending on the pump fluence.
 Such a discrepancy hints towards a sample depended influence on the observed effect.
 
-Similar long-lasting effects have been observed on metal surfaces \cite{bovensiepen_dynamic_2009, gierster_ultrafast_2021, aeschlimann_time-resolved_2025}.
-In these systems, photoexcitation leads to a transfer of electrons, which can then localize, e.g., at pre-existing defect states.
-The trapped electrons exhibit exceptionally long lifetimes due to the limited number of decay pathways and restricted relaxation processes.
-If the lifetime exceeds the inverse repetition rate of the light source creating the excitation, a buildup of carrier population occurs at the defect states.
-This buildup accumulates over multiple pulses, eventually saturating and forming an out-of-equilibrium steady state referred to as a photo-stationary state.
-
 \begin{figure}[b!]
 	\centering
 	\includegraphics[width=\linewidth]{images/bi2212_pp/ultrafast_dynamics}
 	\caption{(a) Bandmap near the node at $t_0$ using a pump fluence of $\approx$\qty{1}{\milli\joule/\centi\meter\squared}. (b) Difference maps of the same measurement as (a), for a delay of \qty{0}{\femto\second} and \qty{1500}{\femto\second}. The difference maps show a depopulation of the occupied states and a hot carrier distribution above $E_F$ at $t_0$, which relaxes within \qty{1.5}{\pico\second}. (c) Ultrafast hot carrier dynamics, representing the region marked with a black square in (a). The excitation is generated within the pulse duration and decays with a rate of \qty{160}{\femto\second}, as extracted from a single exponential decay fit.}
 	\label{fig:ultrafast_dyn}
 \end{figure}
+
+Similar long-lasting effects have been observed on metal surfaces \cite{bovensiepen_dynamic_2009, gierster_ultrafast_2021, aeschlimann_time-resolved_2025}.
+In these systems, photoexcitation leads to a transfer of electrons, which can then localize, e.g., at pre-existing defect states.
+The trapped electrons exhibit exceptionally long lifetimes due to the limited number of decay pathways and restricted relaxation processes.
+If the lifetime exceeds the inverse repetition rate of the light source creating the excitation, a buildup of carrier population occurs at the defect states.
+This buildup accumulates over multiple pulses, eventually saturating and forming an out-of-equilibrium steady state referred to as a photo-stationary state.
 
 It is likely that a similar mechanism occurs in the photoexcitation of \ce{Bi}2212, a system known to host numerous defects.
 Here, photoexcitation likely induces a charge transfer, with electrons subsequently trapped at charged defects such as oxygen vacancies.
@@ -756,7 +759,7 @@ The primary observation in this study is the shift in the quasiparticle peaks wh
 It was shown that the magnitude of this shift varies depending on the angle at which the measurement was performed.
 Specifically, the shift towards \qty{0}{\per\angstrom} becomes more pronounced at higher parallel momenta, or in other words, closer to the anti-node.
 By mapping the FS at multiple angles, it was possible to recreate its evolution using a tight binding approximation.
-The FS evolution across different fluences revealed that light-induced effects mimic the results typically seen in doping-dependent measurements, with light apparently inducing higher hole doping in the sample.
+The FS evolution across different fluences revealed that light-induced effects mimic the results typically seen in doping-dependent measurements, with light inducing a higher hole doping in the sample.
 
 Further analysis of spectral features revealed a rigid band shift caused by changes in the chemical potential.
 It was possible to quantify this shift and with the information it was possible to fit the hopping parameter in the recreation of the FS.
@@ -766,7 +769,7 @@ Typically, electrons move away from the illuminated region, while holes are left
 On the other hand, the shift in the hopping parameter, along with the Coulomb potential, is a result of screening due to the presence of long-lived photodoped carriers.
 Comparison of these contributions showed that the change in the hopping parameter represents the largest energy change within the tight binding Hamiltonian.
 
-Additionally, it was shown that the effect persists for more than \qty{166.66}{\micro\second}, indicating the formation of a metastable, photo-stationary state that returns to equilibrium after stopping the optical excitation.
+Additionally, it was shown that the effect persists for more than \qty{166.66}{\micro\second}, indicating the formation of a metastable, photo-stationary state that returns to equilibrium only after stopping the optical excitation.
 Comparing the time duration to a similar observation by Rameau et al. \cite{rameau_photoinduced_2014} shows that the time duration is rather sample dependent, as there measurements showed a decay of the quasiparticle shift within a picosecond.
 Which shows that while the magnitude and duration of the effect are sample dependent, the nature of the effect, with the ability to manipulate the microscopic electronic properties is rather fundamental.
 
@@ -774,7 +777,7 @@ Several possible mechanisms could explain this photoinduced phenomenon, includin
 A parallel can be drawn to the phenomenon of persistent photosuperconductivity (PPS) observed in YBCO, where an enhanced superconducting critical temperature persists for over \qty{200}{\minute}.
 The cause of PPS is still debated, with arguments revolving around photodoping and oxygen vacancy reordering \cite{gilabert_photodoping_2000}.
 Long photodoping lifetimes can be explained by electron-hole pair excitation followed by electron trapping by charged defects \cite{el_hage_disentangling_2024, kudinov_persistent_1993, kudinov_mechanisms_1994}.
-Alternatively, PPS might be driven by photoinduced oxygen vacancy reordering, which increases carrier density in the \ce{CuO2} planes.
+Alternatively, PPS might be driven by photoinduced oxygen vacancy reordering, which increases carrier mobility in the \ce{CuO2} planes.
 A recent study \cite{el_hage_disentangling_2024} argued that oxygen reordering, not photodoping, is the primary mechanism behind enhanced superconducting properties.
 The reasoning in this report is, that enhanced superconducting properties were only observed together with an increased carrier mobility, which they observed to be uncorrelated to the trapping of electrons.
 Whether these insights apply to \ce{Bi}2212 remains an open question for future research, but a recent XPS study \cite{puntel_out--equilibrium_2024} provides initial evidence suggesting that oxygen reordering is relevant in infrared-excited \ce{Bi}2212.
@@ -782,7 +785,7 @@ Whether these insights apply to \ce{Bi}2212 remains an open question for future 
 It is essential to emphasize that the current data does not definitively support any particular mechanism, leaving room for further investigations.
 One avenue could be additional trARPES measurements using lower repetition rates, which would extend the time delay between pump and probe pulses but at the cost of significantly reducing the signal-to-noise ratio, making an already challenging experiment even harder.
 Another option could be changing the pump energy to a value below the charge transfer gap, which might influence the photoinduced effect differently.
-Beyond trARPES, other techniques like time resolved transport measurements or ultrafast electron diffraction, which might be sensitive to any light induced oxygen reordering, could help in further understand the microscopic mechanisms at play.
+Beyond trARPES, other techniques like time resolved transport measurements or ultrafast electron diffraction, which might be sensitive to any light induced oxygen reordering, could help to further understand the microscopic mechanisms at play.
 
 \begin{figure}[t!]
 	\centering

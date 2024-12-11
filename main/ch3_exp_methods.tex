@@ -1,8 +1,10 @@
+\definecolor{custom_brown}{RGB}{211, 84, 0}
+\renewcommand{\chaptercolor}{custom_brown}
 \chapter{Time \& angle resolved photoemission spectroscopy}
 
 The development and understanding of quantum materials are pivotal in advancing next-generation technologies.
 In many of these materials, electron interactions and correlations significantly influence their overall properties, often leading to the emergence of exotic phases.
-Gaining insight into how electron and their interactions shape these phases and give rise to emergent phenomena is essential for understanding and potentially manipulating these materials.
+Gaining insight into how electrons and their interactions shape these phases and give rise to emergent phenomena is essential for understanding and potentially manipulating these materials.
 
 Angle-resolved photoemission spectroscopy (ARPES) is a powerful technique uniquely suited for probing these interactions.
 It measures the single-particle spectral function, allowing for a detailed mapping of the electronic band structure across the full 3D Brillouin zone (BZ).
@@ -31,7 +33,7 @@ This relationship is captured by the energy conservation equation
 The photoelectrons emitted from the sample are collected by a spectrometer, such as a hemispherical analyzer, allowing the observation of transitions between initial and final states, within a given region of the Brillouin zone.
 Figure \ref{fig:arpes_sketch} (b) illustrates the relationship between the binding energy $E_\text{B}$ of electrons within the crystal and the kinetic energy $E_\text{kin}$ of the detected photoelectrons.
 
-In addition to energy, the angle at which the photoelectrons are emitted and their kinetic energy can be used to determine the crystal momentum of the electrons inside the material, based on momentum conservation rules.
+In addition, the angle at which the photoelectrons are emitted and their kinetic energy can be used to determine the crystal momentum of the electrons inside the material, based on momentum conservation rules.
 For the in-plane momentum component, this relation is given by
 \begin{equation}
 	\hbar \mathbf{k}_\parallel = \sqrt{2m_eE_\text{kin}} \sin\theta,
@@ -44,7 +46,7 @@ The expression for $\mathbf{k}_\perp$ is
 \begin{equation}
 	\hbar \mathbf{k}_\perp = \sqrt{2m_e\left(E_\text{kin}\cos^2\theta+V_0\right)}.
 \end{equation}
-If the free-electron approximation does not hold, the perpendicular momentum component can still be determined by performing photon energy-dependent scans and knowledge of the final state dispersion \cite{strocov_intrinsic_2003}.
+If the free-electron approximation does not hold, the perpendicular momentum component can still be determined by performing energy-dependent scans and knowledge of the final state dispersion \cite{strocov_intrinsic_2003}.
 
 %\begin{figure}
 %	\centering
@@ -93,13 +95,13 @@ The full spectral function is described by
 \end{equation}
 where $\Sigma'(\mathbf{k}, \omega)$ and $\Sigma''(\mathbf{k}, \omega)$ are the real and imaginary parts of the self-energy, respectively.
 The real part $\Sigma'(\mathbf{k}, \omega)$ shifts the bare band dispersion, while the imaginary part $\Sigma''(\mathbf{k}, \omega)$ introduces an energy broadening, compared to a non-interacting case.
-The lifetime of the excited state, resulting from the removal of a single electron can be calculated from the imaginary part of the self-energy $\tau=\hbar/\left[2\Sigma''(\mathbf{k}, \omega)\right]$.
+The lifetime of the excited state, resulting from the removal of a single electron, can be calculated from the imaginary part of the self-energy $\tau=\hbar/\left[2\Sigma''(\mathbf{k}, \omega)\right]$.
 
 To extract self-energy information from ARPES data, energy distribution curves (EDCs) and momentum distribution curves (MDCs) are commonly analyzed.
 By examining the position and width of spectral features in these curves, insight into the self-energy can be gained \cite{norman_extraction_1999, freericks_what_2021,kurleto_about_2021}.
 Intimate knowledge of the bare-band dispersion is also beneficial for interpreting ARPES data.
 
-For a more detailed discussion on equilibrium ARPES, refer to reviews by Damascelli et al. and Sobota et al. \cite{damascelli_angle-resolved_2003,sobota_angle-resolved_2021}.
+For a more detailed discussion on equilibrium ARPES, I refer to reviews by Damascelli et al. and Sobota et al. \cite{damascelli_angle-resolved_2003,sobota_angle-resolved_2021}.
 The next section will build on these fundamentals by extending equilibrium ARPES principles into the time domain.
 
 \section{TR-ARPES: a stroboscopic time domain approach}
@@ -133,7 +135,7 @@ Figure \ref{fig:example_bandstructure} sketches an example of such electron popu
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{images/trarpes_pp/example_bandstructure}
-	\caption{Illustration of the trARPES process with exemplary transient band strucutre evolution. Adapted from Ref. \cite{boschini_time-resolved_2024}. (Left) shows the sequence from equilibrium, to excitation when the pump pulse arrived at the sample and finally photoemission from the excited state when the probe pulse arrives. (Right) Shows a sequence of band maps for an exemplary Dirac cone (top) and the corresponding difference maps to equilibrium (bottom) for four different time steps. Before $t_0$ the equilibrium band structure can be seen. At $t_0$ a direct transition, as indicated by the red dashed arrow occurs, corresponding to the energy of the pump pulse, at timescales corresponding to the electron-electron scattering time $\tau_{ee}$ the initial distribution begins to thermalize, this population decays at longer timescales.}
+	\caption{Illustration of the trARPES process with exemplary transient band structure evolution. Adapted from Ref. \cite{boschini_time-resolved_2024}. (Left) shows the sequence from equilibrium, to excitation when the pump pulse arrived at the sample and finally photoemission from the excited state when the probe pulse arrives. (Right) Shows a sequence of band maps for an exemplary Dirac cone (top) and the corresponding difference maps compared to equilibrium (bottom) for four different time steps. Before $t_0$ the equilibrium band structure can be seen. At $t_0$ a direct transition, as indicated by the red dashed arrow occurs, corresponding to the energy of the pump pulse, at timescales corresponding to the electron-electron scattering time $\tau_{ee}$ the initial distribution begins to thermalize, this population decays at longer timescales.}
 	\label{fig:example_bandstructure}
 \end{figure}
 
@@ -151,5 +153,5 @@ However, when pump and probe pulses overlap and until scattering processes lead 
 Modeling these effects presents significant theoretical challenges, particularly when considering phenomena such as Floquet-Bloch states, which only exist in the presence of a light pulse.
 
 Overall, trARPES is a powerful tool for observing a variety of transient effects, including band structure changes, renormalizations due to many-body interactions, and coupling with phonons.
-It provides not only insights into equilibrium electronic properties but also a view on purely light-induced phenomena such as Floquet states, though these will not be covered in detail in this thesis.
+It provides not only insights into equilibrium electronic properties but also a view on purely light-induced phenomena such as Floquet states, though these will not be covered in this thesis.
 Chapters \ref{ch:bi2212} and \ref{ch:tate2} will focus on two studies of \ce{Bi}2212 and \ce{TaTe2}, highlighting the importance of trARPES in out-of-equilibrium investigations.
